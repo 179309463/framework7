@@ -15,8 +15,12 @@
     <div class="page-content">
       <div class="block block-strong">
         <p class="row">
-          <a href="#" class="col button button-fill" @click="openDemo1">One group</a>
+          <a href="#" class="col button button-fill" @click="openDemo11">One group, three buttons</a>
+          <a href="#" class="col button button-fill" @click="openDemo12">One group, title, tree buttons</a>
+        </p>
+        <p class="row">
           <a href="#" class="col button button-fill" @click="openDemo2">Two groups</a>
+          <a href="#" class="col button button-fill" @click="openDemo3">Three groups</a>
         </p>
         <p>
           <a href="#" class="button button-fill" @click="openGrid">Action Grid</a>
@@ -32,13 +36,21 @@
 <script>
 return {
   methods: {
-    openDemo1: function () {
+    openDemo11: function () {
       var self = this;
-      self.actions1.open();
+      self.actions11.open();
+    },
+    openDemo12: function () {
+      var self = this;
+      self.actions12.open();
     },
     openDemo2: function () {
       var self = this;
       self.actions2.open();
+    },
+    openDemo3: function () {
+      var self = this;
+      self.actions3.open();
     },
     openGrid: function () {
       var self = this;
@@ -52,16 +64,42 @@ return {
   on: {
     pageBeforeRemove: function() {
       var self = this;
-      self.actions1.destroy();
+      self.actions11.destroy();
+      self.actions12.destroy();
       self.actions2.destroy();
+      self.actions3.destroy();
       self.actionsGrid.destroy();
       self.actionsToPopover.destroy();
     },
     pageInit: function(page) {
       var self = this;
 
-      // 1 Group
-      var buttons1 = [
+      // 1 Group, 3 buttons
+      var buttons11 = [
+        {
+          text: 'Button 1',
+          bold: true,
+          onClick: function () {
+            app.dialog.alert('Button1 clicked')
+          }
+        },
+        {
+          text: 'Button 2',
+          onClick: function () {
+            app.dialog.alert('Button2 clicked')
+          }
+        },
+        {
+          text: 'Cancel',
+          color: 'red',
+          onClick: function () {
+            app.dialog.alert('Button3 clicked')
+          }
+        },
+      ];
+
+      // 1 Group, title, 3 buttons
+      var buttons12 = [
         {
           text: 'Do something',
           label: true
@@ -104,6 +142,40 @@ return {
         ]
       ]
 
+      // 2 Groups
+      var buttons3 = [
+        [
+          {
+            text: 'Share',
+            label: true
+          },
+          {
+            text: 'Mail',
+          },
+          {
+            text: 'Messages',
+          }
+        ],
+        [
+          {
+            text: 'Social share',
+            label: true
+          },
+          {
+            text: 'Facebook',
+          },
+          {
+            text: 'Twitter',
+          }
+        ],
+        [
+          {
+            text: 'Cancel',
+            color: 'red'
+          }
+        ]
+      ]
+
       // Grid buttons with icons/images
       var gridButtons = [
         [
@@ -136,13 +208,15 @@ return {
         ],
       ]
 
-      self.actions1 = self.$app.actions.create({buttons: buttons1});
+      self.actions11 = self.$app.actions.create({buttons: buttons11});
+      self.actions12 = self.$app.actions.create({buttons: buttons12});
       self.actions2 = self.$app.actions.create({buttons: buttons2});
+      self.actions3 = self.$app.actions.create({buttons: buttons3});
       self.actionsGrid = self.$app.actions.create({buttons: gridButtons, grid: true});
 
       // Actions To Popover
       self.actionsToPopover = self.$app.actions.create({
-        buttons: buttons1,
+        buttons: buttons11,
         // Need to specify popover target
         targetEl: self.$el.find('.button-to-popover')
       });
