@@ -95,14 +95,17 @@ label.item-checkbox {
       align-self: center;
     }
   }
-  > .icon-checkbox {
-    .ltr({
-      margin-right: calc(var(--f7-list-item-media-margin) + var(--f7-checkbox-extra-margin));
-    });
-    .rtl({
-      margin-left: calc(var(--f7-list-item-media-margin) + var(--f7-checkbox-extra-margin));
-    });
-  }
+  /* 参考radio在aurora/ios/md中重写了 start */
+  // > .icon-checkbox {
+  //   .ltr({
+  //     margin-right: calc(var(--f7-list-item-media-margin) + var(--f7-checkbox-extra-margin));
+  //   });
+  //   .rtl({
+  //     margin-left: calc(var(--f7-list-item-media-margin) + var(--f7-checkbox-extra-margin));
+  //   });
+  // }
+  /* 参考radio在aurora/ios/md中重写了 end */
+  
   &.active-state {
     .hairline-color(bottom, transparent);
     background-color: var(--f7-list-link-pressed-bg-color);

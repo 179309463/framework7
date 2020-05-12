@@ -395,7 +395,7 @@ class SmartSelect extends Framework7Class {
 
       itemHtml = `
         <li class="${item.className || ''}${disabled ? ' disabled' : ''}">
-          <label class="item-${item.inputType} item-content">
+          <label class="item-${item.inputType} item-${item.inputType}-icon-start item-content">
             <input type="${item.inputType}" name="${item.inputName}" value="${item.value}" ${selected ? 'checked' : ''}/>
             <i class="icon icon-${item.inputType}"></i>
             ${item.hasMedia ? `

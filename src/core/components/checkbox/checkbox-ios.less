@@ -20,4 +20,35 @@
       margin-top: 0px;
     }
   }
+  label.item-checkbox.item-checkbox-icon-end input[type="checkbox"] ~ .icon-checkbox {
+    position: absolute;
+    top: 50%;
+    margin-top: -11px;
+    .ltr({
+      right: calc(var(--f7-safe-area-right) + 10px);
+    });
+    .rtl({
+      left: calc(var(--f7-safe-area-left) + 10px);
+    })
+  }
+  label.item-checkbox.item-checkbox-icon-end {
+    .item-inner {
+      .ltr({
+        padding-right: calc(var(--f7-safe-area-right) + 36px);
+      });
+      .rtl({
+        padding-left: calc(var(--f7-safe-area-left) + 36px);
+      });
+    }
+  }
+  label.item-checkbox-icon-start {
+    > .icon-checkbox {
+      .ltr({
+        margin-right: calc(var(--f7-list-item-media-margin) + var(--f7-checkbox-extra-margin));
+      });
+      .rtl({
+        margin-left: calc(var(--f7-list-item-media-margin) + var(--f7-checkbox-extra-margin));
+      });
+    }
+  }
 }
