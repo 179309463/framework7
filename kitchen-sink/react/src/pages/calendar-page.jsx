@@ -18,7 +18,7 @@ export default class extends React.Component {
           hours: 12,
           minutes: 30,
           title: 'Meeting with Vladimir',
-          color: '#2196f3',
+          color: '#005096',
         },
         {
           date: new Date(year, month, day),
@@ -39,7 +39,7 @@ export default class extends React.Component {
           hours: 16,
           minutes: 0,
           title: 'Pay loan',
-          color: '#2196f3',
+          color: '#005096',
         },
         {
           date: new Date(year, month, day + 2),

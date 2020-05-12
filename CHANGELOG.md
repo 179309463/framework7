@@ -669,7 +669,7 @@
     * `click` event won't be fired with 300ms delay anymore. Now it will be fired at the same time as `tap` event
     * When `slidesPerColumnFill: 'column'` it now uses `flex-direction: column` layout which requires specified height on swiper-container
     * `slidesPerColumn` now can be used with breakpoints
-    * Now Swiper styles use CSS Custom Properties (CSS Custom Variables) to specify swiper's color theme (color of navigation buttons/pagination). It is now `--swiper-theme-color: #007aff;`
+    * Now Swiper styles use CSS Custom Properties (CSS Custom Variables) to specify swiper's color theme (color of navigation buttons/pagination). It is now `--swiper-theme-color: #005096;`
     * Improved `es` module "tree-shake-ability"
     * New `swiper.esm.browser.bundle.js` package that can be used directly in browser (`import Swiper from 'swiper.esm.browser.bundle.js'`)
   * Autoplay

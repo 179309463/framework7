@@ -22,11 +22,11 @@ export default class extends React.Component {
             type="circle"
             value={this.state.gaugeValue}
             size={250}
-            borderColor="#2196f3"
+            borderColor="#005096"
             borderWidth={10}
             valueText={`${this.state.gaugeValue * 100}%`}
             valueFontSize={41}
-            valueTextColor="#2196f3"
+            valueTextColor="#005096"
             labelText="amount of something"
           />
           <Segmented tag="p" raised>

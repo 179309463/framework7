@@ -342,7 +342,7 @@ div.demo-lazy {
 }
 .demo-swiper-custom .swiper-pagination .swiper-pagination-bullet-active {
   z-index: 1;
-  border: 1px solid #007aff;
+  border: 1px solid #005096;
   transform: scale(1.4);
 }
 .demo-swiper-cube {
