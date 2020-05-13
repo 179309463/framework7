@@ -34,7 +34,7 @@ export default {
       position: 'bottom',
       closeButton: false,
       closeButtonColor: null,
-      closeButtonText: 'Ok',
+      closeButtonText: '好的',
       closeTimeout: null,
       cssClass: null,
       render: null,
