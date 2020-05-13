@@ -123,7 +123,7 @@
     </f7-list>
 
     <f7-block-title>HSB Sliders</f7-block-title>
-    <f7-block-header>HSB sliders with labels and values in Popover</f7-block-header>
+    <f7-block-header>HSB sliders with labels and values in Page</f7-block-header>
     <f7-list no-hairlines-md>
       <f7-list-input
         type="colorpicker"
@@ -133,6 +133,7 @@
         @colorpicker:change="(value) => hsbPickerValue = value"
         :color-picker-params="{
           modules: ['hsb-sliders'],
+          openIn: 'page',
           sliderValue: true,
           sliderLabel: true,
           targetEl: '.hsb-picker-target',

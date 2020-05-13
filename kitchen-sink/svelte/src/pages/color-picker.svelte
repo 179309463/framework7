@@ -122,7 +122,7 @@
   </List>
 
   <BlockTitle>HSB Sliders</BlockTitle>
-  <BlockHeader>HSB sliders with labels and values in Popover</BlockHeader>
+  <BlockHeader>HSB sliders with labels and values in Page</BlockHeader>
   <List noHairlinesMd>
     <ListInput
       type="colorpicker"
@@ -132,6 +132,7 @@
       onColorPickerChange={(value) => hsbPickerValue = value}
       colorPickerParams={{
         modules: ['hsb-sliders'],
+        openIn: 'page',
         sliderValue: true,
         sliderLabel: true,
         targetEl: '.hsb-picker-target',

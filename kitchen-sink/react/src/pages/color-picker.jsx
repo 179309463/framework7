@@ -163,7 +163,7 @@ export default class extends React.Component {
         </List>
 
         <BlockTitle>HSB Sliders</BlockTitle>
-        <BlockHeader>HSB sliders with labels and values in Popover</BlockHeader>
+        <BlockHeader>HSB sliders with labels and values in Page</BlockHeader>
         <List noHairlinesMd>
           <ListInput
             type="colorpicker"
@@ -173,6 +173,7 @@ export default class extends React.Component {
             onColorPickerChange={(value) => this.setState({hsbPickerValue: value})}
             colorPickerParams={{
               modules: ['hsb-sliders'],
+              openIn: 'page',
               sliderValue: true,
               sliderLabel: true,
               targetEl: '.hsb-picker-target',
