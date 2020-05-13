@@ -12,7 +12,7 @@
     ></Searchbar>
   </Navbar>
   <List class="searchbar-not-found">
-    <ListItem title="Nothing found"></ListItem>
+    <ListItem title="查无数据"></ListItem>
   </List>
   <List class="search-list searchbar-found">
     <ListItem title="Acura"></ListItem>

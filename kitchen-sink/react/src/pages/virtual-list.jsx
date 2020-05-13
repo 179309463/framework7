@@ -37,7 +37,7 @@ export default class extends React.Component {
           <p>Here is the example of virtual list with 10 000 items:</p>
         </Block>
         <List className="searchbar-not-found">
-          <ListItem title="Nothing found"></ListItem>
+          <ListItem title="查无数据"></ListItem>
         </List>
         <List
           className="searchbar-found"

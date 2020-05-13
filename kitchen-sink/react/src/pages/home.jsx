@@ -27,12 +27,12 @@ export default class extends React.Component {
         </Navbar>
 
         <List className="searchbar-hide-on-search">
-          <ListItem title="About Framework7" link="/about/">
+          <ListItem title="关于 Framework7" link="/about/">
             <Icon slot="media" icon="icon-f7" />
           </ListItem>
         </List>
 
-        <BlockTitle medium className="searchbar-found">Components</BlockTitle>
+        <BlockTitle medium className="searchbar-found">组件</BlockTitle>
         <List className="components-list searchbar-found">
           <ListItem link="/accordion/" title="Accordion">
             <Icon slot="media" icon="icon-f7" />
@@ -222,16 +222,16 @@ export default class extends React.Component {
           </ListItem>
         </List>
         <List className="searchbar-not-found">
-          <ListItem title="Nothing found"></ListItem>
+          <ListItem title="查无数据"></ListItem>
         </List>
-        <BlockTitle medium className="searchbar-hide-on-search">Themes</BlockTitle>
+        <BlockTitle medium className="searchbar-hide-on-search">主题</BlockTitle>
         <List className="searchbar-hide-on-search">
           <ListItem title="iOS Theme" external link="./index.html?theme=ios"></ListItem>
           <ListItem title="Material (MD) Theme" external link="./index.html?theme=md"></ListItem>
           <ListItem title="Aurora Desktop Theme" external link="./index.html?theme=aurora"></ListItem>
           <ListItem title="Color Themes" link="/color-themes/"></ListItem>
         </List>
-        <BlockTitle medium className="searchbar-hide-on-search">Page Loaders & Router</BlockTitle>
+        <BlockTitle medium className="searchbar-hide-on-search">页面加载与路由</BlockTitle>
         <List className="searchbar-hide-on-search">
           <ListItem title="Page Transitions" link="/page-transitions/"></ListItem>
           <ListItem title="Routable Modals" link="/routable-modals/"></ListItem>

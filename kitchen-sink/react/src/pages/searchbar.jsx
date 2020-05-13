@@ -18,7 +18,7 @@ export default class extends React.Component {
           </Subnavbar>
         </Navbar>
         <List className="searchbar-not-found">
-          <ListItem title="Nothing found"></ListItem>
+          <ListItem title="查无数据"></ListItem>
         </List>
         <List className="search-list searchbar-found">
           <ListItem title="Acura"></ListItem>

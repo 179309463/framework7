@@ -19,12 +19,12 @@
     </f7-navbar>
 
     <f7-list class="searchbar-hide-on-search">
-      <f7-list-item title="About Framework7" link="/about/">
+      <f7-list-item title="关于 Framework7" link="/about/">
         <f7-icon slot="media" icon="icon-f7"></f7-icon>
       </f7-list-item>
     </f7-list>
 
-    <f7-block-title medium class="searchbar-found">Components</f7-block-title>
+    <f7-block-title medium class="searchbar-found">组件</f7-block-title>
     <f7-list class="components-list searchbar-found">
       <f7-list-item link="/accordion/" title="Accordion">
         <f7-icon slot="media" icon="icon-f7"></f7-icon>
@@ -214,9 +214,9 @@
       </f7-list-item>
     </f7-list>
     <f7-list class="searchbar-not-found">
-      <f7-list-item title="Nothing found"></f7-list-item>
+      <f7-list-item title="查无数据"></f7-list-item>
     </f7-list>
-    <f7-block-title medium class="searchbar-hide-on-search">Themes</f7-block-title>
+    <f7-block-title medium class="searchbar-hide-on-search">主题</f7-block-title>
     <f7-list class="searchbar-hide-on-search">
       <f7-list-item title="iOS Theme" external link="./index.html?theme=ios"></f7-list-item>
       <f7-list-item title="Material (MD) Theme" external link="./index.html?theme=md"></f7-list-item>
@@ -224,7 +224,7 @@
       <f7-list-item title="Color Themes" link="/color-themes/"></f7-list-item>
     </f7-list>
 
-    <f7-block-title medium class="searchbar-hide-on-search">Page Loaders & Router</f7-block-title>
+    <f7-block-title medium class="searchbar-hide-on-search">页面加载与路由</f7-block-title>
     <f7-list class="searchbar-hide-on-search">
       <f7-list-item title="Page Transitions" link="/page-transitions/"></f7-list-item>
       <f7-list-item title="Routable Modals" link="/routable-modals/"></f7-list-item>

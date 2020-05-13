@@ -597,7 +597,7 @@ class SmartSelect extends Framework7Class {
         if (typeof ss.params.appendSearchbarNotFound === 'string') {
           $notFoundEl = $(`<div class="block searchbar-not-found">${ss.params.appendSearchbarNotFound}</div>`);
         } else if (typeof ss.params.appendSearchbarNotFound === 'boolean') {
-          $notFoundEl = $('<div class="block searchbar-not-found">Nothing found</div>');
+          $notFoundEl = $('<div class="block searchbar-not-found">查无数据</div>');
         } else {
           $notFoundEl = ss.params.appendSearchbarNotFound;
         }

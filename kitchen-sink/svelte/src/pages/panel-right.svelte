@@ -1,13 +1,13 @@
 <Page>
-  <Navbar title="Right Panel"></Navbar>
-  <BlockTitle>Left Panel</BlockTitle>
+  <Navbar title="右侧面板"></Navbar>
+  <BlockTitle>右侧面板</BlockTitle>
   <Block>
     <p>This is a right side panel. You can close it by clicking outsite or on this link: <Link panelClose>close me</Link>. You can put here anything, even another isolated view.</p>
   </Block>
-  <BlockTitle>Panel Navigation</BlockTitle>
+  <BlockTitle>面板导航</BlockTitle>
   <List>
-    <ListItem link="/panel-right-1/" title="Right panel page 1"></ListItem>
-    <ListItem link="/panel-right-2/" title="Right panel page 2"></ListItem>
+    <ListItem link="/panel-right-1/" title="右侧面板页面1"></ListItem>
+    <ListItem link="/panel-right-2/" title="右侧面板页面2"></ListItem>
   </List>
 </Page>
 <script>

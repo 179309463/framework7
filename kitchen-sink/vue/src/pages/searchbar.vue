@@ -10,7 +10,7 @@
       </f7-subnavbar>
     </f7-navbar>
     <f7-list class="searchbar-not-found">
-      <f7-list-item title="Nothing found"></f7-list-item>
+      <f7-list-item title="查无数据"></f7-list-item>
     </f7-list>
     <f7-list class="search-list searchbar-found">
       <f7-list-item title="Acura"></f7-list-item>

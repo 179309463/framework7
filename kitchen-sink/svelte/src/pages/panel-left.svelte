@@ -1,9 +1,9 @@
 <Page>
-  <BlockTitle>Left Panel</BlockTitle>
+  <BlockTitle>左侧面板</BlockTitle>
   <Block>
     <p>This is a left side panel. You can close it by clicking outsite or on this link: <Link panelClose>close me</Link>. You can put here anything, even another isolated view like in  <Link panelOpen="right">Right Panel</Link></p>
   </Block>
-  <BlockTitle>Main View Navigation</BlockTitle>
+  <BlockTitle>主页面导航</BlockTitle>
   <List>
     <ListItem link="/accordion/" title="Accordion" panelClose></ListItem>
     <ListItem link="/action-sheet/" title="Action Sheet" panelClose></ListItem>
