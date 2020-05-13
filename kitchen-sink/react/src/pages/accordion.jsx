@@ -17,7 +17,7 @@ export default () => (
 
     <BlockTitle>List View Accordion</BlockTitle>
     <List accordionList>
-      <ListItem accordionItem title="滚滚长江东逝水">
+      <ListItem accordionItem title="随机文字">
         <AccordionContent>
           <Block>
             <p>
@@ -36,7 +36,7 @@ export default () => (
           </List>
         </AccordionContent>
       </ListItem>
-      <ListItem accordionItem title="Integer semper">
+      <ListItem accordionItem title="随机文字">
         <AccordionContent>
           <Block>
             <p>
@@ -49,7 +49,7 @@ export default () => (
 
     <BlockTitle>Inset Accordion</BlockTitle>
     <List accordionList inset>
-      <ListItem accordionItem title="滚滚长江东逝水">
+      <ListItem accordionItem title="随机文字">
         <AccordionContent>
           <Block>
             <p>
@@ -68,7 +68,7 @@ export default () => (
           </List>
         </AccordionContent>
       </ListItem>
-      <ListItem accordionItem title="Integer semper">
+      <ListItem accordionItem title="随机文字">
         <AccordionContent>
           <Block>
             <p>
@@ -82,7 +82,7 @@ export default () => (
 
     <BlockTitle>Opposite Side</BlockTitle>
     <List accordionList accordionOpposite>
-      <ListItem accordionItem title="滚滚长江东逝水">
+      <ListItem accordionItem title="随机文字">
         <AccordionContent>
           <Block>
             <p>
@@ -101,7 +101,7 @@ export default () => (
           </List>
         </AccordionContent>
       </ListItem>
-      <ListItem accordionItem title="Integer semper">
+      <ListItem accordionItem title="随机文字">
         <AccordionContent>
           <Block>
             <p>

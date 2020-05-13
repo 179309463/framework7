@@ -4,7 +4,7 @@
 
     <f7-block-title>List View Accordion</f7-block-title>
     <f7-list accordion-list>
-      <f7-list-item accordion-item title="滚滚长江东逝水">
+      <f7-list-item accordion-item title="随机文字">
         <f7-accordion-content>
           <f7-block>
             <p>
@@ -23,7 +23,7 @@
           </f7-list>
         </f7-accordion-content>
       </f7-list-item>
-      <f7-list-item accordion-item title="Integer semper">
+      <f7-list-item accordion-item title="随机文字">
         <f7-accordion-content>
           <f7-block>
             <p>
@@ -36,7 +36,7 @@
 
     <f7-block-title>Inset Accordion</f7-block-title>
     <f7-list accordion-list inset>
-      <f7-list-item accordion-item title="滚滚长江东逝水">
+      <f7-list-item accordion-item title="随机文字">
         <f7-accordion-content>
           <f7-block>
             <p>
@@ -55,7 +55,7 @@
           </f7-list>
         </f7-accordion-content>
       </f7-list-item>
-      <f7-list-item accordion-item title="Integer semper">
+      <f7-list-item accordion-item title="随机文字">
         <f7-accordion-content>
           <f7-block>
             <p>
@@ -68,7 +68,7 @@
 
     <f7-block-title>Opposite Side</f7-block-title>
     <f7-list accordion-list accordion-opposite>
-      <f7-list-item accordion-item title="滚滚长江东逝水">
+      <f7-list-item accordion-item title="随机文字">
         <f7-accordion-content>
           <f7-block>
             <p>
@@ -87,7 +87,7 @@
           </f7-list>
         </f7-accordion-content>
       </f7-list-item>
-      <f7-list-item accordion-item title="Integer semper">
+      <f7-list-item accordion-item title="随机文字">
         <f7-accordion-content>
           <f7-block>
             <p>
