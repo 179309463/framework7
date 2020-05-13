@@ -38,6 +38,14 @@
     });
   }
 }
+label.item-checkbox input[type="checkbox"]:disabled ~ .icon-checkbox,
+label.item-checkbox input[type="checkbox"]:disabled ~ * .icon-checkbox,
+.checkbox input[type="checkbox"]:disabled ~ i {
+  opacity: 0.3;
+  & .item-inner {
+    opacity: 0.4;
+  }
+}
 label.item-checkbox input[type="checkbox"]:not(:checked) ~ .icon-checkbox,
 label.item-checkbox input[type="checkbox"]:not(:checked) ~ * .icon-checkbox,
 .checkbox input[type="checkbox"]:not(:checked) ~ i {
