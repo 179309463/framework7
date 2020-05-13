@@ -116,7 +116,8 @@ export default class extends React.Component {
     const self = this;
     const app = self.$f7;
     const $ = self.$$;
-    const monthNames = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+    //const monthNames = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+    const monthNames = ['1月', '2月', '3月', '4月', '5月', '6月', '7月', '8月', '9月', '10月', '11月', '12月'];
     self.calendar = app.calendar.create({
       containerEl: '#calendar',
       toolbar: false,

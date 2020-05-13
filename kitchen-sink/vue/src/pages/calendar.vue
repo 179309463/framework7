@@ -72,7 +72,8 @@
         const $ = self.$$;
 
         // Inline with custom toolbar
-        const monthNames = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+        //const monthNames = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+        const monthNames = ['1月', '2月', '3月', '4月', '5月', '6月', '7月', '8月', '9月', '10月', '11月', '12月'];
         self.calendarInline = app.calendar.create({
           containerEl: '#demo-calendar-inline-container',
           value: [new Date()],
