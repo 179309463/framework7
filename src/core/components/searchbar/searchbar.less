@@ -292,6 +292,17 @@
 
 }
 
+.searchbar.searchbar-center-icon:not(.searchbar-focused) {
+  text-align: center;
+  .searchbar-icon{
+    left: unset;
+  }
+  input[type="text"]::-webkit-input-placeholder,
+  input[type="search"]::-webkit-input-placeholder {
+    color: transparent;
+  }
+}
+
 .if-ios-theme({
   @import url('./searchbar-ios.less');
 });
