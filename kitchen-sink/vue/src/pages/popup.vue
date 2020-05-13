@@ -38,7 +38,7 @@
       <f7-page>
         <f7-navbar title="Popup Title">
           <f7-nav-right>
-            <f7-link popup-close>Close</f7-link>
+            <f7-link popup-close>关闭</f7-link>
           </f7-nav-right>
         </f7-navbar>
         <f7-block>
@@ -54,7 +54,7 @@
         <f7-page>
           <f7-navbar title="Push Popup" large transparent>
             <f7-nav-right>
-              <f7-link popup-close>Close</f7-link>
+              <f7-link popup-close>关闭</f7-link>
             </f7-nav-right>
           </f7-navbar>
           <f7-block>
@@ -70,7 +70,7 @@
       <f7-page>
         <f7-navbar title="Swipe To Close">
           <f7-nav-right>
-            <f7-link popup-close>Close</f7-link>
+            <f7-link popup-close>关闭</f7-link>
           </f7-nav-right>
         </f7-navbar>
 
@@ -127,7 +127,7 @@
                     <div class="navbar-bg"></div>
                     <div class="navbar-inner">
                       <div class="title">Dynamic Popup</div>
-                      <div class="right"><a href="#" class="link popup-close">Close</a></div>
+                      <div class="right"><a href="#" class="link popup-close">关闭</a></div>
                     </div>
                   </div>
                   <div class="page-content">

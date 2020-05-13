@@ -2,7 +2,7 @@
   <Page>
     <Navbar title="Routable Popup">
       <NavRight>
-        <Link popupClose>Close</Link>
+        <Link popupClose>关闭</Link>
       </NavRight>
     </Navbar>
     <Block strong>

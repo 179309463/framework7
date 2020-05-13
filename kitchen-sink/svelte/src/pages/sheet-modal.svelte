@@ -38,7 +38,7 @@
     <Toolbar>
       <div class="left"></div>
       <div class="right">
-        <Link sheetClose>Close</Link>
+        <Link sheetClose>关闭</Link>
       </div>
     </Toolbar>
     <PageContent>
@@ -56,7 +56,7 @@
     <Toolbar bottom>
       <div class="left"></div>
       <div class="right">
-        <Link sheetClose>Close</Link>
+        <Link sheetClose>关闭</Link>
       </div>
     </Toolbar>
     <PageContent>
@@ -74,7 +74,7 @@
     <Toolbar>
       <div class="left"></div>
       <div class="right">
-        <Link sheetClose>Close</Link>
+        <Link sheetClose>关闭</Link>
       </div>
     </Toolbar>
     <PageContent>
@@ -157,7 +157,7 @@
           <div class="sheet-modal">
             <div class="toolbar">
               <div class="toolbar-inner justify-content-flex-end">
-                <a href="#" class="link sheet-close">Close</a>
+                <a href="#" class="link sheet-close">关闭</a>
               </div>
             </div>
             <div class="sheet-modal-inner">

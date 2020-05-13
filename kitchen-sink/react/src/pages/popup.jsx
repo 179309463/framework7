@@ -50,7 +50,7 @@ export default class extends React.Component {
           <Page>
             <Navbar title="Popup Title">
               <NavRight>
-                <Link popupClose>Close</Link>
+                <Link popupClose>关闭</Link>
               </NavRight>
             </Navbar>
             <Block>
@@ -66,7 +66,7 @@ export default class extends React.Component {
             <Page>
               <Navbar title="Push Popup" large transparent>
                 <NavRight>
-                  <Link popupClose>Close</Link>
+                  <Link popupClose>关闭</Link>
                 </NavRight>
               </Navbar>
               <Block>
@@ -82,7 +82,7 @@ export default class extends React.Component {
           <Page>
             <Navbar title="Swipe To Close">
               <NavRight>
-                <Link popupClose>Close</Link>
+                <Link popupClose>关闭</Link>
               </NavRight>
             </Navbar>
 
@@ -119,7 +119,7 @@ export default class extends React.Component {
                 <div class="navbar-inner">
                   <div class="navbar-bg"></div>
                   <div class="title">Dynamic Popup</div>
-                  <div class="right"><a href="#" class="link popup-close">Close</a></div>
+                  <div class="right"><a href="#" class="link popup-close">关闭</a></div>
                 </div>
               </div>
               <div class="page-content">

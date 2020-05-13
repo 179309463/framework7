@@ -3,7 +3,7 @@
     <f7-page>
       <f7-navbar title="Routable Popup">
         <f7-nav-right>
-          <f7-link popup-close>Close</f7-link>
+          <f7-link popup-close>关闭</f7-link>
         </f7-nav-right>
       </f7-navbar>
       <f7-block strong>

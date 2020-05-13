@@ -69,13 +69,13 @@ export namespace Autocomplete {
     openerEl?: HTMLElement | CSSSelector
     /** Default text for "Close" button when opened as Popup. (default Close) */
     popupCloseLinkText?: string
-    /** Default text for "Back" link when opened as Page. (default Back) */
+    /** Default text for "返回" link when opened as Page. (default Back) */
     pageBackLinkText?: string
     /** Autocomplete page title. If nothing is specified and passed openerEl is an item of List View, then text value of item-title element will be used. */
     pageTitle?: string
     /** Searchbar placeholder text. (default Search...) */
     searchbarPlaceholder?: string
-    /** Searchbar "Cancel" button text. (default Cancel) */
+    /** Searchbar "取消" button text. (default Cancel) */
     searchbarDisableText?: string
     /** Enables searchbar disable button. By default, disabled for Aurora theme */
     searchbarDisableButton?: boolean

@@ -164,7 +164,7 @@ export namespace Dialog {
       title? : string
       /** Default "OK" button text. (default OK) */
       buttonOk?: string
-      /** Default "Cancel" button text. (default Cancel) */
+      /** Default "取消" button text. (default Cancel) */
       buttonCancel?: string
       /** Default username field placeholder in Login dialog. (default Username) */
       usernamePlaceholder?: string
@@ -176,7 +176,7 @@ export namespace Dialog {
       progressTitle?: string
       /** Will automatically destroy all predefined dialogs (Alert, Confirm, Prompt, etc.) on close. (default true) */
       destroyPredefinedDialogs?: boolean
-      /** Enables keyboard shortcuts (Enter and Esc) keys for predefined dialogs (Alert, Confirm, Prompt, Login, Password) "Ok" and "Cancel" buttons. (default true) */
+      /** Enables keyboard shortcuts (Enter and Esc) keys for predefined dialogs (Alert, Confirm, Prompt, Login, Password) "Ok" and "取消" buttons. (default true) */
       keyboardActions?: boolean
       /** When enabled, dialog will be closed on backdrop click. (default true) */
       closeByBackdropClick?: boolean

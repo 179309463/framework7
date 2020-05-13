@@ -41,19 +41,19 @@ export namespace SmartSelect {
     sheetSwipeToClose?: boolean | undefined
     /** Smart select page title. If not passed then it will be the <div class="item-title"> text */
     pageTitle?: string
-    /** Smart select Page back link text (default 'Back') */
+    /** Smart select Page back link text (default '返回') */
     pageBackLinkText?: string
-    /** Smart select Popup close link text (default 'Close') */
+    /** Smart select Popup close link text (default '关闭') */
     popupCloseLinkText?: string
     /** Smart select Popup will be opened as full screen popup on tablet */
     popupTabletFullscreen?: boolean
-    /** Smart select Sheet close link text (default 'Done') */
+    /** Smart select Sheet close link text (default '完成') */
     sheetCloseLinkText?: string
     /** Enables Searchbar on smart select page. If passed as object then it should be valid Searchbar parameters (default false) */
     searchbar?: boolean | Searchbar.Parameters
-    /** Searchbar placeholder text (default 'Search') */
+    /** Searchbar placeholder text (default '搜索...') */
     searchbarPlaceholder?: string
-    /** Searchbar "cancel" link text. Has effect only in iOS theme (default 'Cancel') */
+    /** Searchbar "cancel" link text. Has effect only in iOS theme (default '取消') */
     searchbarDisableText?: string
     /** Enables searchbar disable button. By default, disabled for Aurora theme */
     searchbarDisableButton?: boolean

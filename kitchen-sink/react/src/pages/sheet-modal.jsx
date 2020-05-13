@@ -51,7 +51,7 @@ export default class extends React.Component {
           <Toolbar>
             <div className="left"></div>
             <div className="right">
-              <Link sheetClose>Close</Link>
+              <Link sheetClose>关闭</Link>
             </div>
           </Toolbar>
           {/*  Scrollable sheet content */}
@@ -70,7 +70,7 @@ export default class extends React.Component {
           <Toolbar bottom>
             <div className="left"></div>
             <div className="right">
-              <Link sheetClose>Close</Link>
+              <Link sheetClose>关闭</Link>
             </div>
           </Toolbar>
           {/*  Scrollable sheet content */}
@@ -89,7 +89,7 @@ export default class extends React.Component {
           <Toolbar>
             <div className="left"></div>
             <div className="right">
-              <Link sheetClose>Close</Link>
+              <Link sheetClose>关闭</Link>
             </div>
           </Toolbar>
           <PageContent>
@@ -170,7 +170,7 @@ export default class extends React.Component {
           <div className="sheet-modal">
             <div className="toolbar">
               <div className="toolbar-inner justify-content-flex-end">
-                <a href="#" className="link sheet-close">Close</a>
+                <a href="#" className="link sheet-close">关闭</a>
               </div>
             </div>
             <div className="sheet-modal-inner">
