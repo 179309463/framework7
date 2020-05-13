@@ -78,7 +78,7 @@ const watch = {
       'build-vue',
       'ks-react',
       'ks-vue',
-      'ks-svelte',
+      // 'ks-svelte',
     ));
     gulp.watch(['./kitchen-sink/react/src/**/*.js', './kitchen-sink/react/src/**/*.jsx'], gulp.series(
       'ks-react'
@@ -153,10 +153,10 @@ const watch = {
       'core-styles',
       'core-components',
     ));
-    gulp.watch(['./src/phenome/**/*.js'], gulp.series(
-      'build-svelte',
-      'ks-svelte'
-    ));
+    // gulp.watch(['./src/phenome/**/*.js'], gulp.series(
+    //   'build-svelte',
+    //   'ks-svelte'
+    // ));
     gulp.watch(['./src/svelte/**/*.svelte'], gulp.series(
       'build-svelte',
       'ks-svelte'
@@ -215,5 +215,6 @@ gulp.task('watch-vue', () => {
   watch.vue();
 });
 gulp.task('watch-svelte', () => {
+  console.log("watch-svelte")
   watch.svelte();
 });

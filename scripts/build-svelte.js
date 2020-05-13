@@ -45,12 +45,12 @@ function buildSvelte(cb) {
     });
 
   // Copy utils
-  const phenomeUtilsSrc = path.resolve('./src/phenome/utils');
-  fs
-    .readdirSync(phenomeUtilsSrc)
-    .forEach((fileName) => {
-      fs.copyFileSync(path.resolve(phenomeUtilsSrc, fileName), path.resolve(output, 'utils', fileName));
-    });
+  // const phenomeUtilsSrc = path.resolve('./src/phenome/utils');
+  // fs
+  //   .readdirSync(phenomeUtilsSrc)
+  //   .forEach((fileName) => {
+  //     fs.copyFileSync(path.resolve(phenomeUtilsSrc, fileName), path.resolve(output, 'utils', fileName));
+  //   });
   const svelteUtilsSrc = path.resolve('./src/svelte/utils');
   fs
     .readdirSync(svelteUtilsSrc)
