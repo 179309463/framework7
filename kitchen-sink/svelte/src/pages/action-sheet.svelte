@@ -4,9 +4,13 @@
   <Block strong>
     <p class="row">
       <!-- One group, open by direct accessing instance .open() method -->
-      <Button class="col" fill onClick={() => actionsOneGroup.open()}>One group</Button>
+      <Button class="col" fill onClick={() => actionsOneGroup11.open()}>One group, three buttons</Button>
+      <Button class="col" fill onClick={() => actionsOneGroup12.open()}>One group, title, three buttons</Button>
+    </p>
+    <p class="row">
       <!--  Two groups, open by "actionsOpen" attribute -->
       <Button class="col" fill actionsOpen="#actions-two-groups">Two groups</Button>
+      <Button class="col" fill actionsOpen="#actions-three-groups">Three groups</Button>
     </p>
     <p>
       <!-- Actions Grid, open by changing actionGridOpened state property -->
@@ -27,7 +31,15 @@
   </Block>
 
   <!-- One Group -->
-  <Actions bind:this={actionsOneGroup}>
+  <Actions bind:this={actionsOneGroup11}>
+    <ActionsGroup>
+      <ActionsButton bold>Button 1</ActionsButton>
+      <ActionsButton>Button 2</ActionsButton>
+      <ActionsButton color="red">取消</ActionsButton>
+    </ActionsGroup>
+  </Actions>
+
+  <Actions bind:this={actionsOneGroup12}>
     <ActionsGroup>
       <ActionsLabel>Do something</ActionsLabel>
       <ActionsButton bold>Button 1</ActionsButton>
@@ -42,6 +54,23 @@
       <ActionsLabel>Do something</ActionsLabel>
       <ActionsButton bold>Button 1</ActionsButton>
       <ActionsButton>Button 2</ActionsButton>
+    </ActionsGroup>
+    <ActionsGroup>
+      <ActionsButton color="red">取消</ActionsButton>
+    </ActionsGroup>
+  </Actions>
+
+  <!-- Three Groups -->
+  <Actions id="actions-three-groups">
+    <ActionsGroup>
+      <ActionsLabel>Share</ActionsLabel>
+      <ActionsButton>Mail</ActionsButton>
+      <ActionsButton>Messages</ActionsButton>
+    </ActionsGroup>
+    <ActionsGroup>
+      <ActionsLabel>Social share</ActionsLabel>
+      <ActionsButton>Facebook</ActionsButton>
+      <ActionsButton>Twitter</ActionsButton>
     </ActionsGroup>
     <ActionsGroup>
       <ActionsButton color="red">取消</ActionsButton>
@@ -86,7 +115,8 @@
 
   let actionGridOpened = false;
 
-  let actionsOneGroup;
+  let actionsOneGroup11;
+  let actionsOneGroup12;
   let actionsToPopover;
   let buttonToPopoverWrapper;
 

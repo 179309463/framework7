@@ -6,8 +6,7 @@ export default class extends React.Component {
     super();
 
     this.state = {
-      actionGridOpened: false,
-      oneGroupOpened: false
+      actionGridOpened: false
     };
   }
 
@@ -18,9 +17,13 @@ export default class extends React.Component {
         <Block strong>
           <p className="row">
             {/* One group, open by direct accessing instance .open() method */}
-            <Button className="col" fill onClick={() => this.refs.actionsOneGroup.open()}>One group</Button>
+            <Button className="col" fill onClick={() => this.refs.actionsOneGroup11.open()}>One group, three buttons</Button>
+            <Button className="col" fill onClick={() => this.refs.actionsOneGroup12.open()}>One group, title, three buttons</Button>
+          </p>
+          <p className="row">
             {/*  Two groups, open by "actionsOpen" attribute */}
             <Button className="col" fill actionsOpen="#actions-two-groups">Two groups</Button>
+            <Button className="col" fill actionsOpen="#actions-three-groups">Three groups</Button>
           </p>
           <p>
             {/* Actions Grid, open by changing actionGridOpened state property */}
@@ -42,7 +45,15 @@ export default class extends React.Component {
         </Block>
 
         {/* One Group */}
-        <Actions ref="actionsOneGroup">
+        <Actions ref="actionsOneGroup11">
+          <ActionsGroup>
+            <ActionsButton bold>Button 1</ActionsButton>
+            <ActionsButton>Button 2</ActionsButton>
+            <ActionsButton color="red">取消</ActionsButton>
+          </ActionsGroup>
+        </Actions>
+
+        <Actions ref="actionsOneGroup12">
           <ActionsGroup>
             <ActionsLabel>Do something</ActionsLabel>
             <ActionsButton bold>Button 1</ActionsButton>
@@ -57,6 +68,23 @@ export default class extends React.Component {
             <ActionsLabel>Do something</ActionsLabel>
             <ActionsButton bold>Button 1</ActionsButton>
             <ActionsButton>Button 2</ActionsButton>
+          </ActionsGroup>
+          <ActionsGroup>
+            <ActionsButton color="red">取消</ActionsButton>
+          </ActionsGroup>
+        </Actions>
+
+        {/* Three Groups */}
+        <Actions id="actions-three-groups">
+          <ActionsGroup>
+            <ActionsLabel>Share</ActionsLabel>
+            <ActionsButton>Mail</ActionsButton>
+            <ActionsButton>Messages</ActionsButton>
+          </ActionsGroup>
+          <ActionsGroup>
+            <ActionsLabel>Social share</ActionsLabel>
+            <ActionsButton>Facebook</ActionsButton>
+            <ActionsButton>Twitter</ActionsButton>
           </ActionsGroup>
           <ActionsGroup>
             <ActionsButton color="red">取消</ActionsButton>
@@ -134,12 +162,6 @@ export default class extends React.Component {
 
     // Open
     this.actionsToPopover.open();
-  }
-
-  setOneGroupOpened(oneGroupOpened) {
-    this.setState({
-      oneGroupOpened
-    });
   }
 
   setActionsGridOpened(actionGridOpened) {

@@ -4,9 +4,13 @@
     <f7-block strong>
       <p class="row">
         <!-- One group, open by direct accessing instance .open() method -->
-        <f7-button class="col" fill @click="$refs.actionsOneGroup.open()">One group</f7-button>
+        <f7-button class="col" fill @click="$refs.actionsOneGroup11.open()">One group, three buttons</f7-button>
+        <f7-button class="col" fill @click="$refs.actionsOneGroup12.open()">One group, title, three buttons</f7-button>
+      </p>
+      <p class="row">
         <!-- Two groups, open by "actions-open" attribute -->
         <f7-button class="col" fill actions-open="#actions-two-groups">Two groups</f7-button>
+        <f7-button class="col" fill actions-open="#actions-three-groups">Three groups</f7-button>
       </p>
       <p>
         <!-- Actions Grid, open by changing actionGridOpened prop -->
@@ -20,7 +24,15 @@
     </f7-block>
 
     <!-- One Group -->
-    <f7-actions ref="actionsOneGroup">
+    <f7-actions ref="actionsOneGroup11">
+      <f7-actions-group>
+        <f7-actions-button bold>Button 1</f7-actions-button>
+        <f7-actions-button>Button 2</f7-actions-button>
+        <f7-actions-button color="red">取消</f7-actions-button>
+      </f7-actions-group>
+    </f7-actions>
+
+    <f7-actions ref="actionsOneGroup12">
       <f7-actions-group>
         <f7-actions-label>Do something</f7-actions-label>
         <f7-actions-button bold>Button 1</f7-actions-button>
@@ -35,6 +47,23 @@
         <f7-actions-label>Do something</f7-actions-label>
         <f7-actions-button bold>Button 1</f7-actions-button>
         <f7-actions-button>Button 2</f7-actions-button>
+      </f7-actions-group>
+      <f7-actions-group>
+        <f7-actions-button color="red">取消</f7-actions-button>
+      </f7-actions-group>
+    </f7-actions>
+
+    <!-- Three Groups -->
+    <f7-actions id="actions-three-groups">
+      <f7-actions-group>
+        <f7-actions-label>Share</f7-actions-label>
+        <f7-actions-button>Mail</f7-actions-button>
+        <f7-actions-button>Messages</f7-actions-button>
+      </f7-actions-group>
+      <f7-actions-group>
+        <f7-actions-label>Social share</f7-actions-label>
+        <f7-actions-button>Facebook</f7-actions-button>
+        <f7-actions-button>Twitter</f7-actions-button>
       </f7-actions-group>
       <f7-actions-group>
         <f7-actions-button color="red">取消</f7-actions-button>
