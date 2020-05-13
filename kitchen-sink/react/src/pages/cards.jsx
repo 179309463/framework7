@@ -18,7 +18,7 @@ export default () => (
       footer="Card footer"
     ></Card>
     <Card
-      content="Another card. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse feugiat sem est, non tincidunt ligula volutpat sit amet. Mauris aliquet magna justo. "
+      content="滚滚长江东逝水，浪花淘尽英雄。是非成败转头空，青山依旧在，几度夕阳红。白发渔樵江渚上，惯看秋月春风。一壶浊酒喜相逢，古今多少事，都付笑谈中。"
     ></Card>
 
     <BlockTitle>Outline Cards</BlockTitle>
@@ -34,7 +34,7 @@ export default () => (
     ></Card>
     <Card
       outline
-      content="Another card. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse feugiat sem est, non tincidunt ligula volutpat sit amet. Mauris aliquet magna justo. "
+      content="滚滚长江东逝水，浪花淘尽英雄。是非成败转头空，青山依旧在，几度夕阳红。白发渔樵江渚上，惯看秋月春风。一壶浊酒喜相逢，古今多少事，都付笑谈中。"
     ></Card>
 
     <BlockTitle>Styled Cards</BlockTitle>
@@ -46,7 +46,7 @@ export default () => (
       >Journey To Mountains</CardHeader>
       <CardContent>
         <p className="date">Posted on January 21, 2015</p>
-        <p>Quisque eget vestibulum nulla. Quisque quis dui quis ex ultricies efficitur vitae non felis. Phasellus quis nibh hendrerit...</p>
+        <p>滚滚长江东逝水，浪花淘尽英雄。是非成败转头空，青山依旧在，几度夕阳红。白发渔樵江渚上，惯看秋月春风。一壶浊酒喜相逢，古今多少事，都付笑谈中。</p>
       </CardContent>
       <CardFooter>
         <Link>Like</Link>
@@ -61,7 +61,7 @@ export default () => (
       >Journey To Mountains</CardHeader>
       <CardContent>
         <p className="date">Posted on January 21, 2015</p>
-        <p>Quisque eget vestibulum nulla. Quisque quis dui quis ex ultricies efficitur vitae non felis. Phasellus quis nibh hendrerit...</p>
+        <p>滚滚长江东逝水，浪花淘尽英雄。是非成败转头空，青山依旧在，几度夕阳红。白发渔樵江渚上，惯看秋月春风。一壶浊酒喜相逢，古今多少事，都付笑谈中。</p>
       </CardContent>
       <CardFooter>
         <Link>Like</Link>

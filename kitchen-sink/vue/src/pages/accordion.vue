@@ -4,11 +4,11 @@
 
     <f7-block-title>List View Accordion</f7-block-title>
     <f7-list accordion-list>
-      <f7-list-item accordion-item title="Lorem Ipsum">
+      <f7-list-item accordion-item title="滚滚长江东逝水">
         <f7-accordion-content>
           <f7-block>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean elementum id neque nec commodo. Sed vel justo at turpis laoreet pellentesque quis sed lorem. Integer semper arcu nibh, non mollis arcu tempor vel. Sed pharetra tortor vitae est rhoncus, vel congue dui sollicitudin. Donec eu arcu dignissim felis viverra blandit suscipit eget ipsum.
+              滚滚长江东逝水，浪花淘尽英雄。是非成败转头空，青山依旧在，几度夕阳红。白发渔樵江渚上，惯看秋月春风。一壶浊酒喜相逢，古今多少事，都付笑谈中。
             </p>
           </f7-block>
         </f7-accordion-content>
@@ -27,7 +27,7 @@
         <f7-accordion-content>
           <f7-block>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean elementum id neque nec commodo. Sed vel justo at turpis laoreet pellentesque quis sed lorem. Integer semper arcu nibh, non mollis arcu tempor vel. Sed pharetra tortor vitae est rhoncus, vel congue dui sollicitudin. Donec eu arcu dignissim felis viverra blandit suscipit eget ipsum.
+              滚滚长江东逝水，浪花淘尽英雄。是非成败转头空，青山依旧在，几度夕阳红。白发渔樵江渚上，惯看秋月春风。一壶浊酒喜相逢，古今多少事，都付笑谈中。
             </p>
           </f7-block>
         </f7-accordion-content>
@@ -36,11 +36,11 @@
 
     <f7-block-title>Inset Accordion</f7-block-title>
     <f7-list accordion-list inset>
-      <f7-list-item accordion-item title="Lorem Ipsum">
+      <f7-list-item accordion-item title="滚滚长江东逝水">
         <f7-accordion-content>
           <f7-block>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean elementum id neque nec commodo. Sed vel justo at turpis laoreet pellentesque quis sed lorem. Integer semper arcu nibh, non mollis arcu tempor vel. Sed pharetra tortor vitae est rhoncus, vel congue dui sollicitudin. Donec eu arcu dignissim felis viverra blandit suscipit eget ipsum.
+              滚滚长江东逝水，浪花淘尽英雄。是非成败转头空，青山依旧在，几度夕阳红。白发渔樵江渚上，惯看秋月春风。一壶浊酒喜相逢，古今多少事，都付笑谈中。
             </p>
           </f7-block>
         </f7-accordion-content>
@@ -59,7 +59,7 @@
         <f7-accordion-content>
           <f7-block>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean elementum id neque nec commodo. Sed vel justo at turpis laoreet pellentesque quis sed lorem. Integer semper arcu nibh, non mollis arcu tempor vel. Sed pharetra tortor vitae est rhoncus, vel congue dui sollicitudin. Donec eu arcu dignissim felis viverra blandit suscipit eget ipsum.
+              滚滚长江东逝水，浪花淘尽英雄。是非成败转头空，青山依旧在，几度夕阳红。白发渔樵江渚上，惯看秋月春风。一壶浊酒喜相逢，古今多少事，都付笑谈中。
             </p>
           </f7-block>
         </f7-accordion-content>
@@ -68,11 +68,11 @@
 
     <f7-block-title>Opposite Side</f7-block-title>
     <f7-list accordion-list accordion-opposite>
-      <f7-list-item accordion-item title="Lorem Ipsum">
+      <f7-list-item accordion-item title="滚滚长江东逝水">
         <f7-accordion-content>
           <f7-block>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean elementum id neque nec commodo. Sed vel justo at turpis laoreet pellentesque quis sed lorem. Integer semper arcu nibh, non mollis arcu tempor vel. Sed pharetra tortor vitae est rhoncus, vel congue dui sollicitudin. Donec eu arcu dignissim felis viverra blandit suscipit eget ipsum.
+              滚滚长江东逝水，浪花淘尽英雄。是非成败转头空，青山依旧在，几度夕阳红。白发渔樵江渚上，惯看秋月春风。一壶浊酒喜相逢，古今多少事，都付笑谈中。
             </p>
           </f7-block>
         </f7-accordion-content>
@@ -91,7 +91,7 @@
         <f7-accordion-content>
           <f7-block>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean elementum id neque nec commodo. Sed vel justo at turpis laoreet pellentesque quis sed lorem. Integer semper arcu nibh, non mollis arcu tempor vel. Sed pharetra tortor vitae est rhoncus, vel congue dui sollicitudin. Donec eu arcu dignissim felis viverra blandit suscipit eget ipsum.
+              滚滚长江东逝水，浪花淘尽英雄。是非成败转头空，青山依旧在，几度夕阳红。白发渔樵江渚上，惯看秋月春风。一壶浊酒喜相逢，古今多少事，都付笑谈中。
             </p>
           </f7-block>
         </f7-accordion-content>
