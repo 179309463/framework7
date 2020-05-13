@@ -47,7 +47,7 @@ export default class extends React.Component {
             <ActionsLabel>Do something</ActionsLabel>
             <ActionsButton bold>Button 1</ActionsButton>
             <ActionsButton>Button 2</ActionsButton>
-            <ActionsButton color="red">Cancel</ActionsButton>
+            <ActionsButton color="red">取消</ActionsButton>
           </ActionsGroup>
         </Actions>
 
@@ -59,7 +59,7 @@ export default class extends React.Component {
             <ActionsButton>Button 2</ActionsButton>
           </ActionsGroup>
           <ActionsGroup>
-            <ActionsButton color="red">Cancel</ActionsButton>
+            <ActionsButton color="red">取消</ActionsButton>
           </ActionsGroup>
         </Actions>
 

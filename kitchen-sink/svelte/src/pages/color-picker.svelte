@@ -10,7 +10,7 @@
   <List noHairlinesMd>
     <ListInput
       type="colorpicker"
-      placeholder="Color"
+      placeholder="颜色"
       readonly
       value={wheePickerValue}
       onColorPickerChange={(value) => wheePickerValue = value}
@@ -31,7 +31,7 @@
   <List noHairlinesMd>
     <ListInput
       type="colorpicker"
-      placeholder="Color"
+      placeholder="颜色"
       readonly
       value={spectrumPickerValue}
       onColorPickerChange={(value) => spectrumPickerValue = value}
@@ -53,7 +53,7 @@
   <List noHairlinesMd>
     <ListInput
       type="colorpicker"
-      placeholder="Color"
+      placeholder="颜色"
       readonly
       value={hsSpectrumPickerValue}
       onColorPickerChange={(value) => hsSpectrumPickerValue = value}
@@ -75,7 +75,7 @@
   <List noHairlinesMd>
     <ListInput
       type="colorpicker"
-      placeholder="Color"
+      placeholder="颜色"
       readonly
       value={rgbPickerValue}
       onColorPickerChange={(value) => rgbPickerValue = value}
@@ -99,7 +99,7 @@
   <List noHairlinesMd>
     <ListInput
       type="colorpicker"
-      placeholder="Color"
+      placeholder="颜色"
       readonly
       value={rgbaPickerValue}
       onColorPickerChange={(value) => rgbaPickerValue = value}
@@ -126,7 +126,7 @@
   <List noHairlinesMd>
     <ListInput
       type="colorpicker"
-      placeholder="Color"
+      placeholder="颜色"
       readonly
       value={hsbPickerValue}
       onColorPickerChange={(value) => hsbPickerValue = value}
@@ -154,7 +154,7 @@
   <List noHairlinesMd>
     <ListInput
       type="colorpicker"
-      placeholder="Color"
+      placeholder="颜色"
       readonly
       value={rgbBarsPickerValue}
       onColorPickerChange={(value) => rgbBarsPickerValue = value}
@@ -182,7 +182,7 @@
   <List noHairlinesMd>
     <ListInput
       type="colorpicker"
-      placeholder="Color"
+      placeholder="颜色"
       readonly
       value={rgbSlidersColorsPickerValue}
       onColorPickerChange={(value) => rgbSlidersColorsPickerValue = value}
@@ -209,7 +209,7 @@
   <List noHairlinesMd>
     <ListInput
       type="colorpicker"
-      placeholder="Color"
+      placeholder="颜色"
       readonly
       value={palettePickerValue}
       onColorPickerChange={(value) => palettePickerValue = value}
@@ -246,7 +246,7 @@
   <List noHairlinesMd>
     <ListInput
       type="colorpicker"
-      placeholder="Color"
+      placeholder="颜色"
       readonly
       value={proPickerValue}
       onColorPickerChange={(value) => proPickerValue = value}

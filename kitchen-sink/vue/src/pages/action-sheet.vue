@@ -25,7 +25,7 @@
         <f7-actions-label>Do something</f7-actions-label>
         <f7-actions-button bold>Button 1</f7-actions-button>
         <f7-actions-button>Button 2</f7-actions-button>
-        <f7-actions-button color="red">Cancel</f7-actions-button>
+        <f7-actions-button color="red">取消</f7-actions-button>
       </f7-actions-group>
     </f7-actions>
 
@@ -37,7 +37,7 @@
         <f7-actions-button>Button 2</f7-actions-button>
       </f7-actions-group>
       <f7-actions-group>
-        <f7-actions-button color="red">Cancel</f7-actions-button>
+        <f7-actions-button color="red">取消</f7-actions-button>
       </f7-actions-group>
     </f7-actions>
 

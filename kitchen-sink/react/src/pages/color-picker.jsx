@@ -51,7 +51,7 @@ export default class extends React.Component {
         <List noHairlinesMd>
           <ListInput
             type="colorpicker"
-            placeholder="Color"
+            placeholder="颜色"
             readonly
             value={this.state.wheePickerValue}
             onColorPickerChange={(value) => this.setState({wheePickerValue: value})}
@@ -72,7 +72,7 @@ export default class extends React.Component {
         <List noHairlinesMd>
           <ListInput
             type="colorpicker"
-            placeholder="Color"
+            placeholder="颜色"
             readonly
             value={this.state.spectrumPickerValue}
             onColorPickerChange={(value) => this.setState({spectrumPickerValue: value})}
@@ -94,7 +94,7 @@ export default class extends React.Component {
         <List noHairlinesMd>
           <ListInput
             type="colorpicker"
-            placeholder="Color"
+            placeholder="颜色"
             readonly
             value={this.state.hsSpectrumPickerValue}
             onColorPickerChange={(value) => this.setState({hsSpectrumPickerValue: value})}
@@ -116,7 +116,7 @@ export default class extends React.Component {
         <List noHairlinesMd>
           <ListInput
             type="colorpicker"
-            placeholder="Color"
+            placeholder="颜色"
             readonly
             value={this.state.rgbPickerValue}
             onColorPickerChange={(value) => this.setState({rgbPickerValue: value})}
@@ -140,7 +140,7 @@ export default class extends React.Component {
         <List noHairlinesMd>
           <ListInput
             type="colorpicker"
-            placeholder="Color"
+            placeholder="颜色"
             readonly
             value={this.state.rgbaPickerValue}
             onColorPickerChange={(value) => this.setState({rgbaPickerValue: value})}
@@ -167,7 +167,7 @@ export default class extends React.Component {
         <List noHairlinesMd>
           <ListInput
             type="colorpicker"
-            placeholder="Color"
+            placeholder="颜色"
             readonly
             value={this.state.hsbPickerValue}
             onColorPickerChange={(value) => this.setState({hsbPickerValue: value})}
@@ -195,7 +195,7 @@ export default class extends React.Component {
         <List noHairlinesMd>
           <ListInput
             type="colorpicker"
-            placeholder="Color"
+            placeholder="颜色"
             readonly
             value={this.state.rgbBarsPickerValue}
             onColorPickerChange={(value) => this.setState({rgbBarsPickerValue: value})}
@@ -223,7 +223,7 @@ export default class extends React.Component {
         <List noHairlinesMd>
           <ListInput
             type="colorpicker"
-            placeholder="Color"
+            placeholder="颜色"
             readonly
             value={this.state.rgbSlidersColorsPickerValue}
             onColorPickerChange={(value) => this.setState({rgbSlidersColorsPickerValue: value})}
@@ -250,7 +250,7 @@ export default class extends React.Component {
         <List noHairlinesMd>
           <ListInput
             type="colorpicker"
-            placeholder="Color"
+            placeholder="颜色"
             readonly
             value={this.state.palettePickerValue}
             onColorPickerChange={(value) => this.setState({palettePickerValue: value})}
@@ -287,7 +287,7 @@ export default class extends React.Component {
         <List noHairlinesMd>
           <ListInput
             type="colorpicker"
-            placeholder="Color"
+            placeholder="颜色"
             readonly
             value={this.state.proPickerValue}
             onColorPickerChange={(value) => this.setState({proPickerValue: value})}

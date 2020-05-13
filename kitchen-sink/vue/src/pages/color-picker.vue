@@ -11,7 +11,7 @@
     <f7-list no-hairlines-md>
       <f7-list-input
         type="colorpicker"
-        placeholder="Color"
+        placeholder="颜色"
         readonly
         :value="wheePickerValue"
         @colorpicker:change="(value) => wheePickerValue = value"
@@ -32,7 +32,7 @@
     <f7-list no-hairlines-md>
       <f7-list-input
         type="colorpicker"
-        placeholder="Color"
+        placeholder="颜色"
         readonly
         :value="spectrumPickerValue"
         @colorpicker:change="(value) => spectrumPickerValue = value"
@@ -54,7 +54,7 @@
     <f7-list no-hairlines-md>
       <f7-list-input
         type="colorpicker"
-        placeholder="Color"
+        placeholder="颜色"
         readonly
         :value="hsSpectrumPickerValue"
         @colorpicker:change="(value) => hsSpectrumPickerValue = value"
@@ -76,7 +76,7 @@
     <f7-list no-hairlines-md>
       <f7-list-input
         type="colorpicker"
-        placeholder="Color"
+        placeholder="颜色"
         readonly
         :value="rgbPickerValue"
         @colorpicker:change="(value) => rgbPickerValue = value"
@@ -100,7 +100,7 @@
     <f7-list no-hairlines-md>
       <f7-list-input
         type="colorpicker"
-        placeholder="Color"
+        placeholder="颜色"
         readonly
         :value="rgbaPickerValue"
         @colorpicker:change="(value) => rgbaPickerValue = value"
@@ -127,7 +127,7 @@
     <f7-list no-hairlines-md>
       <f7-list-input
         type="colorpicker"
-        placeholder="Color"
+        placeholder="颜色"
         readonly
         :value="hsbPickerValue"
         @colorpicker:change="(value) => hsbPickerValue = value"
@@ -155,7 +155,7 @@
     <f7-list no-hairlines-md>
       <f7-list-input
         type="colorpicker"
-        placeholder="Color"
+        placeholder="颜色"
         readonly
         :value="rgbBarsPickerValue"
         @colorpicker:change="(value) => rgbBarsPickerValue = value"
@@ -183,7 +183,7 @@
     <f7-list no-hairlines-md>
       <f7-list-input
         type="colorpicker"
-        placeholder="Color"
+        placeholder="颜色"
         readonly
         :value="rgbSlidersColorsPickerValue"
         @colorpicker:change="(value) => rgbSlidersColorsPickerValue = value"
@@ -210,7 +210,7 @@
     <f7-list no-hairlines-md>
       <f7-list-input
         type="colorpicker"
-        placeholder="Color"
+        placeholder="颜色"
         readonly
         :value="palettePickerValue"
         @colorpicker:change="(value) => palettePickerValue = value"
@@ -247,7 +247,7 @@
     <f7-list no-hairlines-md>
       <f7-list-input
         type="colorpicker"
-        placeholder="Color"
+        placeholder="颜色"
         readonly
         :value="proPickerValue"
         @colorpicker:change="(value) => proPickerValue = value"

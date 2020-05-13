@@ -5,11 +5,11 @@
         <form class="searchbar" id="searchbar-autocomplete">
           <div class="searchbar-inner">
             <div class="searchbar-input-wrap">
-              <input type="search" placeholder="Search"/>
+              <input type="search" placeholder="搜索..."/>
               <i class="searchbar-icon"></i>
               <span class="input-clear-button"></span>
             </div>
-            <span class="searchbar-disable-button" v-if="!$theme.aurora">Cancel</span>
+            <span class="searchbar-disable-button" v-if="!$theme.aurora">取消</span>
           </div>
         </form>
       </div>

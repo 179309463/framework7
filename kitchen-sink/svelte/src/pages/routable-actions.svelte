@@ -5,7 +5,7 @@
     <ActionsButton>Action 2</ActionsButton>
   </ActionsGroup>
   <ActionsGroup>
-    <ActionsButton color="red">Cancel</ActionsButton>
+    <ActionsButton color="red">取消</ActionsButton>
   </ActionsGroup>
 </Actions>
 <script>
