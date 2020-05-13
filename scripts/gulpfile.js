@@ -81,7 +81,7 @@ const watch = {
     ));
     gulp.watch(['./src/svelte/**/*.js', './src/svelte/**/*.svelte'], gulp.series(
       'build-svelte',
-      'ks-svelte',
+      'ks-svelte'
     ));
     gulp.watch(['./kitchen-sink/react/src/**/*.js', './kitchen-sink/react/src/**/*.jsx'], gulp.series(
       'ks-react'
