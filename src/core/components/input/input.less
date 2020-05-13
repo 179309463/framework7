@@ -430,6 +430,25 @@ textarea {
   }
 });
 
+.item-input-wrap{
+  display: flex;
+  align-items: center;
+  .icon, 
+  .f7-icons,
+  .material-icons {
+    font-size: var(--f7-input-font-size);
+  }
+}
+.input-with-value ~ .input-clear-button, 
+.item-input-with-value .input-clear-button, 
+.input-with-value .input-clear-button{
+  ~ .icon, 
+  ~ .f7-icons,
+  ~ .material-icons {
+    visibility: hidden;
+  }
+}
+
 .if-ios-theme({
   @import url('./input-ios.less');
 });
