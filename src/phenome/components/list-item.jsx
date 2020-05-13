@@ -70,6 +70,7 @@ export default {
 
     // Inputs
     checkbox: Boolean,
+    checkboxIcon: String,
     radio: Boolean,
     radioIcon: String,
     checked: Boolean,
@@ -127,6 +128,7 @@ export default {
       accordionItemOpened,
       smartSelect,
       checkbox,
+      checkboxIcon,
       radio,
       radioIcon,
       checked,
@@ -167,6 +169,7 @@ export default {
           mediaList={isMedia}
           accordionItem={accordionItem}
           checkbox={checkbox}
+          checkboxIcon={checkboxIcon}
           checked={checked}
           defaultChecked={defaultChecked}
           indeterminate={indeterminate}

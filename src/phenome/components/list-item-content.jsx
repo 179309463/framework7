@@ -25,6 +25,7 @@ export default {
     mediaItem: Boolean,
 
     checkbox: Boolean,
+    checkboxIcon: String,
     checked: Boolean,
     defaultChecked: Boolean,
     indeterminate: Boolean,
@@ -48,6 +49,7 @@ export default {
       radio,
       radioIcon,
       checkbox,
+      checkboxIcon,
       value,
       name,
       checked,
@@ -293,6 +295,8 @@ export default {
       'item-content',
       {
         'item-checkbox': checkbox,
+        'item-checkbox-icon-start': checkbox && checkboxIcon === 'start',
+        'item-checkbox-icon-end': checkbox && checkboxIcon === 'end',
         'item-radio': radio,
         'item-radio-icon-start': radio && radioIcon === 'start',
         'item-radio-icon-end': radio && radioIcon === 'end',

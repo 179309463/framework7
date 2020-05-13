@@ -8,16 +8,24 @@
 
     <f7-block-title>Checkbox Group</f7-block-title>
     <f7-list>
-      <f7-list-item checkbox title="Books" name="demo-checkbox" checked></f7-list-item>
-      <f7-list-item checkbox title="Movies" name="demo-checkbox"></f7-list-item>
-      <f7-list-item checkbox title="Food" name="demo-checkbox"></f7-list-item>
-      <f7-list-item checkbox title="Drinks" name="demo-checkbox"></f7-list-item>
+      <f7-list-item checkbox checkbox-icon="start" title="Books" name="demo-checkbox" checked></f7-list-item>
+      <f7-list-item checkbox checkbox-icon="start" title="Movies" name="demo-checkbox"></f7-list-item>
+      <f7-list-item checkbox checkbox-icon="start" title="Food" name="demo-checkbox"></f7-list-item>
+      <f7-list-item checkbox checkbox-icon="start" title="Drinks" name="demo-checkbox"></f7-list-item>
+    </f7-list>
+
+    <f7-list>
+      <f7-list-item checkbox checkbox-icon="end" title="Books" name="demo-checkbox" checked></f7-list-item>
+      <f7-list-item checkbox checkbox-icon="end" title="Movies" name="demo-checkbox"></f7-list-item>
+      <f7-list-item checkbox checkbox-icon="end" title="Food" name="demo-checkbox"></f7-list-item>
+      <f7-list-item checkbox checkbox-icon="end" title="Drinks" name="demo-checkbox"></f7-list-item>
     </f7-list>
 
     <f7-block-title>Indeterminate State</f7-block-title>
     <f7-list>
       <f7-list-item
         checkbox
+        checkbox-icon="start"
         title="Movies"
         name="demo-checkbox"
         :checked="movies.length === 2"
@@ -27,6 +35,7 @@
         <ul slot="root">
           <f7-list-item
             checkbox
+            checkbox-icon="start"
             title="Movie 1"
             name="demo-checkbox"
             value="Movie 1"
@@ -35,6 +44,7 @@
           />
           <f7-list-item
             checkbox
+            checkbox-icon="start"
             title="Movie 2"
             name="demo-checkbox"
             value="Movie 2"
@@ -49,6 +59,7 @@
     <f7-list media-list>
       <f7-list-item
         checkbox
+        checkbox-icon="start"
         checked
         name="demo-media-checkbox"
         title="Facebook"
@@ -58,6 +69,7 @@
       ></f7-list-item>
       <f7-list-item
         checkbox
+        checkbox-icon="start"
         name="demo-media-checkbox"
         title="John Doe (via Twitter)"
         after="17:11"
@@ -66,6 +78,7 @@
       ></f7-list-item>
       <f7-list-item
         checkbox
+        checkbox-icon="start"
         name="demo-media-checkbox"
         title="Facebook"
         after="16:48"
@@ -74,6 +87,47 @@
       ></f7-list-item>
       <f7-list-item
         checkbox
+        checkbox-icon="start"
+        name="demo-media-checkbox"
+        title="John Doe (via Twitter)"
+        after="15:32"
+        subtitle="John Doe (@_johndoe) mentioned you on Twitter!"
+        text="滚滚长江东逝水，浪花淘尽英雄。是非成败转头空，青山依旧在，几度夕阳红。白发渔樵江渚上，惯看秋月春风。一壶浊酒喜相逢，古今多少事，都付笑谈中。"
+      ></f7-list-item>
+    </f7-list>
+
+    <f7-list media-list>
+      <f7-list-item
+        checkbox
+        checkbox-icon="end"
+        checked
+        name="demo-media-checkbox"
+        title="Facebook"
+        after="17:14"
+        subtitle="New messages from John Doe"
+        text="滚滚长江东逝水，浪花淘尽英雄。是非成败转头空，青山依旧在，几度夕阳红。白发渔樵江渚上，惯看秋月春风。一壶浊酒喜相逢，古今多少事，都付笑谈中。"
+      ></f7-list-item>
+      <f7-list-item
+        checkbox
+        checkbox-icon="end"
+        name="demo-media-checkbox"
+        title="John Doe (via Twitter)"
+        after="17:11"
+        subtitle="John Doe (@_johndoe) mentioned you on Twitter!"
+        text="滚滚长江东逝水，浪花淘尽英雄。是非成败转头空，青山依旧在，几度夕阳红。白发渔樵江渚上，惯看秋月春风。一壶浊酒喜相逢，古今多少事，都付笑谈中。"
+      ></f7-list-item>
+      <f7-list-item
+        checkbox
+        checkbox-icon="end"
+        name="demo-media-checkbox"
+        title="Facebook"
+        after="16:48"
+        subtitle="New messages from John Doe"
+        text="滚滚长江东逝水，浪花淘尽英雄。是非成败转头空，青山依旧在，几度夕阳红。白发渔樵江渚上，惯看秋月春风。一壶浊酒喜相逢，古今多少事，都付笑谈中。"
+      ></f7-list-item>
+      <f7-list-item
+        checkbox
+        checkbox-icon="end"
         name="demo-media-checkbox"
         title="John Doe (via Twitter)"
         after="15:32"

@@ -7,16 +7,24 @@
 
   <BlockTitle>Checkbox Group</BlockTitle>
   <List>
-    <ListItem checkbox title="Books" name="demo-checkbox" checked></ListItem>
-    <ListItem checkbox title="Movies" name="demo-checkbox"></ListItem>
-    <ListItem checkbox title="Food" name="demo-checkbox"></ListItem>
-    <ListItem checkbox title="Drinks" name="demo-checkbox"></ListItem>
+    <ListItem checkbox checkboxIcon="start" title="Books" name="demo-checkbox" checked></ListItem>
+    <ListItem checkbox checkboxIcon="start" title="Movies" name="demo-checkbox"></ListItem>
+    <ListItem checkbox checkboxIcon="start" title="Food" name="demo-checkbox"></ListItem>
+    <ListItem checkbox checkboxIcon="start" title="Drinks" name="demo-checkbox"></ListItem>
+  </List>
+
+  <List>
+    <ListItem checkbox checkboxIcon="end" title="Books" name="demo-checkbox" checked></ListItem>
+    <ListItem checkbox checkboxIcon="end" title="Movies" name="demo-checkbox"></ListItem>
+    <ListItem checkbox checkboxIcon="end" title="Food" name="demo-checkbox"></ListItem>
+    <ListItem checkbox checkboxIcon="end" title="Drinks" name="demo-checkbox"></ListItem>
   </List>
 
   <BlockTitle>Indeterminate State</BlockTitle>
   <List>
     <ListItem
       checkbox
+      checkboxIcon="start"
       title="Movies"
       name="demo-checkbox"
       checked={movies.length === 2}
@@ -26,6 +34,7 @@
       <ul slot="root">
         <ListItem
           checkbox
+          checkboxIcon="start"
           title="Movie 1"
           name="demo-checkbox"
           value="Movie 1"
@@ -34,6 +43,7 @@
         />
         <ListItem
           checkbox
+          checkboxIcon="start"
           title="Movie 2"
           name="demo-checkbox"
           value="Movie 2"
@@ -48,6 +58,7 @@
   <List mediaList>
     <ListItem
       checkbox
+      checkboxIcon="start"
       checked
       name="demo-media-checkbox"
       title="Facebook"
@@ -57,6 +68,7 @@
     ></ListItem>
     <ListItem
       checkbox
+      checkboxIcon="start"
       name="demo-media-checkbox"
       title="John Doe (via Twitter)"
       after="17:11"
@@ -65,6 +77,7 @@
     ></ListItem>
     <ListItem
       checkbox
+      checkboxIcon="start"
       name="demo-media-checkbox"
       title="Facebook"
       after="16:48"
@@ -73,6 +86,47 @@
     ></ListItem>
     <ListItem
       checkbox
+      checkboxIcon="start"
+      name="demo-media-checkbox"
+      title="John Doe (via Twitter)"
+      after="15:32"
+      subtitle="John Doe (@_johndoe) mentioned you on Twitter!"
+      text="滚滚长江东逝水，浪花淘尽英雄。是非成败转头空，青山依旧在，几度夕阳红。白发渔樵江渚上，惯看秋月春风。一壶浊酒喜相逢，古今多少事，都付笑谈中。"
+    ></ListItem>
+  </List>
+
+  <List mediaList>
+    <ListItem
+      checkbox
+      checkboxIcon="end"
+      checked
+      name="demo-media-checkbox"
+      title="Facebook"
+      after="17:14"
+      subtitle="New messages from John Doe"
+      text="滚滚长江东逝水，浪花淘尽英雄。是非成败转头空，青山依旧在，几度夕阳红。白发渔樵江渚上，惯看秋月春风。一壶浊酒喜相逢，古今多少事，都付笑谈中。"
+    ></ListItem>
+    <ListItem
+      checkbox
+      checkboxIcon="end"
+      name="demo-media-checkbox"
+      title="John Doe (via Twitter)"
+      after="17:11"
+      subtitle="John Doe (@_johndoe) mentioned you on Twitter!"
+      text="滚滚长江东逝水，浪花淘尽英雄。是非成败转头空，青山依旧在，几度夕阳红。白发渔樵江渚上，惯看秋月春风。一壶浊酒喜相逢，古今多少事，都付笑谈中。"
+    ></ListItem>
+    <ListItem
+      checkbox
+      checkboxIcon="end"
+      name="demo-media-checkbox"
+      title="Facebook"
+      after="16:48"
+      subtitle="New messages from John Doe"
+      text="滚滚长江东逝水，浪花淘尽英雄。是非成败转头空，青山依旧在，几度夕阳红。白发渔樵江渚上，惯看秋月春风。一壶浊酒喜相逢，古今多少事，都付笑谈中。"
+    ></ListItem>
+    <ListItem
+      checkbox
+      checkboxIcon="end"
       name="demo-media-checkbox"
       title="John Doe (via Twitter)"
       after="15:32"
