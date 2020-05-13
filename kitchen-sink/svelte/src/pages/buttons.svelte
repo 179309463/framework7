@@ -9,10 +9,10 @@
         <Button>Button</Button>
       </Col>
       <Col>
-        <Button>Button</Button>
+        <Button round>Round</Button>
       </Col>
       <Col>
-        <Button round>Round</Button>
+        <Button rectangle>Rectangle</Button>
       </Col>
     </Row>
   </Block>
@@ -24,10 +24,10 @@
         <Button fill>Button</Button>
       </Col>
       <Col>
-        <Button fill>Button</Button>
+        <Button fill round>Round</Button>
       </Col>
       <Col>
-        <Button fill round>Round</Button>
+        <Button fill rectangle>Rectangle</Button>
       </Col>
     </Row>
   </Block>
@@ -39,10 +39,10 @@
         <Button outline>Button</Button>
       </Col>
       <Col>
-        <Button outline>Button</Button>
+        <Button outline round>Round</Button>
       </Col>
       <Col>
-        <Button outline round>Round</Button>
+        <Button outline rectangle>Rectangle</Button>
       </Col>
     </Row>
   </Block>
@@ -69,6 +69,17 @@
       </Col>
       <Col tag="span">
         <Button raised outline round>Outline</Button>
+      </Col>
+    </Row>
+    <Row tag="p">
+      <Col tag="span">
+        <Button raised rectangle>Rectangle</Button>
+      </Col>
+      <Col tag="span">
+        <Button raised fill rectangle>Fill</Button>
+      </Col>
+      <Col tag="span">
+        <Button raised outline rectangle>Outline</Button>
       </Col>
     </Row>
   </Block>
@@ -100,10 +111,20 @@
       <Button round>Button</Button>
       <Button round active>Active</Button>
     </Segmented>
+    <Segmented raised rectangle tag="p">
+      <Button rectangle>Button</Button>
+      <Button rectangle>Button</Button>
+      <Button rectangle active>Active</Button>
+    </Segmented>
     <Segmented round tag="p">
       <Button round outline>Outline</Button>
       <Button round outline>Outline</Button>
       <Button round outline active>Active</Button>
+    </Segmented>
+    <Segmented rectangle tag="p">
+      <Button rectangle outline>Outline</Button>
+      <Button rectangle outline>Outline</Button>
+      <Button rectangle outline active>Active</Button>
     </Segmented>
   </Block>
 
@@ -114,23 +135,43 @@
         <Button large>Button</Button>
       </Col>
       <Col tag="span">
+        <Button large outline>Outline</Button>
+      </Col>
+      <Col tag="span">
         <Button large fill>Fill</Button>
       </Col>
     </Row>
     <Row tag="p">
       <Col tag="span">
-        <Button large raised>Raised</Button>
+        <Button large raised>Button</Button>
       </Col>
       <Col tag="span">
-        <Button large raised fill>Raised Fill</Button>
+        <Button large outline raised>Outline</Button>
+      </Col>
+      <Col tag="span">
+        <Button large fill raised>Fill</Button>
+      </Col>
+    </Row>   
+    <Row tag="p">
+      <Col tag="span">
+        <Button large round>Button</Button>
+      </Col>
+      <Col tag="span">
+        <Button large outline round>Outline</Button>
+      </Col>
+      <Col tag="span">
+        <Button large fill round>Fill</Button>
       </Col>
     </Row>
     <Row tag="p">
       <Col tag="span">
-        <Button large round>Round</Button>
+        <Button large rectangle>Button</Button>
       </Col>
       <Col tag="span">
-        <Button large round fill>Round Fill</Button>
+        <Button large outline rectangle>Outline</Button>
+      </Col>
+      <Col tag="span">
+        <Button large fill rectangle>Fill</Button>
       </Col>
     </Row>
   </Block>
@@ -139,24 +180,46 @@
   <Block strong>
     <Row tag="p">
       <Col tag="span">
-        <Button large small>Button</Button>
+        <Button small>Button</Button>
       </Col>
       <Col tag="span">
-        <Button large small outline>Outline</Button>
+        <Button small outline>Outline</Button>
       </Col>
       <Col tag="span">
-        <Button large small fill>Fill</Button>
+        <Button small fill>Fill</Button>
       </Col>
     </Row>
     <Row tag="p">
       <Col tag="span">
-        <Button large small round>Button</Button>
+        <Button small raised>Button</Button>
       </Col>
       <Col tag="span">
-        <Button large small outline round>Outline</Button>
+        <Button small outline raised>Outline</Button>
       </Col>
       <Col tag="span">
-        <Button large small fill round>Fill</Button>
+        <Button small fill raised>Fill</Button>
+      </Col>
+    </Row>   
+    <Row tag="p">
+      <Col tag="span">
+        <Button small round>Button</Button>
+      </Col>
+      <Col tag="span">
+        <Button small outline round>Outline</Button>
+      </Col>
+      <Col tag="span">
+        <Button small fill round>Fill</Button>
+      </Col>
+    </Row>
+    <Row tag="p">
+      <Col tag="span">
+        <Button small rectangle>Button</Button>
+      </Col>
+      <Col tag="span">
+        <Button small outline rectangle>Outline</Button>
+      </Col>
+      <Col tag="span">
+        <Button small fill rectangle>Fill</Button>
       </Col>
     </Row>
   </Block>

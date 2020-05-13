@@ -9,10 +9,10 @@
           <f7-button>Button</f7-button>
         </f7-col>
         <f7-col>
-          <f7-button>Button</f7-button>
+          <f7-button round>Round</f7-button>
         </f7-col>
         <f7-col>
-          <f7-button round>Round</f7-button>
+          <f7-button rectangle>Rectangle</f7-button>
         </f7-col>
       </f7-row>
     </f7-block>
@@ -24,10 +24,10 @@
           <f7-button fill>Button</f7-button>
         </f7-col>
         <f7-col>
-          <f7-button fill>Button</f7-button>
+          <f7-button fill round>Round</f7-button>
         </f7-col>
         <f7-col>
-          <f7-button fill round>Round</f7-button>
+          <f7-button fill rectangle>Rectangle</f7-button>
         </f7-col>
       </f7-row>
     </f7-block>
@@ -39,10 +39,10 @@
           <f7-button outline>Button</f7-button>
         </f7-col>
         <f7-col>
-          <f7-button outline>Button</f7-button>
+          <f7-button outline round>Round</f7-button>
         </f7-col>
         <f7-col>
-          <f7-button outline round>Round</f7-button>
+          <f7-button outline rectangle>Rectangle</f7-button>
         </f7-col>
       </f7-row>
     </f7-block>
@@ -69,6 +69,17 @@
         </f7-col>
         <f7-col tag="span">
           <f7-button raised outline round>Outline</f7-button>
+        </f7-col>
+      </f7-row>
+      <f7-row tag="p">
+        <f7-col tag="span">
+          <f7-button raised rectangle>Rectangle</f7-button>
+        </f7-col>
+        <f7-col tag="span">
+          <f7-button raised fill rectangle>Fill</f7-button>
+        </f7-col>
+        <f7-col tag="span">
+          <f7-button raised outline rectangle>Outline</f7-button>
         </f7-col>
       </f7-row>
     </f7-block>
@@ -100,10 +111,20 @@
         <f7-button round>Button</f7-button>
         <f7-button round active>Active</f7-button>
       </f7-segmented>
+      <f7-segmented raised rectangle tag="p">
+        <f7-button rectangle>Button</f7-button>
+        <f7-button rectangle>Button</f7-button>
+        <f7-button rectangle active>Active</f7-button>
+      </f7-segmented>
       <f7-segmented round tag="p">
         <f7-button round outline>Outline</f7-button>
         <f7-button round outline>Outline</f7-button>
         <f7-button round outline active>Active</f7-button>
+      </f7-segmented>
+      <f7-segmented rectangle tag="p">
+        <f7-button rectangle outline>Outline</f7-button>
+        <f7-button rectangle outline>Outline</f7-button>
+        <f7-button rectangle outline active>Active</f7-button>
       </f7-segmented>
     </f7-block>
 
@@ -114,15 +135,43 @@
           <f7-button large>Button</f7-button>
         </f7-col>
         <f7-col tag="span">
+          <f7-button large outline>Outline</f7-button>
+        </f7-col>
+        <f7-col tag="span">
           <f7-button large fill>Fill</f7-button>
         </f7-col>
       </f7-row>
       <f7-row tag="p">
         <f7-col tag="span">
-          <f7-button large raised>Raised</f7-button>
+          <f7-button large raised>Button</f7-button>
         </f7-col>
         <f7-col tag="span">
-          <f7-button large raised fill>Raised Fill</f7-button>
+          <f7-button large raised outline>Outline</f7-button>
+        </f7-col>
+        <f7-col tag="span">
+          <f7-button large raised fill>Fill</f7-button>
+        </f7-col>
+      </f7-row>
+      <f7-row tag="p">
+        <f7-col tag="span">
+          <f7-button large round>Button</f7-button>
+        </f7-col>
+        <f7-col tag="span">
+          <f7-button large outline round>Outline</f7-button>
+        </f7-col>
+        <f7-col tag="span">
+          <f7-button large fill round>Fill</f7-button>
+        </f7-col>
+      </f7-row>
+      <f7-row tag="p">
+        <f7-col tag="span">
+          <f7-button large rectangle>Button</f7-button>
+        </f7-col>
+        <f7-col tag="span">
+          <f7-button large outline rectangle>Outline</f7-button>
+        </f7-col>
+        <f7-col tag="span">
+          <f7-button large fill rectangle>Fill</f7-button>
         </f7-col>
       </f7-row>
     </f7-block>
@@ -131,24 +180,46 @@
     <f7-block strong>
       <f7-row tag="p">
         <f7-col tag="span">
-          <f7-button large small>Button</f7-button>
+          <f7-button small>Button</f7-button>
         </f7-col>
         <f7-col tag="span">
-          <f7-button large small outline>Outline</f7-button>
+          <f7-button small outline>Outline</f7-button>
         </f7-col>
         <f7-col tag="span">
-          <f7-button large small fill>Fill</f7-button>
+          <f7-button small fill>Fill</f7-button>
         </f7-col>
       </f7-row>
       <f7-row tag="p">
         <f7-col tag="span">
-          <f7-button large small round>Button</f7-button>
+          <f7-button small raised>Button</f7-button>
         </f7-col>
         <f7-col tag="span">
-          <f7-button large small outline round>Outline</f7-button>
+          <f7-button small raised outline>Outline</f7-button>
         </f7-col>
         <f7-col tag="span">
-          <f7-button large small fill round>Fill</f7-button>
+          <f7-button small raised fill>Fill</f7-button>
+        </f7-col>
+      </f7-row>
+      <f7-row tag="p">
+        <f7-col tag="span">
+          <f7-button small round>Button</f7-button>
+        </f7-col>
+        <f7-col tag="span">
+          <f7-button small outline round>Outline</f7-button>
+        </f7-col>
+        <f7-col tag="span">
+          <f7-button small fill round>Fill</f7-button>
+        </f7-col>
+      </f7-row>
+      <f7-row tag="p">
+        <f7-col tag="span">
+          <f7-button small rectangle>Button</f7-button>
+        </f7-col>
+        <f7-col tag="span">
+          <f7-button small outline rectangle>Outline</f7-button>
+        </f7-col>
+        <f7-col tag="span">
+          <f7-button small fill rectangle>Fill</f7-button>
         </f7-col>
       </f7-row>
     </f7-block>

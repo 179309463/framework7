@@ -10,6 +10,10 @@
   export let raisedIos = false;
   export let raisedMd = false;
   export let raisedAurora = false;
+  export let rectangle = false;
+  export let rectangleIos = false;
+  export let rectangleMd = false;
+  export let rectangleAurora = false;
   export let round = false;
   export let roundIos = false;
   export let roundMd = false;
@@ -28,6 +32,10 @@
       'segmented-raised-ios': raisedIos,
       'segmented-raised-aurora': raisedAurora,
       'segmented-raised-md': raisedMd,
+      'segmented-rectangle': rectangle,
+      'segmented-rectangle-ios': rectangleIos,
+      'segmented-rectangle-aurora': rectangleAurora,
+      'segmented-rectangle-md': rectangleMd,
       'segmented-round': round,
       'segmented-round-ios': roundIos,
       'segmented-round-aurora': roundAurora,

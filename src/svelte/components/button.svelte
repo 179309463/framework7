@@ -18,6 +18,10 @@
   export let type = undefined;
   export let href = '#';
   export let target = undefined;
+  export let rectangle = false;
+  export let rectangleMd = false;
+  export let rectangleIos = false;
+  export let rectangleAurora = false;
   export let round = false;
   export let roundMd = false;
   export let roundIos = false;
@@ -71,6 +75,10 @@
       'tab-link': tabLink || tabLink === '',
       'tab-link-active': tabLinkActive,
 
+      'button-rectangle': rectangle,
+      'button-rectangle-ios': rectangleIos,
+      'button-rectangle-aurora': rectangleAurora,
+      'button-rectangle-md': rectangleMd,
       'button-round': round,
       'button-round-ios': roundIos,
       'button-round-aurora': roundAurora,
