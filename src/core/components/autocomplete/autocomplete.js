@@ -28,11 +28,11 @@ export default {
       textProperty: 'text',
 
       openIn: 'page', // or 'popup' or 'dropdown'
-      pageBackLinkText: 'Back',
-      popupCloseLinkText: 'Close',
+      pageBackLinkText: '返回',
+      popupCloseLinkText: '关闭',
       pageTitle: undefined,
-      searchbarPlaceholder: 'Search...',
-      searchbarDisableText: 'Cancel',
+      searchbarPlaceholder: '搜索...',
+      searchbarDisableText: '取消',
       searchbarDisableButton: undefined,
 
       popupPush: false,
@@ -42,7 +42,7 @@ export default {
 
       autoFocus: false,
       closeOnSelect: false,
-      notFoundText: 'Nothing found',
+      notFoundText: '查无数据',
       requestSourceOnOpen: false,
 
       // Preloader
