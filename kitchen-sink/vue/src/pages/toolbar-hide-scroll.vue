@@ -1,6 +1,6 @@
 <template>
   <f7-page hide-toolbar-on-scroll>
-    <f7-navbar title="Hide Toolbar On Scroll" back-link="Back"></f7-navbar>
+    <f7-navbar title="Hide Toolbar On Scroll" back-link="返回"></f7-navbar>
     <f7-toolbar bottom>
       <f7-link>Left Link</f7-link>
       <f7-link>Right Link</f7-link>

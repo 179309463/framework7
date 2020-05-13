@@ -1,6 +1,6 @@
 <template>
   <f7-page @page:beforeremove="onPageBeforeRemove">
-    <f7-navbar title="Action Sheet" back-link="Back"></f7-navbar>
+    <f7-navbar title="Action Sheet" back-link="返回"></f7-navbar>
     <f7-block strong>
       <p class="row">
         <!-- One group, open by direct accessing instance .open() method -->
@@ -118,7 +118,7 @@ export default {
               text: 'Button 2',
             },
             {
-              text: 'Cancel',
+              text: '取消',
               color: 'red',
             },
           ],

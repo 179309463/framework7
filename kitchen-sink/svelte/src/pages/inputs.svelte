@@ -1,5 +1,5 @@
 <Page>
-  <Navbar title="Form Inputs" backLink="Back"></Navbar>
+  <Navbar title="Form Inputs" backLink="返回"></Navbar>
   <BlockTitle>Full Layout / Inline Labels</BlockTitle>
   <List inlineLabels noHairlinesMd>
     <ListInput

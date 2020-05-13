@@ -3,7 +3,7 @@ import { Navbar, Page, Block, Fab, FabButton, FabButtons, Icon } from 'framework
 
 export default () => (
   <Page>
-    <Navbar title="Floating Action Button" backLink="Back"></Navbar>
+    <Navbar title="Floating Action Button" backLink="返回"></Navbar>
 
     <Fab position="right-top" slot="fixed">
       <Icon ios="f7:plus" aurora="f7:plus" md="material:add"></Icon>

@@ -1,6 +1,6 @@
 <template>
   <f7-page @page:beforeremove="onPageBeforeRemove" @page:init="onPageInit">
-    <f7-navbar back-link="Back" no-shadow>
+    <f7-navbar back-link="返回" no-shadow>
       <f7-nav-title class="navbar-calendar-title"></f7-nav-title>
     </f7-navbar>
     <div id="calendar" class="block block-strong no-padding no-margin no-hairline-top"></div>

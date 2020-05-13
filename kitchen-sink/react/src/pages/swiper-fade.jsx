@@ -4,7 +4,7 @@ import { Navbar, Page, Swiper, SwiperSlide } from 'framework7-react';
 export default () => (
 
   <Page>
-    <Navbar title="Fade Effect" backLink="Back"></Navbar>
+    <Navbar title="Fade Effect" backLink="返回"></Navbar>
     <Swiper className="demo-swiper demo-swiper-fade" pagination params={{
       effect: 'fade',
     }}>

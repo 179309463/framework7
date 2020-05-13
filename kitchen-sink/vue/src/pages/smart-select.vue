@@ -1,6 +1,6 @@
 <template>
   <f7-page>
-    <f7-navbar title="Smart Select" back-link="Back"></f7-navbar>
+    <f7-navbar title="Smart Select" back-link="返回"></f7-navbar>
     <f7-block>
       Framework7 allows you to easily convert your usual form selects to dynamic pages with radios:
     </f7-block>

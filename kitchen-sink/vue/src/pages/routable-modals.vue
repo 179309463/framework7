@@ -1,6 +1,6 @@
 <template>
   <f7-page>
-    <f7-navbar title="Routable Modals" backLink="Back"></f7-navbar>
+    <f7-navbar title="Routable Modals" backLink="返回"></f7-navbar>
     <f7-block>
       <p>In addition to pages, Framework7 router allows to load modal components:</p>
     </f7-block>

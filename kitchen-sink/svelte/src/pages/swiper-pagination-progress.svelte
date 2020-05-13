@@ -1,5 +1,5 @@
 <Page>
-  <Navbar title="Progress Pagination" backLink="Back"></Navbar>
+  <Navbar title="Progress Pagination" backLink="返回"></Navbar>
   <Swiper
     class="demo-swiper"
     pagination

@@ -1,5 +1,5 @@
 <Page>
-  <Navbar title="Swiper Horizontal" backLink="Back"></Navbar>
+  <Navbar title="Swiper Horizontal" backLink="返回"></Navbar>
   <Swiper class="demo-swiper" pagination params={{
     direction: 'vertical',
     pagination: {

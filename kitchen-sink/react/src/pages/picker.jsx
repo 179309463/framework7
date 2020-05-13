@@ -8,7 +8,7 @@ export default class extends React.Component {
   render() {
     return (
       <Page onPageInit={this.onPageInit.bind(this)} onPageBeforeRemove={this.onPageBeforeRemove.bind(this)}>
-        <Navbar title="Picker" backLink="Back"></Navbar>
+        <Navbar title="Picker" backLink="返回"></Navbar>
         <Block>
           <p>Picker is a powerful component that allows you to create custom overlay pickers which looks like native picker.</p>
           <p>Picker could be used as inline component or as overlay. Overlay Picker will be automatically converted to Popover on tablets (iPad).</p>

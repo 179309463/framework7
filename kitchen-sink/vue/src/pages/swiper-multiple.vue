@@ -1,6 +1,6 @@
 <template>
   <f7-page>
-    <f7-navbar title="Multiple Swipers" back-link="Back"></f7-navbar>
+    <f7-navbar title="Multiple Swipers" back-link="返回"></f7-navbar>
     <f7-block-title>1 Slide Per View, 50px Between</f7-block-title>
     <div data-pagination='{"el": ".swiper-pagination"}' data-space-between="50" class="swiper-container swiper-init demo-swiper-multiple">
       <div class="swiper-pagination"></div>

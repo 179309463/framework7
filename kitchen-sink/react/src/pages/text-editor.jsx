@@ -24,7 +24,7 @@ export default class extends React.Component {
   render() {
     return (
       <Page>
-        <Navbar title="Text Editor" backLink="Back"></Navbar>
+        <Navbar title="Text Editor" backLink="返回"></Navbar>
 
         <Block>
           <p>Framework7 comes with a touch-friendly Rich Text Editor component. It is based on modern "contenteditable" API so it should work everywhere as is.</p>

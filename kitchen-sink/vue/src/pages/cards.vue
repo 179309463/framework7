@@ -1,6 +1,6 @@
 <template>
   <f7-page>
-    <f7-navbar title="Cards" back-link="Back"></f7-navbar>
+    <f7-navbar title="Cards" back-link="返回"></f7-navbar>
 
     <f7-block>
       <p>Cards are a great way to contain and organize your information, especially when combined with List Views. Cards can contain unique related data, like for example photos, text or links about a particular subject. Cards are typically an entry point to more complex and detailed information.</p>

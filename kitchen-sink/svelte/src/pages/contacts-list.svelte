@@ -1,5 +1,5 @@
 <Page>
-  <Navbar title="Contacts List" backLink="Back"></Navbar>
+  <Navbar title="Contacts List" backLink="返回"></Navbar>
   <List contactsList ul={false}>
     <ListGroup>
       <ListItem title="A" groupTitle></ListItem>

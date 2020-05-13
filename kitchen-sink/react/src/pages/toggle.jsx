@@ -3,7 +3,7 @@ import { Navbar, Page, BlockTitle, List, ListItem, Toggle } from 'framework7-rea
 
 export default () => (
   <Page>
-    <Navbar title="Toggle" backLink="Back"></Navbar>
+    <Navbar title="Toggle" backLink="返回"></Navbar>
     <BlockTitle>Super Heroes</BlockTitle>
     <List simpleList>
       <ListItem>

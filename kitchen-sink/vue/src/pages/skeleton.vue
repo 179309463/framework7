@@ -1,6 +1,6 @@
 <template>
   <f7-page>
-    <f7-navbar title="Skeleton Layouts" back-link="Back"></f7-navbar>
+    <f7-navbar title="Skeleton Layouts" back-link="返回"></f7-navbar>
     <f7-block strong>
       <p>Skeleton (or Ghost) elements designed to improve perceived performance and make app feels faster.</p>
       <p>Framework7 comes with two types of such elements: Skeleton Block and Skeleton Text. Skeleton block is a gray box that can be used as placeholder for any element. Skeleton text uses special built-in skeleton font to render each character of such text as gray rectangle. Skeleton text allows to make such elements responsive and feel more natural.</p>

@@ -1,6 +1,6 @@
 <template>
   <f7-page @page:afterin="onPageAfterIn">
-    <f7-navbar title="Menu" back-link="Back"></f7-navbar>
+    <f7-navbar title="Menu" back-link="返回"></f7-navbar>
     <f7-block strong>
       <p>Menu component is designed to be used as overlay control. It can be very helpful when you need controls on top of the map, images, some text/code editor, etc.</p>
     </f7-block>

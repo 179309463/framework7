@@ -1,5 +1,5 @@
 <Page>
-  <Navbar title="Custom Controls" backLink="Back"></Navbar>
+  <Navbar title="Custom Controls" backLink="返回"></Navbar>
   <div class="demo-swiper-custom">
     <Swiper
       pagination

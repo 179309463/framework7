@@ -1,5 +1,5 @@
 <Page>
-  <Navbar title="Content Block" backLink="Back" />
+  <Navbar title="Content Block" backLink="返回" />
 
   <p>This paragraph is outside of content block. Not cool, but useful for any custom elements with custom styling.</p>
 

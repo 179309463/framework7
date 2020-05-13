@@ -1,5 +1,5 @@
 <Page hideNavbarOnScroll>
-  <Navbar title="Hide Navbar On Scroll" backLink="Back"></Navbar>
+  <Navbar title="Hide Navbar On Scroll" backLink="返回"></Navbar>
   <Block strong>
     <p>Navbar will be hidden if you scroll bottom</p>
   </Block>

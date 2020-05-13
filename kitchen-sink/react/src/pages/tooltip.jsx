@@ -8,7 +8,7 @@ export default class extends React.Component {
   render() {
     return (
       <Page onPageInit={this.onPageInit.bind(this)} onPageBeforeRemove={this.onPageBeforeRemove.bind(this)}>
-        <Navbar title="Tooltip" backLink="Back">
+        <Navbar title="Tooltip" backLink="返回">
           <NavRight>
             <Link className="navbar-tooltip">
               <Icon ios="f7:info_circle_fill" aurora="f7:info_circle_fill" md="material:info_outline" />

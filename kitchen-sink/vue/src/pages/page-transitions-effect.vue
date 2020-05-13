@@ -1,6 +1,6 @@
 <template>
   <f7-page>
-    <f7-navbar :title="effect" back-link="Back"></f7-navbar>
+    <f7-navbar :title="effect" back-link="返回"></f7-navbar>
 
     <f7-block strong class="text-align-center">
       <p>This page was loaded with <b>{{effect}}</b> transition.</p>

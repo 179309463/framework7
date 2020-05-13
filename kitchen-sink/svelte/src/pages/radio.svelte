@@ -1,5 +1,5 @@
 <Page>
-  <Navbar title="Radio" backLink="Back"></Navbar>
+  <Navbar title="Radio" backLink="返回"></Navbar>
 
   <BlockTitle>Inline</BlockTitle>
   <Block strong>

@@ -1,5 +1,5 @@
 <Page onPageBeforeRemove={onPageBeforeRemove} onPageInit={onPageInit}>
-  <Navbar title="Swipeout" backLink="Back"></Navbar>
+  <Navbar title="Swipeout" backLink="返回"></Navbar>
 
   <Block>
     <p>
@@ -259,7 +259,7 @@
         ],
         [
           {
-            text: 'Cancel',
+            text: '取消',
             bold: true,
           },
         ],

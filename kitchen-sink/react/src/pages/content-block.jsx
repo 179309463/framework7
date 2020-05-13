@@ -3,7 +3,7 @@ import { Navbar, Page, BlockTitle, Block, BlockHeader, BlockFooter } from 'frame
 
 export default () => (
   <Page>
-    <Navbar title="Content Block" backLink="Back"></Navbar>
+    <Navbar title="Content Block" backLink="返回"></Navbar>
     <p>This paragraph is outside of content block. Not cool, but useful for any custom elements with custom styling.</p>
 
     <Block>

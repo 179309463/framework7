@@ -8,7 +8,7 @@ export default class extends React.Component {
   render() {
     return (
       <Page>
-        <Navbar backLink="Back" title="Searchbar">
+        <Navbar backLink="返回" title="Searchbar">
           <Subnavbar inner={false}>
             <Searchbar
               searchContainer=".search-list"

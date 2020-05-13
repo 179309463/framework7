@@ -53,7 +53,7 @@ export default class extends React.Component {
   render() {
     return (
       <Page>
-        <Navbar title="Treeview" backLink="Back" />
+        <Navbar title="Treeview" backLink="返回" />
 
         <BlockTitle>Basic tree view</BlockTitle>
         <Block strong className="no-padding-horizontal">

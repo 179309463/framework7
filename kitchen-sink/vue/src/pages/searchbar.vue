@@ -1,6 +1,6 @@
 <template>
   <f7-page>
-    <f7-navbar back-link="Back" title="Searchbar">
+    <f7-navbar back-link="返回" title="Searchbar">
       <f7-subnavbar :inner="false">
         <f7-searchbar
           search-container=".search-list"

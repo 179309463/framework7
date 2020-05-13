@@ -1,5 +1,5 @@
 <Page>
-  <Navbar title="3D Flip Effect" backLink="Back"></Navbar>
+  <Navbar title="3D Flip Effect" backLink="返回"></Navbar>
   <Swiper class="demo-swiper demo-swiper-cube" params={{
     effect: 'flip',
   }}>

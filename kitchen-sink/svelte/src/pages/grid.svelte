@@ -1,5 +1,5 @@
 <Page class="grid-demo">
-  <Navbar title="Grid / Layout" backLink="Back" />
+  <Navbar title="Grid / Layout" backLink="返回" />
 
   <Block>
     <p>Columns within a row are automatically set to have equal width. Otherwise you can define your column with pourcentage of screen you want.</p>

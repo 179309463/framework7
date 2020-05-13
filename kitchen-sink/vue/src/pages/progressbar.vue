@@ -1,6 +1,6 @@
 <template>
   <f7-page>
-    <f7-navbar title="Progress Bar" back-link="Back"></f7-navbar>
+    <f7-navbar title="Progress Bar" back-link="返回"></f7-navbar>
     <f7-block>
       <p>In addition to <a href="/preloader/">Preloader</a>, Framework7 also comes with fancy animated determinate and infinite/indeterminate progress bars to indicate some activity.</p>
     </f7-block>

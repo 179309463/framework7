@@ -9,7 +9,7 @@ export default class extends React.Component {
   render() {
     return (
       <Page onPageInit={this.onPageInit.bind(this)} onPageBeforeRemove={this.onPageBeforeRemove.bind(this)}>
-        <Navbar title="Calendar" backLink="Back"></Navbar>
+        <Navbar title="Calendar" backLink="返回"></Navbar>
         <Block>
           <p>Calendar is a touch optimized component that provides an easy way to handle dates.</p>
           <p>Calendar could be used as inline component or as overlay. Overlay Calendar will be automatically converted to Popover on tablets (iPad).</p>

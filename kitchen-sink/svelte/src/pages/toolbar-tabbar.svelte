@@ -1,5 +1,5 @@
 <Page>
-  <Navbar title="Toolbar & Tabbar" backLink="Back"></Navbar>
+  <Navbar title="Toolbar & Tabbar" backLink="返回"></Navbar>
   <Toolbar position={toolbarPosition}>
     <Link>Left Link</Link>
     <Link>Right Link</Link>

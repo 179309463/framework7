@@ -1,5 +1,5 @@
 <Page>
-  <Navbar title="Page Transitions" backLink="Back"></Navbar>
+  <Navbar title="Page Transitions" backLink="返回"></Navbar>
 
   <Block strong>
     <p>In addition to default theme-specific page transition it is possible to create custom page transition or use one of the additional transition effects:</p>

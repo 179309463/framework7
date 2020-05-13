@@ -1,5 +1,5 @@
 <Page>
-  <Navbar title="Nested Swipers" backLink="Back"></Navbar>
+  <Navbar title="Nested Swipers" backLink="返回"></Navbar>
   <Swiper class="demo-swiper" pagination>
     <SwiperSlide>Horizontal Slide 1</SwiperSlide>
     <SwiperSlide>

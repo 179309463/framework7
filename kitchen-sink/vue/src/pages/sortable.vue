@@ -1,6 +1,6 @@
 <template>
   <f7-page>
-    <f7-navbar title="Sortable List" back-link="Back">
+    <f7-navbar title="Sortable List" back-link="返回">
       <f7-nav-right>
         <f7-link sortable-toggle=".sortable">Toggle</f7-link>
       </f7-nav-right>

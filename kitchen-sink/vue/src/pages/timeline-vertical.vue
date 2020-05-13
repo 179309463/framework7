@@ -1,6 +1,6 @@
 <template>
   <f7-page>
-    <f7-navbar title="Vertical Timeline" back-link="Back"></f7-navbar>
+    <f7-navbar title="Vertical Timeline" back-link="返回"></f7-navbar>
     <f7-block-title>Default</f7-block-title>
     <div class="timeline">
       <div class="timeline-item">

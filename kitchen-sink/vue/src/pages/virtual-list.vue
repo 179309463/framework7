@@ -1,6 +1,6 @@
 <template>
   <f7-page>
-    <f7-navbar title="Virtual List" back-link="Back">
+    <f7-navbar title="Virtual List" back-link="返回">
       <f7-subnavbar :inner="false">
         <f7-searchbar
           search-container=".virtual-list"

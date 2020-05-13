@@ -1,6 +1,6 @@
 <!-- svelte-ignore a11y-missing-attribute -->
 <Page ptr ptrMousewheel={true} onPtrRefresh={loadMore}>
-  <Navbar title="Pull To Refresh" backLink="Back"></Navbar>
+  <Navbar title="Pull To Refresh" backLink="返回"></Navbar>
   <List mediaList>
     {#each items as item, index (index)}
       <ListItem

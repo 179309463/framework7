@@ -1,5 +1,5 @@
 <Page>
-  <Navbar title="Tabs" backLink="Back"></Navbar>
+  <Navbar title="Tabs" backLink="返回"></Navbar>
   <List>
     <ListItem link="/tabs-static/" title="Static Tabs"></ListItem>
     <ListItem link="/tabs-animated/" title="Animated Tabs"></ListItem>

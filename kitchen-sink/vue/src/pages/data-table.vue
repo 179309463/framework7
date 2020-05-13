@@ -1,6 +1,6 @@
 <template>
   <f7-page>
-    <f7-navbar title="Data Table" back-link="Back"></f7-navbar>
+    <f7-navbar title="Data Table" back-link="返回"></f7-navbar>
     <f7-block-title>Plain table</f7-block-title>
     <div class="data-table">
       <table>

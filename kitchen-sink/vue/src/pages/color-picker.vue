@@ -1,6 +1,6 @@
 <template>
   <f7-page>
-    <f7-navbar title="Color Picker" back-link="Back"></f7-navbar>
+    <f7-navbar title="Color Picker" back-link="返回"></f7-navbar>
 
     <f7-block strong>
       <p>Framework7 comes with ultimate modular Color Picker component that allows to create color picker with limitless combinations of color modules.</p>

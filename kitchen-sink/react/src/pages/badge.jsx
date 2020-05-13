@@ -3,7 +3,7 @@ import { Navbar, NavRight, Toolbar, Page, Link, Badge, List, ListItem, Icon } fr
 
 export default () => (
   <Page>
-    <Navbar sliding backLink="Back" title="Badge">
+    <Navbar sliding backLink="返回" title="Badge">
       <NavRight>
         <Link iconOnly>
           <Icon ios="f7:person_circle_fill" aurora="f7:person_circle_fill" md="material:person">

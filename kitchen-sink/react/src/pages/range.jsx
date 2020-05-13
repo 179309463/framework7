@@ -13,7 +13,7 @@ export default class extends React.Component {
   render() {
     return (
       <Page>
-        <Navbar title="Range Slider" backLink="Back"></Navbar>
+        <Navbar title="Range Slider" backLink="返回"></Navbar>
 
         <BlockTitle>Volume</BlockTitle>
         <List simpleList>

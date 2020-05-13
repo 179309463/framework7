@@ -8,7 +8,7 @@ export default class extends React.Component {
   render() {
     return (
       <Page style={{background: '#000'}} onPageInit={this.onPageInit.bind(this)} onPageBeforeRemove={this.onPageBeforeRemove.bind(this)}>
-        <Navbar title="Two Way Control Gallery" backLink="Back"></Navbar>
+        <Navbar title="Two Way Control Gallery" backLink="返回"></Navbar>
         <Swiper
           className="demo-swiper-gallery-top"
           navigation

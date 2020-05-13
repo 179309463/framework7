@@ -1,6 +1,6 @@
 <template>
   <f7-page :page-content="false" @page:beforeremove="onPageBeforeRemove" @page:init="onPageInit">
-    <f7-navbar title="Picker" back-link="Back"></f7-navbar>
+    <f7-navbar title="Picker" back-link="返回"></f7-navbar>
     <div class="page-content">
       <div class="block">
         <p>Picker is a powerful component that allows you to create custom overlay pickers which looks like native picker.</p>

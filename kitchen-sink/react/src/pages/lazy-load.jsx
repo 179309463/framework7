@@ -3,7 +3,7 @@ import { Navbar, Page, Block } from 'framework7-react';
 
 export default () => (
   <Page>
-    <Navbar title="Lazy Load Images" backLink="Back"></Navbar>
+    <Navbar title="Lazy Load Images" backLink="返回"></Navbar>
     <Block strong>
       <p>Lazy Load delays loading of images on page while they are outside of viewport until user scrolls to them.</p>
       <p>It will make the page load faster, improve scrolling performance and also save traffic.</p>

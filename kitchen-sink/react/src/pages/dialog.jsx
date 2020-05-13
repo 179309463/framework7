@@ -8,7 +8,7 @@ export default class extends React.Component {
   render() {
     return (
       <Page>
-        <Navbar title="Dialog" backLink="Back"></Navbar>
+        <Navbar title="Dialog" backLink="返回"></Navbar>
         <Block strong>
           <p>There are 1:1 replacements of native Alert, Prompt and Confirm modals. They support callbacks, have very easy api and can be combined with each other. Check these examples:</p>
           <Row tag="p">

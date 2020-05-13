@@ -1,6 +1,6 @@
 <template>
   <f7-page>
-    <f7-navbar title="Fade Effect" back-link="Back"></f7-navbar>
+    <f7-navbar title="Fade Effect" back-link="返回"></f7-navbar>
     <div data-pagination='{"el": ".swiper-pagination"}' data-effect="fade" class="swiper-container swiper-init demo-swiper demo-swiper-fade">
       <div class="swiper-pagination"></div>
       <div class="swiper-wrapper">

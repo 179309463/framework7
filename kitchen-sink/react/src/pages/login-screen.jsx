@@ -14,7 +14,7 @@ export default class extends React.Component {
   render() {
     return (
       <Page>
-        <Navbar title="Login Screen" backLink="Back"></Navbar>
+        <Navbar title="Login Screen" backLink="返回"></Navbar>
         <Block>
           <p>Framework7 comes with ready to use Login Screen layout. It could be used inside of page or inside of popup (Embedded) or as a standalone overlay:</p>
         </Block>

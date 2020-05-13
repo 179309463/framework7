@@ -14,7 +14,7 @@ export default class extends React.Component {
   render() {
     return (
       <Page>
-        <Navbar title="Action Sheet" backLink="Back"></Navbar>
+        <Navbar title="Action Sheet" backLink="返回"></Navbar>
         <Block strong>
           <p className="row">
             {/* One group, open by direct accessing instance .open() method */}
@@ -123,7 +123,7 @@ export default class extends React.Component {
             text: 'Button 2',
           },
           {
-            text: 'Cancel',
+            text: '取消',
             color: 'red',
           },
         ],

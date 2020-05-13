@@ -1,6 +1,6 @@
 <!-- svelte-ignore a11y-missing-attribute -->
 <Page>
-  <Navbar title="Data Table" backLink="Back"></Navbar>
+  <Navbar title="Data Table" backLink="返回"></Navbar>
   <BlockTitle>Plain table</BlockTitle>
   <div class="data-table">
     <table>

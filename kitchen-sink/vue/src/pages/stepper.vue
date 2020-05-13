@@ -1,6 +1,6 @@
 <template>
   <f7-page>
-    <f7-navbar title="Stepper" back-link="Back"></f7-navbar>
+    <f7-navbar title="Stepper" back-link="返回"></f7-navbar>
     <f7-block-title>Shape and size</f7-block-title>
     <f7-block strong class="text-align-center">
       <f7-row>

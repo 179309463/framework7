@@ -1,6 +1,6 @@
 <template>
   <f7-page hide-navbar-on-scroll>
-    <f7-navbar title="Hide Navbar On Scroll" back-link="Back"></f7-navbar>
+    <f7-navbar title="Hide Navbar On Scroll" back-link="返回"></f7-navbar>
     <f7-block strong>
       <p>Navbar will be hidden if you scroll bottom</p>
     </f7-block>

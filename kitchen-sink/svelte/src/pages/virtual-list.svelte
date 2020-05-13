@@ -1,5 +1,5 @@
 <Page>
-  <Navbar title="Virtual List" backLink="Back">
+  <Navbar title="Virtual List" backLink="返回">
     <Subnavbar inner={false}>
       <Searchbar
         searchContainer=".virtual-list"

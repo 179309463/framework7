@@ -3,7 +3,7 @@ import { Navbar, Page, Block, Subnavbar } from 'framework7-react';
 
 export default () => (
   <Page>
-    <Navbar backLink="Back">
+    <Navbar backLink="返回">
       <Subnavbar title="Page Title"></Subnavbar>
     </Navbar>
     <Block>

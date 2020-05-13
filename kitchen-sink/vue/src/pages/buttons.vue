@@ -1,6 +1,6 @@
 <template>
   <f7-page>
-    <f7-navbar title="Buttons" back-link="Back"></f7-navbar>
+    <f7-navbar title="Buttons" back-link="返回"></f7-navbar>
 
     <f7-block-title>Usual Buttons</f7-block-title>
     <f7-block strong>

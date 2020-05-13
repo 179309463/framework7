@@ -1,6 +1,6 @@
 <template>
   <f7-page>
-    <f7-navbar title="Gauge" back-link="Back"></f7-navbar>
+    <f7-navbar title="Gauge" back-link="返回"></f7-navbar>
     <f7-block strong>
       <p>Framework7 comes with Gauge component. It produces nice looking fully responsive SVG gauges.</p>
     </f7-block>

@@ -8,7 +8,7 @@ export default class extends React.Component {
   render() {
     return (
       <Page onPageBeforeOut={this.onPageBeforeOut.bind(this)} onPageBeforeRemove={this.onPageBeforeRemove.bind(this)}>
-        <Navbar title="Notifications" backLink="Back"></Navbar>
+        <Navbar title="Notifications" backLink="返回"></Navbar>
         <Block>
           <p>Framework7 comes with simple Notifications component that allows you to show some useful messages to user and request basic actions.</p>
           <p><Button fill onClick={this.showNotificationFull.bind(this)}>Full layout notification</Button></p>

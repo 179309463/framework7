@@ -4,7 +4,7 @@ import { Navbar, Page, Swiper, SwiperSlide } from 'framework7-react';
 export default () => (
 
   <Page>
-    <Navbar title="3D Cube" backLink="Back"></Navbar>
+    <Navbar title="3D Cube" backLink="返回"></Navbar>
     <Swiper className="demo-swiper demo-swiper-cube" params={{
       effect: 'cube',
     }}>

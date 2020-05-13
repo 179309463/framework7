@@ -1,5 +1,5 @@
 <Page>
-  <Navbar title="Parallax" backLink="Back"></Navbar>
+  <Navbar title="Parallax" backLink="返回"></Navbar>
   <Swiper
     class="demo-swiper-parallax"
     pagination

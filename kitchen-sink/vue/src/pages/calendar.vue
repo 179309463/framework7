@@ -1,6 +1,6 @@
 <template>
   <f7-page @page:beforeremove="onPageBeforeRemove" @page:init="onPageInit">
-    <f7-navbar title="Calendar" back-link="Back"></f7-navbar>
+    <f7-navbar title="Calendar" back-link="返回"></f7-navbar>
 
     <f7-block>
       <p>Calendar is a touch optimized component that provides an easy way to handle dates.</p>

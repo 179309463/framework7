@@ -13,7 +13,7 @@ import {
 
 export default () => (
   <Page>
-    <Navbar title="Accordion" backLink="Back" />
+    <Navbar title="Accordion" backLink="返回" />
 
     <BlockTitle>List View Accordion</BlockTitle>
     <List accordionList>

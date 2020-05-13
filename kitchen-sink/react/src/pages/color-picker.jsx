@@ -40,7 +40,7 @@ export default class extends React.Component {
   render() {
     return (
       <Page>
-        <Navbar title="Color Picker" backLink="Back" />
+        <Navbar title="Color Picker" backLink="返回" />
 
         <Block strong>
           <p>Framework7 comes with ultimate modular Color Picker component that allows to create color picker with limitless combinations of color modules.</p>

@@ -1,6 +1,6 @@
 <!-- svelte-ignore a11y-missing-attribute -->
 <Page>
-  <Navbar title="Zoom" backLink="Back"></Navbar>
+  <Navbar title="Zoom" backLink="返回"></Navbar>
   <Swiper
     class="demo-swiper"
     pagination

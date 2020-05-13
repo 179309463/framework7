@@ -1,5 +1,5 @@
 <Page>
-  <Navbar title="Scrollbar" backLink="Back"></Navbar>
+  <Navbar title="Scrollbar" backLink="返回"></Navbar>
   <Swiper class="demo-swiper" scrollbar>
     <SwiperSlide>Slide 1</SwiperSlide>
     <SwiperSlide>Slide 2</SwiperSlide>

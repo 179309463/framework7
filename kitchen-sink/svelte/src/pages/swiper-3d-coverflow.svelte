@@ -1,5 +1,5 @@
 <Page>
-  <Navbar title="3D Coverflow Effect" backLink="Back"></Navbar>
+  <Navbar title="3D Coverflow Effect" backLink="返回"></Navbar>
   <Swiper class="demo-swiper demo-swiper-coverflow" pagination params={{
     effect: 'coverflow',
     centeredSlides: true,

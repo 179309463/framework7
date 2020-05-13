@@ -55,7 +55,7 @@ export default class extends React.Component {
   render() {
     return (
       <Page onPageInit={this.onPageInit.bind(this)} onPageBeforeRemove={this.onPageBeforeRemove.bind(this)}>
-        <Navbar backLink="Back" noShadow>
+        <Navbar backLink="返回" noShadow>
           <NavTitle className="navbar-calendar-title"></NavTitle>
         </Navbar>
         <Block

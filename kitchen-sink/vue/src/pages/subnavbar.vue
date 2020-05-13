@@ -1,6 +1,6 @@
 <template>
   <f7-page>
-    <f7-navbar title="Subnavbar" back-link="Back">
+    <f7-navbar title="Subnavbar" back-link="返回">
       <f7-subnavbar>
         <f7-segmented strong>
           <f7-button active>Link 1</f7-button>

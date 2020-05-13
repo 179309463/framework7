@@ -1,5 +1,5 @@
 <Page onPageBeforeRemove={onPageBeforeRemove} onPageBeforeOut={onPageBeforeOut}>
-  <Navbar title="Toast" backLink="Back"></Navbar>
+  <Navbar title="Toast" backLink="返回"></Navbar>
   <Block strong>
     <p>Toasts provide brief feedback about an operation through a message on the screen.</p>
     <p>

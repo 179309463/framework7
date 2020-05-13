@@ -1,5 +1,5 @@
 <Page>
-  <Navbar title="Fade Effect" backLink="Back"></Navbar>
+  <Navbar title="Fade Effect" backLink="返回"></Navbar>
   <Swiper class="demo-swiper demo-swiper-fade" pagination params={{
     effect: 'fade',
   }}>

@@ -1,5 +1,5 @@
 <Page onPageBeforeRemove={onPageBeforeRemove}>
-  <Navbar title="Popup" backLink="Back"></Navbar>
+  <Navbar title="Popup" backLink="返回"></Navbar>
   <Block strong>
     <p>Popup is a modal window with any HTML content that pops up over App's main content. Popup as all other overlays is part of so called "Temporary Views".</p>
     <p>

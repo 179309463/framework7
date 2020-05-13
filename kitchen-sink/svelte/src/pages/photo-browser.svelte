@@ -1,5 +1,5 @@
 <Page>
-  <Navbar title="Photo Browser" backLink="Back"></Navbar>
+  <Navbar title="Photo Browser" backLink="返回"></Navbar>
   <Block strong>
     <p>Photo Browser is a standalone and highly configurable component that allows to open window with photo viewer and navigation elements with the following features:</p>
     <ul>
@@ -21,7 +21,7 @@
         <Button fill onClick={() => popup.open()}>Popup</Button>
       </Col>
       <Col>
-        <PhotoBrowser photos={photos} type="page" pageBackLinkText="Back" bind:this={ page } />
+        <PhotoBrowser photos={photos} type="page" pageBackLinkText="返回" bind:this={ page } />
         <Button fill onClick={() => page.open()}>Page</Button>
       </Col>
     </Row>
@@ -38,7 +38,7 @@
         <Button fill onClick={() => popupDark.open()}>Popup</Button>
       </Col>
       <Col>
-        <PhotoBrowser photos={photos} theme="dark" type="page" pageBackLinkText="Back" bind:this={ pageDark } />
+        <PhotoBrowser photos={photos} theme="dark" type="page" pageBackLinkText="返回" bind:this={ pageDark } />
         <Button fill onClick={() => pageDark.open()}>Page</Button>
       </Col>
     </Row>

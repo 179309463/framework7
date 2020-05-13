@@ -1,6 +1,6 @@
 <template>
   <f7-page>
-    <f7-navbar title="Toolbar & Tabbar" back-link="Back"></f7-navbar>
+    <f7-navbar title="Toolbar & Tabbar" back-link="返回"></f7-navbar>
     <f7-toolbar :position="toolbarPosition">
       <f7-link>Left Link</f7-link>
       <f7-link>Right Link</f7-link>

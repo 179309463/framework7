@@ -1,6 +1,6 @@
 <template>
   <f7-page ptr :ptr-mousewheel="true" @ptr:refresh="loadMore">
-    <f7-navbar title="Pull To Refresh" back-link="Back"></f7-navbar>
+    <f7-navbar title="Pull To Refresh" back-link="返回"></f7-navbar>
     <f7-list media-list>
       <f7-list-item
         v-for="(item, index) in items"

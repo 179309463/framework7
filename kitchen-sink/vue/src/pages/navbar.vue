@@ -1,6 +1,6 @@
 <template>
   <f7-page>
-    <f7-navbar title="Navbar" subtitle="Subtitle" back-link="Back">
+    <f7-navbar title="Navbar" subtitle="Subtitle" back-link="返回">
       <f7-nav-right>
         <f7-link>Right</f7-link>
       </f7-nav-right>

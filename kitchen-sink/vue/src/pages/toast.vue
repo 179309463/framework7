@@ -1,6 +1,6 @@
 <template>
   <f7-page  @page:beforeremove="onPageBeforeRemove" @page:beforeout="onPageBeforeOut">
-    <f7-navbar title="Toast" back-link="Back"></f7-navbar>
+    <f7-navbar title="Toast" back-link="返回"></f7-navbar>
     <f7-block strong>
       <p>Toasts provide brief feedback about an operation through a message on the screen.</p>
       <p>

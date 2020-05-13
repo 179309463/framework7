@@ -1,5 +1,5 @@
 <Page>
-  <Navbar title="Space Between Slides" backLink="Back"></Navbar>
+  <Navbar title="Space Between Slides" backLink="返回"></Navbar>
   <Swiper class="demo-swiper" pagination params={{
     spaceBetween: 50,
     pagination: {

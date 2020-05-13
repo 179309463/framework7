@@ -16,7 +16,7 @@ export default class extends React.Component {
   render() {
     return (
       <Page ref="el">
-        <Navbar title="Toolbar & Tabbar" backLink="Back"></Navbar>
+        <Navbar title="Toolbar & Tabbar" backLink="返回"></Navbar>
         <Toolbar position={this.state.toolbarPosition}>
           <Link>Left Link</Link>
           <Link>Right Link</Link>

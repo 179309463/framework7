@@ -1,6 +1,6 @@
 <template>
   <f7-page class="grid-demo">
-    <f7-navbar title="Grid / Layout" back-link="Back"></f7-navbar>
+    <f7-navbar title="Grid / Layout" back-link="返回"></f7-navbar>
     <f7-block>
       <p>Columns within a row are automatically set to have equal width. Otherwise you can define your column with pourcentage of screen you want.</p>
     </f7-block>

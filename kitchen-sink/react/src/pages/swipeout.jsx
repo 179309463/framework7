@@ -8,7 +8,7 @@ export default class extends React.Component {
   render () {
     return (
       <Page onPageBeforeRemove={this.onPageBeforeRemove.bind(this)} onPageInit={this.onPageInit.bind(this)}>
-        <Navbar title="Swipeout" backLink="Back"></Navbar>
+        <Navbar title="Swipeout" backLink="返回"></Navbar>
 
         <Block>
           <p>
@@ -259,7 +259,7 @@ export default class extends React.Component {
         ],
         [
           {
-            text: 'Cancel',
+            text: '取消',
             bold: true,
           },
         ],

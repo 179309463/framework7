@@ -1,6 +1,6 @@
 <template>
   <f7-page>
-    <f7-navbar title="Preloader" back-link="Back"></f7-navbar>
+    <f7-navbar title="Preloader" back-link="返回"></f7-navbar>
     <f7-block>
       <p>How about an activity indicator? Framework7 has a nice one. The F7 Preloader is made with SVG and animated with CSS so it can be easily resized.</p>
     </f7-block>

@@ -1,5 +1,5 @@
 <Page style="background: #000" onPageInit={onPageInit} onPageBeforeRemove={onPageBeforeRemove}>
-  <Navbar title="Two Way Control Gallery" backLink="Back"></Navbar>
+  <Navbar title="Two Way Control Gallery" backLink="返回"></Navbar>
   <Swiper
     class="demo-swiper-gallery-top"
     navigation

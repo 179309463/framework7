@@ -1,6 +1,6 @@
 <!-- svelte-ignore a11y-missing-attribute -->
 <Page>
-  <Navbar title="Action Sheet" backLink="Back" />
+  <Navbar title="Action Sheet" backLink="返回" />
   <Block strong>
     <p class="row">
       <!-- One group, open by direct accessing instance .open() method -->
@@ -106,7 +106,7 @@
             text: 'Button 2',
           },
           {
-            text: 'Cancel',
+            text: '取消',
             color: 'red',
           },
         ],

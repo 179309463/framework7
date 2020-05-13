@@ -4,7 +4,7 @@ import { Navbar, Page, Swiper, SwiperSlide } from 'framework7-react';
 export default () => (
 
   <Page>
-    <Navbar title="Slider Lazy Loading" backLink="Back"></Navbar>
+    <Navbar title="Slider Lazy Loading" backLink="返回"></Navbar>
     <Swiper
       className="demo-swiper-lazy"
       pagination

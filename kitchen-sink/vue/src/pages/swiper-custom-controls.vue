@@ -1,6 +1,6 @@
 <template>
   <f7-page>
-    <f7-navbar title="Custom Controls" back-link="Back"></f7-navbar>
+    <f7-navbar title="Custom Controls" back-link="返回"></f7-navbar>
     <div class="demo-swiper-custom">
       <div data-pagination='{"el": ".swiper-pagination", "clickable": true}' data-navigation='{"nextEl": ".swiper-button-next", "prevEl": ".swiper-button-prev"}' data-space-between="0" class="swiper-container swiper-init">
         <div class="swiper-pagination"></div>

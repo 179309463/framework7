@@ -1,6 +1,6 @@
 <template>
   <f7-page>
-    <f7-navbar title="Vertical Swiper" back-link="Back"></f7-navbar>
+    <f7-navbar title="Vertical Swiper" back-link="返回"></f7-navbar>
     <div data-direction="vertical" data-pagination='{"el": ".swiper-pagination", "hideOnClick": true}' class="swiper-container swiper-init demo-swiper">
       <div class="swiper-pagination"></div>
       <div class="swiper-wrapper">

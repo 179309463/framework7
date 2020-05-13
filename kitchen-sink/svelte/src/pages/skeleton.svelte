@@ -1,6 +1,6 @@
 <!-- svelte-ignore a11y-missing-attribute -->
 <Page>
-  <Navbar title="Skeleton Layouts" backLink="Back"></Navbar>
+  <Navbar title="Skeleton Layouts" backLink="返回"></Navbar>
   <Block strong>
     <p>Skeleton (or Ghost) elements designed to improve perceived performance and make app feels faster.</p>
     <p>Framework7 comes with two types of such elements: Skeleton Block and Skeleton Text. Skeleton block is a gray box that can be used as placeholder for any element. Skeleton text uses special built-in skeleton font to render each character of such text as gray rectangle. Skeleton text allows to make such elements responsive and feel more natural.</p>

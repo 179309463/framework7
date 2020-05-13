@@ -1,6 +1,6 @@
 <template>
   <f7-page>
-    <f7-navbar title="Appbar" back-link="Back"></f7-navbar>
+    <f7-navbar title="Appbar" back-link="返回"></f7-navbar>
     <f7-block strong>
       <p>Appbar is the main app bar with actions on top of the whole app. It is designed to be used in desktop apps with Aurora theme.</p>
     </f7-block>

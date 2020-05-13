@@ -1,5 +1,5 @@
 <Page pageContent={false}>
-  <Navbar title="Tabbar Labels" backLink="Back">
+  <Navbar title="Tabbar Labels" backLink="返回">
     <NavRight>
       <Link iconMd="material:compare_arrows" iconIos="f7:arrow_up_arrow_down_circle_fill" iconAurora="f7:arrow_up_arrow_down_circle_fill" onClick={toggleToolbarPosition}></Link>
     </NavRight>

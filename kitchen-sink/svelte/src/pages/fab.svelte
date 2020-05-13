@@ -1,5 +1,5 @@
 <Page>
-  <Navbar title="Floating Action Button" backLink="Back"></Navbar>
+  <Navbar title="Floating Action Button" backLink="返回"></Navbar>
 
   <Fab position="right-top">
     <Icon ios="f7:add" aurora="f7:add" md="material:add"></Icon>

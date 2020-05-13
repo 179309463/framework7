@@ -1,6 +1,6 @@
 <template>
   <f7-page>
-    <f7-navbar title="Treeview" back-link="Back" />
+    <f7-navbar title="Treeview" back-link="返回" />
 
     <f7-block-title>Basic tree view</f7-block-title>
     <f7-block strong class="no-padding-horizontal">

@@ -13,7 +13,7 @@ export default class extends React.Component {
   render() {
     return (
       <Page>
-        <Navbar title="Gauge" backLink="Back"></Navbar>
+        <Navbar title="Gauge" backLink="返回"></Navbar>
         <Block strong>
           <p>Framework7 comes with Gauge component. It produces nice looking fully responsive SVG gauges.</p>
         </Block>

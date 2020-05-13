@@ -1,5 +1,5 @@
 <Page onPageInit={onPageInit} onPageBeforeRemove={onPageBeforeRemove}>
-  <Navbar backLink="Back" noShadow>
+  <Navbar backLink="返回" noShadow>
     <NavTitle class="navbar-calendar-title"></NavTitle>
   </Navbar>
   <Block

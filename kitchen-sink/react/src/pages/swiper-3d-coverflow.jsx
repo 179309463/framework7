@@ -4,7 +4,7 @@ import { Navbar, Page, Swiper, SwiperSlide } from 'framework7-react';
 export default () => (
 
   <Page>
-    <Navbar title="3D Coverflow Effect" backLink="Back"></Navbar>
+    <Navbar title="3D Coverflow Effect" backLink="返回"></Navbar>
     <Swiper className="demo-swiper demo-swiper-coverflow" pagination params={{
       effect: 'coverflow',
       centeredSlides: true,

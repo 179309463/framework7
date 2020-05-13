@@ -1,5 +1,5 @@
 <Page>
-  <Navbar title="Not found" backLink="Back" />
+  <Navbar title="Not found" backLink="返回" />
 
   <Block strong>
     <p>Sorry</p>

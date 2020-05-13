@@ -26,7 +26,7 @@ export default class extends React.Component {
   render() {
     return (
       <Page>
-        <Navbar title="Photo Browser" backLink="Back"></Navbar>
+        <Navbar title="Photo Browser" backLink="返回"></Navbar>
         <Block strong>
           <p>Photo Browser is a standalone and highly configurable component that allows to open window with photo viewer and navigation elements with the following features:</p>
           <ul>
@@ -48,7 +48,7 @@ export default class extends React.Component {
               <Button fill onClick={() => this.popup.open()}>Popup</Button>
             </Col>
             <Col>
-              <PhotoBrowser photos={this.state.photos} type="page" pageBackLinkText="Back" ref={(el) => {this.page = el}} />
+              <PhotoBrowser photos={this.state.photos} type="page" pageBackLinkText="返回" ref={(el) => {this.page = el}} />
               <Button fill onClick={() => this.page.open()}>Page</Button>
             </Col>
           </Row>
@@ -65,7 +65,7 @@ export default class extends React.Component {
               <Button fill onClick={() => this.popupDark.open()}>Popup</Button>
             </Col>
             <Col>
-              <PhotoBrowser photos={this.state.photos} theme="dark" type="page" pageBackLinkText="Back" ref={(el) => {this.pageDark = el}} />
+              <PhotoBrowser photos={this.state.photos} theme="dark" type="page" pageBackLinkText="返回" ref={(el) => {this.pageDark = el}} />
               <Button fill onClick={() => this.pageDark.open()}>Page</Button>
             </Col>
           </Row>

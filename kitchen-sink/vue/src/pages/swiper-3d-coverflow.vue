@@ -1,6 +1,6 @@
 <template>
   <f7-page>
-    <f7-navbar title="3D Coverflow Effect" back-link="Back"></f7-navbar>
+    <f7-navbar title="3D Coverflow Effect" back-link="返回"></f7-navbar>
     <div data-pagination='{"el": ".swiper-pagination"}' data-effect="coverflow" data-slides-per-view="auto" data-centered-slides="true" class="swiper-container swiper-init demo-swiper demo-swiper-coverflow">
       <div class="swiper-pagination"></div>
       <div class="swiper-wrapper">

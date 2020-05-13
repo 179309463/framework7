@@ -1,5 +1,5 @@
 <Page>
-  <Navbar title="Checkbox" backLink="Back" />
+  <Navbar title="Checkbox" backLink="返回" />
   <BlockTitle>Inline</BlockTitle>
   <Block strong>
     <p>Lorem <Checkbox name="checkbox-1"></Checkbox> ipsum dolor sit amet, consectetur adipisicing elit. Alias beatae illo nihil aut eius commodi sint eveniet aliquid eligendi <Checkbox name="checkbox-2" checked></Checkbox> ad delectus impedit tempore nemo, enim vel praesentium consequatur nulla mollitia!</p>

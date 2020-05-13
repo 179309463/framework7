@@ -4,7 +4,7 @@ import { Navbar, Page, Block, List, ListItem } from 'framework7-react';
 export default () => (
 
   <Page>
-    <Navbar title="Swiper Slider" backLink="Back"></Navbar>
+    <Navbar title="Swiper Slider" backLink="返回"></Navbar>
     <Block>
       <p>
         Framework7 comes with powerful and most modern touch slider ever -

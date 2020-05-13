@@ -3,7 +3,7 @@ import { Navbar, Page, Block, Tabs, Tab, Link, Toolbar } from 'framework7-react'
 
 export default () => (
   <Page pageContent={false}>
-    <Navbar title="Swipeable Tabs" backLink="Back"></Navbar>
+    <Navbar title="Swipeable Tabs" backLink="返回"></Navbar>
     <Toolbar bottom tabbar>
       <Link tabLink="#tab-1" tabLinkActive>Tab 1</Link>
       <Link tabLink="#tab-2">Tab 2</Link>

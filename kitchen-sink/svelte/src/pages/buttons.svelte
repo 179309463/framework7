@@ -1,6 +1,6 @@
 <!-- svelte-ignore a11y-invalid-attribute -->
 <Page>
-  <Navbar title="Buttons" backLink="Back" />
+  <Navbar title="Buttons" backLink="返回" />
 
   <BlockTitle>Usual Buttons</BlockTitle>
   <Block strong>

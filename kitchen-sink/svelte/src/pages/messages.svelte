@@ -1,6 +1,6 @@
 <!-- svelte-ignore a11y-missing-attribute -->
 <Page>
-  <Navbar title="Messages" backLink="Back"></Navbar>
+  <Navbar title="Messages" backLink="返回"></Navbar>
 
   <Messagebar
     placeholder={placeholder}

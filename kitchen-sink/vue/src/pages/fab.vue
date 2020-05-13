@@ -1,6 +1,6 @@
 <template>
   <f7-page>
-    <f7-navbar title="Floating Action Button" back-link="Back"></f7-navbar>
+    <f7-navbar title="Floating Action Button" back-link="返回"></f7-navbar>
 
     <f7-fab position="right-top" slot="fixed">
       <f7-icon ios="f7:plus" aurora="f7:plus" md="material:add"></f7-icon>

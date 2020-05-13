@@ -1,5 +1,5 @@
 <Page>
-  <Navbar title="Stepper" backLink="Back"></Navbar>
+  <Navbar title="Stepper" backLink="返回"></Navbar>
   <BlockTitle>Shape and size</BlockTitle>
   <Block strong class="text-align-center">
     <Row>

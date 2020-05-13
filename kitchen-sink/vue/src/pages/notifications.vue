@@ -1,6 +1,6 @@
 <template>
   <f7-page @page:beforeremove="onPageBeforeRemove" @page:beforeout="onPageBeforeOut">
-    <f7-navbar title="Notifications" back-link="Back"></f7-navbar>
+    <f7-navbar title="Notifications" back-link="返回"></f7-navbar>
     <f7-block>
       <p>Framework7 comes with simple Notifications component that allows you to show some useful messages to user and request basic actions.</p>
       <p><f7-button fill @click="showNotificationFull">Full layout notification</f7-button></p>

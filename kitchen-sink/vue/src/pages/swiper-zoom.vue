@@ -1,6 +1,6 @@
 <template>
   <f7-page>
-    <f7-navbar title="Zoom" back-link="Back"></f7-navbar>
+    <f7-navbar title="Zoom" back-link="返回"></f7-navbar>
     <div data-pagination='{"el": ".swiper-pagination"}' data-zoom='{"enabled": true}' data-navigation='{"nextEl": ".swiper-button-next", "prevEl": ".swiper-button-prev"}' class="swiper-container swiper-init demo-swiper">
       <div class="swiper-wrapper">
         <div class="swiper-slide">

@@ -3,7 +3,7 @@ import { Navbar, Page, BlockTitle, Swiper, SwiperSlide } from 'framework7-react'
 
 export default () => (
   <Page>
-    <Navbar title="Multiple Swipers" backLink="Back"></Navbar>
+    <Navbar title="Multiple Swipers" backLink="返回"></Navbar>
     <BlockTitle>1 Slide Per View, 50px Between</BlockTitle>
     <Swiper className="demo-swiper-multiple" pagination params={{
       spaceBetween: 50,

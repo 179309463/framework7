@@ -1,6 +1,6 @@
 <template>
   <f7-page>
-    <f7-navbar title="Text Editor" back-link="Back"></f7-navbar>
+    <f7-navbar title="Text Editor" back-link="返回"></f7-navbar>
     <f7-block>
       <p>Framework7 comes with a touch-friendly Rich Text Editor component. It is based on modern "contenteditable" API so it should work everywhere as is.</p>
       <p>It comes with the basic set of formatting features. But its functionality can be easily extended and customized to fit any requirements.</p>

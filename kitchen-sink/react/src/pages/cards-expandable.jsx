@@ -3,7 +3,7 @@ import { Navbar, Page, Block, Card, CardHeader, CardContent, Link, Button } from
 
 export default () => (
   <Page>
-    <Navbar title="Cards Expandable" backLink="Back" />
+    <Navbar title="Cards Expandable" backLink="返回" />
 
     <Block>
       <p>In addition to usual <a href="/cards/">Cards</a> there are also Expandable Cards that allow to store more information and illustrations about particular subject.</p>

@@ -1,6 +1,6 @@
 <template>
   <f7-page>
-    <f7-navbar title="Swiper Slider" back-link="Back"></f7-navbar>
+    <f7-navbar title="Swiper Slider" back-link="返回"></f7-navbar>
     <div class="block">
       <p>
         Framework7 comes with powerful and most modern touch slider ever -

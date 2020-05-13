@@ -1,6 +1,6 @@
 <template>
   <f7-page @page:beforeremove="onPageBeforeRemove" @page:init="onPageInit">
-    <f7-navbar title="Swipeout" back-link="Back"></f7-navbar>
+    <f7-navbar title="Swipeout" back-link="返回"></f7-navbar>
 
     <f7-block>
       <p>
@@ -266,7 +266,7 @@
             ],
             [
               {
-                text: 'Cancel',
+                text: '取消',
                 bold: true,
               },
             ],

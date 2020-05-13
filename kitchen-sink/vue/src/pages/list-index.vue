@@ -1,6 +1,6 @@
 <template>
   <f7-page>
-    <f7-navbar title="List Index" back-link="Back"></f7-navbar>
+    <f7-navbar title="List Index" back-link="返回"></f7-navbar>
     <f7-list-index
       indexes="auto"
       list-el=".list.contacts-list"

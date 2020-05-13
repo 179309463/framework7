@@ -1,6 +1,6 @@
 <template>
   <f7-page infinite :infinite-distance="50" :infinite-preloader="showPreloader" @infinite="loadMore">
-    <f7-navbar title="Infinite Scroll" back-link="Back"></f7-navbar>
+    <f7-navbar title="Infinite Scroll" back-link="返回"></f7-navbar>
     <f7-block-title>Scroll bottom</f7-block-title>
     <f7-list>
       <f7-list-item v-for="(item, index) in items" :title="`Item ${item}`" :key="index"></f7-list-item>

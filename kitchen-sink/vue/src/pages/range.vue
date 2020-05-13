@@ -1,6 +1,6 @@
 <template>
   <f7-page>
-    <f7-navbar title="Range Slider" back-link="Back"></f7-navbar>
+    <f7-navbar title="Range Slider" back-link="返回"></f7-navbar>
 
     <f7-block-title>Volume</f7-block-title>
     <f7-list simple-list>

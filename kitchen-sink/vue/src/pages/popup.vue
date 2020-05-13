@@ -1,6 +1,6 @@
 <template>
   <f7-page @page:beforeremove="onPageBeforeRemove">
-    <f7-navbar title="Popup" back-link="Back"></f7-navbar>
+    <f7-navbar title="Popup" back-link="返回"></f7-navbar>
     <f7-block strong>
       <p>Popup is a modal window with any HTML content that pops up over App's main content. Popup as all other overlays is part of so called "Temporary Views".</p>
       <p>

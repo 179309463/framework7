@@ -1,6 +1,6 @@
 <template>
   <f7-page @page:beforeremove="onPageBeforeRemove" @page:init="onPageInit">
-    <f7-navbar title="Autocomplete" back-link="Back">
+    <f7-navbar title="Autocomplete" back-link="返回">
       <div class="subnavbar">
         <form class="searchbar" id="searchbar-autocomplete">
           <div class="searchbar-inner">

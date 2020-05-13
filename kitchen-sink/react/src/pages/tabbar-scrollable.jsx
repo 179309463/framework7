@@ -17,7 +17,7 @@ export default class extends React.Component {
     const tabs = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
     return (
       <Page pageContent={false}>
-        <Navbar title="Tabbar Scrollable" backLink="Back">
+        <Navbar title="Tabbar Scrollable" backLink="返回">
           <NavRight>
             <Link iconMd="material:compare_arrows" iconIos="f7:arrow_up_arrow_down_circle_fill" iconAurora="f7:arrow_up_arrow_down_circle_fill" onClick={() => {this.toggleToolbarPosition()}}></Link>
           </NavRight>

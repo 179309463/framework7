@@ -1,5 +1,5 @@
 <Page onPageInit={onPageInit} onPageBeforeRemove={onPageBeforeRemove}>
-  <Navbar title="Autocomplete" backLink="Back">
+  <Navbar title="Autocomplete" backLink="返回">
     <Subnavbar inner={false}>
       <Searchbar init={false} id="searchbar-autocomplete" disableButton={!theme.aurora}></Searchbar>
     </Subnavbar>

@@ -30,7 +30,7 @@ export default class extends React.Component {
   render() {
     return (
       <Page ptr ptrMousewheel={true} onPtrRefresh={this.loadMore.bind(this)}>
-        <Navbar title="Pull To Refresh" backLink="Back"></Navbar>
+        <Navbar title="Pull To Refresh" backLink="返回"></Navbar>
         <List mediaList>
           {this.state.items.map((item, index) => (
             <ListItem

@@ -1,6 +1,6 @@
 <template>
   <f7-page style="background: #000" @page:beforeremove="onPageBeforeRemove" @page:init="onPageInit">
-    <f7-navbar title="Thumbs Gallery" back-link="Back"></f7-navbar>
+    <f7-navbar title="Thumbs Gallery" back-link="返回"></f7-navbar>
     <div class="swiper-container demo-swiper-gallery-top">
       <div class="swiper-wrapper">
         <div style="background-image:url(https://cdn.framework7.io/placeholder/nature-800x800-1.jpg)" class="swiper-slide"></div>

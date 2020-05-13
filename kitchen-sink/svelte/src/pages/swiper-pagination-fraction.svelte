@@ -1,5 +1,5 @@
 <Page>
-  <Navbar title="Pagination Fraction" backLink="Back"></Navbar>
+  <Navbar title="Pagination Fraction" backLink="返回"></Navbar>
   <Swiper
     class="demo-swiper"
     pagination

@@ -1,6 +1,6 @@
 <template>
   <f7-page>
-    <f7-navbar title="Accordion" back-link="Back"></f7-navbar>
+    <f7-navbar title="Accordion" back-link="返回"></f7-navbar>
 
     <f7-block-title>List View Accordion</f7-block-title>
     <f7-list accordion-list>

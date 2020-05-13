@@ -1,6 +1,6 @@
 <template>
   <f7-page>
-    <f7-navbar title="Progress Pagination" back-link="Back"></f7-navbar>
+    <f7-navbar title="Progress Pagination" back-link="返回"></f7-navbar>
     <div data-pagination='{"el": ".swiper-pagination", "type": "progressbar"}' class="swiper-container swiper-init demo-swiper">
       <div class="swiper-pagination"></div>
       <div class="swiper-wrapper">

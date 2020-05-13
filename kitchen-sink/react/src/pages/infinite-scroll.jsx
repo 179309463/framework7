@@ -19,7 +19,7 @@ export default class extends React.Component {
         infinitePreloader={this.state.showPreloader}
         onInfinite={this.loadMore.bind(this)}
       >
-        <Navbar title="Infinite Scroll" backLink="Back"></Navbar>
+        <Navbar title="Infinite Scroll" backLink="返回"></Navbar>
         <BlockTitle>Scroll bottom</BlockTitle>
         <List>
           {this.state.items.map((item, index) => (

@@ -1,5 +1,5 @@
 <Page onPageAfterIn={onPageAfterIn}>
-  <Navbar title="Menu" backLink="Back" />
+  <Navbar title="Menu" backLink="返回" />
   <Block strong>
     <p>Menu component is designed to be used as overlay control. It can be very helpful when you need controls on top of the map, images, some text/code editor, etc.</p>
   </Block>

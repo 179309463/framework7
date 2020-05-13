@@ -1,5 +1,5 @@
 <Page>
-  <Navbar title="Popover" backLink="Back"></Navbar>
+  <Navbar title="Popover" backLink="返回"></Navbar>
   <Toolbar bottom>
     <Link>Dummy Link</Link>
     <Link popoverOpen=".popover-menu">Open Popover</Link>

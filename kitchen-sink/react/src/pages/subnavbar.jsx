@@ -3,7 +3,7 @@ import { Navbar, Page, Subnavbar, Segmented, Button, Block, List, ListItem } fro
 
 export default () => (
   <Page>
-    <Navbar title="Subnavbar" backLink="Back">
+    <Navbar title="Subnavbar" backLink="返回">
       <Subnavbar>
         <Segmented strong>
           <Button active>Link 1</Button>

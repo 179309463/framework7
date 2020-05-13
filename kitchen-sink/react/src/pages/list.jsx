@@ -3,7 +3,7 @@ import { Navbar, Page, BlockTitle, Block, List, ListItem, ListGroup, ListItemCel
 
 export default () => (
   <Page>
-    <Navbar title="List View" backLink="Back"></Navbar>
+    <Navbar title="List View" backLink="返回"></Navbar>
     <Block>
       <p>Framework7 allows you to be flexible with list views (table views). You can make them as navigation menus, you can use there icons, inputs, and any elements inside of the list, and even make them nested:</p>
     </Block>

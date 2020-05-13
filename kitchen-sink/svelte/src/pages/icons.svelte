@@ -1,5 +1,5 @@
 <Page>
-  <Navbar title="Icons" backLink="Back"></Navbar>
+  <Navbar title="Icons" backLink="返回"></Navbar>
   <BlockTitle>Scroll bottom</BlockTitle>
   <Block strong>
     <p>Framework7 comes with the premium and free <a href="https://framework7.io/icons/" class="external" target="_blank">Framework7 Icons</a> iOS-icons font developed specially to be used with iOS theme of Framework7. As for Material theme we recommend to use great-designed <a href="https://material.io/icons/" class="external" target="_blank">Material Icons</a> font. Both of these fonts use a typographic feature called <a href="http://alistapart.com/article/the-era-of-symbol-fonts" class="external" target="_blank">ligatures</a>. It’s easy to incorporate icons into your app. Here’s a small example:</p>

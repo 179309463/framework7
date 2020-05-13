@@ -1,6 +1,6 @@
 <!-- svelte-ignore a11y-missing-attribute -->
 <Page>
-  <Navbar title="Slider Lazy Loading" backLink="Back"></Navbar>
+  <Navbar title="Slider Lazy Loading" backLink="返回"></Navbar>
   <Swiper
     class="demo-swiper-lazy"
     pagination

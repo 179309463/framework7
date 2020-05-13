@@ -1,6 +1,6 @@
 <template>
   <f7-page>
-    <f7-navbar title="3D Flip Effect" back-link="Back"></f7-navbar>
+    <f7-navbar title="3D Flip Effect" back-link="返回"></f7-navbar>
     <div data-effect="flip" class="swiper-container swiper-init demo-swiper demo-swiper-cube">
       <div class="swiper-wrapper">
         <div style="background-image:url(https://cdn.framework7.io/placeholder/people-800x800-1.jpg)" class="swiper-slide">Slide 1</div>

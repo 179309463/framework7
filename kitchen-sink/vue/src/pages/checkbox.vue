@@ -1,6 +1,6 @@
 <template>
   <f7-page>
-    <f7-navbar title="Checkbox" back-link="Back"></f7-navbar>
+    <f7-navbar title="Checkbox" back-link="返回"></f7-navbar>
     <f7-block-title>Inline</f7-block-title>
     <f7-block strong>
       <p>Lorem <f7-checkbox name="checkbox-1"></f7-checkbox> ipsum dolor sit amet, consectetur adipisicing elit. Alias beatae illo nihil aut eius commodi sint eveniet aliquid eligendi <f7-checkbox name="checkbox-2" checked></f7-checkbox> ad delectus impedit tempore nemo, enim vel praesentium consequatur nulla mollitia!</p>

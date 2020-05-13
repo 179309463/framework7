@@ -1,6 +1,6 @@
 <template>
   <f7-page>
-    <f7-navbar title="Content Block" back-link="Back"></f7-navbar>
+    <f7-navbar title="Content Block" back-link="返回"></f7-navbar>
     <p>This paragraph is outside of content block. Not cool, but useful for any custom elements with custom styling.</p>
 
     <f7-block>

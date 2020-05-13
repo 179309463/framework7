@@ -1,6 +1,6 @@
 <template>
   <f7-page>
-    <f7-navbar title="Tabs" back-link="Back"></f7-navbar>
+    <f7-navbar title="Tabs" back-link="返回"></f7-navbar>
     <f7-list>
       <f7-list-item link="/tabs-static/" title="Static Tabs"></f7-list-item>
       <f7-list-item link="/tabs-animated/" title="Animated Tabs"></f7-list-item>

@@ -1,5 +1,5 @@
 <Page>
-  <Navbar noShadow title="Horizontal Timeline Calendar" backLink="Back"></Navbar>
+  <Navbar noShadow title="Horizontal Timeline Calendar" backLink="返回"></Navbar>
   <div class="timeline timeline-horizontal col-33 tablet-15">
     <div class="timeline-year">
       <div class="timeline-year-title"><span>2016</span></div>

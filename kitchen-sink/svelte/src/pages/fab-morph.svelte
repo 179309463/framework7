@@ -1,6 +1,6 @@
 <!-- svelte-ignore a11y-invalid-attribute -->
 <Page>
-  <Navbar title="Floating Action Button Morph" backLink="Back"></Navbar>
+  <Navbar title="Floating Action Button Morph" backLink="返回"></Navbar>
   <Toolbar tabbar labels bottom class="fab-morph-target">
     <Link tabLink tabLinkActive iconIos="f7:envelope_fill" iconAurora="f7:envelope_fill" iconMd="material:email" text="Inbox"/>
     <Link tabLink iconIos="f7:calendar_fill" iconAurora="f7:calendar_fill" iconMd="material:today" text="Calendar"/>

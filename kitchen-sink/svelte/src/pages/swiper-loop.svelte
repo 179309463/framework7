@@ -1,5 +1,5 @@
 <Page>
-  <Navbar title="Infinite Loop Mode" backLink="Back"></Navbar>
+  <Navbar title="Infinite Loop Mode" backLink="返回"></Navbar>
   <Swiper class="demo-swiper" pagination params={{
     loop: true,
   }}>

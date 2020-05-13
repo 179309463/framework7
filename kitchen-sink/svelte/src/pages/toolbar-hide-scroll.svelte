@@ -1,5 +1,5 @@
 <Page hideToolbarOnScroll>
-  <Navbar title="Hide Toolbar On Scroll" backLink="Back"></Navbar>
+  <Navbar title="Hide Toolbar On Scroll" backLink="返回"></Navbar>
   <Toolbar bottom>
     <Link>Left Link</Link>
     <Link>Right Link</Link>

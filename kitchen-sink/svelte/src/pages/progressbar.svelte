@@ -1,5 +1,5 @@
 <Page>
-  <Navbar title="Progress Bar" backLink="Back"></Navbar>
+  <Navbar title="Progress Bar" backLink="返回"></Navbar>
   <Block>
     <p>In addition to <a href="/preloader/">Preloader</a>, Framework7 also comes with fancy animated determinate and infinite/indeterminate progress bars to indicate some activity.</p>
   </Block>

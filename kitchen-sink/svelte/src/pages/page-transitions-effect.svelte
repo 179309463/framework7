@@ -1,5 +1,5 @@
 <Page>
-  <Navbar title={effect} backLink="Back"></Navbar>
+  <Navbar title={effect} backLink="返回"></Navbar>
 
   <Block strong class="text-align-center">
   <p>This page was loaded with <b>{effect}</b> transition.</p>

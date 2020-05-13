@@ -63,7 +63,7 @@ export default class extends React.Component {
   render() {
     return (
       <Page>
-        <Navbar title="Appbar" backLink="Back" />
+        <Navbar title="Appbar" backLink="返回" />
         <Block strong>
           <p>Appbar is the main app bar with actions on top of the whole app. It is designed to be used in desktop apps with Aurora theme.</p>
         </Block>

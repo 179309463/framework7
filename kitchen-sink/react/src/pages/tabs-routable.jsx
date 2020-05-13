@@ -3,7 +3,7 @@ import { Navbar, Page, Block, Tabs, Tab, Link, Toolbar } from 'framework7-react'
 
 export default () => (
   <Page pageContent={false}>
-    <Navbar title="Tabs Routable" backLink="Back"></Navbar>
+    <Navbar title="Tabs Routable" backLink="返回"></Navbar>
     <Toolbar bottom tabbar>
       <Link tabLink href="./" routeTabId="tab1">Tab 1</Link>
       <Link tabLink href="tab2/" routeTabId="tab2">Tab 2</Link>

@@ -1,6 +1,6 @@
 <template>
   <f7-page>
-    <f7-navbar title="Nested Swipers" back-link="Back"></f7-navbar>
+    <f7-navbar title="Nested Swipers" back-link="返回"></f7-navbar>
     <div data-pagination='{"el": ".swiper-pagination-h"}' class="swiper-container swiper-init demo-swiper">
       <div class="swiper-pagination swiper-pagination-h"></div>
       <div class="swiper-wrapper">

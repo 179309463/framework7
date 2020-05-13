@@ -1,5 +1,5 @@
 <Page>
-  <Navbar title="List Index" backLink="Back"></Navbar>
+  <Navbar title="List Index" backLink="返回"></Navbar>
   <ListIndex
     indexes="auto"
     listEl=".list.contacts-list"

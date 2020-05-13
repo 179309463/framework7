@@ -3,7 +3,7 @@ import { Navbar, Page, List, ListGroup, ListItem } from 'framework7-react';
 
 export default () => (
   <Page>
-    <Navbar title="Contacts List" backLink="Back"></Navbar>
+    <Navbar title="Contacts List" backLink="返回"></Navbar>
     <List contactsList>
       <ListGroup>
         <ListItem title="A" groupTitle></ListItem>

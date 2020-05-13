@@ -4,7 +4,7 @@ import { Navbar, Page, Swiper, SwiperSlide } from 'framework7-react';
 export default () => (
 
   <Page>
-    <Navbar title="Scrollbar" backLink="Back"></Navbar>
+    <Navbar title="Scrollbar" backLink="返回"></Navbar>
     <Swiper className="demo-swiper" scrollbar>
       <SwiperSlide>Slide 1</SwiperSlide>
       <SwiperSlide>Slide 2</SwiperSlide>

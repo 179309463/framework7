@@ -22,7 +22,7 @@ var routes = [
             <div class="left">\
               <a href="#" class="link back">\
                 <i class="icon icon-back"></i>\
-                <span class="if-not-md">Back</span>\
+                <span class="if-not-md">返回</span>\
               </a>\
             </div>\
             <div class="title">Panel Page 1</div>\
@@ -47,7 +47,7 @@ var routes = [
             <div class="left">\
               <a href="#" class="link back">\
                 <i class="icon icon-back"></i>\
-                <span class="if-not-md">Back</span>\
+                <span class="if-not-md">返回</span>\
               </a>\
             </div>\
             <div class="title">Panel Page 2</div>\

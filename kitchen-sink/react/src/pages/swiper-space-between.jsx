@@ -4,7 +4,7 @@ import { Navbar, Page, Swiper, SwiperSlide } from 'framework7-react';
 export default () => (
 
   <Page>
-    <Navbar title="Space Between Slides" backLink="Back"></Navbar>
+    <Navbar title="Space Between Slides" backLink="返回"></Navbar>
     <Swiper className="demo-swiper" pagination params={{
       spaceBetween: 50,
       pagination: {

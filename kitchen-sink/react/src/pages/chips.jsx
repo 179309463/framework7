@@ -9,7 +9,7 @@ export default class extends React.Component {
   render() {
     return (
       <Page>
-        <Navbar title="Chips" backLink="Back"></Navbar>
+        <Navbar title="Chips" backLink="返回"></Navbar>
         <BlockTitle>Chips With Text</BlockTitle>
         <Block strong>
           <Chip text="Example Chip" />

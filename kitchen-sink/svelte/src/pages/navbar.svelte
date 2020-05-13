@@ -1,5 +1,5 @@
 <Page>
-  <Navbar title="Navbar" subtitle="Subtitle" backLink="Back">
+  <Navbar title="Navbar" subtitle="Subtitle" backLink="返回">
     <NavRight>
       <Link>Right</Link>
     </NavRight>

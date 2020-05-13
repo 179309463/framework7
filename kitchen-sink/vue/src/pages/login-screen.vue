@@ -1,6 +1,6 @@
 <template>
   <f7-page>
-    <f7-navbar title="Login Screen" back-link="Back"></f7-navbar>
+    <f7-navbar title="Login Screen" back-link="返回"></f7-navbar>
     <f7-block>
       <p>Framework7 comes with ready to use Login Screen layout. It could be used inside of page or inside of popup (Embedded) or as a standalone overlay:</p>
     </f7-block>

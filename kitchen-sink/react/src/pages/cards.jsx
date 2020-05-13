@@ -3,7 +3,7 @@ import { Navbar, Page, Block, BlockTitle, Card, CardHeader, CardContent, CardFoo
 
 export default () => (
   <Page>
-    <Navbar title="Cards" backLink="Back" />
+    <Navbar title="Cards" backLink="返回" />
 
     <Block>
       <p>Cards are a great way to contain and organize your information, especially when combined with List Views. Cards can contain unique related data, like for example photos, text or links about a particular subject. Cards are typically an entry point to more complex and detailed information.</p>

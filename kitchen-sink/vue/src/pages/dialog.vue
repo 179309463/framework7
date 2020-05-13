@@ -1,6 +1,6 @@
 <template>
   <f7-page>
-    <f7-navbar title="Dialog" back-link="Back"></f7-navbar>
+    <f7-navbar title="Dialog" back-link="返回"></f7-navbar>
     <f7-block strong>
       <p>There are 1:1 replacements of native Alert, Prompt and Confirm modals. They support callbacks, have very easy api and can be combined with each other. Check these examples:</p>
       <f7-row tag="p">

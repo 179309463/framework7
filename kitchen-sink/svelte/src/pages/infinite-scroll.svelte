@@ -4,7 +4,7 @@
   infinitePreloader={showPreloader}
   onInfinite={loadMore}
 >
-  <Navbar title="Infinite Scroll" backLink="Back"></Navbar>
+  <Navbar title="Infinite Scroll" backLink="返回"></Navbar>
   <BlockTitle>Scroll bottom</BlockTitle>
   <List>
     {#each items as item, index (index)}

@@ -1,6 +1,6 @@
 <template>
   <f7-page @page:beforeremove="onPageBeforeRemove" @page:beforeout="onPageBeforeOut">
-    <f7-navbar title="Sheet Modal" back-link="Back"></f7-navbar>
+    <f7-navbar title="Sheet Modal" back-link="返回"></f7-navbar>
     <f7-block strong>
       <p>Sheet Modals slide up from the bottom of the screen to reveal more content. Such modals allow to create custom overlays with custom content.</p>
       <f7-row tag="p">
