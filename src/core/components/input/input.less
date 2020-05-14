@@ -430,22 +430,86 @@ textarea {
   }
 });
 
-.item-input-wrap{
-  .item-input-with-value & input {
+
+
+
+.item-input-with-value .item-input-wrap input {
+  padding-right: 20px;
+  .item-input-outline & {
     padding-right: 28px;
   }
-  
-  & ~ .icon, 
-  & ~ .f7-icons,
-  & ~ .material-icons {
-    font-size: var(--f7-input-font-size);
-    margin-left: 15px;
+}
+.item-input-with-value .item-input-wrap-with-icon.item-input-wrap input{
+  padding-right: 45px;
+  .item-input-outline & {
+    padding-right: 53px;
   }
-  & ~ .button {
+}
+.item-input-with-value .item-input-wrap-with-button.item-input-wrap input{
+  padding-right: 85px;
+  .item-input-outline & {
+    padding-right: 93px;
+  }
+}
+
+.item-input-wrap-with-icon.item-input-wrap textarea{
+  padding-right: 20px;
+  .item-input-outline & {
+    padding-right: 28px;
+  }
+}
+.item-input-wrap-with-button.item-input-wrap textarea{
+  padding-right: 60px;
+  .item-input-outline & {
+    padding-right: 68px;
+  }
+}
+
+.item-input-wrap-with-icon{  
+  .input-clear-button,
+  &.input-dropdown-wrap:before,
+  &.input-dropdown:before{
+    right: 25px;
+    .item-input-outline & {
+      right: 33px;
+    }
+  }  
+  .icon, 
+  .f7-icons,
+  .material-icons {
+    font-size: var(--f7-input-font-size);
+    position: absolute;
+    top: calc(var(--f7-input-height) / 2);
+    right: -4px;
+    .item-input-outline & {
+      right: 4px;
+    }
+    width: 20px;
+    margin-top: calc(-1 * var(--f7-input-font-size) / 2);
+  }
+}
+.item-input-wrap-with-button{
+  .input-clear-button,
+  &.input-dropdown-wrap:before,
+  &.input-dropdown:before{
+    right: 65px;
+    .item-input-outline & {
+      right: 73px;
+    }
+  }
+  .button {
     margin-left: 15px;
-    padding-left: 30px;
-    padding-right: 30px;
-    width: unset;
+    position: absolute;
+    top: calc(var(--f7-input-height) / 2);
+    right: 0px;
+    .item-input-outline & {
+      right: 8px;
+    }
+    width: 60px;
+    max-width: 60px;
+    margin-top: calc(-1 * var(--f7-button-height) / 2);
+    //margin-top: calc(-0.5 * (var(--f7-input-font-size) * var(--f7-button-height)));
+    display: block;
   }
 }
 
