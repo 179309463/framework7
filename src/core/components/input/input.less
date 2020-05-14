@@ -438,11 +438,19 @@ textarea {
     textarea{
       padding-right: var(--f7-input-clear-width);
     }
+    input[type="date"],input[type="month"],input[type="datetime-local"],input[type="time"]{
+      width: calc(100% - var(--f7-input-clear-width));
+      padding-right: 0;
+    }
   }
   &.item-input-wrap-with-icon {
     input,
     textarea{
       padding-right: var(--f7-input-icon-width);
+    }
+    input[type="date"],input[type="month"],input[type="datetime-local"],input[type="time"]{
+      width: calc(100% - var(--f7-input-icon-width));
+      padding-right: 0;
     }
   }
   &.item-input-wrap-with-button {
@@ -450,17 +458,29 @@ textarea {
     textarea{
       padding-right: var(--f7-input-button-width);
     }
+    input[type="date"],input[type="month"],input[type="datetime-local"],input[type="time"]{
+      width: calc(100% - var(--f7-input-button-width));
+      padding-right: 0;
+    }
   }
   &.item-input-wrap-with-clear.item-input-wrap-with-icon {
     input,
     textarea{
       padding-right: calc(var(--f7-input-clear-width) + var(--f7-input-icon-width));
     }
+    input[type="date"],input[type="month"],input[type="datetime-local"],input[type="time"]{
+      width: calc(100% - var(--f7-input-clear-width) - var(--f7-input-icon-width));
+      padding-right: 0;
+    }
   }
   &.item-input-wrap-with-clear.item-input-wrap-with-button {
     input,
     textarea{
       padding-right: calc(var(--f7-input-clear-width) + var(--f7-input-button-width));
+    }
+    input[type="date"],input[type="month"],input[type="datetime-local"],input[type="time"]{
+      width: calc(100% - var(--f7-input-clear-width) - var(--f7-input-button-width));
+      padding-right: 0;
     }
   }
 }
@@ -473,11 +493,19 @@ textarea {
       textarea{
         padding-right: calc(var(--f7-input-clear-width) + 8px);
       }
+      input[type="date"],input[type="month"],input[type="datetime-local"],input[type="time"]{
+        width: calc(100% - var(--f7-input-clear-width));
+        padding-right: 0;
+      }
     }
     &.item-input-wrap-with-icon {
       input,
       textarea{
         padding-right: calc(var(--f7-input-icon-width) + 8px);
+      }
+      input[type="date"],input[type="month"],input[type="datetime-local"],input[type="time"]{
+        width: calc(100% - var(--f7-input-icon-width));
+        padding-right: 0;
       }
     }
     &.item-input-wrap-with-button {
@@ -485,17 +513,29 @@ textarea {
       textarea{
         padding-right: calc(var(--f7-input-button-width) + 8px);
       }
+      input[type="date"],input[type="month"],input[type="datetime-local"],input[type="time"]{
+        width: calc(100% - var(--f7-input-button-width));
+        padding-right: 0;
+      }
     }
     &.item-input-wrap-with-clear.item-input-wrap-with-icon {
       input,
       textarea{
         padding-right: calc(var(--f7-input-clear-width) + var(--f7-input-icon-width) + 8px);
       }
+      input[type="date"],input[type="month"],input[type="datetime-local"],input[type="time"]{
+        width: calc(100% - var(--f7-input-clear-width) - var(--f7-input-icon-width));
+        padding-right: 0;
+      }
     }
     &.item-input-wrap-with-clear.item-input-wrap-with-button {
       input,
       textarea{
         padding-right: calc(var(--f7-input-clear-width) + var(--f7-input-button-width) + 8px);
+      }
+      input[type="date"],input[type="month"],input[type="datetime-local"],input[type="time"]{
+        width: calc(100% - var(--f7-input-clear-width) - var(--f7-input-button-width));
+        padding-right: 0;
       }
     }
   }
