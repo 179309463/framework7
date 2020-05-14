@@ -431,23 +431,25 @@ textarea {
 });
 
 .item-input-wrap{
-  display: flex;
-  align-items: center;
-  .icon, 
-  .f7-icons,
-  .material-icons {
+  .item-input-with-value & {
+    padding-right: 28px;
+  }
+  
+  & ~ .icon, 
+  & ~ .f7-icons,
+  & ~ .material-icons {
     font-size: var(--f7-input-font-size);
+    margin-left: 15px;
+  }
+  & ~ .button {
+    margin-left: 15px;
+    padding-left: 20px;
+    padding-right: 20px;
+    width: unset;
   }
 }
-.input-with-value ~ .input-clear-button, 
-.item-input-with-value .input-clear-button, 
-.input-with-value .input-clear-button{
-  ~ .icon, 
-  ~ .f7-icons,
-  ~ .material-icons {
-    visibility: hidden;
-  }
-}
+
+
 
 .if-ios-theme({
   @import url('./input-ios.less');
