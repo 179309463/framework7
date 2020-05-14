@@ -612,6 +612,18 @@ each(@breakpoints, {
   }
 }
 
+.media-list-reverse{
+  .item-content{
+    flex-direction: row-reverse;
+  }
+  .item-media + .item-inner{
+    margin-left: 0px;
+  }
+  .item-media {
+    margin-right: var(--f7-list-item-media-margin);
+  }
+}
+
 .if-ios-theme({
   @import url('./list-ios.less');
 });
