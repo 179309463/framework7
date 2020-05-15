@@ -33,6 +33,7 @@ import Modal from './components/modal/modal';
 import Router from './modules/router/router-class';//NO_LITE
 
 //IMPORT_COMPONENTS
+import Keypad from './components/keypad/keypad';
 
 if (process.env.FORMAT !== 'es') {
   if (typeof window !== 'undefined') {
@@ -69,6 +70,7 @@ Framework7.use([
   Subnavbar,
   TouchRipple,
   Modal,
+  Keypad,
   //INSTALL_COMPONENTS
 ]);
 

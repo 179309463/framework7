@@ -166,7 +166,7 @@ var routes = [
   },
   {
     path: '/inputs/',
-    url: './pages/inputs.html',
+    componentUrl: './pages/inputs.html',
   },
   {
     path: '/lazy-load/',
@@ -187,6 +187,10 @@ var routes = [
   {
     path: '/login-screen-page/',
     componentUrl: './pages/login-screen-page.html',
+  },
+  {
+    path: '/passcode/',
+    componentUrl: './pages/passcode.html',
   },
   {
     path: '/menu/',
