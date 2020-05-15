@@ -111,7 +111,7 @@ if [[ $REPLY =~ ^[Yy]$ ]]; then
 
   echo "Creating release"
   API_JSON=$(printf '{"tag_name": "v%s","name": "v%s","body": "Release of version %s","draft": false,"prerelease": false}' $VERSION $VERSION $VERSION)
-  curl --data "$API_JSON" https://api.github.com/repos/framework7io/framework7/releases?access_token=$token
+  curl --data "$API_JSON" https://api.github.com/repos/179309463/framework7-cn/releases?access_token=$token
 
   # Upload assets
   echo "Uploading release assets"
