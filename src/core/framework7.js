@@ -34,6 +34,7 @@ import Router from './modules/router/router-class';//NO_LITE
 
 //IMPORT_COMPONENTS
 import Keypad from './components/keypad/keypad';
+import Panel3D from './components/panel/panel3D';
 
 if (process.env.FORMAT !== 'es') {
   if (typeof window !== 'undefined') {
@@ -71,6 +72,7 @@ Framework7.use([
   TouchRipple,
   Modal,
   Keypad,
+  Panel3D,
   //INSTALL_COMPONENTS
 ]);
 
