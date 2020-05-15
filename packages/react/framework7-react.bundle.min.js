@@ -1,5 +1,5 @@
 /**
- * Framework7 React 5.8.0
+ * Framework7 React 5.8.1
  * Build full featured iOS & Android apps using Framework7 & React
  * https://framework7.io/react/
  *

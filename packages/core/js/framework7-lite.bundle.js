@@ -1,5 +1,5 @@
 /**
- * Framework7 5.8.0
+ * Framework7 5.8.1
  * Full featured mobile HTML framework for building iOS & Android apps
  * https://framework7.io/
  *
@@ -41418,7 +41418,7 @@
   };
 
   /**
-   * Framework7 5.8.0
+   * Framework7 5.8.1
    * Full featured mobile HTML framework for building iOS & Android apps
    * https://framework7.io/
    *
