@@ -27,6 +27,7 @@
   export let sortableOpposite = false;
   export let accordionList = false;
   export let accordionOpposite = false;
+  export let accordionHightlight = false;
   export let contactsList = false;
   export let simpleList = false;
   export let linksList = false;
@@ -87,6 +88,7 @@
       'sortable-opposite': sortableOpposite,
       'accordion-list': accordionList,
       'accordion-opposite': accordionOpposite,
+      'accordion-hightlight': accordionHightlight,
       'contacts-list': contactsList,
       'virtual-list': virtualList,
       tab,

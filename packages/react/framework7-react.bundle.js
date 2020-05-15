@@ -1,5 +1,5 @@
 /**
- * Framework7 React 5.7.2
+ * Framework7 React 5.8.0
  * Build full featured iOS & Android apps using Framework7 & React
  * https://framework7.io/react/
  *
@@ -7,7 +7,7 @@
  *
  * Released under the MIT License
  *
- * Released on: May 9, 2020
+ * Released on: May 15, 2020
  */
 
 (function (global, factory) {
@@ -785,7 +785,8 @@
       var id = props.id;
       var style = props.style;
       var accordionOpposite = props.accordionOpposite;
-      var classes = Utils.classNames(className, 'accordion-list', accordionOpposite && 'accordion-opposite', Mixins.colorClasses(props));
+      var accordionHightlight = props.accordionHightlight;
+      var classes = Utils.classNames(className, 'accordion-list', accordionOpposite && 'accordion-opposite', accordionHightlight && 'accordion-hightlight', Mixins.colorClasses(props));
       return React.createElement('div', {
         id: id,
         style: style,
@@ -806,7 +807,8 @@
     id: [String, Number],
     className: String,
     style: Object,
-    accordionOpposite: Boolean
+    accordionOpposite: Boolean,
+    accordionHightlight: Boolean
   }, Mixins.colorProps));
 
   F7Accordion.displayName = 'f7-accordion';
@@ -2070,6 +2072,10 @@
       var props = self.props;
       var tabLink = props.tabLink;
       var tabLinkActive = props.tabLinkActive;
+      var rectangle = props.rectangle;
+      var rectangleIos = props.rectangleIos;
+      var rectangleAurora = props.rectangleAurora;
+      var rectangleMd = props.rectangleMd;
       var round = props.round;
       var roundIos = props.roundIos;
       var roundAurora = props.roundAurora;
@@ -2100,6 +2106,10 @@
       return Utils.classNames(className, 'button', {
         'tab-link': tabLink || tabLink === '',
         'tab-link-active': tabLinkActive,
+        'button-rectangle': rectangle,
+        'button-rectangle-ios': rectangleIos,
+        'button-rectangle-aurora': rectangleAurora,
+        'button-rectangle-md': rectangleMd,
         'button-round': round,
         'button-round-ios': roundIos,
         'button-round-aurora': roundAurora,
@@ -2271,7 +2281,7 @@
     return F7Button;
   }(React.Component));
 
-  __reactComponentSetProps(F7Button, Object.assign({
+  __reactComponentSetProps(F7Button, Object.assign(Object.assign(Object.assign(Object.assign({
     id: [String, Number],
     className: String,
     style: Object,
@@ -2284,6 +2294,10 @@
       default: '#'
     },
     target: String,
+    rectangle: Boolean,
+    rectangleMd: Boolean,
+    rectangleIos: Boolean,
+    rectangleAurora: Boolean,
     round: Boolean,
     roundMd: Boolean,
     roundIos: Boolean,
@@ -2312,7 +2326,7 @@
     disabled: Boolean,
     tooltip: String,
     tooltipTrigger: String
-  }, Mixins.colorProps, {}, Mixins.linkIconProps, {}, Mixins.linkRouterProps, {}, Mixins.linkActionsProps));
+  }, Mixins.colorProps), Mixins.linkIconProps), Mixins.linkRouterProps), Mixins.linkActionsProps));
 
   F7Button.displayName = 'f7-button';
 
@@ -2969,7 +2983,7 @@
     return F7Chip;
   }(React.Component));
 
-  __reactComponentSetProps(F7Chip, Object.assign({
+  __reactComponentSetProps(F7Chip, Object.assign(Object.assign({
     id: [String, Number],
     className: String,
     style: Object,
@@ -2979,7 +2993,7 @@
     mediaBgColor: String,
     mediaTextColor: String,
     outline: Boolean
-  }, Mixins.colorProps, {}, Mixins.linkIconProps));
+  }, Mixins.colorProps), Mixins.linkIconProps));
 
   F7Chip.displayName = 'f7-chip';
 
@@ -4221,11 +4235,11 @@
     return F7TextEditor;
   }(React.Component));
 
-  __reactComponentSetProps(F7TextEditor, Object.assign({
+  __reactComponentSetProps(F7TextEditor, Object.assign(Object.assign({
     id: [String, Number],
     className: String,
     style: Object
-  }, Mixins.colorProps, {
+  }, Mixins.colorProps), {}, {
     mode: {
       type: String,
       default: undefined
@@ -5083,7 +5097,7 @@
     return F7Link;
   }(React.Component));
 
-  __reactComponentSetProps(F7Link, Object.assign({
+  __reactComponentSetProps(F7Link, Object.assign(Object.assign(Object.assign(Object.assign({
     id: [String, Number],
     className: String,
     style: Object,
@@ -5105,7 +5119,7 @@
     tooltipTrigger: String,
     smartSelect: Boolean,
     smartSelectParams: Object
-  }, Mixins.colorProps, {}, Mixins.linkIconProps, {}, Mixins.linkRouterProps, {}, Mixins.linkActionsProps));
+  }, Mixins.colorProps), Mixins.linkIconProps), Mixins.linkRouterProps), Mixins.linkActionsProps));
 
   F7Link.displayName = 'f7-link';
 
@@ -5171,9 +5185,9 @@
         id: id,
         style: style,
         className: className
-      }, React.createElement('a', Object.assign({
+      }, React.createElement('a', Object.assign(Object.assign({
         className: self.classes
-      }, self.attrs, {
+      }, self.attrs), {}, {
         ref: function (__reactNode) {
           this$1.__reactRefs['linkEl'] = __reactNode;
         }
@@ -5275,7 +5289,7 @@
     return F7ListButton;
   }(React.Component));
 
-  __reactComponentSetProps(F7ListButton, Object.assign({
+  __reactComponentSetProps(F7ListButton, Object.assign(Object.assign(Object.assign({
     id: [String, Number],
     className: String,
     style: Object,
@@ -5288,7 +5302,7 @@
     target: String,
     tooltip: String,
     tooltipTrigger: String
-  }, Mixins.colorProps, {}, Mixins.linkRouterProps, {}, Mixins.linkActionsProps));
+  }, Mixins.colorProps), Mixins.linkRouterProps), Mixins.linkActionsProps));
 
   F7ListButton.displayName = 'f7-list-button';
 
@@ -6178,6 +6192,7 @@
       var radio = props.radio;
       var radioIcon = props.radioIcon;
       var checkbox = props.checkbox;
+      var checkboxIcon = props.checkboxIcon;
       var value = props.value;
       var name = props.name;
       var checked = props.checked;
@@ -6370,6 +6385,8 @@
       var ItemContentTag = checkbox || radio ? 'label' : 'div';
       var classes = Utils.classNames(className, 'item-content', {
         'item-checkbox': checkbox,
+        'item-checkbox-icon-start': checkbox && checkboxIcon === 'start',
+        'item-checkbox-icon-end': checkbox && checkboxIcon === 'end',
         'item-radio': radio,
         'item-radio-icon-start': radio && radioIcon === 'start',
         'item-radio-icon-end': radio && radioIcon === 'end'
@@ -6456,6 +6473,7 @@
     mediaList: Boolean,
     mediaItem: Boolean,
     checkbox: Boolean,
+    checkboxIcon: String,
     checked: Boolean,
     defaultChecked: Boolean,
     indeterminate: Boolean,
@@ -6662,6 +6680,7 @@
       var accordionItemOpened = props.accordionItemOpened;
       var smartSelect = props.smartSelect;
       var checkbox = props.checkbox;
+      var checkboxIcon = props.checkboxIcon;
       var radio = props.radio;
       var radioIcon = props.radioIcon;
       var checked = props.checked;
@@ -6697,6 +6716,7 @@
           mediaList: isMedia,
           accordionItem: accordionItem,
           checkbox: checkbox,
+          checkboxIcon: checkboxIcon,
           checked: checked,
           defaultChecked: defaultChecked,
           indeterminate: indeterminate,
@@ -6715,11 +6735,11 @@
         }));
 
         if (link || href || accordionItem || smartSelect) {
-          var linkAttrs = Object.assign({
+          var linkAttrs = Object.assign(Object.assign({
             href: link === true ? '' : link || href,
             target: target,
             'data-tab': Utils.isStringProp(tabLink) && tabLink || undefined
-          }, Mixins.linkRouterAttrs(props), {}, Mixins.linkActionsAttrs(props));
+          }, Mixins.linkRouterAttrs(props)), Mixins.linkActionsAttrs(props));
           var linkClasses = Utils.classNames({
             'item-link': true,
             'smart-select': smartSelect,
@@ -7032,7 +7052,7 @@
     return F7ListItem;
   }(React.Component));
 
-  __reactComponentSetProps(F7ListItem, Object.assign({
+  __reactComponentSetProps(F7ListItem, Object.assign(Object.assign(Object.assign({
     id: [String, Number],
     className: String,
     style: Object,
@@ -7072,6 +7092,7 @@
     noChevron: Boolean,
     chevronCenter: Boolean,
     checkbox: Boolean,
+    checkboxIcon: String,
     radio: Boolean,
     radioIcon: String,
     checked: Boolean,
@@ -7083,7 +7104,7 @@
     required: Boolean,
     disabled: Boolean,
     virtualListIndex: Number
-  }, Mixins.colorProps, {}, Mixins.linkRouterProps, {}, Mixins.linkActionsProps));
+  }, Mixins.colorProps), Mixins.linkRouterProps), Mixins.linkActionsProps));
 
   F7ListItem.displayName = 'f7-list-item';
 
@@ -7152,6 +7173,7 @@
       var sortableOpposite = props.sortableOpposite;
       var accordionList = props.accordionList;
       var accordionOpposite = props.accordionOpposite;
+      var accordionHightlight = props.accordionHightlight;
       var contactsList = props.contactsList;
       var virtualList = props.virtualList;
       var tab = props.tab;
@@ -7185,6 +7207,7 @@
         'sortable-opposite': sortableOpposite,
         'accordion-list': accordionList,
         'accordion-opposite': accordionOpposite,
+        'accordion-hightlight': accordionHightlight,
         'contacts-list': contactsList,
         'virtual-list': virtualList,
         tab: tab,
@@ -7374,6 +7397,7 @@
     sortableOpposite: Boolean,
     accordionList: Boolean,
     accordionOpposite: Boolean,
+    accordionHightlight: Boolean,
     contactsList: Boolean,
     simpleList: Boolean,
     linksList: Boolean,
@@ -7693,7 +7717,7 @@
     return F7MenuDropdownItem;
   }(React.Component));
 
-  __reactComponentSetProps(F7MenuDropdownItem, Object.assign({
+  __reactComponentSetProps(F7MenuDropdownItem, Object.assign(Object.assign(Object.assign({
     id: [String, Number],
     className: String,
     style: Object,
@@ -7702,7 +7726,7 @@
     href: String,
     target: String,
     divider: Boolean
-  }, Mixins.colorProps, {}, Mixins.linkRouterProps, {}, Mixins.linkActionsProps));
+  }, Mixins.colorProps), Mixins.linkRouterProps), Mixins.linkActionsProps));
 
   F7MenuDropdownItem.displayName = 'f7-menu-dropdown-item';
 
@@ -7935,7 +7959,7 @@
     return F7MenuItem;
   }(React.Component));
 
-  __reactComponentSetProps(F7MenuItem, Object.assign({
+  __reactComponentSetProps(F7MenuItem, Object.assign(Object.assign(Object.assign(Object.assign({
     id: [String, Number],
     className: String,
     style: Object,
@@ -7945,7 +7969,7 @@
     link: Boolean,
     target: String,
     dropdown: Boolean
-  }, Mixins.colorProps, {}, Mixins.linkIconProps, {}, Mixins.linkRouterProps, {}, Mixins.linkActionsProps));
+  }, Mixins.colorProps), Mixins.linkIconProps), Mixins.linkRouterProps), Mixins.linkActionsProps));
 
   F7MenuItem.displayName = 'f7-menu-item';
 
@@ -12140,7 +12164,7 @@
     },
     placeholder: {
       type: String,
-      default: 'Search'
+      default: '搜索...'
     },
     disableButton: {
       type: Boolean,
@@ -12148,7 +12172,7 @@
     },
     disableButtonText: {
       type: String,
-      default: 'Cancel'
+      default: '取消'
     },
     clearButton: {
       type: Boolean,
@@ -12246,6 +12270,10 @@
       var raisedIos = props.raisedIos;
       var raisedAurora = props.raisedAurora;
       var raisedMd = props.raisedMd;
+      var rectangle = props.rectangle;
+      var rectangleIos = props.rectangleIos;
+      var rectangleAurora = props.rectangleAurora;
+      var rectangleMd = props.rectangleMd;
       var round = props.round;
       var roundIos = props.roundIos;
       var roundAurora = props.roundAurora;
@@ -12263,6 +12291,10 @@
         'segmented-raised-ios': raisedIos,
         'segmented-raised-aurora': raisedAurora,
         'segmented-raised-md': raisedMd,
+        'segmented-rectangle': rectangle,
+        'segmented-rectangle-ios': rectangleIos,
+        'segmented-rectangle-aurora': rectangleAurora,
+        'segmented-rectangle-md': rectangleMd,
         'segmented-round': round,
         'segmented-round-ios': roundIos,
         'segmented-round-aurora': roundAurora,
@@ -12299,6 +12331,10 @@
     raisedIos: Boolean,
     raisedMd: Boolean,
     raisedAurora: Boolean,
+    rectangle: Boolean,
+    rectangleIos: Boolean,
+    rectangleMd: Boolean,
+    rectangleAurora: Boolean,
     round: Boolean,
     roundIos: Boolean,
     roundMd: Boolean,
@@ -14150,7 +14186,7 @@
     return F7TreeviewItem;
   }(React.Component));
 
-  __reactComponentSetProps(F7TreeviewItem, Object.assign({
+  __reactComponentSetProps(F7TreeviewItem, Object.assign(Object.assign(Object.assign(Object.assign({
     id: [String, Number],
     className: String,
     style: Object,
@@ -14168,7 +14204,7 @@
       type: [Boolean, String],
       default: undefined
     }
-  }, Mixins.colorProps, {}, Mixins.linkActionsProps, {}, Mixins.linkRouterProps, {}, Mixins.linkIconProps));
+  }, Mixins.colorProps), Mixins.linkActionsProps), Mixins.linkRouterProps), Mixins.linkIconProps));
 
   F7TreeviewItem.displayName = 'f7-treeview-item';
 
@@ -14748,7 +14784,7 @@
   };
 
   /**
-   * Framework7 React 5.7.2
+   * Framework7 React 5.8.0
    * Build full featured iOS & Android apps using Framework7 & React
    * https://framework7.io/react/
    *
@@ -14756,7 +14792,7 @@
    *
    * Released under the MIT License
    *
-   * Released on: May 9, 2020
+   * Released on: May 15, 2020
    */
 
   function f7ready(callback) {

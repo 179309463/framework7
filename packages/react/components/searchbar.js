@@ -292,7 +292,7 @@ __reactComponentSetProps(F7Searchbar, Object.assign({
   },
   placeholder: {
     type: String,
-    default: 'Search'
+    default: '搜索...'
   },
   disableButton: {
     type: Boolean,
@@ -300,7 +300,7 @@ __reactComponentSetProps(F7Searchbar, Object.assign({
   },
   disableButtonText: {
     type: String,
-    default: 'Cancel'
+    default: '取消'
   },
   clearButton: {
     type: Boolean,

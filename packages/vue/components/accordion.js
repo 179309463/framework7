@@ -4,7 +4,8 @@ import __vueComponentProps from '../runtime-helpers/vue-component-props.js';
 export default {
   props: Object.assign({
     id: [String, Number],
-    accordionOpposite: Boolean
+    accordionOpposite: Boolean,
+    accordionHightlight: Boolean
   }, Mixins.colorProps),
   name: 'f7-accordion',
 
@@ -15,9 +16,10 @@ export default {
       className,
       id,
       style,
-      accordionOpposite
+      accordionOpposite,
+      accordionHightlight
     } = props;
-    const classes = Utils.classNames(className, 'accordion-list', accordionOpposite && 'accordion-opposite', Mixins.colorClasses(props));
+    const classes = Utils.classNames(className, 'accordion-list', accordionOpposite && 'accordion-opposite', accordionHightlight && 'accordion-hightlight', Mixins.colorClasses(props));
     return _h('div', {
       style: style,
       class: classes,

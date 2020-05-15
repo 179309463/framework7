@@ -4,9 +4,9 @@ import __vueComponentDispatchEvent from '../runtime-helpers/vue-component-dispat
 import __vueComponentProps from '../runtime-helpers/vue-component-props.js';
 export default {
   name: 'f7-text-editor',
-  props: Object.assign({
+  props: Object.assign(Object.assign({
     id: [String, Number]
-  }, Mixins.colorProps, {
+  }, Mixins.colorProps), {}, {
     mode: {
       type: String,
       default: undefined

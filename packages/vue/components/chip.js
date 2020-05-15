@@ -5,7 +5,7 @@ import __vueComponentDispatchEvent from '../runtime-helpers/vue-component-dispat
 import __vueComponentProps from '../runtime-helpers/vue-component-props.js';
 export default {
   name: 'f7-chip',
-  props: Object.assign({
+  props: Object.assign(Object.assign({
     id: [String, Number],
     media: String,
     text: [String, Number],
@@ -13,7 +13,7 @@ export default {
     mediaBgColor: String,
     mediaTextColor: String,
     outline: Boolean
-  }, Mixins.colorProps, {}, Mixins.linkIconProps),
+  }, Mixins.colorProps), Mixins.linkIconProps),
 
   render() {
     const _h = this.$createElement;

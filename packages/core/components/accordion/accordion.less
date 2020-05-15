@@ -206,6 +206,46 @@
   }
 }
 
+.accordion-hightlight {
+  .accordion-item{
+    /*去掉inner的线*/
+    .item-inner:after{
+      background-color: transparent;
+    }
+    /*增加item的线*/
+    &:before {
+      position: absolute;
+      right: 0;
+      top: 0px;
+      left: calc(var(--f7-list-item-padding-horizontal) + var(--f7-safe-area-left));
+      height: 1px;
+      content: '';
+      transform: scaleY(calc(1 / var(--f7-device-pixel-ratio)));
+      background-color: var(--f7-list-item-border-color);
+    }
+    /*第一项item不需要重复线*/
+    &:first-child:before{
+      background-color: transparent;
+    }
+  }
+  .accordion-item-opened {
+    /*选中项item不需要重复线*/
+    &.accordion-item {
+      &:before{
+        background-color: transparent;
+      }
+    }
+    /*链接成灰色*/
+    .item-link{     
+      background-color: var(--f7-list-link-pressed-bg-color);
+    }    
+  }
+  /*inset时需要去掉圆角*/
+  &.list.inset li:last-child > a {
+    border-radius: 0;
+  }
+}
+
 .if-ios-theme({
   @import url('./accordion-ios.less');
 });

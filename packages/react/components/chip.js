@@ -131,7 +131,7 @@ class F7Chip extends React.Component {
 
 }
 
-__reactComponentSetProps(F7Chip, Object.assign({
+__reactComponentSetProps(F7Chip, Object.assign(Object.assign({
   id: [String, Number],
   className: String,
   style: Object,
@@ -141,7 +141,7 @@ __reactComponentSetProps(F7Chip, Object.assign({
   mediaBgColor: String,
   mediaTextColor: String,
   outline: Boolean
-}, Mixins.colorProps, {}, Mixins.linkIconProps));
+}, Mixins.colorProps), Mixins.linkIconProps));
 
 F7Chip.displayName = 'f7-chip';
 export default F7Chip;

@@ -6,7 +6,7 @@ import __vueComponentDispatchEvent from '../runtime-helpers/vue-component-dispat
 import __vueComponentProps from '../runtime-helpers/vue-component-props.js';
 export default {
   name: 'f7-menu-item',
-  props: Object.assign({
+  props: Object.assign(Object.assign(Object.assign(Object.assign({
     id: [String, Number],
     text: String,
     iconOnly: Boolean,
@@ -14,7 +14,7 @@ export default {
     link: Boolean,
     target: String,
     dropdown: Boolean
-  }, Mixins.colorProps, {}, Mixins.linkIconProps, {}, Mixins.linkRouterProps, {}, Mixins.linkActionsProps),
+  }, Mixins.colorProps), Mixins.linkIconProps), Mixins.linkRouterProps), Mixins.linkActionsProps),
 
   render() {
     const _h = this.$createElement;
@@ -71,11 +71,11 @@ export default {
       'menu-item-dropdown': isDropdown,
       'icon-only': iconOnlyComputed
     }, className, Mixins.colorClasses(props), Mixins.linkRouterClasses(props), Mixins.linkActionsClasses(props));
-    return _h(Tag, __vueComponentTransformJSXProps(Object.assign({
+    return _h(Tag, __vueComponentTransformJSXProps(Object.assign(Object.assign({
       ref: 'el',
       class: classes,
       style: style
-    }, self.attrs, {
+    }, self.attrs), {}, {
       attrs: {
         id: id
       }

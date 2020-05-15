@@ -7,11 +7,13 @@
   export { className as class };
 
   export let accordionOpposite = undefined;
+  export let accordionHightlight = undefined;
 
   $: classes = Utils.classNames(
     className,
     'accordion-list',
     accordionOpposite && 'accordion-opposite',
+    accordionHightlight && 'accordion-hightlight',
     Mixins.colorClasses($$props),
   );
 

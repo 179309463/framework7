@@ -164,7 +164,7 @@ class F7MenuItem extends React.Component {
 
 }
 
-__reactComponentSetProps(F7MenuItem, Object.assign({
+__reactComponentSetProps(F7MenuItem, Object.assign(Object.assign(Object.assign(Object.assign({
   id: [String, Number],
   className: String,
   style: Object,
@@ -174,7 +174,7 @@ __reactComponentSetProps(F7MenuItem, Object.assign({
   link: Boolean,
   target: String,
   dropdown: Boolean
-}, Mixins.colorProps, {}, Mixins.linkIconProps, {}, Mixins.linkRouterProps, {}, Mixins.linkActionsProps));
+}, Mixins.colorProps), Mixins.linkIconProps), Mixins.linkRouterProps), Mixins.linkActionsProps));
 
 F7MenuItem.displayName = 'f7-menu-item';
 export default F7MenuItem;

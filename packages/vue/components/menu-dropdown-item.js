@@ -5,14 +5,14 @@ import __vueComponentDispatchEvent from '../runtime-helpers/vue-component-dispat
 import __vueComponentProps from '../runtime-helpers/vue-component-props.js';
 export default {
   name: 'f7-menu-dropdown-item',
-  props: Object.assign({
+  props: Object.assign(Object.assign(Object.assign({
     id: [String, Number],
     text: String,
     link: Boolean,
     href: String,
     target: String,
     divider: Boolean
-  }, Mixins.colorProps, {}, Mixins.linkRouterProps, {}, Mixins.linkActionsProps),
+  }, Mixins.colorProps), Mixins.linkRouterProps), Mixins.linkActionsProps),
 
   render() {
     const _h = this.$createElement;
@@ -37,11 +37,11 @@ export default {
     }, className, Mixins.colorClasses(props), Mixins.linkRouterClasses(props), Mixins.linkActionsClasses(props), {
       'menu-close': typeof menuClose === 'undefined'
     });
-    return _h(Tag, __vueComponentTransformJSXProps(Object.assign({
+    return _h(Tag, __vueComponentTransformJSXProps(Object.assign(Object.assign({
       ref: 'el',
       class: classes,
       style: style
-    }, self.attrs, {
+    }, self.attrs), {}, {
       attrs: {
         id: id
       }

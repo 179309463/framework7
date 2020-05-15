@@ -7,12 +7,12 @@ export default {
   params: {
     dialog: {
       title: undefined,
-      buttonOk: 'OK',
-      buttonCancel: 'Cancel',
-      usernamePlaceholder: 'Username',
-      passwordPlaceholder: 'Password',
-      preloaderTitle: 'Loading... ',
-      progressTitle: 'Loading... ',
+      buttonOk: '确定',
+      buttonCancel: '取消',
+      usernamePlaceholder: '用户名',
+      passwordPlaceholder: '密码',
+      preloaderTitle: '加载中... ',
+      progressTitle: '加载中... ',
       backdrop: true,
       closeByBackdropClick: false,
       destroyPredefinedDialogs: true,

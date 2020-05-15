@@ -13,7 +13,7 @@
   export let rectangle = false;
   export let rectangleIos = false;
   export let rectangleMd = false;
-  export let rectangleAurora = false;  
+  export let rectangleAurora = false;
   export let round = false;
   export let roundIos = false;
   export let roundMd = false;

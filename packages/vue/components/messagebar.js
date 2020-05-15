@@ -106,9 +106,9 @@ export default {
       class: 'toolbar-inner'
     }, [slotsInnerStart, _h('div', {
       class: 'messagebar-area'
-    }, [slotsBeforeArea, messagebarAttachmentsEl, _h(F7Input, __vueComponentTransformJSXProps(Object.assign({
+    }, [slotsBeforeArea, messagebarAttachmentsEl, _h(F7Input, __vueComponentTransformJSXProps(Object.assign(Object.assign({
       ref: 'area'
-    }, valueProps, {
+    }, valueProps), {}, {
       on: {
         input: self.onInput,
         change: self.onChange,

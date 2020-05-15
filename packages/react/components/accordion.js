@@ -15,9 +15,10 @@ class F7Accordion extends React.Component {
       className,
       id,
       style,
-      accordionOpposite
+      accordionOpposite,
+      accordionHightlight
     } = props;
-    const classes = Utils.classNames(className, 'accordion-list', accordionOpposite && 'accordion-opposite', Mixins.colorClasses(props));
+    const classes = Utils.classNames(className, 'accordion-list', accordionOpposite && 'accordion-opposite', accordionHightlight && 'accordion-hightlight', Mixins.colorClasses(props));
     return React.createElement('div', {
       id: id,
       style: style,
@@ -35,7 +36,8 @@ __reactComponentSetProps(F7Accordion, Object.assign({
   id: [String, Number],
   className: String,
   style: Object,
-  accordionOpposite: Boolean
+  accordionOpposite: Boolean,
+  accordionHightlight: Boolean
 }, Mixins.colorProps));
 
 F7Accordion.displayName = 'f7-accordion';

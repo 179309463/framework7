@@ -5,7 +5,7 @@ import __vueComponentTransformJSXProps from '../runtime-helpers/vue-component-tr
 import __vueComponentDispatchEvent from '../runtime-helpers/vue-component-dispatch-event.js';
 import __vueComponentProps from '../runtime-helpers/vue-component-props.js';
 export default {
-  props: Object.assign({
+  props: Object.assign(Object.assign(Object.assign(Object.assign({
     id: [String, Number],
     toggle: {
       type: Boolean,
@@ -21,7 +21,7 @@ export default {
       type: [Boolean, String],
       default: undefined
     }
-  }, Mixins.colorProps, {}, Mixins.linkActionsProps, {}, Mixins.linkRouterProps, {}, Mixins.linkIconProps),
+  }, Mixins.colorProps), Mixins.linkActionsProps), Mixins.linkRouterProps), Mixins.linkIconProps),
   name: 'f7-treeview-item',
 
   render() {

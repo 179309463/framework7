@@ -1,6 +1,6 @@
 {
-  "name": "framework7",
-  "version": "5.7.2",
+  "name": "framework7-cn",
+  "version": "5.8.0",
   "description": "Full featured mobile HTML framework for building iOS & Android apps",
   "main": "js/framework7.js",
   "typings": "js/framework7.d.ts",
@@ -11,7 +11,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/framework7io/framework7.git"
+    "url": "https://github.com/179309463/framework7-cn.git"
   },
   "keywords": [
     "mobile",
@@ -36,7 +36,7 @@
   "author": "Vladimir Kharlampidi",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/framework7io/framework7/issues"
+    "url": "https://github.com/179309463/framework7-cn/issues"
   },
   "homepage": "https://framework7.io/",
   "funding": {

@@ -6,7 +6,7 @@ import __vueComponentDispatchEvent from '../runtime-helpers/vue-component-dispat
 import __vueComponentProps from '../runtime-helpers/vue-component-props.js';
 export default {
   name: 'f7-button',
-  props: Object.assign({
+  props: Object.assign(Object.assign(Object.assign(Object.assign({
     id: [String, Number],
     text: String,
     tabLink: [Boolean, String],
@@ -17,6 +17,10 @@ export default {
       default: '#'
     },
     target: String,
+    rectangle: Boolean,
+    rectangleMd: Boolean,
+    rectangleIos: Boolean,
+    rectangleAurora: Boolean,
     round: Boolean,
     roundMd: Boolean,
     roundIos: Boolean,
@@ -45,7 +49,7 @@ export default {
     disabled: Boolean,
     tooltip: String,
     tooltipTrigger: String
-  }, Mixins.colorProps, {}, Mixins.linkIconProps, {}, Mixins.linkRouterProps, {}, Mixins.linkActionsProps),
+  }, Mixins.colorProps), Mixins.linkIconProps), Mixins.linkRouterProps), Mixins.linkActionsProps),
 
   render() {
     const _h = this.$createElement;
@@ -88,11 +92,11 @@ export default {
     }
 
     const ButtonTag = type === 'submit' || type === 'reset' || type === 'button' ? 'button' : 'a';
-    return _h(ButtonTag, __vueComponentTransformJSXProps(Object.assign({
+    return _h(ButtonTag, __vueComponentTransformJSXProps(Object.assign(Object.assign({
       ref: 'el',
       style: style,
       class: self.classes
-    }, self.attrs, {
+    }, self.attrs), {}, {
       attrs: {
         id: id
       }
@@ -126,6 +130,10 @@ export default {
       const {
         tabLink,
         tabLinkActive,
+        rectangle,
+        rectangleIos,
+        rectangleAurora,
+        rectangleMd,
         round,
         roundIos,
         roundAurora,
@@ -157,6 +165,10 @@ export default {
       return Utils.classNames(className, 'button', {
         'tab-link': tabLink || tabLink === '',
         'tab-link-active': tabLinkActive,
+        'button-rectangle': rectangle,
+        'button-rectangle-ios': rectangleIos,
+        'button-rectangle-aurora': rectangleAurora,
+        'button-rectangle-md': rectangleMd,
         'button-round': round,
         'button-round-ios': roundIos,
         'button-round-aurora': roundAurora,

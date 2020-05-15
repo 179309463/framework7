@@ -64,9 +64,9 @@ class F7ListButton extends React.Component {
       id: id,
       style: style,
       className: className
-    }, React.createElement('a', Object.assign({
+    }, React.createElement('a', Object.assign(Object.assign({
       className: self.classes
-    }, self.attrs, {
+    }, self.attrs), {}, {
       ref: __reactNode => {
         this.__reactRefs['linkEl'] = __reactNode;
       }
@@ -162,7 +162,7 @@ class F7ListButton extends React.Component {
 
 }
 
-__reactComponentSetProps(F7ListButton, Object.assign({
+__reactComponentSetProps(F7ListButton, Object.assign(Object.assign(Object.assign({
   id: [String, Number],
   className: String,
   style: Object,
@@ -175,7 +175,7 @@ __reactComponentSetProps(F7ListButton, Object.assign({
   target: String,
   tooltip: String,
   tooltipTrigger: String
-}, Mixins.colorProps, {}, Mixins.linkRouterProps, {}, Mixins.linkActionsProps));
+}, Mixins.colorProps), Mixins.linkRouterProps), Mixins.linkActionsProps));
 
 F7ListButton.displayName = 'f7-list-button';
 export default F7ListButton;

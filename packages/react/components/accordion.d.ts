@@ -7,6 +7,7 @@ declare namespace F7Accordion {
     className? : string
     style? : React.CSSProperties
     accordionOpposite? : boolean
+    accordionHightlight? : boolean
     color? : string
     colorTheme? : string
     textColor? : string

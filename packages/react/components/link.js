@@ -248,7 +248,7 @@ class F7Link extends React.Component {
 
 }
 
-__reactComponentSetProps(F7Link, Object.assign({
+__reactComponentSetProps(F7Link, Object.assign(Object.assign(Object.assign(Object.assign({
   id: [String, Number],
   className: String,
   style: Object,
@@ -270,7 +270,7 @@ __reactComponentSetProps(F7Link, Object.assign({
   tooltipTrigger: String,
   smartSelect: Boolean,
   smartSelectParams: Object
-}, Mixins.colorProps, {}, Mixins.linkIconProps, {}, Mixins.linkRouterProps, {}, Mixins.linkActionsProps));
+}, Mixins.colorProps), Mixins.linkIconProps), Mixins.linkRouterProps), Mixins.linkActionsProps));
 
 F7Link.displayName = 'f7-link';
 export default F7Link;

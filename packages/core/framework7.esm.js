@@ -1,5 +1,5 @@
 /**
- * Framework7 5.7.2
+ * Framework7 5.8.0
  * Full featured mobile HTML framework for building iOS & Android apps
  * https://framework7.io/
  *
@@ -7,7 +7,7 @@
  *
  * Released under the MIT License
  *
- * Released on: May 9, 2020
+ * Released on: May 15, 2020
  */
 
 import Template7 from 'template7';
@@ -47,6 +47,8 @@ import TouchRipple from './components/touch-ripple/touch-ripple';
 import Modal from './components/modal/modal';
 import Router from './modules/router/router-class';//NO_LITE
 
+import Keypad from './components/keypad/keypad';
+import Panel3D from './components/panel/panel3D';
 
 if ("es" !== 'es') {
   if (typeof window !== 'undefined') {
@@ -83,6 +85,8 @@ Framework7.use([
   Subnavbar,
   TouchRipple,
   Modal,
+  Keypad,
+  Panel3D,
   ]);
 
 export { Template7, $ as Dom7, Request, Utils, Device, Support, Component };

@@ -145,11 +145,11 @@ class F7TextEditor extends React.Component {
 
 }
 
-__reactComponentSetProps(F7TextEditor, Object.assign({
+__reactComponentSetProps(F7TextEditor, Object.assign(Object.assign({
   id: [String, Number],
   className: String,
   style: Object
-}, Mixins.colorProps, {
+}, Mixins.colorProps), {}, {
   mode: {
     type: String,
     default: undefined

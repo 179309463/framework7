@@ -47,6 +47,10 @@ class F7Button extends React.Component {
     const {
       tabLink,
       tabLinkActive,
+      rectangle,
+      rectangleIos,
+      rectangleAurora,
+      rectangleMd,
       round,
       roundIos,
       roundAurora,
@@ -78,6 +82,10 @@ class F7Button extends React.Component {
     return Utils.classNames(className, 'button', {
       'tab-link': tabLink || tabLink === '',
       'tab-link-active': tabLinkActive,
+      'button-rectangle': rectangle,
+      'button-rectangle-ios': rectangleIos,
+      'button-rectangle-aurora': rectangleAurora,
+      'button-rectangle-md': rectangleMd,
       'button-round': round,
       'button-round-ios': roundIos,
       'button-round-aurora': roundAurora,
@@ -243,7 +251,7 @@ class F7Button extends React.Component {
 
 }
 
-__reactComponentSetProps(F7Button, Object.assign({
+__reactComponentSetProps(F7Button, Object.assign(Object.assign(Object.assign(Object.assign({
   id: [String, Number],
   className: String,
   style: Object,
@@ -256,6 +264,10 @@ __reactComponentSetProps(F7Button, Object.assign({
     default: '#'
   },
   target: String,
+  rectangle: Boolean,
+  rectangleMd: Boolean,
+  rectangleIos: Boolean,
+  rectangleAurora: Boolean,
   round: Boolean,
   roundMd: Boolean,
   roundIos: Boolean,
@@ -284,7 +296,7 @@ __reactComponentSetProps(F7Button, Object.assign({
   disabled: Boolean,
   tooltip: String,
   tooltipTrigger: String
-}, Mixins.colorProps, {}, Mixins.linkIconProps, {}, Mixins.linkRouterProps, {}, Mixins.linkActionsProps));
+}, Mixins.colorProps), Mixins.linkIconProps), Mixins.linkRouterProps), Mixins.linkActionsProps));
 
 F7Button.displayName = 'f7-button';
 export default F7Button;

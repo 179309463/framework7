@@ -149,6 +149,7 @@ class F7ListItem extends React.Component {
       accordionItemOpened,
       smartSelect,
       checkbox,
+      checkboxIcon,
       radio,
       radioIcon,
       checked,
@@ -185,6 +186,7 @@ class F7ListItem extends React.Component {
         mediaList: isMedia,
         accordionItem: accordionItem,
         checkbox: checkbox,
+        checkboxIcon: checkboxIcon,
         checked: checked,
         defaultChecked: defaultChecked,
         indeterminate: indeterminate,
@@ -203,11 +205,11 @@ class F7ListItem extends React.Component {
       }));
 
       if (link || href || accordionItem || smartSelect) {
-        const linkAttrs = Object.assign({
+        const linkAttrs = Object.assign(Object.assign({
           href: link === true ? '' : link || href,
           target,
           'data-tab': Utils.isStringProp(tabLink) && tabLink || undefined
-        }, Mixins.linkRouterAttrs(props), {}, Mixins.linkActionsAttrs(props));
+        }, Mixins.linkRouterAttrs(props)), Mixins.linkActionsAttrs(props));
         const linkClasses = Utils.classNames({
           'item-link': true,
           'smart-select': smartSelect,
@@ -520,7 +522,7 @@ class F7ListItem extends React.Component {
 
 }
 
-__reactComponentSetProps(F7ListItem, Object.assign({
+__reactComponentSetProps(F7ListItem, Object.assign(Object.assign(Object.assign({
   id: [String, Number],
   className: String,
   style: Object,
@@ -560,6 +562,7 @@ __reactComponentSetProps(F7ListItem, Object.assign({
   noChevron: Boolean,
   chevronCenter: Boolean,
   checkbox: Boolean,
+  checkboxIcon: String,
   radio: Boolean,
   radioIcon: String,
   checked: Boolean,
@@ -571,7 +574,7 @@ __reactComponentSetProps(F7ListItem, Object.assign({
   required: Boolean,
   disabled: Boolean,
   virtualListIndex: Number
-}, Mixins.colorProps, {}, Mixins.linkRouterProps, {}, Mixins.linkActionsProps));
+}, Mixins.colorProps), Mixins.linkRouterProps), Mixins.linkActionsProps));
 
 F7ListItem.displayName = 'f7-list-item';
 export default F7ListItem;

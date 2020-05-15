@@ -5,7 +5,7 @@ import __vueComponentDispatchEvent from '../runtime-helpers/vue-component-dispat
 import __vueComponentProps from '../runtime-helpers/vue-component-props.js';
 export default {
   name: 'f7-list-button',
-  props: Object.assign({
+  props: Object.assign(Object.assign(Object.assign({
     id: [String, Number],
     title: [String, Number],
     text: [String, Number],
@@ -16,7 +16,7 @@ export default {
     target: String,
     tooltip: String,
     tooltipTrigger: String
-  }, Mixins.colorProps, {}, Mixins.linkRouterProps, {}, Mixins.linkActionsProps),
+  }, Mixins.colorProps), Mixins.linkRouterProps), Mixins.linkActionsProps),
 
   render() {
     const _h = this.$createElement;
@@ -35,9 +35,9 @@ export default {
       attrs: {
         id: id
       }
-    }, [_h('a', __vueComponentTransformJSXProps(Object.assign({
+    }, [_h('a', __vueComponentTransformJSXProps(Object.assign(Object.assign({
       class: self.classes
-    }, self.attrs, {
+    }, self.attrs), {}, {
       ref: 'linkEl'
     })), [this.$slots['default'] || [title || text]])]);
   },

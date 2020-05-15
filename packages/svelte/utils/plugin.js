@@ -15,7 +15,6 @@ const Plugin = {
     f7.Framework7 = Framework7;
     f7.events = new Framework7.Events();
     // eslint-disable-next-line
-    
     const { theme } = params;
     if (theme === 'md') f7Theme.md = true;
     if (theme === 'ios') f7Theme.ios = true;
@@ -30,7 +29,6 @@ const Plugin = {
       f7Theme.md = f7.instance.theme === 'md';
       f7Theme.aurora = f7.instance.theme === 'aurora';
     });
-    
     // Extend F7 Router
     Framework7.Router.use(componentsRouter);
   },

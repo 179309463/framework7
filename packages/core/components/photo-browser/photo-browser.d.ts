@@ -38,7 +38,7 @@ export namespace PhotoBrowser {
     navbar?: boolean
     /** Set to false to remove Photo Browser's Toolbar (default true) */
     toolbar?: boolean
-    /** Text on back link in Photo Browser's navbar (default "Back") */
+    /** Text on back link in Photo Browser's navbar (default "返回") */
     pageBackLinkText?: string
     /** Text on close link in Photo Browser's navbar when opened in Popup or as Standalone (default "Close") */
     popupCloseLinkText?: string

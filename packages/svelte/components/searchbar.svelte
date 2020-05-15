@@ -13,9 +13,9 @@
   export let noShadow = false;
   export let noHairline = false;
   export let form = true;
-  export let placeholder = 'Search';
+  export let placeholder = '搜索...';
   export let disableButton = true;
-  export let disableButtonText = 'Cancel';
+  export let disableButtonText = '取消';
   export let clearButton = true;
   // Input Value
   export let value = undefined;

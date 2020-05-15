@@ -185,7 +185,7 @@ class F7TreeviewItem extends React.Component {
 
 }
 
-__reactComponentSetProps(F7TreeviewItem, Object.assign({
+__reactComponentSetProps(F7TreeviewItem, Object.assign(Object.assign(Object.assign(Object.assign({
   id: [String, Number],
   className: String,
   style: Object,
@@ -203,7 +203,7 @@ __reactComponentSetProps(F7TreeviewItem, Object.assign({
     type: [Boolean, String],
     default: undefined
   }
-}, Mixins.colorProps, {}, Mixins.linkActionsProps, {}, Mixins.linkRouterProps, {}, Mixins.linkIconProps));
+}, Mixins.colorProps), Mixins.linkActionsProps), Mixins.linkRouterProps), Mixins.linkIconProps));
 
 F7TreeviewItem.displayName = 'f7-treeview-item';
 export default F7TreeviewItem;

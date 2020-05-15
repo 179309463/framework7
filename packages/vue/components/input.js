@@ -259,7 +259,7 @@ export default {
         }
       });
     } else if (type === 'texteditor') {
-      inputEl = _h(F7TextEditor, __vueComponentTransformJSXProps(Object.assign({}, textEditorParams, {
+      inputEl = _h(F7TextEditor, __vueComponentTransformJSXProps(Object.assign(Object.assign({}, textEditorParams), {}, {
         on: {
           textEditorFocus: self.onFocus,
           textEditorBlur: self.onBlur,

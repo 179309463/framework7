@@ -21,6 +21,7 @@ declare namespace F7List {
     sortableOpposite? : boolean
     accordionList? : boolean
     accordionOpposite? : boolean
+    accordionHightlight? : boolean
     contactsList? : boolean
     simpleList? : boolean
     linksList? : boolean

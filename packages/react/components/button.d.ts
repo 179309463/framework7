@@ -13,6 +13,10 @@ declare namespace F7Button {
     type? : string
     href? : string | boolean
     target? : string
+    rectangle? : boolean
+    rectangleMd? : boolean
+    rectangleIos? : boolean
+    rectangleAurora? : boolean
     round? : boolean
     roundMd? : boolean
     roundIos? : boolean

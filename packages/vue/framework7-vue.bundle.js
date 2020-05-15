@@ -1,5 +1,5 @@
 /**
- * Framework7 Vue 5.7.2
+ * Framework7 Vue 5.8.0
  * Build full featured iOS & Android apps using Framework7 & Vue
  * https://framework7.io/vue/
  *
@@ -7,7 +7,7 @@
  *
  * Released under the MIT License
  *
- * Released on: May 9, 2020
+ * Released on: May 15, 2020
  */
 
 (function (global, factory) {
@@ -573,7 +573,8 @@
   var f7Accordion = {
     props: Object.assign({
       id: [String, Number],
-      accordionOpposite: Boolean
+      accordionOpposite: Boolean,
+      accordionHightlight: Boolean
     }, Mixins.colorProps),
     name: 'f7-accordion',
 
@@ -584,7 +585,8 @@
       var id = props.id;
       var style = props.style;
       var accordionOpposite = props.accordionOpposite;
-      var classes = Utils.classNames(className, 'accordion-list', accordionOpposite && 'accordion-opposite', Mixins.colorClasses(props));
+      var accordionHightlight = props.accordionHightlight;
+      var classes = Utils.classNames(className, 'accordion-list', accordionOpposite && 'accordion-opposite', accordionHightlight && 'accordion-hightlight', Mixins.colorClasses(props));
       return _h('div', {
         style: style,
         class: classes,
@@ -1645,7 +1647,7 @@
 
   var f7Button = {
     name: 'f7-button',
-    props: Object.assign({
+    props: Object.assign(Object.assign(Object.assign(Object.assign({
       id: [String, Number],
       text: String,
       tabLink: [Boolean, String],
@@ -1656,6 +1658,10 @@
         default: '#'
       },
       target: String,
+      rectangle: Boolean,
+      rectangleMd: Boolean,
+      rectangleIos: Boolean,
+      rectangleAurora: Boolean,
       round: Boolean,
       roundMd: Boolean,
       roundIos: Boolean,
@@ -1684,7 +1690,7 @@
       disabled: Boolean,
       tooltip: String,
       tooltipTrigger: String
-    }, Mixins.colorProps, {}, Mixins.linkIconProps, {}, Mixins.linkRouterProps, {}, Mixins.linkActionsProps),
+    }, Mixins.colorProps), Mixins.linkIconProps), Mixins.linkRouterProps), Mixins.linkActionsProps),
 
     render: function render() {
       var _h = this.$createElement;
@@ -1725,11 +1731,11 @@
       }
 
       var ButtonTag = type === 'submit' || type === 'reset' || type === 'button' ? 'button' : 'a';
-      return _h(ButtonTag, __vueComponentTransformJSXProps(Object.assign({
+      return _h(ButtonTag, __vueComponentTransformJSXProps(Object.assign(Object.assign({
         ref: 'el',
         style: style,
         class: self.classes
-      }, self.attrs, {
+      }, self.attrs), {}, {
         attrs: {
           id: id
         }
@@ -1760,6 +1766,10 @@
         var props = self.props;
         var tabLink = props.tabLink;
         var tabLinkActive = props.tabLinkActive;
+        var rectangle = props.rectangle;
+        var rectangleIos = props.rectangleIos;
+        var rectangleAurora = props.rectangleAurora;
+        var rectangleMd = props.rectangleMd;
         var round = props.round;
         var roundIos = props.roundIos;
         var roundAurora = props.roundAurora;
@@ -1790,6 +1800,10 @@
         return Utils.classNames(className, 'button', {
           'tab-link': tabLink || tabLink === '',
           'tab-link-active': tabLinkActive,
+          'button-rectangle': rectangle,
+          'button-rectangle-ios': rectangleIos,
+          'button-rectangle-aurora': rectangleAurora,
+          'button-rectangle-md': rectangleMd,
           'button-round': round,
           'button-round-ios': roundIos,
           'button-round-aurora': roundAurora,
@@ -2361,7 +2375,7 @@
 
   var f7Chip = {
     name: 'f7-chip',
-    props: Object.assign({
+    props: Object.assign(Object.assign({
       id: [String, Number],
       media: String,
       text: [String, Number],
@@ -2369,7 +2383,7 @@
       mediaBgColor: String,
       mediaTextColor: String,
       outline: Boolean
-    }, Mixins.colorProps, {}, Mixins.linkIconProps),
+    }, Mixins.colorProps), Mixins.linkIconProps),
 
     render: function render() {
       var _h = this.$createElement;
@@ -3466,9 +3480,9 @@
 
   var f7TextEditor = {
     name: 'f7-text-editor',
-    props: Object.assign({
+    props: Object.assign(Object.assign({
       id: [String, Number]
-    }, Mixins.colorProps, {
+    }, Mixins.colorProps), {}, {
       mode: {
         type: String,
         default: undefined
@@ -3889,7 +3903,7 @@
           }
         });
       } else if (type === 'texteditor') {
-        inputEl = _h(f7TextEditor, __vueComponentTransformJSXProps(Object.assign({}, textEditorParams, {
+        inputEl = _h(f7TextEditor, __vueComponentTransformJSXProps(Object.assign(Object.assign({}, textEditorParams), {}, {
           on: {
             textEditorFocus: self.onFocus,
             textEditorBlur: self.onBlur,
@@ -4219,7 +4233,7 @@
 
   var f7Link = {
     name: 'f7-link',
-    props: Object.assign({
+    props: Object.assign(Object.assign(Object.assign(Object.assign({
       id: [String, Number],
       noLinkClass: Boolean,
       text: String,
@@ -4239,7 +4253,7 @@
       tooltipTrigger: String,
       smartSelect: Boolean,
       smartSelectParams: Object
-    }, Mixins.colorProps, {}, Mixins.linkIconProps, {}, Mixins.linkRouterProps, {}, Mixins.linkActionsProps),
+    }, Mixins.colorProps), Mixins.linkIconProps), Mixins.linkRouterProps), Mixins.linkActionsProps),
 
     data: function data() {
       var props = __vueComponentProps(this);
@@ -4324,11 +4338,11 @@
         self.iconOnlyComputed = false;
       }
 
-      return _h('a', __vueComponentTransformJSXProps(Object.assign({
+      return _h('a', __vueComponentTransformJSXProps(Object.assign(Object.assign({
         ref: 'el',
         style: style,
         class: self.classes
-      }, self.attrs, {
+      }, self.attrs), {}, {
         attrs: {
           id: id
         }
@@ -4492,7 +4506,7 @@
 
   var f7ListButton = {
     name: 'f7-list-button',
-    props: Object.assign({
+    props: Object.assign(Object.assign(Object.assign({
       id: [String, Number],
       title: [String, Number],
       text: [String, Number],
@@ -4503,7 +4517,7 @@
       target: String,
       tooltip: String,
       tooltipTrigger: String
-    }, Mixins.colorProps, {}, Mixins.linkRouterProps, {}, Mixins.linkActionsProps),
+    }, Mixins.colorProps), Mixins.linkRouterProps), Mixins.linkActionsProps),
 
     render: function render() {
       var _h = this.$createElement;
@@ -4520,9 +4534,9 @@
         attrs: {
           id: id
         }
-      }, [_h('a', __vueComponentTransformJSXProps(Object.assign({
+      }, [_h('a', __vueComponentTransformJSXProps(Object.assign(Object.assign({
         class: self.classes
-      }, self.attrs, {
+      }, self.attrs), {}, {
         ref: 'linkEl'
       })), [this.$slots['default'] || [title || text]])]);
     },
@@ -5065,7 +5079,7 @@
             inputEl = createInput('textarea');
           }
         } else if (type === 'texteditor') {
-          inputEl = _h(f7TextEditor, __vueComponentTransformJSXProps(Object.assign({}, textEditorParams, {
+          inputEl = _h(f7TextEditor, __vueComponentTransformJSXProps(Object.assign(Object.assign({}, textEditorParams), {}, {
             on: {
               textEditorFocus: self.onFocus,
               textEditorBlur: self.onBlur,
@@ -5470,6 +5484,7 @@
       mediaList: Boolean,
       mediaItem: Boolean,
       checkbox: Boolean,
+      checkboxIcon: String,
       checked: Boolean,
       defaultChecked: Boolean,
       indeterminate: Boolean,
@@ -5492,6 +5507,7 @@
       var radio = props.radio;
       var radioIcon = props.radioIcon;
       var checkbox = props.checkbox;
+      var checkboxIcon = props.checkboxIcon;
       var value = props.value;
       var name = props.name;
       var checked = props.checked;
@@ -5687,6 +5703,8 @@
       var ItemContentTag = checkbox || radio ? 'label' : 'div';
       var classes = Utils.classNames(className, 'item-content', {
         'item-checkbox': checkbox,
+        'item-checkbox-icon-start': checkbox && checkboxIcon === 'start',
+        'item-checkbox-icon-end': checkbox && checkboxIcon === 'end',
         'item-radio': radio,
         'item-radio-icon-start': radio && radioIcon === 'start',
         'item-radio-icon-end': radio && radioIcon === 'end'
@@ -5796,7 +5814,7 @@
 
   var f7ListItem = {
     name: 'f7-list-item',
-    props: Object.assign({
+    props: Object.assign(Object.assign(Object.assign({
       id: [String, Number],
       title: [String, Number],
       text: [String, Number],
@@ -5834,6 +5852,7 @@
       noChevron: Boolean,
       chevronCenter: Boolean,
       checkbox: Boolean,
+      checkboxIcon: String,
       radio: Boolean,
       radioIcon: String,
       checked: Boolean,
@@ -5845,7 +5864,7 @@
       required: Boolean,
       disabled: Boolean,
       virtualListIndex: Number
-    }, Mixins.colorProps, {}, Mixins.linkRouterProps, {}, Mixins.linkActionsProps),
+    }, Mixins.colorProps), Mixins.linkRouterProps), Mixins.linkActionsProps),
 
     data: function data() {
       var props = __vueComponentProps(this);
@@ -5896,6 +5915,7 @@
       var accordionItemOpened = props.accordionItemOpened;
       var smartSelect = props.smartSelect;
       var checkbox = props.checkbox;
+      var checkboxIcon = props.checkboxIcon;
       var radio = props.radio;
       var radioIcon = props.radioIcon;
       var checked = props.checked;
@@ -5936,6 +5956,7 @@
             mediaList: isMedia,
             accordionItem: accordionItem,
             checkbox: checkbox,
+            checkboxIcon: checkboxIcon,
             checked: checked,
             defaultChecked: defaultChecked,
             indeterminate: indeterminate,
@@ -5953,11 +5974,11 @@
         })]);
 
         if (link || href || accordionItem || smartSelect) {
-          var linkAttrs = Object.assign({
+          var linkAttrs = Object.assign(Object.assign({
             href: link === true ? '' : link || href,
             target: target,
             'data-tab': Utils.isStringProp(tabLink) && tabLink || undefined
-          }, Mixins.linkRouterAttrs(props), {}, Mixins.linkActionsAttrs(props));
+          }, Mixins.linkRouterAttrs(props)), Mixins.linkActionsAttrs(props));
           var linkClasses = Utils.classNames({
             'item-link': true,
             'smart-select': smartSelect,
@@ -6382,6 +6403,7 @@
       sortableOpposite: Boolean,
       accordionList: Boolean,
       accordionOpposite: Boolean,
+      accordionHightlight: Boolean,
       contactsList: Boolean,
       simpleList: Boolean,
       linksList: Boolean,
@@ -6478,6 +6500,7 @@
         var sortableOpposite = props.sortableOpposite;
         var accordionList = props.accordionList;
         var accordionOpposite = props.accordionOpposite;
+        var accordionHightlight = props.accordionHightlight;
         var contactsList = props.contactsList;
         var virtualList = props.virtualList;
         var tab = props.tab;
@@ -6511,6 +6534,7 @@
           'sortable-opposite': sortableOpposite,
           'accordion-list': accordionList,
           'accordion-opposite': accordionOpposite,
+          'accordion-hightlight': accordionHightlight,
           'contacts-list': contactsList,
           'virtual-list': virtualList,
           tab: tab,
@@ -6792,14 +6816,14 @@
 
   var f7MenuDropdownItem = {
     name: 'f7-menu-dropdown-item',
-    props: Object.assign({
+    props: Object.assign(Object.assign(Object.assign({
       id: [String, Number],
       text: String,
       link: Boolean,
       href: String,
       target: String,
       divider: Boolean
-    }, Mixins.colorProps, {}, Mixins.linkRouterProps, {}, Mixins.linkActionsProps),
+    }, Mixins.colorProps), Mixins.linkRouterProps), Mixins.linkActionsProps),
 
     render: function render() {
       var _h = this.$createElement;
@@ -6822,11 +6846,11 @@
       }, className, Mixins.colorClasses(props), Mixins.linkRouterClasses(props), Mixins.linkActionsClasses(props), {
         'menu-close': typeof menuClose === 'undefined'
       });
-      return _h(Tag, __vueComponentTransformJSXProps(Object.assign({
+      return _h(Tag, __vueComponentTransformJSXProps(Object.assign(Object.assign({
         ref: 'el',
         class: classes,
         style: style
-      }, self.attrs, {
+      }, self.attrs), {}, {
         attrs: {
           id: id
         }
@@ -6951,7 +6975,7 @@
 
   var f7MenuItem = {
     name: 'f7-menu-item',
-    props: Object.assign({
+    props: Object.assign(Object.assign(Object.assign(Object.assign({
       id: [String, Number],
       text: String,
       iconOnly: Boolean,
@@ -6959,7 +6983,7 @@
       link: Boolean,
       target: String,
       dropdown: Boolean
-    }, Mixins.colorProps, {}, Mixins.linkIconProps, {}, Mixins.linkRouterProps, {}, Mixins.linkActionsProps),
+    }, Mixins.colorProps), Mixins.linkIconProps), Mixins.linkRouterProps), Mixins.linkActionsProps),
 
     render: function render() {
       var _h = this.$createElement;
@@ -7014,11 +7038,11 @@
         'menu-item-dropdown': isDropdown,
         'icon-only': iconOnlyComputed
       }, className, Mixins.colorClasses(props), Mixins.linkRouterClasses(props), Mixins.linkActionsClasses(props));
-      return _h(Tag, __vueComponentTransformJSXProps(Object.assign({
+      return _h(Tag, __vueComponentTransformJSXProps(Object.assign(Object.assign({
         ref: 'el',
         class: classes,
         style: style
-      }, self.attrs, {
+      }, self.attrs), {}, {
         attrs: {
           id: id
         }
@@ -7704,9 +7728,9 @@
         class: 'toolbar-inner'
       }, [slotsInnerStart, _h('div', {
         class: 'messagebar-area'
-      }, [slotsBeforeArea, messagebarAttachmentsEl, _h(f7Input, __vueComponentTransformJSXProps(Object.assign({
+      }, [slotsBeforeArea, messagebarAttachmentsEl, _h(f7Input, __vueComponentTransformJSXProps(Object.assign(Object.assign({
         ref: 'area'
-      }, valueProps, {
+      }, valueProps), {}, {
         on: {
           input: self.onInput,
           change: self.onChange,
@@ -10670,7 +10694,7 @@
       },
       placeholder: {
         type: String,
-        default: 'Search'
+        default: '搜索...'
       },
       disableButton: {
         type: Boolean,
@@ -10678,7 +10702,7 @@
       },
       disableButtonText: {
         type: String,
-        default: 'Cancel'
+        default: '取消'
       },
       clearButton: {
         type: Boolean,
@@ -11029,6 +11053,10 @@
       raisedIos: Boolean,
       raisedMd: Boolean,
       raisedAurora: Boolean,
+      rectangle: Boolean,
+      rectangleIos: Boolean,
+      rectangleMd: Boolean,
+      rectangleAurora: Boolean,
       round: Boolean,
       roundIos: Boolean,
       roundMd: Boolean,
@@ -11052,6 +11080,10 @@
       var raisedIos = props.raisedIos;
       var raisedAurora = props.raisedAurora;
       var raisedMd = props.raisedMd;
+      var rectangle = props.rectangle;
+      var rectangleIos = props.rectangleIos;
+      var rectangleAurora = props.rectangleAurora;
+      var rectangleMd = props.rectangleMd;
       var round = props.round;
       var roundIos = props.roundIos;
       var roundAurora = props.roundAurora;
@@ -11069,6 +11101,10 @@
         'segmented-raised-ios': raisedIos,
         'segmented-raised-aurora': raisedAurora,
         'segmented-raised-md': raisedMd,
+        'segmented-rectangle': rectangle,
+        'segmented-rectangle-ios': rectangleIos,
+        'segmented-rectangle-aurora': rectangleAurora,
+        'segmented-rectangle-md': rectangleMd,
         'segmented-round': round,
         'segmented-round-ios': roundIos,
         'segmented-round-aurora': roundAurora,
@@ -12568,7 +12604,7 @@
   };
 
   var f7TreeviewItem = {
-    props: Object.assign({
+    props: Object.assign(Object.assign(Object.assign(Object.assign({
       id: [String, Number],
       toggle: {
         type: Boolean,
@@ -12584,7 +12620,7 @@
         type: [Boolean, String],
         default: undefined
       }
-    }, Mixins.colorProps, {}, Mixins.linkActionsProps, {}, Mixins.linkRouterProps, {}, Mixins.linkIconProps),
+    }, Mixins.colorProps), Mixins.linkActionsProps), Mixins.linkRouterProps), Mixins.linkIconProps),
     name: 'f7-treeview-item',
 
     render: function render() {
@@ -13298,7 +13334,7 @@
   };
 
   /**
-   * Framework7 Vue 5.7.2
+   * Framework7 Vue 5.8.0
    * Build full featured iOS & Android apps using Framework7 & Vue
    * https://framework7.io/vue/
    *
@@ -13306,7 +13342,7 @@
    *
    * Released under the MIT License
    *
-   * Released on: May 9, 2020
+   * Released on: May 15, 2020
    */
 
   function f7ready(callback) {

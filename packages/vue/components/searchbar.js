@@ -14,7 +14,7 @@ export default {
     },
     placeholder: {
       type: String,
-      default: 'Search'
+      default: '搜索...'
     },
     disableButton: {
       type: Boolean,
@@ -22,7 +22,7 @@ export default {
     },
     disableButtonText: {
       type: String,
-      default: 'Cancel'
+      default: '取消'
     },
     clearButton: {
       type: Boolean,

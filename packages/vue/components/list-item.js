@@ -7,7 +7,7 @@ import __vueComponentDispatchEvent from '../runtime-helpers/vue-component-dispat
 import __vueComponentProps from '../runtime-helpers/vue-component-props.js';
 export default {
   name: 'f7-list-item',
-  props: Object.assign({
+  props: Object.assign(Object.assign(Object.assign({
     id: [String, Number],
     title: [String, Number],
     text: [String, Number],
@@ -45,6 +45,7 @@ export default {
     noChevron: Boolean,
     chevronCenter: Boolean,
     checkbox: Boolean,
+    checkboxIcon: String,
     radio: Boolean,
     radioIcon: String,
     checked: Boolean,
@@ -56,7 +57,7 @@ export default {
     required: Boolean,
     disabled: Boolean,
     virtualListIndex: Number
-  }, Mixins.colorProps, {}, Mixins.linkRouterProps, {}, Mixins.linkActionsProps),
+  }, Mixins.colorProps), Mixins.linkRouterProps), Mixins.linkActionsProps),
 
   data() {
     const props = __vueComponentProps(this);
@@ -108,6 +109,7 @@ export default {
       accordionItemOpened,
       smartSelect,
       checkbox,
+      checkboxIcon,
       radio,
       radioIcon,
       checked,
@@ -149,6 +151,7 @@ export default {
           mediaList: isMedia,
           accordionItem: accordionItem,
           checkbox: checkbox,
+          checkboxIcon: checkboxIcon,
           checked: checked,
           defaultChecked: defaultChecked,
           indeterminate: indeterminate,
@@ -166,11 +169,11 @@ export default {
       })]);
 
       if (link || href || accordionItem || smartSelect) {
-        const linkAttrs = Object.assign({
+        const linkAttrs = Object.assign(Object.assign({
           href: link === true ? '' : link || href,
           target,
           'data-tab': Utils.isStringProp(tabLink) && tabLink || undefined
-        }, Mixins.linkRouterAttrs(props), {}, Mixins.linkActionsAttrs(props));
+        }, Mixins.linkRouterAttrs(props)), Mixins.linkActionsAttrs(props));
         const linkClasses = Utils.classNames({
           'item-link': true,
           'smart-select': smartSelect,

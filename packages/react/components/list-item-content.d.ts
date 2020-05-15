@@ -18,6 +18,7 @@ declare namespace F7ListItemContent {
     mediaList? : boolean
     mediaItem? : boolean
     checkbox? : boolean
+    checkboxIcon? : string
     checked? : boolean
     defaultChecked? : boolean
     indeterminate? : boolean

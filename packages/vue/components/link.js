@@ -8,7 +8,7 @@ import __vueComponentDispatchEvent from '../runtime-helpers/vue-component-dispat
 import __vueComponentProps from '../runtime-helpers/vue-component-props.js';
 export default {
   name: 'f7-link',
-  props: Object.assign({
+  props: Object.assign(Object.assign(Object.assign(Object.assign({
     id: [String, Number],
     noLinkClass: Boolean,
     text: String,
@@ -28,7 +28,7 @@ export default {
     tooltipTrigger: String,
     smartSelect: Boolean,
     smartSelectParams: Object
-  }, Mixins.colorProps, {}, Mixins.linkIconProps, {}, Mixins.linkRouterProps, {}, Mixins.linkActionsProps),
+  }, Mixins.colorProps), Mixins.linkIconProps), Mixins.linkRouterProps), Mixins.linkActionsProps),
 
   data() {
     const props = __vueComponentProps(this);
@@ -115,11 +115,11 @@ export default {
       self.iconOnlyComputed = false;
     }
 
-    return _h('a', __vueComponentTransformJSXProps(Object.assign({
+    return _h('a', __vueComponentTransformJSXProps(Object.assign(Object.assign({
       ref: 'el',
       style: style,
       class: self.classes
-    }, self.attrs, {
+    }, self.attrs), {}, {
       attrs: {
         id: id
       }

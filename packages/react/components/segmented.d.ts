@@ -10,6 +10,10 @@ declare namespace F7Segmented {
     raisedIos? : boolean
     raisedMd? : boolean
     raisedAurora? : boolean
+    rectangle? : boolean
+    rectangleIos? : boolean
+    rectangleMd? : boolean
+    rectangleAurora? : boolean
     round? : boolean
     roundIos? : boolean
     roundMd? : boolean
