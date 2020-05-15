@@ -1,5 +1,5 @@
 /**
- * Framework7 Vue 5.8.1
+ * Framework7 Vue 5.8.2
  * Build full featured iOS & Android apps using Framework7 & Vue
  * https://framework7.io/vue/
  *
@@ -13334,7 +13334,7 @@
   };
 
   /**
-   * Framework7 Vue 5.8.1
+   * Framework7 Vue 5.8.2
    * Build full featured iOS & Android apps using Framework7 & Vue
    * https://framework7.io/vue/
    *
