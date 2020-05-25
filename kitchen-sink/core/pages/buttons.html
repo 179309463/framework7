@@ -258,7 +258,7 @@
     <div class="block-title">Color Fill Buttons With Preload</div>
     <div class="block">
       <p class="row">
-        <button class="col button button-fill color-red"><span class="preloader color-white"></span>Red</button>
+        <button class="col button button-fill color-red" id="button-with-preloader1" data-loading-text="正在加载" data-loading-icon-position="left" @click="loadEvent1">Red</button>
         <button class="col button button-fill color-green"><span class="preloader color-white"></span>Green</button>
         <button class="col button button-fill color-blue"><span class="preloader color-white"></span>Blue</button>
       </p>
@@ -365,7 +365,7 @@
     <div class="block-title">Color Outline Buttons With Preload</div>
     <div class="block">
       <p class="row">
-        <button class="col button button-outline color-red"><span class="preloader color-red"></span>Red</button>
+        <button class="col button button-outline color-red" id="button-with-preloader2" data-loading-text="正在加载" data-loading-icon-position="Right" data-loading-icon-class="color-red" @click="loadEvent2">Red</button>
         <button class="col button button-outline color-green"><span class="preloader color-green"></span>Green</button>
         <button class="col button button-outline color-blue"><span class="preloader color-blue"></span>Blue</button>
       </p>
@@ -406,6 +406,20 @@
     methods: {
       setStrongButton(index) {
         this.$setState({ activeStrongButton: index })
+      },
+      loadEvent1(){
+        var self = this;
+        self.$app.button.loading("#button-with-preloader1");
+        setTimeout(function(){
+          self.$app.button.reset("#button-with-preloader1");
+        }, 2000)
+      },
+      loadEvent2(){
+        var self = this;
+        self.$app.button.loading("#button-with-preloader2");
+        setTimeout(function(){
+          self.$app.button.reset("#button-with-preloader2");
+        }, 2000)
       }
     }
   }

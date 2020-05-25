@@ -123,6 +123,9 @@ const config = {
 
     // VI Video Ads
     'vi',
+
+    // Button
+    'button',
   ],
   darkTheme: true,
   lightTheme: true,
