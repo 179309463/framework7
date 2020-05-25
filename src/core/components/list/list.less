@@ -3,10 +3,14 @@
 :root {
   --f7-list-chevron-icon-left: 'chevron_left';
   --f7-list-chevron-icon-right: 'chevron_right';
+  --f7-list-chevron-icon-up: 'chevron_up';
+  --f7-list-chevron-icon-down: 'chevron_down';
 }
 .aurora {
   --f7-list-chevron-icon-left: 'chevron_left_aurora';
   --f7-list-chevron-icon-right: 'chevron_right_aurora';
+  --f7-list-chevron-icon-left: 'chevron_up_aurora';
+  --f7-list-chevron-icon-right: 'chevron_down_aurora';
 }
 
 .list {
@@ -464,6 +468,15 @@ li.media-item .item-link.chevron-center  .item-inner {
       content: var(--f7-list-chevron-icon-left);
     });
   }
+}
+
+.chevron-icon-up{
+  --f7-list-chevron-icon-right: var(--f7-list-chevron-icon-up);
+  --f7-list-chevron-icon-left: var(--f7-list-chevron-icon-up);
+}
+.chevron-icon-down{
+  --f7-list-chevron-icon-right: var(--f7-list-chevron-icon-down);
+  --f7-list-chevron-icon-left: var(--f7-list-chevron-icon-down);
 }
 
 .media-list.chevron-center .item-title-row,
