@@ -36,11 +36,17 @@
       <div class="block block-strong">
         <p>Sheet modal can be closed with swipe to top (for top Sheet) or bottom (for default Bottom sheet):</p>
         <p>
-          <a href="#" class="button button-fill sheet-open" data-sheet=".demo-sheet-swipe-to-close">Swipe To Close</a>
+          <a href="#" class="button button-fill sheet-open" data-sheet=".demo-sheet-swipe-to-close">Swipe To Close (Buttom)</a>
+        </p>
+        <p>
+          <a href="#" class="button button-fill sheet-open" data-sheet=".demo-sheet-swipe-to-close2">Swipe To Close (Top)</a>
         </p>
         <p>Also there is swipe-step that can be set on Sheet modal to expand it with swipe:</p>
         <p>
-          <a href="#" class="button button-fill sheet-open" data-sheet=".demo-sheet-swipe-to-step">Swipe To Step</a>
+          <a href="#" class="button button-fill sheet-open" data-sheet=".demo-sheet-swipe-to-step">Swipe To Step (Buttom)</a>
+        </p>
+        <p>
+          <a href="#" class="button button-fill sheet-open" data-sheet=".demo-sheet-swipe-to-step2">Swipe To Step (Top)</a>
         </p>
       </div>
     </div>
@@ -124,6 +130,19 @@
       </div>
     </div>
 
+    <div class="sheet-modal sheet-modal-top demo-sheet-swipe-to-close2" style="height:auto">
+      <div class="sheet-modal-inner">
+        <div class="page-content">
+          <div class="block-title block-title-large">Hello!</div>
+          <div class="block">
+            <p>滚滚长江东逝水，浪花淘尽英雄。是非成败转头空，青山依旧在，几度夕阳红。白发渔樵江渚上，惯看秋月春风。一壶浊酒喜相逢，古今多少事，都付笑谈中。</p>
+            <p>滚滚长江东逝水，浪花淘尽英雄。是非成败转头空，青山依旧在，几度夕阳红。白发渔樵江渚上，惯看秋月春风。一壶浊酒喜相逢，古今多少事，都付笑谈中。</p>
+          </div>
+        </div>
+        <div class="swipe-handler"></div>
+      </div>
+    </div>
+
     <div class="sheet-modal demo-sheet-swipe-to-step" style="height:auto">
       <div class="sheet-modal-inner">
         <div class="swipe-handler" @click="toggleSwipeStep"></div>
@@ -163,6 +182,50 @@
 
       </div>
     </div>
+
+    <div class="sheet-modal sheet-modal-top demo-sheet-swipe-to-step2" style="height:auto">
+      <div class="sheet-modal-inner">
+        
+        <div class="swipe-handler" @click="toggleSwipeStep2"></div>
+
+        <div class="sheet-modal-swipe-step">
+          <div class="block-title block-title-medium margin-top">Your order:</div>
+          <div class="list no-hairlines">
+            <ul>
+              <li class="item-content">
+                <div class="item-inner">
+                  <div class="item-title">Item 1</div>
+                  <div class="item-after text-color-black"><b>$200</b></div>
+                </div>
+              </li>
+              <li class="item-content">
+                <div class="item-inner">
+                  <div class="item-title">Item 2</div>
+                  <div class="item-after text-color-black"><b>$180</b></div>
+                </div>
+              </li>
+              <li class="item-content">
+                <div class="item-inner">
+                  <div class="item-title">Delivery</div>
+                  <div class="item-after text-color-black"><b>$120</b></div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="display-flex padding justify-content-space-between align-items-center">
+          <div style="font-size: 18px"><b>Total:</b></div>
+          <div style="font-size: 22px"><b>$500</b></div>
+        </div>
+        <div class="padding-horizontal padding-bottom">
+          <a class="button button-large button-fill">Make Payment</a>
+          <div class="margin-top text-align-center">Swipe up for more details</div>
+        </div>
+        
+
+      </div>
+    </div>
+
   </div>
 </template>
 <script>
@@ -171,6 +234,10 @@ return {
     toggleSwipeStep: function () {
       var self = this;
       self.sheetSwipeToStep.stepToggle();
+    },
+    toggleSwipeStep2: function () {
+      var self = this;
+      self.sheetSwipeToStep2.stepToggle();
     },
     createSheet: function () {
       var self = this;
@@ -223,6 +290,19 @@ return {
         push: true,
         backdrop: true,
       });
+      self.sheetSwipeToClose2 = self.$app.sheet.create({
+        el: '.demo-sheet-swipe-to-close2',
+        swipeToClose: true,
+        push: true,
+        backdrop: true,
+      });
+      self.sheetSwipeToStep2 = self.$app.sheet.create({
+        el: '.demo-sheet-swipe-to-step2',
+        swipeToClose: true,
+        swipeToStep: true,
+        push: true,
+        backdrop: true,
+      });
     },
     pageBeforeOut: function () {
       var self = this;
@@ -236,6 +316,8 @@ return {
       if (self.sheetPush) self.sheetPush.destroy();
       if (self.sheetSwipeToClose) self.sheetSwipeToClose.destroy();
       if (self.sheetSwipeToStep) self.sheetSwipeToStep.destroy();
+      if (self.sheetSwipeToClose2) self.sheetSwipeToClose2.destroy();
+      if (self.sheetSwipeToStep2) self.sheetSwipeToStep2.destroy();
     },
   }
 }

@@ -558,8 +558,14 @@ code {
   border-radius: 15px 15px 0 0;
   overflow: hidden;
 }
+.demo-sheet-swipe-to-close2,
+.demo-sheet-swipe-to-step2  {
+  border-radius: 0 0 15px 15px;
+}
 .demo-sheet-swipe-to-close .swipe-handler,
-.demo-sheet-swipe-to-step .swipe-handler {
+.demo-sheet-swipe-to-step .swipe-handler,
+.demo-sheet-swipe-to-close2 .swipe-handler,
+.demo-sheet-swipe-to-step2 .swipe-handler {
   background: none;
 }
 .swipe-handler {
@@ -571,6 +577,10 @@ code {
   background: #fff;
   cursor: pointer;
   z-index: 10;
+}
+.sheet-modal-top .swipe-handler {
+  bottom: 0;
+  top: unset;
 }
 .swipe-handler:after {
   content: '';
