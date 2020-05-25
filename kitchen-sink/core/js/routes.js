@@ -174,7 +174,7 @@ var routes = [
   },
   {
     path: '/lazy-load/',
-    url: './pages/lazy-load.html',
+    componentUrl: './pages/lazy-load.html',
   },
   {
     path: '/list/',

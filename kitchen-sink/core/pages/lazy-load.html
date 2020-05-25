@@ -1,45 +1,93 @@
-<div class="page">
-  <div class="navbar">
-    <div class="navbar-bg"></div>
-    <div class="navbar-inner sliding">
-      <div class="left">
-        <a href="#" class="link back">
-          <i class="icon icon-back"></i>
-          <span class="if-not-md">返回</span>
-        </a>
+<template>
+  <div class="page">
+    <div class="navbar">
+      <div class="navbar-bg"></div>
+      <div class="navbar-inner sliding">
+        <div class="left">
+          <a href="#" class="link back">
+            <i class="icon icon-back"></i>
+            <span class="if-not-md">返回</span>
+          </a>
+        </div>
+        <div class="title">Lazy Load Images</div>
       </div>
-      <div class="title">Lazy Load Images</div>
+    </div>
+    <div class="page-content">
+      <div class="block block-strong">
+        <p>Lazy Load delays loading of images on page while they are outside of viewport until user scrolls to them.</p>
+        <p>It will make the page load faster, improve scrolling performance and also save traffic.</p>
+      </div>
+      <div class="block block-strong">
+        <p> <img data-src="https://cdn.framework7.io/placeholder/nature-500x500-1.jpg" width="1500" height="1500" class="lazy lazy-fade-in demo-lazy"/></p>
+        <p>滚滚长江东逝水，浪花淘尽英雄。是非成败转头空，青山依旧在，几度夕阳红。白发渔樵江渚上，惯看秋月春风。一壶浊酒喜相逢，古今多少事，都付笑谈中。</p>
+        <p> <img data-src="https://cdn.framework7.io/placeholder/nature-500x500-2.jpg" width="1500" height="1500" class="lazy lazy-fade-in demo-lazy"/></p>
+        <p>滚滚长江东逝水，浪花淘尽英雄。是非成败转头空，青山依旧在，几度夕阳红。白发渔樵江渚上，惯看秋月春风。一壶浊酒喜相逢，古今多少事，都付笑谈中。</p>
+        <p> <img data-src="https://cdn.framework7.io/placeholder/nature-500x500-3.jpg" width="1500" height="1500" class="lazy lazy-fade-in demo-lazy"/></p>
+        <p>滚滚长江东逝水，浪花淘尽英雄。是非成败转头空，青山依旧在，几度夕阳红。白发渔樵江渚上，惯看秋月春风。一壶浊酒喜相逢，古今多少事，都付笑谈中。</p>
+        <p> <img data-src="https://cdn.framework7.io/placeholder/nature-500x500-4.jpg" width="1500" height="1500" class="lazy lazy-fade-in demo-lazy"/></p>
+        <p>滚滚长江东逝水，浪花淘尽英雄。是非成败转头空，青山依旧在，几度夕阳红。白发渔樵江渚上，惯看秋月春风。一壶浊酒喜相逢，古今多少事，都付笑谈中。</p>
+        <p> <img data-src="https://cdn.framework7.io/placeholder/nature-500x500-5.jpg" width="1500" height="1500" class="lazy lazy-fade-in demo-lazy"/></p>
+        <p>滚滚长江东逝水，浪花淘尽英雄。是非成败转头空，青山依旧在，几度夕阳红。白发渔樵江渚上，惯看秋月春风。一壶浊酒喜相逢，古今多少事，都付笑谈中。</p>
+        <p> <img data-src="https://cdn.framework7.io/placeholder/nature-500x500-6.jpg" width="1500" height="1500" class="lazy lazy-fade-in demo-lazy"/></p>
+        <p>滚滚长江东逝水，浪花淘尽英雄。是非成败转头空，青山依旧在，几度夕阳红。白发渔樵江渚上，惯看秋月春风。一壶浊酒喜相逢，古今多少事，都付笑谈中。</p>
+        <p> <img data-src="https://cdn.framework7.io/placeholder/nature-500x500-7.jpg" width="1500" height="1500" class="lazy lazy-fade-in demo-lazy"/></p>
+        <p>滚滚长江东逝水，浪花淘尽英雄。是非成败转头空，青山依旧在，几度夕阳红。白发渔樵江渚上，惯看秋月春风。一壶浊酒喜相逢，古今多少事，都付笑谈中。</p>
+        <p> <img data-src="https://cdn.framework7.io/placeholder/nature-500x500-8.jpg" width="1500" height="1500" class="lazy lazy-fade-in demo-lazy"/></p>
+        <p>滚滚长江东逝水，浪花淘尽英雄。是非成败转头空，青山依旧在，几度夕阳红。白发渔樵江渚上，惯看秋月春风。一壶浊酒喜相逢，古今多少事，都付笑谈中。</p>
+        <p> <img data-src="https://cdn.framework7.io/placeholder/people-500x500-1.jpg" width="1500" height="1500" class="lazy lazy-fade-in demo-lazy"/></p>
+        <p>滚滚长江东逝水，浪花淘尽英雄。是非成败转头空，青山依旧在，几度夕阳红。白发渔樵江渚上，惯看秋月春风。一壶浊酒喜相逢，古今多少事，都付笑谈中。</p>
+        <p> <img data-src="https://cdn.framework7.io/placeholder/nature-500x500-10.jpg" width="1500" height="1500" class="lazy lazy-fade-in demo-lazy"/></p>
+        <p>滚滚长江东逝水，浪花淘尽英雄。是非成败转头空，青山依旧在，几度夕阳红。白发渔樵江渚上，惯看秋月春风。一壶浊酒喜相逢，古今多少事，都付笑谈中。</p>
+        <p><b>Using as background image:</b></p>
+        <div data-background="https://cdn.framework7.io/placeholder/people-500x500-10.jpg" class="lazy lazy-fade-in demo-lazy"></div>
+        <p>滚滚长江东逝水，浪花淘尽英雄。是非成败转头空，青山依旧在，几度夕阳红。白发渔樵江渚上，惯看秋月春风。一壶浊酒喜相逢，古今多少事，都付笑谈中。</p>
+        <p> 
+          <div class="img_container">
+            <img data-src="https://cdn.framework72.io/placeholder/nature-500x500-1.jpg" width="1500" height="1500" class="lazy lazy-fade-in demo-lazy"/>
+            <div class="img_container_info text-align-center text-color-gray"><span class="preloader color-white"></span></div>
+          </div>
+        </p>
+        <p>滚滚长江东逝水，浪花淘尽英雄。是非成败转头空，青山依旧在，几度夕阳红。白发渔樵江渚上，惯看秋月春风。一壶浊酒喜相逢，古今多少事，都付笑谈中。</p>
+        <p> 
+          <div class="img_container">
+            <img data-src="https://cdn.framework72.io/placeholder/nature-500x500-1.jpg" width="1500" height="1500" class="lazy lazy-fade-in demo-lazy"/>
+            <div class="img_container_info text-align-center text-color-white">加载失败</div>
+          </div>
+        </p>
+        <p>滚滚长江东逝水，浪花淘尽英雄。是非成败转头空，青山依旧在，几度夕阳红。白发渔樵江渚上，惯看秋月春风。一壶浊酒喜相逢，古今多少事，都付笑谈中。</p>
+        <p> info-circle
+          <div class="img_container">
+            <img data-src="https://cdn.framework72.io/placeholder/nature-500x500-1.jpg" width="1500" height="1500" class="lazy lazy-fade-in demo-lazy"/>
+            <div class="img_container_info text-align-center text-color-gray"><span class="f7-icons">info_circle</span></div>
+          </div>
+        </p>
+        <p>滚滚长江东逝水，浪花淘尽英雄。是非成败转头空，青山依旧在，几度夕阳红。白发渔樵江渚上，惯看秋月春风。一壶浊酒喜相逢，古今多少事，都付笑谈中。</p>
+        <p> info-circle
+          <div class="img_container">
+            <img data-src="https://cdn.framework72.io/placeholder/nature-500x500-1.jpg" width="1500" height="1500" class="lazy lazy-fade-in demo-lazy"/>
+            <div class="img_container_info text-align-center text-color-gray"><span class="f7-icons">photo</span></div>
+          </div>
+        </p>
+        <p>滚滚长江东逝水，浪花淘尽英雄。是非成败转头空，青山依旧在，几度夕阳红。白发渔樵江渚上，惯看秋月春风。一壶浊酒喜相逢，古今多少事，都付笑谈中。</p>
+        
+      </div>
     </div>
   </div>
-  <div class="page-content">
-    <div class="block block-strong">
-      <p>Lazy Load delays loading of images on page while they are outside of viewport until user scrolls to them.</p>
-      <p>It will make the page load faster, improve scrolling performance and also save traffic.</p>
-    </div>
-    <div class="block block-strong">
-      <p> <img data-src="https://cdn.framework7.io/placeholder/nature-500x500-1.jpg" width="1500" height="1500" class="lazy lazy-fade-in demo-lazy"/></p>
-      <p>滚滚长江东逝水，浪花淘尽英雄。是非成败转头空，青山依旧在，几度夕阳红。白发渔樵江渚上，惯看秋月春风。一壶浊酒喜相逢，古今多少事，都付笑谈中。</p>
-      <p> <img data-src="https://cdn.framework7.io/placeholder/nature-500x500-2.jpg" width="1500" height="1500" class="lazy lazy-fade-in demo-lazy"/></p>
-      <p>滚滚长江东逝水，浪花淘尽英雄。是非成败转头空，青山依旧在，几度夕阳红。白发渔樵江渚上，惯看秋月春风。一壶浊酒喜相逢，古今多少事，都付笑谈中。</p>
-      <p> <img data-src="https://cdn.framework7.io/placeholder/nature-500x500-3.jpg" width="1500" height="1500" class="lazy lazy-fade-in demo-lazy"/></p>
-      <p>滚滚长江东逝水，浪花淘尽英雄。是非成败转头空，青山依旧在，几度夕阳红。白发渔樵江渚上，惯看秋月春风。一壶浊酒喜相逢，古今多少事，都付笑谈中。</p>
-      <p> <img data-src="https://cdn.framework7.io/placeholder/nature-500x500-4.jpg" width="1500" height="1500" class="lazy lazy-fade-in demo-lazy"/></p>
-      <p>滚滚长江东逝水，浪花淘尽英雄。是非成败转头空，青山依旧在，几度夕阳红。白发渔樵江渚上，惯看秋月春风。一壶浊酒喜相逢，古今多少事，都付笑谈中。</p>
-      <p> <img data-src="https://cdn.framework7.io/placeholder/nature-500x500-5.jpg" width="1500" height="1500" class="lazy lazy-fade-in demo-lazy"/></p>
-      <p>滚滚长江东逝水，浪花淘尽英雄。是非成败转头空，青山依旧在，几度夕阳红。白发渔樵江渚上，惯看秋月春风。一壶浊酒喜相逢，古今多少事，都付笑谈中。</p>
-      <p> <img data-src="https://cdn.framework7.io/placeholder/nature-500x500-6.jpg" width="1500" height="1500" class="lazy lazy-fade-in demo-lazy"/></p>
-      <p>滚滚长江东逝水，浪花淘尽英雄。是非成败转头空，青山依旧在，几度夕阳红。白发渔樵江渚上，惯看秋月春风。一壶浊酒喜相逢，古今多少事，都付笑谈中。</p>
-      <p> <img data-src="https://cdn.framework7.io/placeholder/nature-500x500-7.jpg" width="1500" height="1500" class="lazy lazy-fade-in demo-lazy"/></p>
-      <p>滚滚长江东逝水，浪花淘尽英雄。是非成败转头空，青山依旧在，几度夕阳红。白发渔樵江渚上，惯看秋月春风。一壶浊酒喜相逢，古今多少事，都付笑谈中。</p>
-      <p> <img data-src="https://cdn.framework7.io/placeholder/nature-500x500-8.jpg" width="1500" height="1500" class="lazy lazy-fade-in demo-lazy"/></p>
-      <p>滚滚长江东逝水，浪花淘尽英雄。是非成败转头空，青山依旧在，几度夕阳红。白发渔樵江渚上，惯看秋月春风。一壶浊酒喜相逢，古今多少事，都付笑谈中。</p>
-      <p> <img data-src="https://cdn.framework7.io/placeholder/people-500x500-1.jpg" width="1500" height="1500" class="lazy lazy-fade-in demo-lazy"/></p>
-      <p>滚滚长江东逝水，浪花淘尽英雄。是非成败转头空，青山依旧在，几度夕阳红。白发渔樵江渚上，惯看秋月春风。一壶浊酒喜相逢，古今多少事，都付笑谈中。</p>
-      <p> <img data-src="https://cdn.framework7.io/placeholder/nature-500x500-10.jpg" width="1500" height="1500" class="lazy lazy-fade-in demo-lazy"/></p>
-      <p>滚滚长江东逝水，浪花淘尽英雄。是非成败转头空，青山依旧在，几度夕阳红。白发渔樵江渚上，惯看秋月春风。一壶浊酒喜相逢，古今多少事，都付笑谈中。</p>
-      <p><b>Using as background image:</b></p>
-      <div data-background="https://cdn.framework7.io/placeholder/people-500x500-10.jpg" class="lazy lazy-fade-in demo-lazy"></div>
-      <p>滚滚长江东逝水，浪花淘尽英雄。是非成败转头空，青山依旧在，几度夕阳红。白发渔樵江渚上，惯看秋月春风。一壶浊酒喜相逢，古今多少事，都付笑谈中。</p>
-    </div>
-  </div>
-</div>
+</template>
+<style>
+  .img_container{
+    width: 100%;
+    height: auto;
+    position: relative;
+  }
+  .img_container_info{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+</style>
