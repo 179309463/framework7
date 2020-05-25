@@ -1,0 +1,104 @@
+<template>
+    <div class="page">
+      <div class="navbar">
+        <div class="navbar-bg"></div>
+        <div class="navbar-inner sliding">
+          <div class="left">
+            <a href="#" class="link back">
+              <i class="icon icon-back"></i>
+              <span class="if-not-md">返回</span>
+            </a>
+          </div>
+          <div class="title">Image</div>
+        </div>
+      </div>
+      <div class="page-content">
+        <div class="block-title">填充模式</div>
+        <div class="block block-strong">
+            <div class="row">
+                <div class="col-33">
+                    <div class="demo_image_container">
+                        <img src="https://img.yzcdn.cn/vant/cat.jpeg" class="demo_image" style="object-fit: contain;"/>
+                    </div>
+                    <div class="text-align-center text-color-gray padding-bottom">Contain</div>
+                </div>
+                <div class="col-33">
+                    <div class="demo_image_container">
+                        <img src="https://img.yzcdn.cn/vant/cat.jpeg" class="demo_image" style="object-fit: cover;"/>
+                    </div>
+                    <div class="text-align-center text-color-gray padding-bottom">Cover</div>
+                </div>
+                <div class="col-33">
+                    <div class="demo_image_container">
+                        <img src="https://img.yzcdn.cn/vant/cat.jpeg" class="demo_image" style="object-fit: fill;"/>
+                    </div>
+                    <div class="text-align-center text-color-gray padding-bottom">Fill</div>
+                </div>
+                <div class="col-33">
+                    <div class="demo_image_container">
+                        <img src="https://img.yzcdn.cn/vant/cat.jpeg" class="demo_image" style="object-fit: none;"/>
+                    </div>
+                    <div class="text-align-center text-color-gray padding-bottom">None</div>
+                </div>
+                <div class="col-33">
+                    <div class="demo_image_container">
+                        <img src="https://img.yzcdn.cn/vant/cat.jpeg" class="demo_image" style="object-fit: scale-down;"/>
+                    </div>
+                    <div class="text-align-center text-color-gray padding-bottom">ScaleDown</div>
+                </div>
+                <div class="col-33"></div>
+            </div>
+        </div>
+
+        <div class="block-title">圆形图片</div>
+        <div class="block block-strong">
+            <div class="row">
+                <div class="col-33">
+                    <div class="demo_image_container demo_image_container_round">
+                        <img src="https://img.yzcdn.cn/vant/cat.jpeg" class="demo_image" style="object-fit: contain;"/>
+                    </div>
+                    <div class="text-align-center text-color-gray padding-bottom">Contain</div>
+                </div>
+                <div class="col-33">
+                    <div class="demo_image_container demo_image_container_round">
+                        <img src="https://img.yzcdn.cn/vant/cat.jpeg" class="demo_image" style="object-fit: cover;"/>
+                    </div>
+                    <div class="text-align-center text-color-gray padding-bottom">Cover</div>
+                </div>
+                <div class="col-33">
+                    <div class="demo_image_container demo_image_container_round">
+                        <img src="https://img.yzcdn.cn/vant/cat.jpeg" class="demo_image" style="object-fit: fill;"/>
+                    </div>
+                    <div class="text-align-center text-color-gray padding-bottom">Fill</div>
+                </div>
+                <div class="col-33">
+                    <div class="demo_image_container demo_image_container_round">
+                        <img src="https://img.yzcdn.cn/vant/cat.jpeg" class="demo_image" style="object-fit: none;"/>
+                    </div>
+                    <div class="text-align-center text-color-gray padding-bottom">None</div>
+                </div>
+                <div class="col-33">
+                    <div class="demo_image_container demo_image_container_round">
+                        <img src="https://img.yzcdn.cn/vant/cat.jpeg" class="demo_image" style="object-fit: scale-down;"/>
+                    </div>
+                    <div class="text-align-center text-color-gray padding-bottom">ScaleDown</div>
+                </div>
+                <div class="col-33"></div>
+            </div>
+        </div>
+    </div>
+</template>
+<style>
+    .demo_image_container {
+        width: 100%; 
+        height: 27vw;
+    }
+    .demo_image_container_round {
+        overflow: hidden;
+        border-radius: 50%;
+    }
+    .demo_image{
+        width: 100%;
+        height: 100%;
+    }
+</style>

@@ -161,6 +161,10 @@ var routes = [
     componentUrl: './pages/icons.html',
   },
   {
+    path: '/images/',
+    componentUrl: './pages/images.html',
+  },
+  {
     path: '/infinite-scroll/',
     componentUrl: './pages/infinite-scroll.html',
   },
