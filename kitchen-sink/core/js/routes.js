@@ -388,7 +388,7 @@ var routes = [
   },
   {
     path: '/tabs-swipeable/',
-    url: './pages/tabs-swipeable.html',
+    componentUrl: './pages/tabs-swipeable.html',
   },
   {
     path: '/tabs-routable/',
