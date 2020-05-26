@@ -3,7 +3,7 @@
 .radio {
   position: relative;
   display: inline-block;
-  vertical-align: middle;
+  vertical-align: baseline;
   z-index: 1;
   --f7-touch-ripple-color: rgba(var(--f7-theme-color-rgb), 0.5);
 }
@@ -13,7 +13,11 @@
   border-radius: var(--f7-radio-border-radius);
   position: relative;
   box-sizing: border-box;
-  display: block;
+  display: inline-block;
+  vertical-align: middle;
+  .ios .item-input-wrap &{
+    vertical-align: bottom!important;
+  }
   flex-shrink: 0;
 }
 .radio .icon-radio,
