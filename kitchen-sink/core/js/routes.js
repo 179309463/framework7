@@ -380,7 +380,7 @@ var routes = [
   },
   {
     path: '/tabs-static/',
-    url: './pages/tabs-static.html',
+    componentUrl: './pages/tabs-static.html',
   },
   {
     path: '/tabs-animated/',
