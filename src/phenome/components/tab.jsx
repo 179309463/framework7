@@ -4,6 +4,8 @@ import f7 from '../utils/f7';
 import Utils from '../utils/utils';
 import Mixins from '../utils/mixins';
 
+import F7PageContent from './page-content';
+
 export default {
   name: 'f7-tab',
   props: {
@@ -12,6 +14,15 @@ export default {
     style: Object, // phenome-react-line
     tabActive: Boolean,
     ...Mixins.colorProps,
+    // Page Content Props
+    ptr: Boolean,
+    ptrDistance: Number,
+    ptrPreloader: {
+      type: Boolean,
+      default: true,
+    },
+    ptrBottom: Boolean,
+    ptrMousewheel: Boolean,
   },
   state() {
     return {
@@ -21,7 +32,13 @@ export default {
   render() {
     const self = this;
     const props = self.props;
-    const { tabActive, id, className, style } = props;
+    const { tabActive, id, className, style,
+      ptr,
+      ptrDistance,
+      ptrPreloader,
+      ptrBottom,
+      ptrMousewheel,
+    } = props;
     const tabContent = self.state.tabContent;
 
     const classes = Utils.classNames(
@@ -36,30 +53,83 @@ export default {
     let TabContent;
     if (tabContent) TabContent = tabContent.component;
     if (process.env.COMPILER === 'react') {
-      return (
-        <div id={id} style={style} ref="el" className={classes}>
-          {tabContent ? (
-            <TabContent key={tabContent.id} {...tabContent.props} />
-          ) : (
-            <slot />
-          )}
-        </div>
-      );
+      if(ptr){
+        return (
+          <F7PageContent id={id} style={style} ref="el" className={classes}
+            ptr={ptr}
+            ptrDistance={ptrDistance}
+            ptrPreloader={ptrPreloader}
+            ptrBottom={ptrBottom}
+            ptrMousewheel={ptrMousewheel}
+            
+            onPtrPullStart={self.onPtrPullStart}
+            onPtrPullMove={self.onPtrPullMove}
+            onPtrPullEnd={self.onPtrPullEnd}
+            onPtrRefresh={self.onPtrRefresh}
+            onPtrDone={self.onPtrDone}
+          >
+            {tabContent ? (
+              <TabContent key={tabContent.id} {...tabContent.props} />
+            ) : (
+              <slot />
+            )}
+          </F7PageContent>
+        );
+      }else{
+        return (
+          <div id={id} style={style} ref="el" className={classes}>
+            {tabContent ? (
+              <TabContent key={tabContent.id} {...tabContent.props} />
+            ) : (
+              <slot />
+            )}
+          </div>
+        );
+      }
     }
     if (process.env.COMPILER === 'vue') {
-      return (
-        <div id={id} style={style} ref="el" className={classes}>
-          {tabContent ? (
-            <TabContent key={tabContent.id} props={tabContent.props} />
-          ) : (
-            <slot />
-          )}
-        </div>
-      );
+      if(ptr){
+        return (
+          <F7PageContent id={id} style={style} ref="el" className={classes}
+            ptr={ptr}
+            ptrDistance={ptrDistance}
+            ptrPreloader={ptrPreloader}
+            ptrBottom={ptrBottom}
+            ptrMousewheel={ptrMousewheel}
+            
+            onPtrPullStart={self.onPtrPullStart}
+            onPtrPullMove={self.onPtrPullMove}
+            onPtrPullEnd={self.onPtrPullEnd}
+            onPtrRefresh={self.onPtrRefresh}
+            onPtrDone={self.onPtrDone}
+          >
+            {tabContent ? (
+              <TabContent key={tabContent.id} {...tabContent.props} />
+            ) : (
+              <slot />
+            )}
+          </F7PageContent>
+        );
+      }else{
+        return (
+          <div id={id} style={style} ref="el" className={classes}>
+            {tabContent ? (
+              <TabContent key={tabContent.id} props={tabContent.props} />
+            ) : (
+              <slot />
+            )}
+          </div>
+        );
+      }
     }
   },
   componentDidCreate() {
-    Utils.bindMethods(this, ['onTabShow', 'onTabHide']);
+    Utils.bindMethods(this, ['onTabShow', 'onTabHide',
+      'onPtrPullStart',
+      'onPtrPullMove',
+      'onPtrPullEnd',
+      'onPtrRefresh',
+      'onPtrDone']);
   },
   componentDidUpdate() {
     const self = this;
@@ -100,6 +170,21 @@ export default {
     });
   },
   methods: {
+    onPtrPullStart(...args) {
+      this.dispatchEvent('ptr:pullstart ptrPullStart', ...args);
+    },
+    onPtrPullMove(...args) {
+      this.dispatchEvent('ptr:pullmove ptrPullMove', ...args);
+    },
+    onPtrPullEnd(...args) {
+      this.dispatchEvent('ptr:pullend ptrPullEnd', ...args);
+    },
+    onPtrRefresh(...args) {
+      this.dispatchEvent('ptr:refresh ptrRefresh', ...args);
+    },
+    onPtrDone(...args) {
+      this.dispatchEvent('ptr:done ptrDone', ...args);
+    },
     show(animate) {
       if (!this.$f7) return;
       this.$f7.tab.show(this.refs.el, animate);
