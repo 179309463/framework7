@@ -32,7 +32,11 @@ export default {
   render() {
     const self = this;
     const props = self.props;
-    const { tabActive, id, className, style,
+    const {
+      tabActive,
+      id,
+      className,
+      style,
       ptr,
       ptrDistance,
       ptrPreloader,
@@ -53,7 +57,7 @@ export default {
     let TabContent;
     if (tabContent) TabContent = tabContent.component;
     if (process.env.COMPILER === 'react') {
-      if(ptr){
+      if (ptr) {
         return (
           <F7PageContent id={id} style={style} ref="el" className={classes}
             ptr={ptr}
@@ -61,7 +65,6 @@ export default {
             ptrPreloader={ptrPreloader}
             ptrBottom={ptrBottom}
             ptrMousewheel={ptrMousewheel}
-            
             onPtrPullStart={self.onPtrPullStart}
             onPtrPullMove={self.onPtrPullMove}
             onPtrPullEnd={self.onPtrPullEnd}
@@ -75,20 +78,19 @@ export default {
             )}
           </F7PageContent>
         );
-      }else{
-        return (
-          <div id={id} style={style} ref="el" className={classes}>
-            {tabContent ? (
-              <TabContent key={tabContent.id} {...tabContent.props} />
-            ) : (
-              <slot />
-            )}
-          </div>
-        );
       }
+      return (
+        <div id={id} style={style} ref="el" className={classes}>
+          {tabContent ? (
+            <TabContent key={tabContent.id} {...tabContent.props} />
+          ) : (
+            <slot />
+          )}
+        </div>
+      );
     }
     if (process.env.COMPILER === 'vue') {
-      if(ptr){
+      if (ptr) {
         return (
           <F7PageContent id={id} style={style} ref="el" className={classes}
             ptr={ptr}
@@ -96,7 +98,6 @@ export default {
             ptrPreloader={ptrPreloader}
             ptrBottom={ptrBottom}
             ptrMousewheel={ptrMousewheel}
-            
             onPtrPullStart={self.onPtrPullStart}
             onPtrPullMove={self.onPtrPullMove}
             onPtrPullEnd={self.onPtrPullEnd}
@@ -110,17 +111,16 @@ export default {
             )}
           </F7PageContent>
         );
-      }else{
-        return (
-          <div id={id} style={style} ref="el" className={classes}>
-            {tabContent ? (
-              <TabContent key={tabContent.id} props={tabContent.props} />
-            ) : (
-              <slot />
-            )}
-          </div>
-        );
       }
+      return (
+        <div id={id} style={style} ref="el" className={classes}>
+          {tabContent ? (
+            <TabContent key={tabContent.id} props={tabContent.props} />
+          ) : (
+            <slot />
+          )}
+        </div>
+      );
     }
   },
   componentDidCreate() {
