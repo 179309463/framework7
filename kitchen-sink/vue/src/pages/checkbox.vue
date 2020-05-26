@@ -9,7 +9,7 @@
     <f7-block-title>Checkbox Group</f7-block-title>
     <f7-list>
       <f7-list-item checkbox checkbox-icon="start" title="Books" name="demo-checkbox" checked></f7-list-item>
-      <f7-list-item checkbox checkbox-icon="start" title="Movies" name="demo-checkbox"></f7-list-item>
+      <f7-list-item checkbox checkbox-icon="start" title="Movies" name="demo-checkbox" disabled></f7-list-item>
       <f7-list-item checkbox checkbox-icon="start" title="Food" name="demo-checkbox"></f7-list-item>
       <f7-list-item checkbox checkbox-icon="start" title="Drinks" name="demo-checkbox"></f7-list-item>
     </f7-list>

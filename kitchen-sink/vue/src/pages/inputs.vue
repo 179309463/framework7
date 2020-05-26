@@ -23,6 +23,7 @@
 
       <f7-list-input
         label="E-mail"
+        disabled
         type="email"
         placeholder="Your e-mail"
         clear-button
@@ -86,6 +87,7 @@
 
       <f7-list-input
         label="Textarea"
+        disabled
         type="textarea"
         placeholder="Bio"
       >

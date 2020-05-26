@@ -9,7 +9,7 @@
           <f7-button>Button</f7-button>
         </f7-col>
         <f7-col>
-          <f7-button round>Round</f7-button>
+          <f7-button round disabled>Round</f7-button>
         </f7-col>
         <f7-col>
           <f7-button rectangle>Rectangle</f7-button>
