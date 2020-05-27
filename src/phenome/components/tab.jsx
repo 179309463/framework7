@@ -23,6 +23,13 @@ export default {
     },
     ptrBottom: Boolean,
     ptrMousewheel: Boolean,
+    infinite: Boolean,
+    infiniteTop: Boolean,
+    infiniteDistance: Number,
+    infinitePreloader: {
+      type: Boolean,
+      default: true,
+    },
   },
   state() {
     return {
@@ -42,6 +49,10 @@ export default {
       ptrPreloader,
       ptrBottom,
       ptrMousewheel,
+      infinite,
+      infiniteDistance,
+      infinitePreloader,
+      infiniteTop,
     } = props;
     const tabContent = self.state.tabContent;
 
@@ -57,7 +68,7 @@ export default {
     let TabContent;
     if (tabContent) TabContent = tabContent.component;
     if (process.env.COMPILER === 'react') {
-      if (ptr) {
+      if (ptr || infinite) {
         return (
           <F7PageContent id={id} style={style} ref="el" className={classes}
             ptr={ptr}
@@ -65,11 +76,16 @@ export default {
             ptrPreloader={ptrPreloader}
             ptrBottom={ptrBottom}
             ptrMousewheel={ptrMousewheel}
+            infinite={infinite}
+            infiniteTop={infiniteTop}
+            infiniteDistance={infiniteDistance}
+            infinitePreloader={infinitePreloader}
             onPtrPullStart={self.onPtrPullStart}
             onPtrPullMove={self.onPtrPullMove}
             onPtrPullEnd={self.onPtrPullEnd}
             onPtrRefresh={self.onPtrRefresh}
             onPtrDone={self.onPtrDone}
+            onInfinite={self.onInfinite}
           >
             {tabContent ? (
               <TabContent key={tabContent.id} {...tabContent.props} />
@@ -90,7 +106,7 @@ export default {
       );
     }
     if (process.env.COMPILER === 'vue') {
-      if (ptr) {
+      if (ptr || infinite) {
         return (
           <F7PageContent id={id} style={style} ref="el" className={classes}
             ptr={ptr}
@@ -98,11 +114,16 @@ export default {
             ptrPreloader={ptrPreloader}
             ptrBottom={ptrBottom}
             ptrMousewheel={ptrMousewheel}
+            infinite={infinite}
+            infiniteTop={infiniteTop}
+            infiniteDistance={infiniteDistance}
+            infinitePreloader={infinitePreloader}
             onPtrPullStart={self.onPtrPullStart}
             onPtrPullMove={self.onPtrPullMove}
             onPtrPullEnd={self.onPtrPullEnd}
             onPtrRefresh={self.onPtrRefresh}
             onPtrDone={self.onPtrDone}
+            onInfinite={self.onInfinite}
           >
             {tabContent ? (
               <TabContent key={tabContent.id} {...tabContent.props} />
@@ -124,12 +145,16 @@ export default {
     }
   },
   componentDidCreate() {
-    Utils.bindMethods(this, ['onTabShow', 'onTabHide',
+    Utils.bindMethods(this, [
+      'onTabShow', 
+      'onTabHide',
       'onPtrPullStart',
       'onPtrPullMove',
       'onPtrPullEnd',
       'onPtrRefresh',
-      'onPtrDone']);
+      'onPtrDone',
+      'onInfinite'
+    ]);
   },
   componentDidUpdate() {
     const self = this;
@@ -184,6 +209,9 @@ export default {
     },
     onPtrDone(...args) {
       this.dispatchEvent('ptr:done ptrDone', ...args);
+    },
+    onInfinite(...args) {
+      this.dispatchEvent('infinite', ...args);
     },
     show(animate) {
       if (!this.$f7) return;
