@@ -15,6 +15,10 @@ export default {
     tabActive: Boolean,
     ...Mixins.colorProps,
     // Page Content Props
+    pageContent: {
+      type: Boolean,
+      default: false,
+    },
     ptr: Boolean,
     ptrDistance: Number,
     ptrPreloader: {
@@ -30,6 +34,9 @@ export default {
       type: Boolean,
       default: true,
     },
+    hideBarsOnScroll: Boolean,
+    hideNavbarOnScroll: Boolean,
+    hideToolbarOnScroll: Boolean,
   },
   state() {
     return {
@@ -44,6 +51,7 @@ export default {
       id,
       className,
       style,
+      pageContent,
       ptr,
       ptrDistance,
       ptrPreloader,
@@ -53,6 +61,9 @@ export default {
       infiniteDistance,
       infinitePreloader,
       infiniteTop,
+      hideBarsOnScroll,
+      hideNavbarOnScroll,
+      hideToolbarOnScroll,
     } = props;
     const tabContent = self.state.tabContent;
 
@@ -68,7 +79,7 @@ export default {
     let TabContent;
     if (tabContent) TabContent = tabContent.component;
     if (process.env.COMPILER === 'react') {
-      if (ptr || infinite) {
+      if (pageContent) {
         return (
           <F7PageContent id={id} style={style} ref="el" className={classes}
             ptr={ptr}
@@ -86,6 +97,9 @@ export default {
             onPtrRefresh={self.onPtrRefresh}
             onPtrDone={self.onPtrDone}
             onInfinite={self.onInfinite}
+            hideBarsOnScroll={hideBarsOnScroll}
+            hideNavbarOnScroll={hideNavbarOnScroll}
+            hideToolbarOnScroll={hideToolbarOnScroll}
           >
             {tabContent ? (
               <TabContent key={tabContent.id} {...tabContent.props} />
@@ -106,7 +120,7 @@ export default {
       );
     }
     if (process.env.COMPILER === 'vue') {
-      if (ptr || infinite) {
+      if (pageContent) {
         return (
           <F7PageContent id={id} style={style} ref="el" className={classes}
             ptr={ptr}
@@ -124,6 +138,9 @@ export default {
             onPtrRefresh={self.onPtrRefresh}
             onPtrDone={self.onPtrDone}
             onInfinite={self.onInfinite}
+            hideBarsOnScroll={hideBarsOnScroll}
+            hideNavbarOnScroll={hideNavbarOnScroll}
+            hideToolbarOnScroll={hideToolbarOnScroll}
           >
             {tabContent ? (
               <TabContent key={tabContent.id} {...tabContent.props} />

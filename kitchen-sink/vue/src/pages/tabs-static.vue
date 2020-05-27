@@ -7,7 +7,7 @@
       <f7-link tab-link="#tab-3">Tab 3</f7-link>
     </f7-toolbar>
     <f7-tabs>
-      <f7-tab id="tab-1" tab-active ptr :ptr-mousewheel="true" @ptr:refresh="loadMore1">
+      <f7-tab id="tab-1" :page-content="true" tab-active ptr :ptr-mousewheel="true" @ptr:refresh="loadMore1">
         <f7-list media-list>
           <f7-list-item
             v-for="(item, index) in items1"
@@ -22,7 +22,7 @@
           </f7-block-footer>
         </f7-list>
       </f7-tab>
-      <f7-tab id="tab-2" ptr :ptr-mousewheel="true" @ptr:refresh="loadMore2">
+      <f7-tab id="tab-2" :page-content="true" ptr :ptr-mousewheel="true" @ptr:refresh="loadMore2">
         <f7-list media-list>
           <f7-list-item
             v-for="(item, index) in items2"
@@ -37,7 +37,7 @@
           </f7-block-footer>
         </f7-list>
       </f7-tab>
-      <f7-tab id="tab-3" ptr :ptr-mousewheel="true" @ptr:refresh="loadMore3">
+      <f7-tab id="tab-3" :page-content="true" ptr :ptr-mousewheel="true" @ptr:refresh="loadMore3">
         <f7-list media-list>
           <f7-list-item
             v-for="(item, index) in items3"

@@ -7,19 +7,19 @@
       <f7-link tab-link="#tab-3">Tab 3</f7-link>
     </f7-toolbar>
     <f7-tabs swipeable>
-      <f7-tab id="tab-1" tab-active infinite :infinite-distance="50" :infinite-preloader="showPreloader1" @infinite="loadMore1">
+      <f7-tab id="tab-1" :page-content="true" tab-active hide-navbar-on-scroll hide-toolbar-on-scroll infinite :infinite-distance="50" :infinite-preloader="showPreloader1" @infinite="loadMore1">
         <f7-block-title>Scroll bottom</f7-block-title>
         <f7-list>
           <f7-list-item v-for="(item, index) in items1" :title="`Item ${item}`" :key="index"></f7-list-item>
         </f7-list>
       </f7-tab>
-      <f7-tab id="tab-2" infinite :infinite-distance="50" :infinite-preloader="showPreloader2" @infinite="loadMore2">
+      <f7-tab id="tab-2" :page-content="true" hide-navbar-on-scroll hide-toolbar-on-scroll infinite :infinite-distance="50" :infinite-preloader="showPreloader2" @infinite="loadMore2">
         <f7-block-title>Scroll bottom</f7-block-title>
         <f7-list>
           <f7-list-item v-for="(item, index) in items2" :title="`Item ${item}`" :key="index"></f7-list-item>
         </f7-list>
       </f7-tab>
-      <f7-tab id="tab-3" infinite :infinite-distance="50" :infinite-preloader="showPreloader3" @infinite="loadMore3">
+      <f7-tab id="tab-3" :page-content="true" hide-navbar-on-scroll hide-toolbar-on-scroll infinite :infinite-distance="50" :infinite-preloader="showPreloader3" @infinite="loadMore3">
         <f7-block-title>Scroll bottom</f7-block-title>
         <f7-list>
           <f7-list-item v-for="(item, index) in items3" :title="`Item ${item}`" :key="index"></f7-list-item>
