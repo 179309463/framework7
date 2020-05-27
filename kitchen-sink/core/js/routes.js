@@ -409,12 +409,33 @@ var routes = [
       {
         path: '/tab2/',
         id: 'tab2',
-        url: './pages/tabs-routable-page2.html',
+        url: './pages/tabs-routable-content2.html',
       },
       {
         path: '/tab3/',
         id: 'tab3',
-        component: './pages/tabs-routable-page3.html',
+        componentUrl: './pages/tabs-routable-content3.html',
+      },
+    ],
+  },
+  {
+    path: '/tabs-routable-pages/',
+    url: './pages/tabs-routable-pages.html',
+    tabs: [
+      {
+        path: '/tab1/',
+        id: 'tab1',
+        componentUrl: './pages/pull-to-refresh.html',
+      },
+      {
+        path: '/tab2/',
+        id: 'tab2',
+        componentUrl: './pages/infinite-scroll.html',
+      },
+      {
+        path: '/tab3/',
+        id: 'tab3',
+        componentUrl: './pages/inputs.html',
       },
     ],
   },
