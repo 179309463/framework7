@@ -163,14 +163,14 @@ export default {
   },
   componentDidCreate() {
     Utils.bindMethods(this, [
-      'onTabShow', 
+      'onTabShow',
       'onTabHide',
       'onPtrPullStart',
       'onPtrPullMove',
       'onPtrPullEnd',
       'onPtrRefresh',
       'onPtrDone',
-      'onInfinite'
+      'onInfinite',
     ]);
   },
   componentDidUpdate() {
