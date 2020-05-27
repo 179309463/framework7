@@ -420,7 +420,7 @@ var routes = [
   },
   {
     path: '/tabs-routable-pages/',
-    url: './pages/tabs-routable-pages.html',
+    componentUrl: './pages/tabs-routable-pages.html',
     tabs: [
       {
         path: '/tab1/',

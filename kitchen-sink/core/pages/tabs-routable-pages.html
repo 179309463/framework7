@@ -1,15 +1,72 @@
-<div class="page">
-  <div class="navbar" style="display:none"></div>
-  <div class="toolbar tabbar toolbar-bottom">
-    <div class="toolbar-inner">
-        <a href="tab1/" class="tab-link" data-route-tab-id="tab1">Tab 1</a>
-        <a href="tab2/" class="tab-link" data-route-tab-id="tab2">Tab 2</a>
-        <a href="tab3/" class="tab-link" data-route-tab-id="tab3">Tab 3</a>
+<template>
+  <div class="page">
+    <div class="navbar">
+      <div class="navbar-bg"></div>
+      <div class="navbar-inner sliding">
+        <div class="left">
+          <a href="#" class="link back">
+            <i class="icon icon-back"></i>
+            <span class="if-not-md">返回</span>
+          </a>
+        </div>
+        <div class="title">{{navbarTitle}}</div>
+        <div class="right">
+          <a class="link" @click="toggleToolbarPosition">
+            <i class="icon material-icons rotate-icon md-only">compare_arrows</i>
+            <i class="icon f7-icons rotate-icon if-not-md">arrow_up_arrow_down_circle_fill</i>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="toolbar tabbar toolbar-{{toolbarPosition}}">
+      <div class="toolbar-inner">
+          <a href="tab1/" class="tab-link" data-route-tab-id="tab1">Tab 1</a>
+          <a href="tab2/" class="tab-link" data-route-tab-id="tab2">Tab 2</a>
+          <a href="tab3/" class="tab-link" data-route-tab-id="tab3">Tab 3</a>
+      </div>
+    </div>
+    <div class="tabs tabs-routable">
+      <div id="tab1" class="tab" @tab:show="tabActived('tab1')"></div>
+      <div id="tab2" class="tab" @tab:show="tabActived('tab2')"></div>
+      <div id="tab3" class="tab" @tab:show="tabActived('tab3')"></div>
     </div>
   </div>
-  <div class="tabs tabs-routable">
-    <div id="tab1" class="tab"></div>
-    <div id="tab2" class="tab"></div>
-    <div id="tab3" class="tab"></div>
-  </div>
-</div>
+</template>
+<style scoped>
+  .rotate-icon {
+    transform: rotate(90deg);
+  }
+</style>
+<script>
+  return {
+    data() {
+      return {
+        toolbarPosition: 'bottom',
+        navbarTitle: 'Pull To Refresh',
+      };
+    },
+    methods: {
+      toggleToolbarPosition: function () {
+        this.$setState({
+          toolbarPosition: this.toolbarPosition === 'top' ? 'bottom' : 'top',
+        });
+      },
+      tabActived: function (tab) {
+        switch (tab) {
+          case 'tab1':
+            this.navbarTitle = "Pull To Refresh";
+            break;
+          case 'tab2':
+            this.navbarTitle = "Infinite Scroll";
+            break;
+          case 'tab3':
+            this.navbarTitle = "Inputs";
+            break;
+          default:
+            this.navbarTitle = "";
+        }
+        this.$setState({navbarTitle: this.navbarTitle});
+      },
+    }
+  }
+</script>
