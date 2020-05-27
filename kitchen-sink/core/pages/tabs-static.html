@@ -1,5 +1,5 @@
 <template>
-<div class="page">
+<div class="page page-with-subnavbar">
   <div class="navbar">
     <div class="navbar-bg"></div>
     <div class="navbar-inner sliding">
@@ -10,13 +10,16 @@
           </a>
         </div>
       <div class="title">Static Tabs</div>
-    </div>
-  </div>
-  <div class="toolbar toolbar-bottom tabbar">
-    <div class="toolbar-inner">
-      <a href="#tab-1" class="tab-link tab-link-active">Tab 1</a>
-      <a href="#tab-2" class="tab-link">Tab 2</a>
-      <a href="#tab-3" class="tab-link">Tab 3</a>
+      <div class="subnavbar">
+        <div class="subnavbar-inner">
+          <div class="segmented segmented-strong">
+            <a href="#tab-1" class="button tab-link tab-link-active">Tab 1</a>
+            <a href="#tab-2" class="button tab-link">Tab 2</a>
+            <a href="#tab-3" class="button tab-link">Tab 3</a>
+            <span class="segmented-highlight"></span>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
   <div class="tabs">
