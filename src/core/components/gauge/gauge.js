@@ -35,6 +35,7 @@ export default {
       borderBgColor: '#eeeeee',
       borderColor: '#000000',
       borderWidth: 10,
+      closewise: false,
       valueText: null,
       valueTextColor: '#000000',
       valueFontSize: 31,
