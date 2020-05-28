@@ -29,6 +29,14 @@
       <div class="block-title">Circle Gauges</div>
       <div class="block block-strong">
         <div class="row">
+          <svg style="height: 0;">
+            <defs>
+              <linearGradient id="circle-gradient-1" x1="100%" y1="0%" x2="0%" y2="0%">
+                <stop offset="0%" stop-color="#3fecff"></stop>
+                <stop offset="100%" stop-color="#6149f6"></stop>
+              </linearGradient>
+            </defs>
+          </svg>
           <div class="col text-align-center">
             <div
               class="gauge gauge-init"
@@ -36,7 +44,7 @@
               data-value="0.44"
               data-value-text="44%"
               data-value-text-color="#ff9800"
-              data-border-color="#ff9800"
+              data-border-color="url(#circle-gradient-1)"
               data-closewise="true"
             ></div>
           </div>

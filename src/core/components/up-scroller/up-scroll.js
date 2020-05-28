@@ -1,6 +1,6 @@
 import $ from 'dom7';
 
-module.exports = {
+export default {
 	name: 'upscroller',
 	params: {
 		upscroller: {
