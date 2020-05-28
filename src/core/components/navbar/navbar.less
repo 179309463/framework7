@@ -296,6 +296,16 @@
   --f7-page-navbar-offset: var(--f7-safe-area-top);
 }
 
+.navbar-large.navbar-large-with-image{
+  .navbar-inner {
+    .title{
+      opacity: 1!important;
+    }
+    .title-large{
+      display: none;
+    }
+  }
+}
 
 .if-ios-theme({
   @import url('./navbar-ios.less');
