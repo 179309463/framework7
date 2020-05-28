@@ -8,7 +8,7 @@ var routes = [
   // About page
   {
     path: '/about/',
-    url: './pages/about.html',
+    componentUrl: './pages/about.html',
     name: 'about',
   },
   // Right Panel pages

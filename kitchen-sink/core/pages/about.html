@@ -1,26 +1,105 @@
-<div class="page page-about">
-  <div class="navbar navbar-large navbar-transparent">
-    <div class="navbar-bg"></div>
-    <div class="navbar-inner sliding">
-      <div class="left">
-        <a href="#" class="link back">
-          <i class="icon icon-back"></i>
-          <span class="if-not-md">Framework7</span>
-        </a>
+<template>
+  <div class="page page-about">
+    <div class="navbar navbar-large navbar-transparent">
+      <div class="navbar-bg"></div>
+      <div class="navbar-inner sliding">
+        <div class="left">
+          <a href="#" class="link back">
+            <i class="icon icon-back"></i>
+            <span class="if-not-md">Framework7</span>
+          </a>
+        </div>
+        <div class="title">About</div>
+        <div class="title-large">
+          <div class="title-large-text">About</div>
+        </div>
       </div>
-      <div class="title">About</div>
-      <div class="title-large">
-        <div class="title-large-text">About</div>
+    </div>
+    <div class="page-content">
+      <div class="block-title block-title-medium">Welcome to Framework7</div>
+      <div class="block block-strong">
+        <p>Framework7 - is a free and open source HTML mobile framework to develop hybrid mobile apps or web apps with iOS or Android (Material) native look and feel. It is also an indispensable prototyping apps tool to show working app prototype as soon as possible in case you need to. Framework7 is created by Vladimir Kharlampidi (iDangero.us).</p>
+        <p>The main approach of the Framework7 is to give you an opportunity to create iOS and Android (Material) apps with HTML, CSS and JavaScript easily and clear. Framework7 is full of freedom. It doesn't limit your imagination or offer ways of any solutions somehow. Framework7 gives you freedom!</p>
+        <p>Framework7 is not compatible with all platforms. It is focused only on iOS and Android (Material) to bring the best experience and simplicity.</p>
+        <p>Framework7 is definitely for you if you decide to build iOS and Android hybrid app (Cordova or PhoneGap) or web app that looks like and feels as great native iOS or Android (Material) apps.</p>
+      </div>
+
+      <div class="block block-strong">
+        <div class="layers j_layers">
+          <div data-name="popout" class="j_layer layers__layer layers__layer_popout j_transform"><span>Popout</span></div>
+          <div data-name="mask" class="j_layer layers__layer layers__layer_mask j_transform"><span>Mask</span></div>
+          <div data-name="navigation" class="j_layer layers__layer layers__layer_navigation j_transform"><span>Navigation</span></div>
+          <div data-name="content" class="j_layer layers__layer layers__layer_content j_transform"><span>Content</span></div>
+        </div>
       </div>
     </div>
   </div>
-  <div class="page-content">
-    <div class="block-title block-title-medium">Welcome to Framework7</div>
-    <div class="block block-strong">
-      <p>Framework7 - is a free and open source HTML mobile framework to develop hybrid mobile apps or web apps with iOS or Android (Material) native look and feel. It is also an indispensable prototyping apps tool to show working app prototype as soon as possible in case you need to. Framework7 is created by Vladimir Kharlampidi (iDangero.us).</p>
-      <p>The main approach of the Framework7 is to give you an opportunity to create iOS and Android (Material) apps with HTML, CSS and JavaScript easily and clear. Framework7 is full of freedom. It doesn't limit your imagination or offer ways of any solutions somehow. Framework7 gives you freedom!</p>
-      <p>Framework7 is not compatible with all platforms. It is focused only on iOS and Android (Material) to bring the best experience and simplicity.</p>
-      <p>Framework7 is definitely for you if you decide to build iOS and Android hybrid app (Cordova or PhoneGap) or web app that looks like and feels as great native iOS or Android (Material) apps.</p>
-    </div>
-  </div>
-</div>
+</template>
+<style>
+  .layers .layers__layer_popout.j_transform {
+    -webkit-transform: translateX(15px) rotateX(45deg) rotate(10deg) skew(-15deg) translateZ(120px);
+    transform: translateX(15px) rotateX(45deg) rotate(10deg) skew(-15deg) translateZ(120px);
+  }
+  .layers .layers__layer_popout {
+      border: 1px solid hsla(0,0%,80%,.5);
+      z-index: 4;
+  }
+  .layers .layers__layer_mask.j_transform {
+    -webkit-transform: translateX(15px) rotateX(45deg) rotate(10deg) skew(-15deg) translateZ(40px);
+    transform: translateX(15px) rotateX(45deg) rotate(10deg) skew(-15deg) translateZ(40px);
+  }
+  .layers .layers__layer_mask {
+      background-color: rgba(0,0,0,.5);
+      z-index: 3;
+  }
+  .layers .layers__layer_navigation.j_transform {
+    -webkit-transform: translateX(15px) rotateX(45deg) rotate(10deg) skew(-15deg) translateZ(-40px);
+    transform: translateX(15px) rotateX(45deg) rotate(10deg) skew(-15deg) translateZ(-40px);
+  }
+  .layers .layers__layer_navigation {
+      background-color: var(--f7-color-lightblue);
+      z-index: 2;
+  }
+  .layers .layers__layer_content.j_transform {
+    -webkit-transform: translateX(15px) rotateX(45deg) rotate(10deg) skew(-15deg) translateZ(-120px);
+    transform: translateX(15px) rotateX(45deg) rotate(10deg) skew(-15deg) translateZ(-120px);
+  }
+  .layers .layers__layer_content {
+      background-color: var(--f7-color-blue);
+      z-index: 1;
+  }
+  @media only screen and (min-height: 603px) and (min-width: 375px) {
+    .layers .layers__layer {
+        width: 180px;
+        height: 320px;
+        margin-left: -90px;
+    }
+  }
+  .layers .layers__layer {
+      position: absolute;
+      left: 50%;
+      width: 150px;
+      height: 266px;
+      margin-left: -75px;
+      margin-top: 50px;
+      margin-bottom: 150px;
+      box-sizing: border-box;
+      -webkit-transition: .5s;
+      transition: .5s;
+      background-size: contain;
+      font-size: 14px;
+      color: white;
+  }
+  .layers .layers__layer.j_hide {
+    opacity: 0;
+}
+  .layers .layers__layer span {
+    position: absolute;
+    bottom: 5px;
+    left: 0;
+    right: 0;
+    text-align: center;
+    -webkit-transition: .5s;
+    transition: .5s;
+  }
+</style>
