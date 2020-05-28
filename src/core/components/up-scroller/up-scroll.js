@@ -4,8 +4,8 @@ module.exports = {
 		upscroller: {
             up_text: '滚动至顶',
             down_text: '滚动至底',
-            ignoreUpPages: [],
-            ignoreDownPages: [],
+            includeUpPages: [],
+            includeUpPages: [],
 		}
 	},
 	on: {
@@ -16,7 +16,7 @@ module.exports = {
 			var params = app.params.upscroller;
 			var $$ = Dom7;
 
-			if (!params.ignoreUpPages.includes(page.name)){
+			if (params.includeUpPages.includes(page.name)){
                 var $$up_btn = $$('<div class="upscroller">↑ ' + params.up_text + '</div>');
                 $$(page.el).prepend($$up_btn);
     
@@ -37,7 +37,7 @@ module.exports = {
                 });
             }
 
-            if (!params.ignoreDownPages.includes(page.name)){
+            if (params.includeUpPages.includes(page.name)){
                 var $$down_btn = $$('<div class="downscroller">↓ ' + params.down_text + '</div>');
                 $$(page.el).append($$down_btn);
                 
