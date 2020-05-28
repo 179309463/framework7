@@ -17,6 +17,12 @@
   line-height: var(--f7-chip-height);
   border-radius: var(--f7-chip-height);
   position: relative;
+  &.chip-rect{
+    border-radius: 0;
+  }
+  &.chip-mark{
+    border-radius: 0 var(--f7-chip-height) var(--f7-chip-height) 0;
+  }
 }
 .chip-media {
   border-radius: 50%;
@@ -45,6 +51,12 @@
     height: auto;
     border-radius: 50%;
     display: block;
+    .chip-rect &{
+      border-radius: 0;
+    }
+    .chip-mark &{
+      border-radius: 0 var(--f7-chip-height) var(--f7-chip-height) 0;
+    }
   }
   .ltr({
     margin-left: calc(-1 * var(--f7-chip-padding-horizontal));
@@ -58,6 +70,12 @@
       margin-right: 4px;
     }
   });
+  .chip-rect &{
+    border-radius: 0;
+  }
+  .chip-mark &{
+    border-radius: 0 var(--f7-chip-height) var(--f7-chip-height) 0;
+  }
 }
 .chip-label {
   white-space: nowrap;
