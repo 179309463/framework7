@@ -449,7 +449,7 @@ var routes = [
   },
   {
     path: '/toggle/',
-    url: './pages/toggle.html',
+    componentUrl: './pages/toggle.html',
   },
   {
     path: '/toolbar-tabbar/',
