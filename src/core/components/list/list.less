@@ -637,6 +637,17 @@ each(@breakpoints, {
   }
 }
 
+.list li.dot:before {
+  content: ' ';
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  background: var(--f7-theme-color);
+  opacity: 0.8;
+  border-radius: 3px;
+  left: 5px;
+}
+
 .if-ios-theme({
   @import url('./list-ios.less');
 });
