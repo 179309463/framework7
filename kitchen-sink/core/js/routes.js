@@ -110,7 +110,7 @@ var routes = [
   },
   {
     path: '/chips/',
-    componentUrl: './pages/chips.html',
+    componentUrl: './pages/chips-bubble.html',
   },
   {
     path: '/color-picker/',
