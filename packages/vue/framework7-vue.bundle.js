@@ -1,9 +1,5 @@
 /**
-<<<<<<< HEAD
- * Framework7 Vue 5.8.5
-=======
  * Framework7 Vue 5.7.5
->>>>>>> 1772c221d015f3d687cdfec66980fa5b4715941a
  * Build full featured iOS & Android apps using Framework7 & Vue
  * https://framework7.io/vue/
  *
@@ -11,11 +7,7 @@
  *
  * Released under the MIT License
  *
-<<<<<<< HEAD
- * Released on: May 15, 2020
-=======
  * Released on: May 16, 2020
->>>>>>> 1772c221d015f3d687cdfec66980fa5b4715941a
  */
 
 (function (global, factory) {
@@ -13341,11 +13333,7 @@
   };
 
   /**
-<<<<<<< HEAD
-   * Framework7 Vue 5.8.5
-=======
    * Framework7 Vue 5.7.5
->>>>>>> 1772c221d015f3d687cdfec66980fa5b4715941a
    * Build full featured iOS & Android apps using Framework7 & Vue
    * https://framework7.io/vue/
    *
@@ -13353,11 +13341,7 @@
    *
    * Released under the MIT License
    *
-<<<<<<< HEAD
-   * Released on: May 15, 2020
-=======
    * Released on: May 16, 2020
->>>>>>> 1772c221d015f3d687cdfec66980fa5b4715941a
    */
 
   function f7ready(callback) {

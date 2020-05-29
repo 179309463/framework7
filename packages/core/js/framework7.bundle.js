@@ -1,21 +1,9 @@
 /**
-<<<<<<< HEAD
- * Framework7 5.8.5
-=======
- * Framework7 5.7.5
->>>>>>> 1772c221d015f3d687cdfec66980fa5b4715941a
- * Full featured mobile HTML framework for building iOS & Android apps
- * https://framework7.io/
  *
- * Copyright 2014-2020 Vladimir Kharlampidi
  *
  * Released under the MIT License
  *
-<<<<<<< HEAD
- * Released on: May 15, 2020
-=======
  * Released on: May 16, 2020
->>>>>>> 1772c221d015f3d687cdfec66980fa5b4715941a
  */
 
 (function (global, factory) {
