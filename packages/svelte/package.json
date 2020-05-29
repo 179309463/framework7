@@ -1,6 +1,11 @@
 {
+<<<<<<< HEAD
   "name": "framework7-cn-svelte",
   "version": "5.8.5",
+=======
+  "name": "framework7-svelte",
+  "version": "5.7.5",
+>>>>>>> 1772c221d015f3d687cdfec66980fa5b4715941a
   "description": "Build full featured iOS & Android apps using Framework7 & Svelte",
   "main": "framework7-svelte.esm.js",
   "jsnext:main": "framework7-svelte.esm.js",
