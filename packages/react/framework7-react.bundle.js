@@ -7,7 +7,7 @@
  *
  * Released under the MIT License
  *
- * Released on: May 16, 2020
+ * Released on: May 29, 2020
  */
 
 (function (global, factory) {
@@ -6761,7 +6761,7 @@
         swipeout: swipeout,
         'accordion-item': accordionItem,
         'accordion-item-opened': accordionItemOpened,
-        disabled: disabled && !(radio || checkbox),
+        disabled: disabled,
         'no-chevron': noChevron,
         'chevron-center': chevronCenter,
         'disallow-sorting': sortable === false
@@ -13559,7 +13559,7 @@
       })();
 
       (function () {
-        Utils.bindMethods(this$1, ['onTabShow', 'onTabHide']);
+        Utils.bindMethods(this$1, ['onTabShow', 'onTabHide', 'onPtrPullStart', 'onPtrPullMove', 'onPtrPullEnd', 'onPtrRefresh', 'onPtrDone', 'onInfinite']);
       })();
     }
 
@@ -13568,6 +13568,54 @@
     F7Tab.prototype.constructor = F7Tab;
 
     var prototypeAccessors = { slots: { configurable: true },refs: { configurable: true } };
+
+    F7Tab.prototype.onPtrPullStart = function onPtrPullStart () {
+      var ref;
+
+      var args = [], len = arguments.length;
+      while ( len-- ) args[ len ] = arguments[ len ];
+      (ref = this).dispatchEvent.apply(ref, [ 'ptr:pullstart ptrPullStart' ].concat( args ));
+    };
+
+    F7Tab.prototype.onPtrPullMove = function onPtrPullMove () {
+      var ref;
+
+      var args = [], len = arguments.length;
+      while ( len-- ) args[ len ] = arguments[ len ];
+      (ref = this).dispatchEvent.apply(ref, [ 'ptr:pullmove ptrPullMove' ].concat( args ));
+    };
+
+    F7Tab.prototype.onPtrPullEnd = function onPtrPullEnd () {
+      var ref;
+
+      var args = [], len = arguments.length;
+      while ( len-- ) args[ len ] = arguments[ len ];
+      (ref = this).dispatchEvent.apply(ref, [ 'ptr:pullend ptrPullEnd' ].concat( args ));
+    };
+
+    F7Tab.prototype.onPtrRefresh = function onPtrRefresh () {
+      var ref;
+
+      var args = [], len = arguments.length;
+      while ( len-- ) args[ len ] = arguments[ len ];
+      (ref = this).dispatchEvent.apply(ref, [ 'ptr:refresh ptrRefresh' ].concat( args ));
+    };
+
+    F7Tab.prototype.onPtrDone = function onPtrDone () {
+      var ref;
+
+      var args = [], len = arguments.length;
+      while ( len-- ) args[ len ] = arguments[ len ];
+      (ref = this).dispatchEvent.apply(ref, [ 'ptr:done ptrDone' ].concat( args ));
+    };
+
+    F7Tab.prototype.onInfinite = function onInfinite () {
+      var ref;
+
+      var args = [], len = arguments.length;
+      while ( len-- ) args[ len ] = arguments[ len ];
+      (ref = this).dispatchEvent.apply(ref, [ 'infinite' ].concat( args ));
+    };
 
     F7Tab.prototype.show = function show (animate) {
       if (!this.$f7) { return; }
@@ -13593,6 +13641,19 @@
       var id = props.id;
       var className = props.className;
       var style = props.style;
+      var pageContent = props.pageContent;
+      var ptr = props.ptr;
+      var ptrDistance = props.ptrDistance;
+      var ptrPreloader = props.ptrPreloader;
+      var ptrBottom = props.ptrBottom;
+      var ptrMousewheel = props.ptrMousewheel;
+      var infinite = props.infinite;
+      var infiniteDistance = props.infiniteDistance;
+      var infinitePreloader = props.infinitePreloader;
+      var infiniteTop = props.infiniteTop;
+      var hideBarsOnScroll = props.hideBarsOnScroll;
+      var hideNavbarOnScroll = props.hideNavbarOnScroll;
+      var hideToolbarOnScroll = props.hideToolbarOnScroll;
       var tabContent = self.state.tabContent;
       var classes = Utils.classNames(className, 'tab', {
         'tab-active': tabActive
@@ -13600,6 +13661,37 @@
       var TabContent;
       if (tabContent) { TabContent = tabContent.component; }
       {
+        if (pageContent) {
+          return React.createElement(F7PageContent, {
+            id: id,
+            style: style,
+            ref: function (__reactNode) {
+              this$1.__reactRefs['el'] = __reactNode;
+            },
+            className: classes,
+            ptr: ptr,
+            ptrDistance: ptrDistance,
+            ptrPreloader: ptrPreloader,
+            ptrBottom: ptrBottom,
+            ptrMousewheel: ptrMousewheel,
+            infinite: infinite,
+            infiniteTop: infiniteTop,
+            infiniteDistance: infiniteDistance,
+            infinitePreloader: infinitePreloader,
+            onPtrPullStart: self.onPtrPullStart,
+            onPtrPullMove: self.onPtrPullMove,
+            onPtrPullEnd: self.onPtrPullEnd,
+            onPtrRefresh: self.onPtrRefresh,
+            onPtrDone: self.onPtrDone,
+            onInfinite: self.onInfinite,
+            hideBarsOnScroll: hideBarsOnScroll,
+            hideNavbarOnScroll: hideNavbarOnScroll,
+            hideToolbarOnScroll: hideToolbarOnScroll
+          }, tabContent ? React.createElement(TabContent, Object.assign({
+            key: tabContent.id
+          }, tabContent.props)) : this.slots['default']);
+        }
+
         return React.createElement('div', {
           id: id,
           style: style,
@@ -13682,12 +13774,35 @@
     return F7Tab;
   }(React.Component));
 
-  __reactComponentSetProps(F7Tab, Object.assign({
+  __reactComponentSetProps(F7Tab, Object.assign(Object.assign({
     id: [String, Number],
     className: String,
     style: Object,
     tabActive: Boolean
-  }, Mixins.colorProps));
+  }, Mixins.colorProps), {}, {
+    pageContent: {
+      type: Boolean,
+      default: false
+    },
+    ptr: Boolean,
+    ptrDistance: Number,
+    ptrPreloader: {
+      type: Boolean,
+      default: true
+    },
+    ptrBottom: Boolean,
+    ptrMousewheel: Boolean,
+    infinite: Boolean,
+    infiniteTop: Boolean,
+    infiniteDistance: Number,
+    infinitePreloader: {
+      type: Boolean,
+      default: true
+    },
+    hideBarsOnScroll: Boolean,
+    hideNavbarOnScroll: Boolean,
+    hideToolbarOnScroll: Boolean
+  }));
 
   F7Tab.displayName = 'f7-tab';
 
@@ -14791,7 +14906,7 @@
    *
    * Released under the MIT License
    *
-   * Released on: May 16, 2020
+   * Released on: May 29, 2020
    */
 
   function f7ready(callback) {

@@ -65,6 +65,7 @@ class Gauge extends Framework7Class {
       borderBgColor,
       borderColor,
       borderWidth,
+      closewise,
       valueText,
       valueTextColor,
       valueFontSize,
@@ -96,7 +97,7 @@ class Gauge extends Framework7Class {
             stroke="${borderColor}"
             stroke-width="${borderWidth}"
             stroke-dasharray="${length / 2}"
-            stroke-dashoffset="${(length / 2) * (1 + progress)}"
+            stroke-dashoffset="${(closewise ? -1 : 1) * (length / 2) * (1 + progress)}"
             fill="${borderBgColor ? 'none' : (bgColor || 'none')}"
           />
         ` : `
@@ -117,7 +118,7 @@ class Gauge extends Framework7Class {
             stroke="${borderColor}"
             stroke-width="${borderWidth}"
             stroke-dasharray="${length}"
-            stroke-dashoffset="${length * (1 - progress)}"
+            stroke-dashoffset="${(closewise ? -1 : 1) * length * (1 - progress)}"
             fill="${borderBgColor ? 'none' : bgColor || 'none'}"
             cx="${size / 2}"
             cy="${size / 2}"
@@ -172,6 +173,7 @@ class Gauge extends Framework7Class {
       borderBgColor,
       borderColor,
       borderWidth,
+      closewise,
       valueText,
       valueTextColor,
       valueFontSize,
@@ -207,7 +209,7 @@ class Gauge extends Framework7Class {
         stroke: borderColor,
         'stroke-width': borderWidth,
         'stroke-dasharray': length / 2,
-        'stroke-dashoffset': (length / 2) * (1 + progress),
+        'stroke-dashoffset': (closewise ? -1 : 1) * (length / 2) * (1 + progress),
         fill: borderBgColor ? 'none' : (bgColor || 'none'),
       };
       Object.keys(backAttrs).forEach((attr) => {
@@ -230,7 +232,7 @@ class Gauge extends Framework7Class {
         stroke: borderColor,
         'stroke-width': borderWidth,
         'stroke-dasharray': length,
-        'stroke-dashoffset': length * (1 - progress),
+        'stroke-dashoffset': (closewise ? -1 : 1) * length * (1 - progress),
         fill: borderBgColor ? 'none' : bgColor || 'none',
         cx: size / 2,
         cy: size / 2,

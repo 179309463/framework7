@@ -596,7 +596,18 @@ textarea {
   }
 }
 
+input:read-only,
+textarea:read-only{
+  cursor: default;
+}
 
+.item-inner-required:before{
+  position: absolute;
+  left: -8px;
+  color: var(--f7-color-red);
+  font-size: 12px;
+  content: '*';
+}
 
 .if-ios-theme({
   @import url('./input-ios.less');

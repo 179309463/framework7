@@ -194,7 +194,7 @@ export default {
       swipeout,
       'accordion-item': accordionItem,
       'accordion-item-opened': accordionItemOpened,
-      disabled: disabled && !(radio || checkbox),
+      disabled,
       'no-chevron': noChevron,
       'chevron-center': chevronCenter,
       'disallow-sorting': sortable === false

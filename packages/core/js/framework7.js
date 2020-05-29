@@ -7,7 +7,7 @@
  *
  * Released under the MIT License
  *
- * Released on: May 16, 2020
+ * Released on: May 29, 2020
  */
 
 (function (global, factory) {
@@ -6723,6 +6723,7 @@
     var url;
     var createRoute;
     var name;
+    var path;
     var query;
     var params;
     var route;
@@ -6732,11 +6733,12 @@
       url = navigateParams.url;
       createRoute = navigateParams.route;
       name = navigateParams.name;
+      path = navigateParams.path;
       query = navigateParams.query;
       params = navigateParams.params;
     }
-    if (name) {
-      url = router.generateUrl({ name: name, params: params, query: query });
+    if (name || path) {
+      url = router.generateUrl({ path: path, name: name, params: params, query: query });
       if (url) {
         return router.navigate(url, navigateOptions);
       }
@@ -6876,7 +6878,7 @@
         }
       }
       if (preloadMaster || (masterLoaded && navigateOptions.reloadAll)) {
-        router.navigate(route.route.masterRoute.path, {
+        router.navigate({ path: route.route.masterRoute.path, params: route.params || {} }, {
           animate: false,
           reloadAll: navigateOptions.reloadAll,
           reloadCurrent: navigateOptions.reloadCurrent,
@@ -7028,6 +7030,11 @@
           }
         }
       }
+
+      var app = router.app;
+      $($newTabEl).find('.navbar:not(.navbar-previous):not(.stacked)').each(function (index, navbarEl) {
+        app.navbar.size(navbarEl);
+      });
     }
 
     if ($newTabEl[0].f7RouterTabLoaded) {
@@ -8696,15 +8703,23 @@
         return parameters;
       }
       var name = parameters.name;
+      var path = parameters.path;
       var params = parameters.params;
       var query = parameters.query;
-      if (!name) {
-        throw new Error('Framework7: name parameter is required');
+      if (!name && !path) {
+        throw new Error('Framework7: "name" or "path" parameter is required');
       }
       var router = this;
-      var route = router.findRouteByKey('name', name);
+      var route = name
+        ? router.findRouteByKey('name', name)
+        : router.findRouteByKey('path', path);
+
       if (!route) {
-        throw new Error(("Framework7: route with name \"" + name + "\" not found"));
+        if (name) {
+          throw new Error(("Framework7: route with name \"" + name + "\" not found"));
+        } else {
+          throw new Error(("Framework7: route with path \"" + path + "\" not found"));
+        }
       }
       var url = router.constructRouteUrl(route, { params: params, query: query });
       if (!url) {
@@ -14638,6 +14653,68 @@
     },
   };
 
+  var UpScroller = {
+    name: 'upscroller',
+    params: {
+      upscroller: {
+        up_text: '滚动至顶',
+        down_text: '滚动至底',
+        includeUpPages: [],
+        includeDownPages: [],
+      },
+    },
+    on: {
+      pageInit: function pageInit(page) {
+        var app = this;
+        var params = app.params.upscroller;
+
+        if (params.includeUpPages.includes(page.name)) {
+          var upBtn = $(("<div class=\"upscroller\">↑ " + (params.up_text) + "</div>"));
+          $(page.el).prepend(upBtn);
+
+          upBtn.click(function (event) {
+            event.stopPropagation();
+            event.preventDefault();
+            var pageContent = $('.page-content', page.el);
+            pageContent.scrollTop(0, Math.round(pageContent.scrollTop() / 4));
+          });
+
+          $('.page-content', page.el).scroll(function (event) {
+            var e = $(event.target).scrollTop();
+            if (e > 300) {
+              upBtn.addClass('show');
+            } else {
+              upBtn.removeClass('show');
+            }
+          });
+        }
+
+        if (params.includeDownPages.includes(page.name)) {
+          var downBtn = $(("<div class=\"downscroller\">↓ " + (params.down_text) + "</div>"));
+          $(page.el).append(downBtn);
+
+          downBtn.click(function (event) {
+            event.stopPropagation();
+            event.preventDefault();
+            var pageContent = $('.page-content', page.el);
+            pageContent.scrollTop(pageContent[0].scrollHeight, Math.round((pageContent[0].scrollHeight - pageContent.scrollTop()) / 4));
+          });
+
+          $('.page-content', page.el).scroll(function (event) {
+            var e = $(event.target).scrollTop();
+            var contentHeight = $(event.target)[0].scrollHeight;
+            var winHeight = $(window).height();
+            if (contentHeight - winHeight - e < 300) {
+              downBtn.addClass('hide');
+            } else {
+              downBtn.removeClass('hide');
+            }
+          });
+        }
+      },
+    },
+  };
+
   {
     if (typeof window !== 'undefined') {
       // Template7
@@ -14673,7 +14750,8 @@
     TouchRipple$1,
     Modal$1,
     Keypad$1,
-    Panel3D ]);
+    Panel3D,
+    UpScroller ]);
 
   return Framework7;
 

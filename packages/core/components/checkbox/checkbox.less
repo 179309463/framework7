@@ -9,6 +9,9 @@
   background-color: transparent;
   --f7-touch-ripple-color: rgba(var(--f7-theme-color-rgb), 0.5);
 }
+.checkbox{
+  vertical-align: baseline;
+}
 .icon-checkbox,
 .checkbox i {
   flex-shrink: 0;
@@ -19,7 +22,11 @@
   box-sizing: border-box;
   box-sizing: border-box;
   position: relative;
-  display: block;
+  display: inline-block;
+  vertical-align: middle;
+  .ios .item-input-wrap &{
+    vertical-align: bottom!important;
+  }
   &:after {
     .core-icons-font();
     width: var(--f7-checkbox-size);
@@ -38,14 +45,7 @@
     });
   }
 }
-label.item-checkbox input[type="checkbox"]:disabled ~ .icon-checkbox,
-label.item-checkbox input[type="checkbox"]:disabled ~ * .icon-checkbox,
-.checkbox input[type="checkbox"]:disabled ~ i {
-  opacity: 0.3;
-  & .item-inner {
-    opacity: 0.4;
-  }
-}
+
 label.item-checkbox input[type="checkbox"]:not(:checked) ~ .icon-checkbox,
 label.item-checkbox input[type="checkbox"]:not(:checked) ~ * .icon-checkbox,
 .checkbox input[type="checkbox"]:not(:checked) ~ i {

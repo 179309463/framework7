@@ -1,4 +1,5 @@
 import Vue from 'vue';
+// IMPORT_COMPONENTS
 /* eslint no-underscore-dangle: "off" */
 import componentsRouter from './components-router';
 import f7, { f7Instance } from './f7';
@@ -23,7 +24,8 @@ const Plugin = {
     // eslint-disable-next-line
     const Extend = params.Vue || Vue;
 
-    
+    // REGISTER_COMPONENTS
+
     // DEFINE_INSTANCE_PROTOS_START
     Object.defineProperty(Extend.prototype, '$f7', {
       get() {

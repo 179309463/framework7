@@ -1,15 +1,40 @@
 import f7 from '../utils/f7';
 import Utils from '../utils/utils';
 import Mixins from '../utils/mixins';
+import F7PageContent from './page-content';
+import __vueComponentTransformJSXProps from '../runtime-helpers/vue-component-transform-jsx-props.js';
 import __vueComponentSetState from '../runtime-helpers/vue-component-set-state.js';
 import __vueComponentDispatchEvent from '../runtime-helpers/vue-component-dispatch-event.js';
 import __vueComponentProps from '../runtime-helpers/vue-component-props.js';
 export default {
   name: 'f7-tab',
-  props: Object.assign({
+  props: Object.assign(Object.assign({
     id: [String, Number],
     tabActive: Boolean
-  }, Mixins.colorProps),
+  }, Mixins.colorProps), {}, {
+    pageContent: {
+      type: Boolean,
+      default: false
+    },
+    ptr: Boolean,
+    ptrDistance: Number,
+    ptrPreloader: {
+      type: Boolean,
+      default: true
+    },
+    ptrBottom: Boolean,
+    ptrMousewheel: Boolean,
+    infinite: Boolean,
+    infiniteTop: Boolean,
+    infiniteDistance: Number,
+    infinitePreloader: {
+      type: Boolean,
+      default: true
+    },
+    hideBarsOnScroll: Boolean,
+    hideNavbarOnScroll: Boolean,
+    hideToolbarOnScroll: Boolean
+  }),
 
   data() {
     const props = __vueComponentProps(this);
@@ -33,7 +58,20 @@ export default {
       tabActive,
       id,
       className,
-      style
+      style,
+      pageContent,
+      ptr,
+      ptrDistance,
+      ptrPreloader,
+      ptrBottom,
+      ptrMousewheel,
+      infinite,
+      infiniteDistance,
+      infinitePreloader,
+      infiniteTop,
+      hideBarsOnScroll,
+      hideNavbarOnScroll,
+      hideToolbarOnScroll
     } = props;
     const tabContent = self.state.tabContent;
     const classes = Utils.classNames(className, 'tab', {
@@ -42,6 +80,39 @@ export default {
     let TabContent;
     if (tabContent) TabContent = tabContent.component;
     {
+      if (pageContent) {
+        return _h(F7PageContent, {
+          style: style,
+          ref: 'el',
+          class: classes,
+          on: {
+            ptrPullStart: self.onPtrPullStart,
+            ptrPullMove: self.onPtrPullMove,
+            ptrPullEnd: self.onPtrPullEnd,
+            ptrRefresh: self.onPtrRefresh,
+            ptrDone: self.onPtrDone,
+            infinite: self.onInfinite
+          },
+          attrs: {
+            id: id,
+            ptr: ptr,
+            ptrDistance: ptrDistance,
+            ptrPreloader: ptrPreloader,
+            ptrBottom: ptrBottom,
+            ptrMousewheel: ptrMousewheel,
+            infinite: infinite,
+            infiniteTop: infiniteTop,
+            infiniteDistance: infiniteDistance,
+            infinitePreloader: infinitePreloader,
+            hideBarsOnScroll: hideBarsOnScroll,
+            hideNavbarOnScroll: hideNavbarOnScroll,
+            hideToolbarOnScroll: hideToolbarOnScroll
+          }
+        }, [tabContent ? _h(TabContent, __vueComponentTransformJSXProps(Object.assign({
+          key: tabContent.id
+        }, tabContent.props))) : this.$slots['default']]);
+      }
+
       return _h('div', {
         style: style,
         ref: 'el',
@@ -57,7 +128,7 @@ export default {
   },
 
   created() {
-    Utils.bindMethods(this, ['onTabShow', 'onTabHide']);
+    Utils.bindMethods(this, ['onTabShow', 'onTabHide', 'onPtrPullStart', 'onPtrPullMove', 'onPtrPullEnd', 'onPtrRefresh', 'onPtrDone', 'onInfinite']);
   },
 
   updated() {
@@ -108,6 +179,30 @@ export default {
   },
 
   methods: {
+    onPtrPullStart(...args) {
+      this.dispatchEvent('ptr:pullstart ptrPullStart', ...args);
+    },
+
+    onPtrPullMove(...args) {
+      this.dispatchEvent('ptr:pullmove ptrPullMove', ...args);
+    },
+
+    onPtrPullEnd(...args) {
+      this.dispatchEvent('ptr:pullend ptrPullEnd', ...args);
+    },
+
+    onPtrRefresh(...args) {
+      this.dispatchEvent('ptr:refresh ptrRefresh', ...args);
+    },
+
+    onPtrDone(...args) {
+      this.dispatchEvent('ptr:done ptrDone', ...args);
+    },
+
+    onInfinite(...args) {
+      this.dispatchEvent('infinite', ...args);
+    },
+
     show(animate) {
       if (!this.$f7) return;
       this.$f7.tab.show(this.$refs.el, animate);

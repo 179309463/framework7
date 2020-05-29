@@ -63,7 +63,7 @@
   }
 }
 .sheet-modal-bottom,
-.sheet-modal:not(.sheet-modal-top) {
+.sheet-modal:not(.sheet-modal-top):not(.sheet-modal-left):not(.sheet-modal-right) {
   --f7-safe-area-top: 0px;
   .hairline(top, var(--f7-sheet-border-color));
   &:before {
@@ -87,6 +87,64 @@
     padding-top: var(--f7-safe-area-top);
   }
 }
+/* .sheet-modal-left */
+.sheet-modal-left {
+  left: 0;
+  right: auto;
+  top: 0;
+  bottom: 0;
+  width: var(--f7-sheet-width);
+  height: 100%;
+  transform: translate3d(-100%, 0, 0);
+  &.modal-in {
+    transform: translate3d(0, 0, 0);
+  }
+  &.modal-in-swipe-step {
+    transform: translate3d(var(--f7-sheet-swipe-step, 0), 0, 0);
+  }
+  &.modal-out {
+    transform: translate3d(-100%, 0, 0);
+  }
+  --f7-safe-area-top: 0px;
+  .hairline(right, var(--f7-sheet-border-color));
+  .toolbar {
+    .hairline(bottom, var(--f7-sheet-border-color));
+  }
+  &:before {
+    z-index: 700;
+    backface-visibility: hidden;
+    transform-style: preserve-3d;
+  }
+}
+/* .sheet-modal-right */
+.sheet-modal-right {
+  left: auto;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: var(--f7-sheet-width);
+  height: 100%;
+  transform: translate3d(100%, 0, 0);
+  &.modal-in {
+    transform: translate3d(0, 0, 0);
+  }
+  &.modal-in-swipe-step {
+    transform: translate3d(var(--f7-sheet-swipe-step, 0), 0, 0);
+  }
+  &.modal-out {
+    transform: translate3d(100%, 0, 0);
+  }
+  --f7-safe-area-top: 0px;
+  .hairline(left, var(--f7-sheet-border-color));
+  .toolbar {
+    .hairline(bottom, var(--f7-sheet-border-color));
+  }
+  &:before {
+    z-index: 700;
+    backface-visibility: hidden;
+    transform-style: preserve-3d;
+  }
+}
 
 html.with-modal-sheet-push,
 html.with-modal-sheet-push-closing {
@@ -99,6 +157,12 @@ html.with-modal-sheet-push-closing {
     }
     &.sheet-modal-top {
       border-radius: 0 0 var(--f7-sheet-push-border-radius) var(--f7-sheet-push-border-radius);
+    }
+    &.sheet-modal-left {
+      border-radius: 0 var(--f7-sheet-push-border-radius) var(--f7-sheet-push-border-radius) 0;
+    }
+    &.sheet-modal-right {
+      border-radius: var(--f7-sheet-push-border-radius) 0 0 var(--f7-sheet-push-border-radius);
     }
   }
   .framework7-root {

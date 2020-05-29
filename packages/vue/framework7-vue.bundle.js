@@ -7,7 +7,7 @@
  *
  * Released under the MIT License
  *
- * Released on: May 16, 2020
+ * Released on: May 29, 2020
  */
 
 (function (global, factory) {
@@ -5998,7 +5998,7 @@
         swipeout: swipeout,
         'accordion-item': accordionItem,
         'accordion-item-opened': accordionItemOpened,
-        disabled: disabled && !(radio || checkbox),
+        disabled: disabled,
         'no-chevron': noChevron,
         'chevron-center': chevronCenter,
         'disallow-sorting': sortable === false
@@ -12186,10 +12186,33 @@
 
   var f7Tab = {
     name: 'f7-tab',
-    props: Object.assign({
+    props: Object.assign(Object.assign({
       id: [String, Number],
       tabActive: Boolean
-    }, Mixins.colorProps),
+    }, Mixins.colorProps), {}, {
+      pageContent: {
+        type: Boolean,
+        default: false
+      },
+      ptr: Boolean,
+      ptrDistance: Number,
+      ptrPreloader: {
+        type: Boolean,
+        default: true
+      },
+      ptrBottom: Boolean,
+      ptrMousewheel: Boolean,
+      infinite: Boolean,
+      infiniteTop: Boolean,
+      infiniteDistance: Number,
+      infinitePreloader: {
+        type: Boolean,
+        default: true
+      },
+      hideBarsOnScroll: Boolean,
+      hideNavbarOnScroll: Boolean,
+      hideToolbarOnScroll: Boolean
+    }),
 
     data: function data() {
       var props = __vueComponentProps(this);
@@ -12213,6 +12236,19 @@
       var id = props.id;
       var className = props.className;
       var style = props.style;
+      var pageContent = props.pageContent;
+      var ptr = props.ptr;
+      var ptrDistance = props.ptrDistance;
+      var ptrPreloader = props.ptrPreloader;
+      var ptrBottom = props.ptrBottom;
+      var ptrMousewheel = props.ptrMousewheel;
+      var infinite = props.infinite;
+      var infiniteDistance = props.infiniteDistance;
+      var infinitePreloader = props.infinitePreloader;
+      var infiniteTop = props.infiniteTop;
+      var hideBarsOnScroll = props.hideBarsOnScroll;
+      var hideNavbarOnScroll = props.hideNavbarOnScroll;
+      var hideToolbarOnScroll = props.hideToolbarOnScroll;
       var tabContent = self.state.tabContent;
       var classes = Utils.classNames(className, 'tab', {
         'tab-active': tabActive
@@ -12220,6 +12256,39 @@
       var TabContent;
       if (tabContent) { TabContent = tabContent.component; }
       {
+        if (pageContent) {
+          return _h(f7PageContent, {
+            style: style,
+            ref: 'el',
+            class: classes,
+            on: {
+              ptrPullStart: self.onPtrPullStart,
+              ptrPullMove: self.onPtrPullMove,
+              ptrPullEnd: self.onPtrPullEnd,
+              ptrRefresh: self.onPtrRefresh,
+              ptrDone: self.onPtrDone,
+              infinite: self.onInfinite
+            },
+            attrs: {
+              id: id,
+              ptr: ptr,
+              ptrDistance: ptrDistance,
+              ptrPreloader: ptrPreloader,
+              ptrBottom: ptrBottom,
+              ptrMousewheel: ptrMousewheel,
+              infinite: infinite,
+              infiniteTop: infiniteTop,
+              infiniteDistance: infiniteDistance,
+              infinitePreloader: infinitePreloader,
+              hideBarsOnScroll: hideBarsOnScroll,
+              hideNavbarOnScroll: hideNavbarOnScroll,
+              hideToolbarOnScroll: hideToolbarOnScroll
+            }
+          }, [tabContent ? _h(TabContent, __vueComponentTransformJSXProps(Object.assign({
+            key: tabContent.id
+          }, tabContent.props))) : this.$slots['default']]);
+        }
+
         return _h('div', {
           style: style,
           ref: 'el',
@@ -12235,7 +12304,7 @@
     },
 
     created: function created() {
-      Utils.bindMethods(this, ['onTabShow', 'onTabHide']);
+      Utils.bindMethods(this, ['onTabShow', 'onTabHide', 'onPtrPullStart', 'onPtrPullMove', 'onPtrPullEnd', 'onPtrRefresh', 'onPtrDone', 'onInfinite']);
     },
 
     updated: function updated() {
@@ -12286,6 +12355,54 @@
     },
 
     methods: {
+      onPtrPullStart: function onPtrPullStart() {
+        var ref;
+
+        var args = [], len = arguments.length;
+        while ( len-- ) args[ len ] = arguments[ len ];
+        (ref = this).dispatchEvent.apply(ref, [ 'ptr:pullstart ptrPullStart' ].concat( args ));
+      },
+
+      onPtrPullMove: function onPtrPullMove() {
+        var ref;
+
+        var args = [], len = arguments.length;
+        while ( len-- ) args[ len ] = arguments[ len ];
+        (ref = this).dispatchEvent.apply(ref, [ 'ptr:pullmove ptrPullMove' ].concat( args ));
+      },
+
+      onPtrPullEnd: function onPtrPullEnd() {
+        var ref;
+
+        var args = [], len = arguments.length;
+        while ( len-- ) args[ len ] = arguments[ len ];
+        (ref = this).dispatchEvent.apply(ref, [ 'ptr:pullend ptrPullEnd' ].concat( args ));
+      },
+
+      onPtrRefresh: function onPtrRefresh() {
+        var ref;
+
+        var args = [], len = arguments.length;
+        while ( len-- ) args[ len ] = arguments[ len ];
+        (ref = this).dispatchEvent.apply(ref, [ 'ptr:refresh ptrRefresh' ].concat( args ));
+      },
+
+      onPtrDone: function onPtrDone() {
+        var ref;
+
+        var args = [], len = arguments.length;
+        while ( len-- ) args[ len ] = arguments[ len ];
+        (ref = this).dispatchEvent.apply(ref, [ 'ptr:done ptrDone' ].concat( args ));
+      },
+
+      onInfinite: function onInfinite() {
+        var ref;
+
+        var args = [], len = arguments.length;
+        while ( len-- ) args[ len ] = arguments[ len ];
+        (ref = this).dispatchEvent.apply(ref, [ 'infinite' ].concat( args ));
+      },
+
       show: function show(animate) {
         if (!this.$f7) { return; }
         this.$f7.tab.show(this.$refs.el, animate);
@@ -13341,7 +13458,7 @@
    *
    * Released under the MIT License
    *
-   * Released on: May 16, 2020
+   * Released on: May 29, 2020
    */
 
   function f7ready(callback) {

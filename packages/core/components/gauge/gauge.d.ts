@@ -39,6 +39,8 @@ export namespace Gauge {
     borderColor?: string
     /** Main border/stroke width. (default 10) */
     borderWidth?: string
+    /** Gauge closewise */
+    closewise?: boolean
     /** Gauge value text (large text in the center of gauge). (default null) */
     valueText?: string
     /** Value text color. (default #000000) */

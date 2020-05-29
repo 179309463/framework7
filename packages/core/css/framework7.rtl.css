@@ -7,7 +7,7 @@
  *
  * Released under the MIT License
  *
- * Released on: May 16, 2020
+ * Released on: May 29, 2020
  */
 
 /*====================
@@ -2071,6 +2071,9 @@ html.device-pixel-ratio-3 .navbar-bg:after {
 .page.no-navbar,
 .page.no-navbar .navbar ~ * {
   --f7-page-navbar-offset: var(--f7-safe-area-top);
+}
+.navbar-current .title-opacity-1 {
+  opacity: 1!important;
 }
 .ios {
   --f7-navbarLeftTextOffset: calc(4px + 12px + var(--f7-navbar-inner-padding-left));
@@ -4276,6 +4279,14 @@ html.device-pixel-ratio-3 .block-strong:after {
     display: none !important;
   }
 }
+.block-header-sticky {
+  position: -webkit-sticky;
+  position: sticky;
+  z-index: 2;
+  top: 0;
+  padding: 5px 16px;
+  background-color: var(--f7-page-bg-color);
+}
 /* === List View === */
 :root {
   --f7-list-inset-side-margin: 16px;
@@ -4487,10 +4498,14 @@ html.device-pixel-ratio-3 .block-strong:after {
 :root {
   --f7-list-chevron-icon-left: 'chevron_left';
   --f7-list-chevron-icon-right: 'chevron_right';
+  --f7-list-chevron-icon-up: 'chevron_up';
+  --f7-list-chevron-icon-down: 'chevron_down';
 }
 .aurora {
   --f7-list-chevron-icon-left: 'chevron_left_aurora';
   --f7-list-chevron-icon-right: 'chevron_right_aurora';
+  --f7-list-chevron-icon-left: 'chevron_up_aurora';
+  --f7-list-chevron-icon-right: 'chevron_down_aurora';
 }
 .list {
   position: relative;
@@ -5174,6 +5189,14 @@ li.media-item .item-link.chevron-center .item-inner:before {
   left: calc(var(--f7-list-item-padding-horizontal) + var(--f7-safe-area-left));
   content: var(--f7-list-chevron-icon-left);
 }
+.chevron-icon-up {
+  --f7-list-chevron-icon-right: var(--f7-list-chevron-icon-up);
+  --f7-list-chevron-icon-left: var(--f7-list-chevron-icon-up);
+}
+.chevron-icon-down {
+  --f7-list-chevron-icon-right: var(--f7-list-chevron-icon-down);
+  --f7-list-chevron-icon-left: var(--f7-list-chevron-icon-down);
+}
 .media-list.chevron-center .item-title-row:before,
 .media-list .chevron-center .item-title-row:before,
 li.media-item.chevron-center .item-title-row:before,
@@ -5483,6 +5506,16 @@ li.list-group-title,
 .media-list-reverse .item-media {
   margin-right: var(--f7-list-item-media-margin);
 }
+.list li.dot:before {
+  content: ' ';
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  background: var(--f7-theme-color);
+  opacity: 0.8;
+  border-radius: 3px;
+  left: 5px;
+}
 .ios .item-link.active-state .item-inner:after,
 .ios .list-button.active-state:after,
 .ios .links-list a.active-state:after {
@@ -5574,6 +5607,20 @@ li.list-group-title,
 }
 .badge[class*="color-"] {
   --f7-badge-bg-color: var(--f7-theme-color);
+}
+.badge.badge-inverted {
+  color: var(--f7-badge-bg-color);
+  background: transparent;
+}
+.badge.badge-dot {
+  --f7-badge-size: 8px;
+  text-indent: -999px;
+}
+.icon .badge.badge-dot,
+.f7-icons .badge.badge-dot,
+.framework7-icons .badge.badge-dot,
+.material-icons .badge.badge-dot {
+  margin-left: -5px;
 }
 :root {
   --f7-button-min-width: 32px;
@@ -5739,6 +5786,12 @@ button {
 .button .f7-icons,
 .button .material-icons {
   font-size: var(--f7-button-font-size);
+  margin-left: 5px;
+  margin-right: 5px;
+}
+.button .preloader {
+  width: var(--f7-button-font-size);
+  height: var(--f7-button-font-size);
   margin-left: 5px;
   margin-right: 5px;
 }
@@ -6605,4 +6658,52 @@ html.device-pixel-ratio-3 .keypad-button:before {
 .md.with-panels-3d.with-panel-left-reveal .framework7-root > .view,
 .md.with-panels-3d.with-panel-right-reveal .framework7-root > .view {
   box-shadow: none;
+}
+/*
+  Note: The content of this file must be manually minified and added to
+  f7.upscroller.js and assign the result to the variable "css".
+*/
+.upscroller {
+  transform: translate3d(0, 0, 0);
+  position: fixed;
+  left: 50%;
+  margin-left: -47px;
+  bottom: -50px;
+  z-index: 9999 !important;
+  height: 20px;
+  border-radius: 20px;
+  width: 100px;
+  background: var(--f7-theme-color);
+  opacity: 0.8;
+  font-size: 14px;
+  text-align: center;
+  padding: 2px;
+  padding-top: 3px;
+  color: #fff !important;
+  cursor: pointer;
+}
+.upscroller.show {
+  transform: translate3d(0, -110px, 0);
+}
+.downscroller {
+  transform: translate3d(0, 0, 0);
+  position: fixed;
+  left: 50%;
+  margin-left: -47px;
+  top: 50px;
+  z-index: 9999 !important;
+  height: 20px;
+  border-radius: 20px;
+  width: 100px;
+  background: var(--f7-theme-color);
+  opacity: 0.8;
+  font-size: 14px;
+  text-align: center;
+  padding: 2px;
+  padding-top: 3px;
+  color: #fff !important;
+  cursor: pointer;
+}
+.downscroller.hide {
+  transform: translate3d(0, -110px, 0);
 }

@@ -2,7 +2,11 @@ import Framework7, { CSSSelector, Framework7EventsClass, Framework7Plugin } from
 
 export namespace Button {
   interface AppMethods {
+      /** loading status */
+      loading(el : HTMLElement | CSSSelector) : void
 
+      /** reset status */
+      reset(el : HTMLElement | CSSSelector) : void
   }
   interface AppParams {
 

@@ -41,6 +41,22 @@
   --f7-badge-bg-color: var(--f7-theme-color);
 }
 
+.badge.badge-inverted{
+  color: var(--f7-badge-bg-color);
+  background: transparent;
+}
+
+.badge.badge-dot{
+  --f7-badge-size: 8px;
+  .icon &,
+  .f7-icons &,
+  .framework7-icons &,
+  .material-icons & {
+    margin-left: -5px;
+  }
+  text-indent: -999px;
+}
+
 .if-ios-theme({
   @import url('./badge-ios.less');
 });

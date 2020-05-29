@@ -1221,7 +1221,7 @@ class Calendar extends Framework7Class {
       }
       monthHtml += `<div class="calendar-row">${rowHtml}</div>`;
     }
-    monthHtml = `<div class="calendar-month" data-year="${year}" data-month="${month}" data-locale-year="${localeYear}" data-locale-month="${localeMonth}">${monthHtml}</div>`;
+    monthHtml = `<div class="calendar-month" data-year="${year}" data-month="${month}" data-locale-year="${localeYear}" data-locale-month="${localeMonth}"><div class="calendar-month-mark">${month}</div>${monthHtml}</div>`;
     return monthHtml;
   }
 

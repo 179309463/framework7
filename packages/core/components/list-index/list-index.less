@@ -123,6 +123,21 @@
   }
 }
 
+.list-index.list-index-label-center{
+  .list-index-label{
+    border-radius: 0!important;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    margin-left: calc(-1 * var(--f7-list-index-label-size) / 2);
+    margin-top: calc(-1 * var(--f7-list-index-label-size) / 2);
+    transform: unset!important;
+    &:before{
+      background-color: unset!important;
+    }
+  }
+}
+
 .if-ios-theme({
   @import url('./list-index-ios.less');
 });

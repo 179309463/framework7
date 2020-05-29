@@ -162,12 +162,35 @@
   --f7-stepper-button-pressed-bg-color: transparent;
   --f7-stepper-button-pressed-text-color: var(--f7-theme-color);
 }
-.stepper-raised,
-.ios .stepper-raised-ios,
-.md .stepper-raised-md,
-.aurora .stepper-raised-aurora {
+.stepper-raised:not(.stepper-circle),
+.ios .stepper-raised-ios:not(.stepper-circle),
+.md .stepper-raised-md:not(.stepper-circle),
+.aurora .stepper-raised-aurora:not(.stepper-circle) {
   --f7-stepper-border-width: 0;
   box-shadow: var(--f7-stepper-raised-box-shadow);
+}
+
+.stepper-circle{
+  .stepper-button-minus,
+  .stepper-button-plus{
+    width: calc(var(--f7-stepper-height) - var(--f7-stepper-border-width, 0px) + 1px);
+    border-radius:  100%;
+    background-color: transparent;
+  }
+  .stepper-button-minus{
+    &:after{
+      background-color: var(--f7-theme-color);
+    }
+  }
+  .stepper-button-plus{
+    &:after,
+    &:before{
+      background-color: var(--f7-theme-color);
+    }
+  }
+  .stepper-input-wrap{
+    border: none;
+  }
 }
 
 .if-ios-theme({

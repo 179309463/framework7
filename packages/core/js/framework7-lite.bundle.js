@@ -7,7 +7,7 @@
  *
  * Released under the MIT License
  *
- * Released on: May 16, 2020
+ * Released on: May 29, 2020
  */
 
 (function (global, factory) {
@@ -6723,6 +6723,7 @@
     var url;
     var createRoute;
     var name;
+    var path;
     var query;
     var params;
     var route;
@@ -6732,11 +6733,12 @@
       url = navigateParams.url;
       createRoute = navigateParams.route;
       name = navigateParams.name;
+      path = navigateParams.path;
       query = navigateParams.query;
       params = navigateParams.params;
     }
-    if (name) {
-      url = router.generateUrl({ name: name, params: params, query: query });
+    if (name || path) {
+      url = router.generateUrl({ path: path, name: name, params: params, query: query });
       if (url) {
         return router.navigate(url, navigateOptions);
       }
@@ -6876,7 +6878,7 @@
         }
       }
       if (preloadMaster || (masterLoaded && navigateOptions.reloadAll)) {
-        router.navigate(route.route.masterRoute.path, {
+        router.navigate({ path: route.route.masterRoute.path, params: route.params || {} }, {
           animate: false,
           reloadAll: navigateOptions.reloadAll,
           reloadCurrent: navigateOptions.reloadCurrent,
@@ -7028,6 +7030,11 @@
           }
         }
       }
+
+      var app = router.app;
+      $($newTabEl).find('.navbar:not(.navbar-previous):not(.stacked)').each(function (index, navbarEl) {
+        app.navbar.size(navbarEl);
+      });
     }
 
     if ($newTabEl[0].f7RouterTabLoaded) {
@@ -8696,15 +8703,23 @@
         return parameters;
       }
       var name = parameters.name;
+      var path = parameters.path;
       var params = parameters.params;
       var query = parameters.query;
-      if (!name) {
-        throw new Error('Framework7: name parameter is required');
+      if (!name && !path) {
+        throw new Error('Framework7: "name" or "path" parameter is required');
       }
       var router = this;
-      var route = router.findRouteByKey('name', name);
+      var route = name
+        ? router.findRouteByKey('name', name)
+        : router.findRouteByKey('path', path);
+
       if (!route) {
-        throw new Error(("Framework7: route with name \"" + name + "\" not found"));
+        if (name) {
+          throw new Error(("Framework7: route with name \"" + name + "\" not found"));
+        } else {
+          throw new Error(("Framework7: route with path \"" + path + "\" not found"));
+        }
       }
       var url = router.constructRouteUrl(route, { params: params, query: query });
       if (!url) {
@@ -17047,7 +17062,6 @@
       }
       $el.removeClass('panel-resizing');
       Utils.nextFrame(function () {
-        if (visibleByBreakpoint) { return; }
         $el.transition('');
         if (effect === 'reveal') {
           $backdropEl.transition('');
@@ -22857,7 +22871,7 @@
         for (var col = 1; col <= cols; col += 1) loop( col );
         monthHtml += "<div class=\"calendar-row\">" + rowHtml + "</div>";
       }
-      monthHtml = "<div class=\"calendar-month\" data-year=\"" + year + "\" data-month=\"" + month + "\" data-locale-year=\"" + localeYear + "\" data-locale-month=\"" + localeMonth + "\">" + monthHtml + "</div>";
+      monthHtml = "<div class=\"calendar-month\" data-year=\"" + year + "\" data-month=\"" + month + "\" data-locale-year=\"" + localeYear + "\" data-locale-month=\"" + localeMonth + "\"><div class=\"calendar-month-mark\">" + month + "</div>" + monthHtml + "</div>";
       return monthHtml;
     };
 
@@ -37442,6 +37456,7 @@
       var borderBgColor = ref.borderBgColor;
       var borderColor = ref.borderColor;
       var borderWidth = ref.borderWidth;
+      var closewise = ref.closewise;
       var valueText = ref.valueText;
       var valueTextColor = ref.valueTextColor;
       var valueFontSize = ref.valueFontSize;
@@ -37456,7 +37471,7 @@
       var length = gauge.calcBorderLength();
       var progress = Math.max(Math.min(value, 1), 0);
 
-      return ("\n      <svg class=\"gauge-svg\" width=\"" + size + "px\" height=\"" + (semiCircle ? size / 2 : size) + "px\" viewBox=\"0 0 " + size + " " + (semiCircle ? size / 2 : size) + "\">\n        " + (semiCircle ? ("\n          <path\n            class=\"gauge-back-semi\"\n            d=\"M" + (size - (borderWidth / 2)) + "," + (size / 2) + " a1,1 0 0,0 -" + (size - borderWidth) + ",0\"\n            stroke=\"" + borderBgColor + "\"\n            stroke-width=\"" + borderWidth + "\"\n            fill=\"" + (bgColor || 'none') + "\"\n          />\n          <path\n            class=\"gauge-front-semi\"\n            d=\"M" + (size - (borderWidth / 2)) + "," + (size / 2) + " a1,1 0 0,0 -" + (size - borderWidth) + ",0\"\n            stroke=\"" + borderColor + "\"\n            stroke-width=\"" + borderWidth + "\"\n            stroke-dasharray=\"" + (length / 2) + "\"\n            stroke-dashoffset=\"" + ((length / 2) * (1 + progress)) + "\"\n            fill=\"" + (borderBgColor ? 'none' : (bgColor || 'none')) + "\"\n          />\n        ") : ("\n          " + (borderBgColor ? ("\n            <circle\n              class=\"gauge-back-circle\"\n              stroke=\"" + borderBgColor + "\"\n              stroke-width=\"" + borderWidth + "\"\n              fill=\"" + (bgColor || 'none') + "\"\n              cx=\"" + (size / 2) + "\"\n              cy=\"" + (size / 2) + "\"\n              r=\"" + radius + "\"\n            ></circle>\n          ") : '') + "\n          <circle\n            class=\"gauge-front-circle\"\n            transform=\"" + ("rotate(-90 " + (size / 2) + " " + (size / 2) + ")") + "\"\n            stroke=\"" + borderColor + "\"\n            stroke-width=\"" + borderWidth + "\"\n            stroke-dasharray=\"" + length + "\"\n            stroke-dashoffset=\"" + (length * (1 - progress)) + "\"\n            fill=\"" + (borderBgColor ? 'none' : bgColor || 'none') + "\"\n            cx=\"" + (size / 2) + "\"\n            cy=\"" + (size / 2) + "\"\n            r=\"" + radius + "\"\n          ></circle>\n        ")) + "\n        " + (valueText ? ("\n          <text\n            class=\"gauge-value-text\"\n            x=\"50%\"\n            y=\"" + (semiCircle ? '100%' : '50%') + "\"\n            font-weight=\"" + valueFontWeight + "\"\n            font-size=\"" + valueFontSize + "\"\n            fill=\"" + valueTextColor + "\"\n            dy=\"" + (semiCircle ? (labelText ? -labelFontSize - 15 : -5) : 0) + "\"\n            text-anchor=\"middle\"\n            dominant-baseline=\"" + (!semiCircle && 'middle') + "\"\n          >" + valueText + "</text>\n        ") : '') + "\n        " + (labelText ? ("\n          <text\n            class=\"gauge-label-text\"\n            x=\"50%\"\n            y=\"" + (semiCircle ? '100%' : '50%') + "\"\n            font-weight=\"" + labelFontWeight + "\"\n            font-size=\"" + labelFontSize + "\"\n            fill=\"" + labelTextColor + "\"\n            dy=\"" + (semiCircle ? -5 : (valueText ? ((valueFontSize / 2) + 10) : 0)) + "\"\n            text-anchor=\"middle\"\n            dominant-baseline=\"" + (!semiCircle && 'middle') + "\"\n          >" + labelText + "</text>\n        ") : '') + "\n      </svg>\n    ").trim();
+      return ("\n      <svg class=\"gauge-svg\" width=\"" + size + "px\" height=\"" + (semiCircle ? size / 2 : size) + "px\" viewBox=\"0 0 " + size + " " + (semiCircle ? size / 2 : size) + "\">\n        " + (semiCircle ? ("\n          <path\n            class=\"gauge-back-semi\"\n            d=\"M" + (size - (borderWidth / 2)) + "," + (size / 2) + " a1,1 0 0,0 -" + (size - borderWidth) + ",0\"\n            stroke=\"" + borderBgColor + "\"\n            stroke-width=\"" + borderWidth + "\"\n            fill=\"" + (bgColor || 'none') + "\"\n          />\n          <path\n            class=\"gauge-front-semi\"\n            d=\"M" + (size - (borderWidth / 2)) + "," + (size / 2) + " a1,1 0 0,0 -" + (size - borderWidth) + ",0\"\n            stroke=\"" + borderColor + "\"\n            stroke-width=\"" + borderWidth + "\"\n            stroke-dasharray=\"" + (length / 2) + "\"\n            stroke-dashoffset=\"" + ((closewise ? -1 : 1) * (length / 2) * (1 + progress)) + "\"\n            fill=\"" + (borderBgColor ? 'none' : (bgColor || 'none')) + "\"\n          />\n        ") : ("\n          " + (borderBgColor ? ("\n            <circle\n              class=\"gauge-back-circle\"\n              stroke=\"" + borderBgColor + "\"\n              stroke-width=\"" + borderWidth + "\"\n              fill=\"" + (bgColor || 'none') + "\"\n              cx=\"" + (size / 2) + "\"\n              cy=\"" + (size / 2) + "\"\n              r=\"" + radius + "\"\n            ></circle>\n          ") : '') + "\n          <circle\n            class=\"gauge-front-circle\"\n            transform=\"" + ("rotate(-90 " + (size / 2) + " " + (size / 2) + ")") + "\"\n            stroke=\"" + borderColor + "\"\n            stroke-width=\"" + borderWidth + "\"\n            stroke-dasharray=\"" + length + "\"\n            stroke-dashoffset=\"" + ((closewise ? -1 : 1) * length * (1 - progress)) + "\"\n            fill=\"" + (borderBgColor ? 'none' : bgColor || 'none') + "\"\n            cx=\"" + (size / 2) + "\"\n            cy=\"" + (size / 2) + "\"\n            r=\"" + radius + "\"\n          ></circle>\n        ")) + "\n        " + (valueText ? ("\n          <text\n            class=\"gauge-value-text\"\n            x=\"50%\"\n            y=\"" + (semiCircle ? '100%' : '50%') + "\"\n            font-weight=\"" + valueFontWeight + "\"\n            font-size=\"" + valueFontSize + "\"\n            fill=\"" + valueTextColor + "\"\n            dy=\"" + (semiCircle ? (labelText ? -labelFontSize - 15 : -5) : 0) + "\"\n            text-anchor=\"middle\"\n            dominant-baseline=\"" + (!semiCircle && 'middle') + "\"\n          >" + valueText + "</text>\n        ") : '') + "\n        " + (labelText ? ("\n          <text\n            class=\"gauge-label-text\"\n            x=\"50%\"\n            y=\"" + (semiCircle ? '100%' : '50%') + "\"\n            font-weight=\"" + labelFontWeight + "\"\n            font-size=\"" + labelFontSize + "\"\n            fill=\"" + labelTextColor + "\"\n            dy=\"" + (semiCircle ? -5 : (valueText ? ((valueFontSize / 2) + 10) : 0)) + "\"\n            text-anchor=\"middle\"\n            dominant-baseline=\"" + (!semiCircle && 'middle') + "\"\n          >" + labelText + "</text>\n        ") : '') + "\n      </svg>\n    ").trim();
     };
 
     Gauge.prototype.update = function update (newParams) {
@@ -37479,6 +37494,7 @@
       var borderBgColor = params.borderBgColor;
       var borderColor = params.borderColor;
       var borderWidth = params.borderWidth;
+      var closewise = params.closewise;
       var valueText = params.valueText;
       var valueTextColor = params.valueTextColor;
       var valueFontSize = params.valueFontSize;
@@ -37513,7 +37529,7 @@
           stroke: borderColor,
           'stroke-width': borderWidth,
           'stroke-dasharray': length / 2,
-          'stroke-dashoffset': (length / 2) * (1 + progress),
+          'stroke-dashoffset': (closewise ? -1 : 1) * (length / 2) * (1 + progress),
           fill: borderBgColor ? 'none' : (bgColor || 'none'),
         };
         Object.keys(backAttrs).forEach(function (attr) {
@@ -37536,7 +37552,7 @@
           stroke: borderColor,
           'stroke-width': borderWidth,
           'stroke-dasharray': length,
-          'stroke-dashoffset': length * (1 - progress),
+          'stroke-dashoffset': (closewise ? -1 : 1) * length * (1 - progress),
           fill: borderBgColor ? 'none' : bgColor || 'none',
           cx: size / 2,
           cy: size / 2,
@@ -37652,6 +37668,7 @@
         borderBgColor: '#eeeeee',
         borderColor: '#000000',
         borderWidth: 10,
+        closewise: false,
         valueText: null,
         valueTextColor: '#000000',
         valueFontSize: 31,
@@ -40741,6 +40758,46 @@
     },
   };
 
+  var Button = {
+    loading: function loading(el) {
+      var app = this;
+      var $el = $(el);
+      if ($el.length) {
+        var elem = $el[0];
+        elem.disabled = true;
+        elem.dataset.resetText = elem.innerText;
+        var text = elem.dataset.loadingText ? elem.dataset.loadingText : elem.innerText;
+        var color = elem.dataset.loadingIconClass ? elem.dataset.loadingIconClass : 'color-white';
+        var icon = "<span class=\"preloader " + color + "\"></span>";
+        elem.innerHTML = elem.dataset.loadingIconPosition === 'right' ? (text + icon) : (icon + text);
+        $el.find('.preloader').each(function (index, preloaderEl) {
+          app.preloader.init(preloaderEl);
+        });
+      }
+    },
+    reset: function reset(el) {
+      var $el = $(el);
+      if ($el.length) {
+        var elem = $el[0];
+        elem.disabled = false;
+        elem.innerHTML = elem.dataset.resetText;
+      }
+    },
+  };
+
+  var Button$1 = {
+    name: 'button',
+    create: function create() {
+      var app = this;
+      Utils.extend(app, {
+        button: {
+          loading: Button.loading.bind(app),
+          reset: Button.reset.bind(app),
+        },
+      });
+    },
+  };
+
   function KeypadClassConstructor (Framework7Class) {
     return /*@__PURE__*/(function (Framework7Class) {
       function Keypad(app, params) {
@@ -41740,6 +41797,68 @@
     },
   };
 
+  var UpScroller = {
+    name: 'upscroller',
+    params: {
+      upscroller: {
+        up_text: '滚动至顶',
+        down_text: '滚动至底',
+        includeUpPages: [],
+        includeDownPages: [],
+      },
+    },
+    on: {
+      pageInit: function pageInit(page) {
+        var app = this;
+        var params = app.params.upscroller;
+
+        if (params.includeUpPages.includes(page.name)) {
+          var upBtn = $(("<div class=\"upscroller\">↑ " + (params.up_text) + "</div>"));
+          $(page.el).prepend(upBtn);
+
+          upBtn.click(function (event) {
+            event.stopPropagation();
+            event.preventDefault();
+            var pageContent = $('.page-content', page.el);
+            pageContent.scrollTop(0, Math.round(pageContent.scrollTop() / 4));
+          });
+
+          $('.page-content', page.el).scroll(function (event) {
+            var e = $(event.target).scrollTop();
+            if (e > 300) {
+              upBtn.addClass('show');
+            } else {
+              upBtn.removeClass('show');
+            }
+          });
+        }
+
+        if (params.includeDownPages.includes(page.name)) {
+          var downBtn = $(("<div class=\"downscroller\">↓ " + (params.down_text) + "</div>"));
+          $(page.el).append(downBtn);
+
+          downBtn.click(function (event) {
+            event.stopPropagation();
+            event.preventDefault();
+            var pageContent = $('.page-content', page.el);
+            pageContent.scrollTop(pageContent[0].scrollHeight, Math.round((pageContent[0].scrollHeight - pageContent.scrollTop()) / 4));
+          });
+
+          $('.page-content', page.el).scroll(function (event) {
+            var e = $(event.target).scrollTop();
+            var contentHeight = $(event.target)[0].scrollHeight;
+            var winHeight = $(window).height();
+            if (contentHeight - winHeight - e < 300) {
+              downBtn.addClass('hide');
+            } else {
+              downBtn.removeClass('hide');
+            }
+          });
+        }
+      },
+    },
+  };
+
   /**
    * Framework7 5.7.5
    * Full featured mobile HTML framework for building iOS & Android apps
@@ -41749,7 +41868,7 @@
    *
    * Released under the MIT License
    *
-   * Released on: May 16, 2020
+   * Released on: May 29, 2020
    */
 
   // Install Core Modules & Components
@@ -41774,6 +41893,7 @@
     Modal$1,
     Keypad$1,
     Panel3D,
+    UpScroller,
     Appbar,
     Dialog$1,
     Popup$1,
@@ -41827,7 +41947,8 @@
     TextEditor$1,
     Elevation,
     Typography,
-    Vi
+    Vi,
+    Button$1
   ]);
 
   return Framework7;

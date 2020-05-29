@@ -151,6 +151,14 @@ each(@breakpoints, {
   }
 });
 
+.block-header-sticky {
+  position: sticky; 
+  z-index: 2; 
+  top: 0; 
+  padding: 5px 16px; 
+  background-color: var(--f7-page-bg-color);
+}
+
 .if-ios-theme({
   @import url('./block-ios.less');
 });

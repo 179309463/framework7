@@ -7,7 +7,7 @@
  *
  * Released under the MIT License
  *
- * Released on: May 16, 2020
+ * Released on: May 29, 2020
  */
 
 import Template7 from 'template7';
@@ -101,8 +101,10 @@ import TextEditor from './components/text-editor/text-editor';
 import Elevation from './components/elevation/elevation';
 import Typography from './components/typography/typography';
 import Vi from './components/vi/vi';
+import Button from './components/button/button';
 import Keypad from './components/keypad/keypad';
 import Panel3D from './components/panel/panel3D';
+import UpScroller from './components/up-scroller/up-scroll';
 
 if ("es" !== 'es') {
   if (typeof window !== 'undefined') {
@@ -141,6 +143,7 @@ Framework7.use([
   Modal,
   Keypad,
   Panel3D,
+  UpScroller,
   Appbar,
   Dialog,
   Popup,
@@ -194,7 +197,8 @@ Framework7.use([
   TextEditor,
   Elevation,
   Typography,
-  Vi
+  Vi,
+  Button
 ]);
 
 export { Template7, $ as Dom7, Request, Utils, Device, Support, Component };

@@ -99,6 +99,11 @@ function tabLoad(tabRoute, loadOptions = {}) {
         }
       }
     }
+
+    const app = router.app;
+    $($newTabEl).find('.navbar:not(.navbar-previous):not(.stacked)').each((index, navbarEl) => {
+      app.navbar.size(navbarEl);
+    });
   }
 
   if ($newTabEl[0].f7RouterTabLoaded) {
