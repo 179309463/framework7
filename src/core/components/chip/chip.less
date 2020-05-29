@@ -131,6 +131,32 @@
   --f7-chip-outline-border-color: var(--f7-theme-color);
   --f7-chip-text-color: var(--f7-theme-color);
 }
+
+.chip.chip-rect.chip-cuppon{
+  &:before{
+    position: absolute;
+    content: '';
+    background: white;
+    width: 10px;
+    height: 10px;
+    border-radius: 0 100% 100% 0;
+    left: 0px;
+    margin-left: -5px;
+    border-right: 1px solid #e0e0e0;
+  }
+  &:after{
+    position: absolute;
+    content: '';
+    background: white;
+    width: 10px;
+    height: 10px;
+    border-radius: 100% 0 0 100%;
+    right: 0px;
+    margin-right: -5px;
+    border-left: 1px solid #e0e0e0;
+  }
+}
+
 .if-ios-theme({
   @import url('./chip-ios.less');
 });
