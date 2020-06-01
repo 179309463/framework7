@@ -62,23 +62,130 @@
           </li>
         </ul>
       </div>
-      <div class="block-title">Inline Picker / Date-time</div>
-      <div class="list no-margin">
+
+      <div class="block-title">年月日-时间段</div>
+      <div class="list large-inset">
         <ul>
           <li>
             <div class="item-content item-input">
               <div class="item-inner">
                 <div class="item-input-wrap">
-                  <input type="text" placeholder="Date Time" readonly="readonly" id="demo-picker-date"/>
+                  <input type="text" placeholder="Date Time" readonly="readonly" id="demo-picker-yyyyMMdd-period"/>
                 </div>
               </div>
             </div>
           </li>
         </ul>
       </div>
-      <div class="block block-strong no-padding no-margin margin-bottom">
-        <div id="demo-picker-date-container"></div>
+
+      <div class="block-title">年月日时分秒</div>
+      <div class="list large-inset">
+        <ul>
+          <li>
+            <div class="item-content item-input">
+              <div class="item-inner">
+                <div class="item-input-wrap">
+                  <input type="text" placeholder="Date Time" readonly="readonly" id="demo-picker-yyyyMMddhhmmss"/>
+                </div>
+              </div>
+            </div>
+          </li>
+        </ul>
       </div>
+
+      <div class="block-title">年月日时分</div>
+      <div class="list large-inset">
+        <ul>
+          <li>
+            <div class="item-content item-input">
+              <div class="item-inner">
+                <div class="item-input-wrap">
+                  <input type="text" placeholder="Date Time" readonly="readonly" id="demo-picker-yyyyMMddhhmm"/>
+                </div>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div class="block block-strong large-inset margin-bottom">
+        <div id="demo-picker-yyyyMMddhhmm-container"></div>
+      </div>
+
+      <div class="block-title">年月日</div>
+      <div class="list large-inset">
+        <ul>
+          <li>
+            <div class="item-content item-input">
+              <div class="item-inner">
+                <div class="item-input-wrap">
+                  <input type="text" placeholder="Date" readonly="readonly" id="demo-picker-yyyyMMdd"/>
+                </div>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+      <div class="block-title">年月</div>
+      <div class="list large-inset">
+        <ul>
+          <li>
+            <div class="item-content item-input">
+              <div class="item-inner">
+                <div class="item-input-wrap">
+                  <input type="text" placeholder="Date" readonly="readonly" id="demo-picker-yyyyMM"/>
+                </div>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+      <div class="block-title">时分秒</div>
+      <div class="list large-inset">
+        <ul>
+          <li>
+            <div class="item-content item-input">
+              <div class="item-inner">
+                <div class="item-input-wrap">
+                  <input type="text" placeholder="Date Time" readonly="readonly" id="demo-picker-hhmmss"/>
+                </div>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+      <div class="block-title">时分</div>
+      <div class="list large-inset">
+        <ul>
+          <li>
+            <div class="item-content item-input">
+              <div class="item-inner">
+                <div class="item-input-wrap">
+                  <input type="text" placeholder="Date Time" readonly="readonly" id="demo-picker-hhmm"/>
+                </div>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+      <div class="block-title">分秒</div>
+      <div class="list large-inset no-margin-top">
+        <ul>
+          <li>
+            <div class="item-content item-input">
+              <div class="item-inner">
+                <div class="item-input-wrap">
+                  <input type="text" placeholder="Date Time" readonly="readonly" id="demo-picker-mmss"/>
+                </div>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+
     </div>
   </f7-page>
 </template>
@@ -195,24 +302,34 @@
             },
           },
         });
-        // Inline date-time
-        self.pickerInline = app.picker.create({
-          containerEl: '#demo-picker-date-container',
-          inputEl: '#demo-picker-date',
-          toolbar: false,
+        
+
+        // 年月日-时间段
+        self.pickerInline_yyyyMMddhhmm = app.picker.create({
+          inputEl: '#demo-picker-yyyyMMdd-period',
           rotateEffect: true,
           value: [
+            today.getFullYear(),
             today.getMonth(),
             today.getDate(),
-            today.getFullYear(),
-            today.getHours(),
-            today.getMinutes() < 10 ? `0${today.getMinutes()}` : today.getMinutes(),
+            today.getHours() >= 6 && today.getHours() < 12
+            ? 0
+            : today.getHours() > 12 && today.getHours() < 18
+            ? 1 : 2
           ],
           formatValue(values, displayValues) {
-            return `${displayValues[0]} ${values[1]}, ${values[2]} ${values[3]}:${values[4]}`;
+            return ` ${values[0]} ${displayValues[1]} ${values[2]} ${displayValues[3]}`;
           },
           cols: [
-          // Months
+            // Years
+            {
+              values: (function createValues() {
+                const arr = [];
+                for (let i = 1950; i <= 2030; i += 1) { arr.push(i); }
+                return arr;
+              }()),
+            },            
+            // Months
             {
               values: ('0 1 2 3 4 5 6 7 8 9 10 11').split(' '),
               displayValues: ('January February March April May June July August September October November December').split(' '),
@@ -222,6 +339,44 @@
             {
               values: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31],
             },
+
+            // Space divider
+            {
+              divider: true,
+              content: '&nbsp;&nbsp;',
+            },
+            // 时间段
+            {
+              values: ('0 1 2').split(' '),
+              displayValues: ["上午", "下午", "晚上"],
+            },
+          ],
+          on: {
+            change(picker, values, displayValues) {
+              const daysInMonth = new Date(picker.value[0], picker.value[1] * 1 + 1, 0).getDate();
+              if (values[2] > daysInMonth) {
+                picker.cols[2].setValue(daysInMonth);
+              }
+            },
+          },
+        });
+
+        // 年月日时分秒
+        self.pickerInline_yyyyMMddhhmm = app.picker.create({
+          inputEl: '#demo-picker-yyyyMMddhhmmss',
+          rotateEffect: true,
+          value: [
+            today.getFullYear(),
+            today.getMonth(),
+            today.getDate(),
+            today.getHours(),
+            today.getMinutes() < 10 ? `0${today.getMinutes()}` : today.getMinutes(),
+            today.getSeconds() < 10 ? `0${today.getSeconds()}` : today.getSeconds(),
+          ],
+          formatValue(values, displayValues) {
+            return ` ${values[0]} ${displayValues[1]} ${values[2]} ${values[3]}:${values[4]}:${values[5]}`;
+          },
+          cols: [
             // Years
             {
               values: (function createValues() {
@@ -229,7 +384,104 @@
                 for (let i = 1950; i <= 2030; i += 1) { arr.push(i); }
                 return arr;
               }()),
+            },            
+            // Months
+            {
+              values: ('0 1 2 3 4 5 6 7 8 9 10 11').split(' '),
+              displayValues: ('January February March April May June July August September October November December').split(' '),
+              textAlign: 'left',
             },
+            // Days
+            {
+              values: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31],
+            },
+
+            // Space divider
+            {
+              divider: true,
+              content: '&nbsp;&nbsp;',
+            },
+            // Hours
+            {
+              values: (function createValues() {
+                const arr = [];
+                for (let i = 0; i <= 23; i += 1) { arr.push(i); }
+                return arr;
+              }()),
+            },
+            // Divider
+            {
+              divider: true,
+              content: ':',
+            },
+            // Minutes
+            {
+              values: (function createValues() {
+                const arr = [];
+                for (let i = 0; i <= 59; i += 1) { arr.push(i < 10 ? `0${i}` : i); }
+                return arr;
+              }()),
+            },
+            // Divider
+            {
+              divider: true,
+              content: ':',
+            },
+            // Seconds
+            {
+              values: (function createValues() {
+                const arr = [];
+                for (let i = 0; i <= 59; i += 1) { arr.push(i < 10 ? `0${i}` : i); }
+                return arr;
+              }()),
+            },
+          ],
+          on: {
+            change(picker, values, displayValues) {
+              const daysInMonth = new Date(picker.value[0], picker.value[1] * 1 + 1, 0).getDate();
+              if (values[2] > daysInMonth) {
+                picker.cols[2].setValue(daysInMonth);
+              }
+            },
+          },
+        });
+
+        // 年月日时分
+        self.pickerInline_yyyyMMddhhmm = app.picker.create({
+          containerEl: '#demo-picker-yyyyMMddhhmm-container',
+          inputEl: '#demo-picker-yyyyMMddhhmm',
+          toolbar: false,
+          rotateEffect: true,
+          value: [
+            today.getFullYear(),
+            today.getMonth(),
+            today.getDate(),
+            today.getHours(),
+            today.getMinutes() < 10 ? `0${today.getMinutes()}` : today.getMinutes(),
+          ],
+          formatValue(values, displayValues) {
+            return ` ${values[0]} ${displayValues[1]} ${values[2]} ${values[3]}:${values[4]}`;
+          },
+          cols: [
+            // Years
+            {
+              values: (function createValues() {
+                const arr = [];
+                for (let i = 1950; i <= 2030; i += 1) { arr.push(i); }
+                return arr;
+              }()),
+            },            
+            // Months
+            {
+              values: ('0 1 2 3 4 5 6 7 8 9 10 11').split(' '),
+              displayValues: ('January February March April May June July August September October November December').split(' '),
+              textAlign: 'left',
+            },
+            // Days
+            {
+              values: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31],
+            },
+
             // Space divider
             {
               divider: true,
@@ -259,13 +511,207 @@
           ],
           on: {
             change(picker, values, displayValues) {
-              const daysInMonth = new Date(picker.value[2], picker.value[0] * 1 + 1, 0).getDate();
-              if (values[1] > daysInMonth) {
-                picker.cols[1].setValue(daysInMonth);
+              const daysInMonth = new Date(picker.value[0], picker.value[1] * 1 + 1, 0).getDate();
+              if (values[2] > daysInMonth) {
+                picker.cols[2].setValue(daysInMonth);
               }
             },
           },
         });
+
+        // 年月日
+        self.pickerInline_yyyyMMdd = app.picker.create({
+          inputEl: '#demo-picker-yyyyMMdd',
+          rotateEffect: true,
+          value: [
+            today.getFullYear(),
+            today.getMonth(),
+            today.getDate()
+          ],
+          formatValue(values, displayValues) {
+            return `${values[0]} ${displayValues[1]} ${values[2]}`;
+          },
+          cols: [
+            // Years
+            {
+              values: (function createValues() {
+                const arr = [];
+                for (let i = 1950; i <= 2030; i += 1) { arr.push(i); }
+                return arr;
+              }()),
+            },            
+            // Months
+            {
+              values: ('0 1 2 3 4 5 6 7 8 9 10 11').split(' '),
+              displayValues: ('January February March April May June July August September October November December').split(' '),
+              textAlign: 'left',
+            },
+            // Days
+            {
+              values: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31],
+            },
+          ],
+          on: {
+            change(picker, values, displayValues) {
+              const daysInMonth = new Date(picker.value[0], picker.value[1] * 1 + 1, 0).getDate();
+              if (values[2] > daysInMonth) {
+                picker.cols[2].setValue(daysInMonth);
+              }
+            },
+          },
+        });
+
+        // 年月
+        self.pickerInline_yyyyMM = app.picker.create({
+          inputEl: '#demo-picker-yyyyMM',
+          rotateEffect: true,
+          value: [
+            today.getFullYear(),
+            today.getMonth(),
+          ],
+          formatValue(values, displayValues) {
+            return `${values[0]} ${displayValues[1]}`;
+          },
+          cols: [
+            // Years
+            {
+              values: (function createValues() {
+                const arr = [];
+                for (let i = 1950; i <= 2030; i += 1) { arr.push(i); }
+                return arr;
+              }()),
+            },
+            // Months
+            {
+              values: ('0 1 2 3 4 5 6 7 8 9 10 11').split(' '),
+              displayValues: ('January February March April May June July August September October November December').split(' '),
+              textAlign: 'left',
+            },
+          ],
+        });
+
+        // 时分秒
+        self.pickerInline_hhmmss = app.picker.create({
+          inputEl: '#demo-picker-hhmmss',
+          rotateEffect: true,
+          value: [
+            today.getHours(),
+            today.getMinutes() < 10 ? `0${today.getMinutes()}` : today.getMinutes(),
+            today.getSeconds() < 10 ? `0${today.getSeconds()}` : today.getSeconds(),
+          ],
+          formatValue(values, displayValues) {
+            return `${values[0]}:${values[1]}:${values[2]}`;
+          },
+          cols: [
+            // Hours
+            {
+              values: (function createValues() {
+                const arr = [];
+                for (let i = 0; i <= 23; i += 1) { arr.push(i); }
+                return arr;
+              }()),
+            },
+            // Divider
+            {
+              divider: true,
+              content: ':',
+            },
+            // Minutes
+            {
+              values: (function createValues() {
+                const arr = [];
+                for (let i = 0; i <= 59; i += 1) { arr.push(i < 10 ? `0${i}` : i); }
+                return arr;
+              }()),
+            },
+            // Divider
+            {
+              divider: true,
+              content: ':',
+            },
+            // Seconds
+            {
+              values: (function createValues() {
+                const arr = [];
+                for (let i = 0; i <= 59; i += 1) { arr.push(i < 10 ? `0${i}` : i); }
+                return arr;
+              }()),
+            },
+          ],
+        });
+
+        // 时分
+        self.pickerInline_hhmm = app.picker.create({
+          inputEl: '#demo-picker-hhmm',
+          rotateEffect: true,
+          value: [
+            today.getHours(),
+            today.getMinutes() < 10 ? `0${today.getMinutes()}` : today.getMinutes(),
+          ],
+          formatValue(values, displayValues) {
+            return `${values[0]}:${values[1]}`;
+          },
+          cols: [
+            // Hours
+            {
+              values: (function createValues() {
+                const arr = [];
+                for (let i = 0; i <= 23; i += 1) { arr.push(i); }
+                return arr;
+              }()),
+            },
+            // Divider
+            {
+              divider: true,
+              content: ':',
+            },
+            // Minutes
+            {
+              values: (function createValues() {
+                const arr = [];
+                for (let i = 0; i <= 59; i += 1) { arr.push(i < 10 ? `0${i}` : i); }
+                return arr;
+              }()),
+            },
+          ],
+        });
+
+        // 分秒
+        self.pickerInline_mmss = app.picker.create({
+          inputEl: '#demo-picker-mmss',
+          rotateEffect: true,
+          value: [
+            today.getMinutes() < 10 ? `0${today.getMinutes()}` : today.getMinutes(),
+            today.getSeconds() < 10 ? `0${today.getSeconds()}` : today.getSeconds(),
+          ],
+          formatValue(values, displayValues) {
+            return `${values[0]}:${values[1]}`;
+          },
+          cols: [
+            // Minutes
+            {
+              values: (function createValues() {
+                const arr = [];
+                for (let i = 0; i <= 59; i += 1) { arr.push(i < 10 ? `0${i}` : i); }
+                return arr;
+              }()),
+            },
+            // Divider
+            {
+              divider: true,
+              content: ':',
+            },
+            // Seconds
+            {
+              values: (function createValues() {
+                const arr = [];
+                for (let i = 0; i <= 59; i += 1) { arr.push(i < 10 ? `0${i}` : i); }
+                return arr;
+              }()),
+            },
+          ],
+        });
+
       },
       onPageBeforeRemove() {
         const self = this;
