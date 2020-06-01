@@ -62,7 +62,7 @@ var routes = [
   {
     path: '/panel-right-1/',
     content: '\
-      <div class="page">\
+      <div class="page no-toolbar">\
         <div class="navbar">\
           <div class="navbar-bg"></div>\
           <div class="navbar-inner sliding">\
@@ -87,7 +87,7 @@ var routes = [
   {
     path: '/panel-right-2/',
     content: '\
-      <div class="page">\
+      <div class="page no-toolbar">\
         <div class="navbar">\
           <div class="navbar-bg"></div>\
           <div class="navbar-inner sliding">\
