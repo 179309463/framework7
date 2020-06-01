@@ -574,8 +574,8 @@ var routes = [
         componentUrl: './pages/ionic/action-sheet.html',
       },
       {
-        path: '/alert/',
-        componentUrl: './pages/ionic/alert.html',
+        path: '/dialog/',
+        componentUrl: './pages/ionic/dialog.html',
       },
       {
         path: '/avatar/',

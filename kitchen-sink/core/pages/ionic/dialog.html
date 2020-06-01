@@ -1,0 +1,47 @@
+<template>
+    <div class="page">
+      <div class="navbar">
+        <div class="navbar-bg"></div>
+        <div class="navbar-inner sliding">
+          <div class="left">
+            <a href="#" class="link back">
+              <i class="icon icon-back"></i>
+              <span class="if-not-md">返回</span>
+            </a>
+          </div>
+          <div class="title">Alert 弹出窗</div>
+        </div>
+      </div>
+      <div class="page-content">
+        <div class="block">
+          <p class="row">
+            <button class="col button button-fill" @click="openConfirm">Show Alert</button>
+          </p>
+      </div>
+    </div>
+  </template>
+  <script>
+    return {
+      methods: {
+        openConfirm: function () {
+          var app = this.$app;
+          app.dialog.create({
+            title: 'Use this lightsaber?',
+            text: 'Do you agree to use this lightsaber to do good across the galaxy?',
+            buttons: [
+                {
+                text: 'Disagree',
+                color: 'blue'
+                },
+                {
+                text: 'Agree',
+                bold: true,
+                color: 'blue'
+                },
+            ],
+            }).open();
+        },
+      }
+    }
+  </script>
+  
