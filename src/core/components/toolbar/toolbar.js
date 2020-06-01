@@ -178,7 +178,9 @@ export default {
         return;
       }
       if (page.$el.hasClass('no-toolbar')) {
-        app.toolbar.hide($toolbarEl);
+        if (!page.view.$el.hasClass('view-master-detail')) {
+          app.toolbar.hide($toolbarEl);
+        }
       } else {
         app.toolbar.show($toolbarEl);
       }

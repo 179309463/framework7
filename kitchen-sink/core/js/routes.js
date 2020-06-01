@@ -4,6 +4,7 @@ var routes = [
     path: '/pages',
     url: './pages/index.html',
     name: 'pages',
+    master: true,
   },
   // About page
   {
@@ -46,17 +47,6 @@ var routes = [
         foo: 'bar',
       },
     },
-  },
-  {
-    path: '/master-detail/',
-    url: './pages/master-detail-master.html',
-    master: true,
-    detailRoutes: [
-      {
-        path: '/master-detail/:id/',
-        templateUrl: './pages/master-detail-detail.html',
-      },
-    ]
   },
   // Right Panel pages
   {
