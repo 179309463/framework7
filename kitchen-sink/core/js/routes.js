@@ -16,6 +16,48 @@ var routes = [
     path: '/color-themes/',
     componentUrl: './pages/color-themes.html',
   },
+  // Effects
+  {
+    path: '/page-transitions/',
+    componentUrl: './pages/page-transitions.html',
+  },
+  {
+    path: '/page-transitions/:effect',
+    componentUrl: './pages/page-transitions-effect.html',
+  },
+
+  // Page Loaders
+  {
+    path: '/page-loader-template7/:user/:userId/:posts/:postId/',
+    templateUrl: './pages/page-loader-template7.html',
+    // additional context
+    options: {
+      context: {
+        foo: 'bar',
+      },
+    },
+  },
+  {
+    path: '/page-loader-component/:user/:userId/:posts/:postId/',
+    componentUrl: './pages/page-loader-component.html',
+    // additional context
+    options: {
+      context: {
+        foo: 'bar',
+      },
+    },
+  },
+  {
+    path: '/master-detail/',
+    url: './pages/master-detail-master.html',
+    master: true,
+    detailRoutes: [
+      {
+        path: '/master-detail/:id/',
+        templateUrl: './pages/master-detail-detail.html',
+      },
+    ]
+  },
   // Right Panel pages
   {
     path: '/panel-right-1/',
@@ -69,7 +111,7 @@ var routes = [
   },
 
   {
-    path: '/framework7-home/',
+    path: '/framework7-home',
     url: './pages/home.html',
     name: 'framework7-home',
     routes: [
@@ -519,50 +561,180 @@ var routes = [
         path: '/vi/',
         componentUrl: './pages/vi.html',
       },
-
-      // Effects
-      {
-        path: '/page-transitions/',
-        componentUrl: './pages/page-transitions.html',
-      },
-      {
-        path: '/page-transitions/:effect',
-        componentUrl: './pages/page-transitions-effect.html',
-      },
-
-      // Page Loaders
-      {
-        path: '/page-loader-template7/:user/:userId/:posts/:postId/',
-        templateUrl: './pages/page-loader-template7.html',
-        // additional context
-        options: {
-          context: {
-            foo: 'bar',
-          },
-        },
-      },
-      {
-        path: '/page-loader-component/:user/:userId/:posts/:postId/',
-        componentUrl: './pages/page-loader-component.html',
-        // additional context
-        options: {
-          context: {
-            foo: 'bar',
-          },
-        },
-      },
-      {
-        path: '/master-detail/',
-        url: './pages/master-detail-master.html',
-        master: true,
-        detailRoutes: [
-          {
-            path: '/master-detail/:id/',
-            templateUrl: './pages/master-detail-detail.html',
-          },
-        ]
-      },
     ],
+  },
+  {
+    path: '/ionic-home',
+    url: './pages/ionic/home.html',
+    name: 'ionic-home',
+    routes: [
+      // Components
+      {
+        path: '/action-sheet/',
+        componentUrl: './pages/ionic/action-sheet.html',
+      },
+      {
+        path: '/alert/',
+        componentUrl: './pages/ionic/alert.html',
+      },
+      {
+        path: '/avatar/',
+        componentUrl: './pages/ionic/avatar.html',
+      },
+      {
+        path: '/badge/',
+        componentUrl: './pages/ionic/badge.html',
+      },
+      {
+        path: '/buttons/',
+        componentUrl: './pages/ionic/buttons.html',
+      },
+      {
+        path: '/cards/',
+        url: './pages/ionic/cards.html',
+      },
+      {
+        path: '/checkbox/',
+        componentUrl: './pages/ionic/checkbox.html',
+      },
+      {
+        path: '/chips/',
+        componentUrl: './pages/ionic/chips.html',
+      },
+      {
+        path: '/content-block/',
+        url: './pages/ionic/content-block.html',
+      },     
+      {
+        path: '/fab/',
+        url: './pages/ionic/fab.html',
+      },
+      {
+        path: '/grid/',
+        url: './pages/ionic/grid.html',
+      },
+      {
+        path: '/icons/',
+        componentUrl: './pages/ionic/icons.html',
+      },
+      {
+        path: '/infinite-scroll/',
+        componentUrl: './pages/ionic/infinite-scroll.html',
+      },
+      {
+        path: '/inputs/',
+        componentUrl: './pages/ionic/inputs.html',
+      },
+      {
+        path: '/item/',
+        url: './pages/ionic/item.html',
+      },
+      {
+        path: '/list/',
+        url: './pages/ionic/list.html',
+      },
+      {
+        path: '/contacts-list/',
+        url: './pages/ionic/contacts-list.html',
+      },
+      {
+        path: '/preloader/',
+        componentUrl: './pages/ionic/preloader.html',
+      },
+      {
+        path: '/menu/',
+        componentUrl: './pages/ionic/menu.html',
+      },
+      {
+        path: '/dialog/',
+        componentUrl: './pages/ionic/dialog.html',
+      },
+      {
+        path: '/navbar/',
+        url: './pages/ionic/navbar.html',
+      },
+      {
+        path: '/note/',
+        url: './pages/ionic/note.html',
+      },
+      {
+        path: '/picker/',
+        componentUrl: './pages/ionic/picker.html',
+      },
+      {
+        path: '/popover/',
+        url: './pages/ionic/popover.html',
+      },
+      {
+        path: '/progressbar/',
+        componentUrl: './pages/ionic/progressbar.html',
+      },
+      {
+        path: '/radio/',
+        url: './pages/ionic/radio.html',
+      },
+      {
+        path: '/range/',
+        componentUrl: './pages/ionic/range.html',
+      },
+      {
+        path: '/pull-to-refresh/',
+        componentUrl: './pages/ionic/pull-to-refresh.html',
+      },
+      {
+        path: '/sortable/',
+        url: './pages/ionic/sortable.html',
+      },
+      {
+        path: '/searchbar/',
+        url: './pages/ionic/searchbar.html',
+      },
+      {
+        path: '/segment/',
+        url: './pages/ionic/segment.html',
+      },
+      {
+        path: '/smart-select/',
+        url: './pages/ionic/smart-select.html',
+      },
+      {
+        path: '/skeleton/',
+        componentUrl: './pages/ionic/skeleton.html',
+      },
+      {
+        path: '/spinner/',
+        componentUrl: './pages/ionic/spinner.html',
+      },
+      {
+        path: '/swiper/',
+        url: './pages/ionic/swiper.html',
+      },
+      {
+        path: '/tabs/',
+        url: './pages/ionic/tabs.html',
+      },
+      {
+        path: '/text/',
+        componentUrl: './pages/ionic/text.html',
+      },
+      {
+        path: '/thumbnail/',
+        componentUrl: './pages/ionic/thumbnail.html',
+      },
+      {
+        path: '/toast/',
+        componentUrl: './pages/ionic/toast.html',
+      },
+      {
+        path: '/toggle/',
+        componentUrl: './pages/ionic/toggle.html',
+      },
+      {
+        path: '/toolbar-tabbar/',
+        componentUrl: './pages/ionic/toolbar-tabbar.html',
+      },
+      
+    ],    
   },
   
 

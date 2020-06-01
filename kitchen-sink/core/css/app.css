@@ -1,32 +1,77 @@
-/* Invert navigation bars to fill style */
-:root,
-:root.theme-dark,
-:root .theme-dark {
+/* 主题颜色 begin */
+:root.theme-dark body, /*整个页面背景*/
+:root.theme-dark .view-master-detail, /*ipad的分割布局的背景*/
+:root.theme-dark .demo-fab-fullscreen-sheet{ /*浮动按钮组选择的背景*/
+  background-color: black;
+}
+
+:root.theme-dark {
+  --f7-theme-color: #ffffff;
+  --f7-theme-color-rgb: 255, 255, 255;
+  --f7-theme-color-shade: #ebebeb;
+  --f7-theme-color-tint: black;
+
+  --f7-checkbox-icon-color: black; /*checkbox的勾选效果*/
+  --f7-fab-text-color: black; /*浮动按钮的文字效果*/
+  --f7-calendar-selected-text-color: black; /*日期选中后的文字效果*/
+  --f7-list-index-label-text-color: black; /*拼音索引选中后的文字效果*/
+
+  --f7-panel-bg-color: black; /*面板背景*/
+}
+:root.theme-dark .panel:after{
+  width: 0; /*左侧面板多了20个像素*/
+}
+:root.theme-dark .panel-left:after{
+  background-color: black; /*左侧面板的分割线*/
+}
+:root.theme-dark .panel-right.panel-in ~ .view-main:after, 
+:root.theme-dark .panel-right.panel-out ~ .view-main:after{
+  background-color: black; /*右侧面板看到的分割线*/
+}
+
+:root.theme-dark .button-fill:not([class*="color-"]),
+:root.theme-dark .button-outline:not([class*="color-"]),
+:root.theme-dark .button-active:not([class*="color-"]),
+:root.theme-dark .message-sent .message-bubble{
+  --f7-theme-color: #005096; /*按钮和自己的消息，保持主题蓝色*/
+}
+:root.theme-dark .stepper-fill:not([class*="color-"]){
+  --f7-stepper-button-text-color: black!important; /*Step器填充白色下的文字*/
+}
+
+
+:root:not([class*="theme-dark"]) {
+  --f7-theme-color: #005096;
+  --f7-theme-color-rgb: 0, 80, 150;
+  --f7-theme-color-shade: #003a6d;
+  --f7-theme-color-tint: #0066bf;
+}
+/* 主题颜色导航栏填充 */
+:root:not([class*="theme-dark"]) .appbar,
+:root:not([class*="theme-dark"]) .navbar,
+:root:not([class*="theme-dark"]) .subnavbar,
+:root:not([class*="theme-dark"]) .theme-dark .appbar,
+:root:not([class*="theme-dark"]) .theme-dark .navbar,
+:root:not([class*="theme-dark"]) .theme-dark .subnavbar{
   --f7-bars-bg-color: var(--f7-theme-color);
   --f7-bars-bg-color-rgb: var(--f7-theme-color-rgb);
   --f7-bars-translucent-opacity: 1;
   --f7-bars-text-color: #fff;
   --f7-bars-link-color: #fff;
-  --f7-navbar-subtitle-text-color: rgba(255,255,255,0.85);
+  --f7-navbar-subtitle-text-color: rgba(255, 255, 255, 0.527);
   --f7-bars-border-color: transparent;
   --f7-tabbar-link-active-color: #fff;
   --f7-tabbar-link-inactive-color: rgba(255,255,255,0.54);
   --f7-sheet-border-color: transparent;
   --f7-tabbar-link-active-border-color: #fff;
-}
-.appbar,
-.navbar,
-.toolbar,
-.subnavbar,
-.calendar-header,
-.calendar-footer {
+
   --f7-touch-ripple-color: var(--f7-touch-ripple-white);
   --f7-link-highlight-color: var(--f7-link-highlight-white);
   --f7-button-text-color: #fff;
   --f7-button-pressed-bg-color: rgba(255,255,255,0.1);
 }
-.navbar-large-transparent,
-.navbar-large.navbar-transparent {
+:root:not([class*="theme-dark"]) .navbar-large-transparent,
+:root:not([class*="theme-dark"]) .navbar-large.navbar-transparent {
   --f7-navbar-large-title-text-color: #000;
 
   --r: 0;
@@ -39,10 +84,18 @@
     calc(var(--b) + (255 - var(--b)) * var(--progress))
   );
 }
-.theme-dark .navbar-large-transparent,
-.theme-dark .navbar-large.navbar-transparent {
+:root:not([class*="theme-dark"]) .theme-dark .navbar-large-transparent,
+:root:not([class*="theme-dark"]) .theme-dark .navbar-large.navbar-transparent {
   --f7-navbar-large-title-text-color: #fff;
 }
+
+:root:not([class*="theme-dark"]) .panel-left:after,
+:root:not([class*="theme-dark"]) .panel-right.panel-in ~ .view-main:after, 
+:root:not([class*="theme-dark"]) .panel-right.panel-out ~ .view-main:after{
+  width: 0;
+}
+
+/* 主题颜色 end */
 
 .demo-list-icon, .icon-f7 {
   background: #ccc;

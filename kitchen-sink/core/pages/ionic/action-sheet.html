@@ -1,0 +1,79 @@
+<template>
+  <div class="page">
+    <div class="navbar">
+      <div class="navbar-bg"></div>
+      <div class="navbar-inner sliding">
+        <div class="left">
+          <a href="#" class="link back">
+            <i class="icon icon-back"></i>
+            <span class="if-not-md">返回</span>
+          </a>
+        </div>
+        <div class="title">Action Sheet</div>
+      </div>
+    </div>
+    <div class="page-content">
+      <div class="block">
+        <p class="row">
+          <a href="#" class="col button button-fill" @click="openDemo">Show Action Sheet</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</template>
+<script>
+return {
+  methods: {
+    openDemo: function () {
+      var self = this;
+      self.actions.open();
+    },
+  },
+  on: {
+    pageBeforeRemove: function() {
+      var self = this;
+      self.actions.destroy();
+    },
+    pageInit: function(page) {
+      var self = this;
+
+      // 2 Groups
+      var buttons = [
+        // First Group
+        [
+          {
+            text: 'Album',
+            label: true
+          },
+          {
+            text: 'Delete',
+            color: 'red'
+          },
+          {
+            text: 'Share',
+            color: 'blue'
+          },
+          {
+            text: 'Play',
+            color: 'blue'
+          },
+          {
+            text: 'Favorite',
+            color: 'blue'
+          }
+        ],
+        // Second Group
+        [
+          {
+            text: 'Cancel',
+            bold: true,
+            color: 'blue'
+          }
+        ]
+      ]
+
+      self.actions = self.$app.actions.create({buttons: buttons});
+    }
+  }
+}
+</script>
