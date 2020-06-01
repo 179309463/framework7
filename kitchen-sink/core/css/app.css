@@ -39,7 +39,6 @@
   --f7-stepper-button-text-color: black!important; /*Step器填充白色下的文字*/
 }
 
-
 :root:not([class*="theme-dark"]) {
   --f7-theme-color: #005096;
   --f7-theme-color-rgb: 0, 80, 150;
@@ -95,6 +94,91 @@
   width: 0;
 }
 
+/* ipad 在master-detail中的navbar */
+.view-master-detail .navbars.navbar-master{
+  z-index: 526;
+}
+
+/* ipad 在master-detail中的border */
+:root {
+  --f7-page-master-border-width: 0px;
+}
+:root .page-content,
+:root .tabbar {
+  border-right: 1px solid var(--f7-page-master-border-color);
+}
+
+/* ipad 在toolbar-bottom下再次出现toolbar-bottom */
+:root.ios {
+  --f7-tabbar-without-labels-height: 44px;
+}
+:root.md {
+  --f7-tabbar-without-labels-height: 48px;
+}
+:root.aurora {
+  --f7-tabbar-without-labels-height: 38px;
+}
+
+:root .tabbar~.tab .toolbar-bottom, 
+:root .tabbar~.tab .messagebar{
+  bottom: calc(var(--f7-tabbar-without-labels-height) + var(--f7-safe-area-bottom));
+}
+:root .tabbar~.tab .toolbar-bottom ~ *, 
+:root .tabbar~.tab .messagebar ~ *{
+  --f7-page-toolbar-bottom-offset: calc(var(--f7-toolbar-height) + var(--f7-tabbar-without-labels-height));
+}
+
+:root .tabbar.tabbar-labels~.tab .toolbar-bottom, 
+:root .tabbar.tabbar-labels~.tab .messagebar{
+  bottom: calc(var(--f7-tabbar-labels-height) + var(--f7-safe-area-bottom));
+}
+:root .tabbar.tabbar-labels~.tab .toolbar-bottom ~ *, 
+:root .tabbar.tabbar-labels~.tab .messagebar ~ *{
+  --f7-page-toolbar-bottom-offset: calc(var(--f7-toolbar-height) + var(--f7-tabbar-labels-height));
+}
+
+/* iphone 下tabbar hidden on push */
+:root .toolbar-hidden.tabbar{
+  display: none;
+}
+:root .toolbar-hidden.tabbar ~ .tab,
+:root .toolbar-hidden.tabbar.tabbar-labels ~ .tab{
+  --f7-page-toolbar-bottom-offset: 0;
+}
+
+:root .toolbar-hidden.tabbar~.tab .toolbar-bottom, 
+:root .toolbar-hidden.tabbar~.tab .messagebar{
+  bottom: var(--f7-safe-area-bottom);
+}
+:root .toolbar-hidden.tabbar~.tab .toolbar-bottom ~ *, 
+:root .toolbar-hidden.tabbar~.tab .messagebar ~ *{
+  --f7-page-toolbar-bottom-offset: var(--f7-tabbar-without-labels-height);
+}
+
+:root .toolbar-hidden.tabbar.tabbar-labels~.tab .toolbar-bottom, 
+:root .toolbar-hidden.tabbar.tabbar-labels~.tab .messagebar{
+  bottom: var(--f7-safe-area-bottom);
+}
+:root .toolbar-hidden.tabbar.tabbar-labels~.tab .toolbar-bottom ~ *, 
+:root .toolbar-hidden.tabbar.tabbar-labels~.tab .messagebar ~ *{
+  --f7-page-toolbar-bottom-offset: var(--f7-tabbar-labels-height);
+}
+
+/* ipad的split-tab下 tabbar icon垂直*/
+@media (min-height: 600px) and (min-width: 768px){
+  .ios .tabbar .tab-link, 
+  .ios .tabbar-labels .tab-link, 
+  .ios .tabbar .link, 
+  .ios .tabbar-labels .link {
+    flex-direction: column;
+  }
+}
+
+.appbar ~ * {
+  --f7-appbar-app-offset: calc(var(--f7-appbar-height) - var(--f7-appbar-extra-offset, 0px) + var(--f7-safe-area-top) + var(--f7-safe-area-bottom) + 4px);//ipad
+  --f7-appbar-app-offset: calc(var(--f7-appbar-height) - var(--f7-appbar-extra-offset, 0px) + var(--f7-safe-area-top) + var(--f7-safe-area-bottom) + 10px);//iphone X
+  --f7-appbar-app-offset: calc(var(--f7-appbar-height) - var(--f7-appbar-extra-offset, 0px) + var(--f7-safe-area-top) + var(--f7-safe-area-bottom) + 20px);//iphone 8
+}
 /* 主题颜色 end */
 
 .demo-list-icon, .icon-f7 {
