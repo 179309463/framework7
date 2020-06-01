@@ -1,9 +1,9 @@
 var routes = [
   // Index page
   {
-    path: '/',
-    url: './index.html',
-    name: 'home',
+    path: '/pages',
+    url: './pages/index.html',
+    name: 'pages',
   },
   // About page
   {

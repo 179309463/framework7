@@ -42,7 +42,7 @@ var app = new Framework7({
     placementId: 'pltd4o7ibb9rc653x14',
   },
   view: {
-    pushState: true,
+    pushState: false,
     stackPages: true,
     allowDuplicateUrls: true,
   }
