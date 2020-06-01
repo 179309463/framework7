@@ -726,6 +726,180 @@ var routes = [
       
     ],    
   },
+
+  {
+    path: '/vant-home',
+    url: './pages/vant/home.html',
+    name: 'vant-home',
+    routes: [
+      // Components
+      {
+        path: '/action-sheet/',
+        componentUrl: './pages/vant/action-sheet.html',
+      },
+      {
+        path: '/dialog/',
+        componentUrl: './pages/vant/dialog.html',
+      },
+      {
+        path: '/avatar/',
+        componentUrl: './pages/vant/avatar.html',
+      },
+      {
+        path: '/badge/',
+        componentUrl: './pages/vant/badge.html',
+      },
+      {
+        path: '/buttons/',
+        componentUrl: './pages/vant/buttons.html',
+      },
+      {
+        path: '/cards/',
+        url: './pages/vant/cards.html',
+      },
+      {
+        path: '/checkbox/',
+        componentUrl: './pages/vant/checkbox.html',
+      },
+      {
+        path: '/chips/',
+        componentUrl: './pages/vant/chips.html',
+      },
+      {
+        path: '/content-block/',
+        url: './pages/vant/content-block.html',
+      },     
+      {
+        path: '/fab/',
+        url: './pages/vant/fab.html',
+      },
+      {
+        path: '/grid/',
+        url: './pages/vant/grid.html',
+      },
+      {
+        path: '/icons/',
+        componentUrl: './pages/vant/icons.html',
+      },
+      {
+        path: '/infinite-scroll/',
+        componentUrl: './pages/vant/infinite-scroll.html',
+      },
+      {
+        path: '/inputs/',
+        componentUrl: './pages/vant/inputs.html',
+      },
+      {
+        path: '/item/',
+        url: './pages/vant/item.html',
+      },
+      {
+        path: '/list/',
+        url: './pages/vant/list.html',
+      },
+      {
+        path: '/contacts-list/',
+        url: './pages/vant/contacts-list.html',
+      },
+      {
+        path: '/preloader/',
+        componentUrl: './pages/vant/preloader.html',
+      },
+      {
+        path: '/menu/',
+        componentUrl: './pages/vant/menu.html',
+      },
+      {
+        path: '/dialog/',
+        componentUrl: './pages/vant/dialog.html',
+      },
+      {
+        path: '/navbar/',
+        url: './pages/vant/navbar.html',
+      },
+      {
+        path: '/note/',
+        url: './pages/vant/note.html',
+      },
+      {
+        path: '/picker/',
+        componentUrl: './pages/vant/picker.html',
+      },
+      {
+        path: '/popover/',
+        url: './pages/vant/popover.html',
+      },
+      {
+        path: '/progressbar/',
+        componentUrl: './pages/vant/progressbar.html',
+      },
+      {
+        path: '/radio/',
+        url: './pages/vant/radio.html',
+      },
+      {
+        path: '/range/',
+        componentUrl: './pages/vant/range.html',
+      },
+      {
+        path: '/pull-to-refresh/',
+        componentUrl: './pages/vant/pull-to-refresh.html',
+      },
+      {
+        path: '/sortable/',
+        url: './pages/vant/sortable.html',
+      },
+      {
+        path: '/searchbar/',
+        url: './pages/vant/searchbar.html',
+      },
+      {
+        path: '/segment/',
+        url: './pages/vant/segment.html',
+      },
+      {
+        path: '/smart-select/',
+        url: './pages/vant/smart-select.html',
+      },
+      {
+        path: '/skeleton/',
+        componentUrl: './pages/vant/skeleton.html',
+      },
+      {
+        path: '/spinner/',
+        componentUrl: './pages/vant/spinner.html',
+      },
+      {
+        path: '/swiper/',
+        url: './pages/vant/swiper.html',
+      },
+      {
+        path: '/tabs/',
+        url: './pages/vant/tabs.html',
+      },
+      {
+        path: '/text/',
+        componentUrl: './pages/vant/text.html',
+      },
+      {
+        path: '/thumbnail/',
+        componentUrl: './pages/vant/thumbnail.html',
+      },
+      {
+        path: '/toast/',
+        componentUrl: './pages/vant/toast.html',
+      },
+      {
+        path: '/toggle/',
+        componentUrl: './pages/vant/toggle.html',
+      },
+      {
+        path: '/toolbar-tabbar/',
+        componentUrl: './pages/vant/toolbar-tabbar.html',
+      },
+      
+    ],    
+  },
   
 
   // Default route (404 page). MUST BE THE LAST
