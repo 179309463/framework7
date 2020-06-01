@@ -13,16 +13,16 @@
       </div>
     </div>
     <div class="page-content">
-      <div class="block block-strong">
+      <div class="block block-strong medium-inset">
         <p>Component page is also compiled with Template7 or ES Template, but it has much more functionality. In addition to Template7 page it has lifecycle hooks, events handling, data managment and Virtual DOM data bindings.</p>
         <p>It is useful to use Component page when you need page-specific logic.</p>
       </div>
       <div class="block-title">Events Handling</div>
-      <div class="block block-strong">
+      <div class="block block-strong medium-inset">
         <a href="#" class="button button-raised" @click="openAlert">Open Alert</a>
       </div>
       <div class="block-title">Page Component Data</div>
-      <div class="block block-strong">
+      <div class="block block-strong medium-inset">
         <p>Hello! My name is {{name}}. I am {{age}} years old.</p>
         <p>I like to play:</p>
         <ul>
@@ -32,14 +32,14 @@
         </ul>
       </div>
       <div class="block-title">Route Context</div>
-      <div class="block block-strong">
+      <div class="block block-strong medium-inset">
         <p>Context can be passed in route options</p>
         <ul>
           <li>foo: {{foo}}</li>
         </ul>
       </div>
       <div class="block-title">Extended Context</div>
-      <div class="block block-strong">
+      <div class="block block-strong medium-inset">
         <p>Component page context as Template7 page context is also extended with some additional variables.</p>
         <h4>$route</h4>
         <p>Contains properties of the current route:</p>
@@ -68,22 +68,22 @@
         </ul>
       </div>
       <div class="block-title">Virtual DOM</div>
-      <div class="block block-strong">
+      <div class="block block-strong medium-inset">
         <p>Component page is rendered using Virtual DOM. It means it can automatically update page layout depending on changed state with minimal efforts and with maxumim performance.</p>
       </div>
-      <div class="block block-strong">
+      <div class="block block-strong medium-inset">
         <p>Ok, so your name is <b>{{name}}</b>?</p>
         <div class="input {{#if $theme.md}}margin-bottom{{/if}}">
           <input class="padding-bottom" type="text" @input="onInput" value="{{name}}" placeholder="Type your name">
           <div class="input-info">Type new name and it be dynamically changed</div>
         </div>
       </div>
-      <div class="block block-strong">
+      <div class="block block-strong medium-inset">
         <p>Button clicked <b>{{clickCounter}}</b> times</p>
         <p><a class="button button-round button-fill" @click="onButtonClick">Increase Counter</a></p>
       </div>
       {{#if listItems}}
-      <div class="list simple-list">
+      <div class="list medium-inset simple-list">
         <ul>
           {{#each listItems}}
           <li>Item {{this}}</li>
@@ -91,7 +91,7 @@
         </ul>
       </div>
       {{else}}
-      <div class="block block-strong text-align-center">
+      <div class="block block-strong medium-inset text-align-center">
         {{#if listLoading}}
         <div class="preloader"></div>
         {{else}}

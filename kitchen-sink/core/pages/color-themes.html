@@ -17,7 +17,7 @@
     </div>
     <div class="page-content">
       <div class="block-title block-title-medium">Layout Themes</div>
-      <div class="block block-strong">
+      <div class="block block-strong medium-inset">
         <p>Framework7 comes with 2 main layout themes: Light (default) and Dark:</p>
         <div class="row">
           <div class="col-50 bg-color-white demo-theme-picker" @click="setLayoutTheme('light')">
@@ -39,7 +39,7 @@
         </div>
       </div>
       <div class="block-title block-title-medium">Navigation Bars Style</div>
-      <div class="block block-strong">
+      <div class="block block-strong medium-inset">
         <p>Switch navigation bars to filled style:</p>
         <div class="row">
           <div class="col-50 demo-bars-picker demo-bars-picker-empty" @click="setBarsStyle('empty')">
@@ -63,7 +63,7 @@
         </div>
       </div>
       <div class="block-title block-title-medium">Default Color Themes</div>
-      <div class="block block-strong">
+      <div class="block block-strong medium-inset">
         <p>Framework7 comes with {{colors.length}} color themes set.</p>
         <div class="row">
         {{#each colors}}
@@ -77,7 +77,7 @@
         </div>
       </div>
       <div class="block-title block-title-medium">Custom Color Theme</div>
-      <div class="list">
+      <div class="list medium-inset">
         <ul>
           <li class="item-content item-input">
             <div class="item-media align-self-flex-end">
@@ -93,7 +93,7 @@
         </ul>
       </div>
       <div class="block-title block-title-medium">Generated CSS Variables</div>
-      <div class="block block-strong">
+      <div class="block block-strong medium-inset">
         {{#if customProperties}}
         <p>Add this code block to your custom stylesheet:</p>
         <pre style="overflow: auto; -webkit-overflow-scrolling: touch; margin: 0; font-size: 12px;">{{customProperties}}</pre>
