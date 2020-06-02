@@ -1,0 +1,97 @@
+<template>
+    <div class="page no-toolbar">
+      <div class="navbar">
+        <div class="navbar-bg"></div>
+        <div class="navbar-inner sliding">
+          <div class="left">
+            <a href="#" class="link back">
+              <i class="icon icon-back"></i>
+              <span class="if-not-md">返回</span>
+            </a>
+          </div>
+          <div class="title">Refresher</div>
+        </div>
+      </div>
+      <div class="page-content ptr-content" data-ptr-mousewheel="true" @ptr:refresh="loadMore">
+        <div class="ptr-preloader">
+          <div class="preloader"></div>
+          <div class="ptr-arrow"></div>
+        </div>
+        <div class="list medium-inset media-list">
+          <ul>
+            {{#each items}}
+            <li class="item-content {{#if isNew}}dot{{/if}}">
+              <div class="item-inner">
+                <div class="item-title-row">
+                  <div class="item-title">{{song}}</div>
+                </div>
+                <div class="item-subtitle">{{author}}</div>
+                <div class="item-text">{{text}}</div>
+              </div>
+            </li>
+            {{/each}}
+          </ul>
+        </div>
+      </div>
+    </div>
+  </template>
+  <script>
+    return {
+      data: function () {
+        return {
+          items: [
+            {
+              picURL: 'https://cdn.framework7.io/placeholder/abstract-88x88-1.jpg',
+              song: 'Yellow Submarine',
+              author: 'Beatles',
+              text: 'Free delivery will make us the MPV!',
+              isNew: false,
+            },
+            {
+              picURL: 'https://cdn.framework7.io/placeholder/abstract-88x88-2.jpg',
+              song: 'Don\'t Stop Me Now',
+              author: 'Queen',
+              text: 'Free delivery will make us the MPV!',
+              isNew: false,
+            },
+            {
+              picURL: 'https://cdn.framework7.io/placeholder/abstract-88x88-3.jpg',
+              song: 'Billie Jean',
+              author: 'Michael Jackson',
+              text: 'Free delivery will make us the MPV!',
+              isNew: false,
+            },
+          ],
+          songs: ['Yellow Submarine', 'Don\'t Stop Me Now', 'Billie Jean', 'Californication'],
+          authors: ['Beatles', 'Queen', 'Michael Jackson', 'Red Hot Chili Peppers'],
+          texts: ['Free delivery will make us the MPV!', 'Free delivery will make us the MPV!', 'Free delivery will make us the MPV!'],
+        }
+      },
+      methods: {
+        loadMore: function (e, done) {
+          var self = this;
+          var $ = self.$$;
+  
+          setTimeout(function () {
+            // Add new item
+            self.items.unshift({
+              picURL: 'https://cdn.framework7.io/placeholder/abstract-88x88-' + (Math.floor(Math.random() * 10) + 1) + '.jpg',
+              song: self.songs[Math.floor(Math.random() * self.songs.length)],
+              author: self.authors[Math.floor(Math.random() * self.authors.length)],
+              text: self.texts[Math.floor(Math.random() * self.texts.length)],
+              isNew: true,
+            })
+  
+            // Update state to rerender
+            self.$setState({
+              items: self.items,
+            });
+  
+            // Done
+            done();
+          }, 1000);
+        }
+      }
+    }
+  </script>
+  

@@ -43,6 +43,11 @@
     background: none !important;
   }
 }
+.progressbar-infinite.progressbar-infinite-reversed {
+  &:before, &:after {
+    transform-origin: right center;
+  }
+}
 .progressbar-in {
   animation: progressbar-in 150ms forwards;
 }

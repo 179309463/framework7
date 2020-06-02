@@ -636,12 +636,12 @@ var routes = [
         componentUrl: './pages/ionic/preloader.html',
       },
       {
-        path: '/menu/',
-        componentUrl: './pages/ionic/menu.html',
+        path: '/panel/',
+        url: './pages/ionic/panel.html',
       },
       {
-        path: '/dialog/',
-        componentUrl: './pages/ionic/dialog.html',
+        path: '/popup/',
+        url: './pages/ionic/popup.html',
       },
       {
         path: '/navbar/',
@@ -685,7 +685,7 @@ var routes = [
       },
       {
         path: '/segment/',
-        url: './pages/ionic/segment.html',
+        componentUrl: './pages/ionic/segment.html',
       },
       {
         path: '/smart-select/',

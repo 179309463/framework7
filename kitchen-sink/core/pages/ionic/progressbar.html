@@ -1,0 +1,71 @@
+<template>
+    <div class="page no-toolbar">
+        <div class="navbar">
+            <div class="navbar-bg"></div>
+            <div class="navbar-inner sliding">
+                <div class="left">
+                    <a href="#" class="link back">
+                        <i class="icon icon-back"></i>
+                        <span class="if-not-md">返回</span>
+                    </a>
+                </div>
+                <div class="title">Progress</div>
+            </div>
+        </div>
+        <div class="page-content">
+            <div class="block">
+                <p>
+                <div class="progressbar-infinite color-black"></div>
+                </p>
+                <p>Determinate</p>
+                <p>
+                <div class="progressbar color-blue" data-progress="10"></div>
+                </p>
+                <p>Control Determinate</p>
+                <div>
+                    <p><span data-progress="10" class="progressbar" id="demo-inline-progressbar"></span></p>
+                    <p class="segmented segmented-raised">
+                        <a href="#" data-progress="10" class="button" @click="setInlineProgress(10)">10%</a>
+                        <a href="#" data-progress="30" class="button" @click="setInlineProgress(30)">30%</a>
+                        <a href="#" data-progress="50" class="button" @click="setInlineProgress(50)">50%</a>
+                        <a href="#" data-progress="100" class="button" @click="setInlineProgress(100)">100%</a>
+                    </p>
+                </div>
+                <p>Indeterminate</p>
+                <p>
+                    <span class="progressbar-infinite"></span>
+                </p>
+                <p>Indeterminate (reversed)</p>
+                <p>
+                    <span class="progressbar-infinite progressbar-infinite-reversed"></span>
+                </p>
+                <p>Buffer</p>
+                <p>
+                    <span class="progressbar-infinite"></span>
+                </p>
+                <p>Colors</p>
+                <p>
+                <div class="progressbar-infinite color-teal"></div>
+                </p>
+                <p>
+                <div class="progressbar-infinite progressbar-infinite-reversed color-purple"></div>
+                </p>
+                <p>
+                <div class="progressbar-infinite color-red"></div>
+                </p>
+                <p>
+            </div>
+        </div>
+    </div>
+</template>
+<script>
+    return {
+        methods: {
+            setInlineProgress: function (value) {
+                var self = this;
+                var app = self.$app;
+                app.progressbar.set('#demo-inline-progressbar', value);
+            },
+        },
+    }
+</script>

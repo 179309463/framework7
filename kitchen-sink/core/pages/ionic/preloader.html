@@ -1,0 +1,35 @@
+<template>
+  <div class="page no-toolbar">
+    <div class="navbar">
+      <div class="navbar-bg"></div>
+      <div class="navbar-inner sliding">
+        <div class="left">
+          <a href="#" class="link back">
+            <i class="icon icon-back"></i>
+            <span class="if-not-md">返回</span>
+          </a>
+        </div>
+        <div class="title">Loading</div>
+      </div>
+    </div>
+    <div class="page-content">
+      <div class="block">
+        <p class="row">
+          <button class="col button button-fill" @click="openCustomDialog">Open Loading</button>
+        </p>
+      </div>
+    </div>
+</template>
+<script>
+  return {
+    methods: {
+      openCustomDialog: function () {
+        var self = this;
+        self.$app.dialog.preloader('Please wait...');
+        setTimeout(function () {
+          self.$app.dialog.close();
+        }, 2000);
+      },
+    }
+  }
+</script>

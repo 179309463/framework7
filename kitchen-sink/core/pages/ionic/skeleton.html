@@ -1,0 +1,147 @@
+<template>
+    <div class="page no-toolbar">
+        <div class="navbar">
+            <div class="navbar-bg"></div>
+            <div class="navbar-inner sliding">
+                <div class="left">
+                    <a href="#" class="link back">
+                        <i class="icon icon-back"></i>
+                        <span class="if-not-md">Back</span>
+                    </a>
+                </div>
+                <div class="title">Skeleton Text</div>
+                <div class="right">
+                    <a href="#" class="link" @click="toggle">Toggle</a>
+                </div>
+            </div>
+        </div>
+        <div class="page-content">
+
+            {{#if loading}}
+            <div class="block-title skeleton-text skeleton-effect-blink">Albums</div>
+
+            <div class="list medium-inset media-list">
+                <ul>
+
+                    <li class="item-content skeleton-text skeleton-effect-blink">
+                        <div class="item-media">
+                            <div class="skeleton-block" style="width: 40px; height: 40px; border-radius: 50%"></div>
+                        </div>
+                        <div class="item-inner">
+                            <div class="item-title-row">
+                                <div class="item-title">Full Name</div>
+                            </div>
+                            <div class="item-subtitle">Position</div>
+                            <div class="item-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi
+                                lobortis et massa ac interdum. Cras consequat felis at consequat hendrerit. Aliquam
+                                vestibulum vitae lorem ac iaculis. Praesent nec pharetra massa, at blandit lectus. Sed
+                                tincidunt, lectus eu convallis elementum, nibh nisi aliquet urna, nec imperdiet felis
+                                sapien at enim.</div>
+                        </div>
+                    </li>
+                    <li class="item-content skeleton-text skeleton-effect-blink">
+                        <div class="item-media">
+                            <div class="skeleton-block" style="width: 40px; height: 40px; border-radius: 50%"></div>
+                        </div>
+                        <div class="item-inner">
+                            <div class="item-title-row">
+                                <div class="item-title">Full Name</div>
+                            </div>
+                            <div class="item-subtitle">Position</div>
+                            <div class="item-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi
+                                lobortis et massa ac interdum. Cras consequat felis at consequat hendrerit. Aliquam
+                                vestibulum vitae lorem ac iaculis. Praesent nec pharetra massa, at blandit lectus. Sed
+                                tincidunt, lectus eu convallis elementum, nibh nisi aliquet urna, nec imperdiet felis
+                                sapien at enim.</div>
+                        </div>
+                    </li>
+                    <li class="item-content skeleton-text skeleton-effect-blink">
+                        <div class="item-media">
+                            <div class="skeleton-block" style="width: 40px; height: 40px; border-radius: 50%"></div>
+                        </div>
+                        <div class="item-inner">
+                            <div class="item-title-row">
+                                <div class="item-title">Full Name</div>
+                            </div>
+                            <div class="item-subtitle">Position</div>
+                            <div class="item-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi
+                                lobortis et massa ac interdum. Cras consequat felis at consequat hendrerit. Aliquam
+                                vestibulum vitae lorem ac iaculis. Praesent nec pharetra massa, at blandit lectus. Sed
+                                tincidunt, lectus eu convallis elementum, nibh nisi aliquet urna, nec imperdiet felis
+                                sapien at enim.</div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+            {{else}}
+            <div class="block-title">Albums</div>
+
+            <div class="list medium-inset media-list">
+                <ul>
+                    <li class="item-content">
+                        <div class="item-media">
+                            <img src="https://placeimg.com/80/80/people/1"
+                                style="width: 40px; height: 40px; border-radius: 50%">
+                        </div>
+                        <div class="item-inner">
+                            <div class="item-title-row">
+                                <div class="item-title">John Doe</div>
+                            </div>
+                            <div class="item-subtitle">CEO</div>
+                            <div class="item-text">
+                                滚滚长江东逝水，浪花淘尽英雄。是非成败转头空，青山依旧在，几度夕阳红。白发渔樵江渚上，惯看秋月春风。一壶浊酒喜相逢，古今多少事，都付笑谈中。</div>
+                        </div>
+                    </li>
+                    <li class="item-content">
+                        <div class="item-media">
+                            <img src="https://placeimg.com/80/80/people/2"
+                                style="width: 40px; height: 40px; border-radius: 50%">
+                        </div>
+                        <div class="item-inner">
+                            <div class="item-title-row">
+                                <div class="item-title">Jane Doe</div>
+                            </div>
+                            <div class="item-subtitle">Marketing</div>
+                            <div class="item-text">
+                                滚滚长江东逝水，浪花淘尽英雄。是非成败转头空，青山依旧在，几度夕阳红。白发渔樵江渚上，惯看秋月春风。一壶浊酒喜相逢，古今多少事，都付笑谈中。</div>
+                        </div>
+                    </li>
+                    <li class="item-content">
+                        <div class="item-media">
+                            <img src="https://placeimg.com/80/80/people/3"
+                                style="width: 40px; height: 40px; border-radius: 50%">
+                        </div>
+                        <div class="item-inner">
+                            <div class="item-title-row">
+                                <div class="item-title">Kate Johnson</div>
+                            </div>
+                            <div class="item-subtitle">Admin</div>
+                            <div class="item-text">
+                                滚滚长江东逝水，浪花淘尽英雄。是非成败转头空，青山依旧在，几度夕阳红。白发渔樵江渚上，惯看秋月春风。一壶浊酒喜相逢，古今多少事，都付笑谈中。</div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            {{/if}}
+
+        </div>
+    </div>
+</template>
+<script>
+    return {
+        data: function () {
+            return {
+                loading: true,
+            }
+        },
+        methods: {
+            toggle: function () {
+                var self = this;
+                self.$setState({
+                    loading: !self.loading,
+                });
+            }
+        }
+    }
+</script>

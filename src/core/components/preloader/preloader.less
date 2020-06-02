@@ -40,6 +40,18 @@ html.with-modal-preloader .page-content,
 .preloader[class*="color-"] {
   --f7-preloader-color: var(--f7-theme-color);
 }
+
+.dialog-preloader .dialog-inner {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  justify-content: center;
+  
+  .preloader{
+    margin: 20px!important;
+  }
+}
+
 .if-ios-theme({
   @import url('./preloader-ios.less');
 });
