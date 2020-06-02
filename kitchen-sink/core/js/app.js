@@ -45,5 +45,9 @@ var app = new Framework7({
     pushState: false,
     stackPages: true,
     allowDuplicateUrls: true,
-  }
+  },
+  upscroller: {
+    includeUpPages: ['ionic-content'],
+    includeDownPages: ['ionic-content'],
+  },
 });

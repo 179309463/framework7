@@ -1,0 +1,129 @@
+<template>
+    <div class="page no-toolbar">
+        <div class="navbar">
+            <div class="navbar-bg"></div>
+            <div class="navbar-inner sliding">
+                <div class="left">
+                    <a href="#" class="link back">
+                        <i class="icon icon-back"></i>
+                        <span class="if-not-md">返回</span>
+                    </a>
+                </div>
+                <div class="title">Chips</div>
+            </div>
+        </div>
+        <div class="page-content">
+            <div class="block-title">Basic</div>
+            <div class="block block-strong medium-inset">
+                <div class="chip">
+                    <div class="chip-label">Default</div>
+                </div>
+                <div class="chip">
+                    <div class="chip-media bg-color-gray">
+                        <i class="icon f7-icons if-not-md">plus_circle</i>
+                        <i class="icon material-icons md-only">add_circle</i>
+                    </div>
+                    <div class="chip-label">Icon</div>
+                </div>
+                <div class="chip">
+                    <div class="chip-media bg-color-blue">
+                        <i class="icon f7-icons if-not-md">person</i>
+                        <i class="icon material-icons md-only">person</i>
+                    </div>
+                    <div class="chip-label">Avatar</div>
+                </div>
+
+            </div>
+            <div class="block-title">Colors</div>
+            <div class="block block-strong medium-inset">
+                <div class="chip color-blue">
+                    <div class="chip-label">Primary</div>
+                </div>
+                <div class="chip color-teal">
+                    <div class="chip-label">Secondary</div>
+                </div>
+                <div class="chip color-purple">
+                    <div class="chip-label">Tertiary</div>
+                </div>
+                <div class="chip color-green">
+                    <div class="chip-label">Success</div>
+                </div>
+                <div class="chip color-yellow">
+                    <div class="chip-label">Warning</div>
+                </div>
+                <div class="chip color-red">
+                    <div class="chip-label">Danger</div>
+                </div>
+            </div>
+            <div class="block-title">Outline</div>
+            <div class="block block-strong medium-inset">
+                <div class="chip chip-outline color-blue">
+                    <div class="chip-label">Primary</div>
+                </div>
+                <div class="chip chip-outline color-teal">
+                    <div class="chip-label">Secondary</div>
+                </div>
+                <div class="chip chip-outline color-purple">
+                    <div class="chip-label">Tertiary</div>
+                </div>
+                <div class="chip chip-outline color-green">
+                    <div class="chip-label">Success</div>
+                </div>
+                <div class="chip chip-outline color-yellow">
+                    <div class="chip-label">Warning</div>
+                </div>
+                <div class="chip chip-outline color-red">
+                    <div class="chip-label">Danger</div>
+                </div>
+            </div>
+            <div class="block-title">Icons</div>
+            <div class="block block-strong medium-inset">
+                <div class="chip chip-outline color-blue">
+                    <div class="chip-media">
+                        <i class="icon f7-icons if-not-md color-blue">plus_circle</i>
+                        <i class="icon material-icons md-only color-blue">add_circle</i>
+                    </div>
+                    <div class="chip-label">Madison</div>
+                    <a href="#" class="chip-delete text-color-blue" @click="deleteChip"></a>
+                </div>
+                <div class="chip chip-outline color-teal">
+                    <div class="chip-media">
+                        <i class="icon f7-icons if-not-md color-teal">plus_circle</i>
+                        <i class="icon material-icons md-only color-teal">add_circle</i>
+                    </div>
+                    <div class="chip-label">Nightlife</div>
+                    <a href="#" class="chip-delete text-color-teal" @click="deleteChip"></a>
+                </div>
+                <div class="chip chip-outline color-purple">
+                    <div class="chip-media">
+                        <i class="icon f7-icons if-not-md color-purple">plus_circle</i>
+                        <i class="icon material-icons md-only color-purple">add_circle</i>
+                    </div>
+                    <div class="chip-label">Dinning</div>
+                    <a href="#" class="chip-delete text-color-purple" @click="deleteChip"></a>
+                </div>
+                <div class="chip chip-outline color-black">
+                    <div class="chip-media">
+                        <i class="icon f7-icons if-not-md color-black">plus_circle</i>
+                        <i class="icon material-icons md-only color-black">add_circle</i>
+                    </div>
+                    <div class="chip-label">Entertainment</div>
+                    <a href="#" class="chip-delete text-color-black" @click="deleteChip"></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</template>
+<script>
+    return {
+        methods: {
+            deleteChip(e) {
+                var $ = this.$;
+                var app = this.$app;
+                app.dialog.confirm('Do you want to delete this tiny demo Chip?', function () {
+                    $(e.target).parents('.chip').remove();
+                });
+            }
+        }
+    }
+</script>

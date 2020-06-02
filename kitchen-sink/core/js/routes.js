@@ -592,9 +592,13 @@ var routes = [
         componentUrl: './pages/ionic/chips.html',
       },
       {
-        path: '/content-block/',
-        url: './pages/ionic/content-block.html',
-      },     
+        path: '/content/',
+        url: './pages/ionic/content.html',
+      },  
+      {
+        path: '/calendar/',
+        componentUrl: './pages/ionic/calendar.html',
+      },      
       {
         path: '/fab/',
         url: './pages/ionic/fab.html',
@@ -766,8 +770,9 @@ var routes = [
         componentUrl: './pages/vant/chips.html',
       },
       {
-        path: '/content-block/',
-        url: './pages/vant/content-block.html',
+        path: '/content/',
+        url: './pages/vant/content.html',
+        name: 'vant-content',
       },     
       {
         path: '/fab/',

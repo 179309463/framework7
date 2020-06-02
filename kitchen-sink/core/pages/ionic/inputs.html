@@ -1,0 +1,101 @@
+<template>
+    <div class="page no-toolbar">
+      <div class="navbar">
+        <div class="navbar-bg"></div>
+        <div class="navbar-inner sliding">
+          <div class="left">
+            <a href="#" class="link back">
+              <i class="icon icon-back"></i>
+              <span class="if-not-md">返回</span>
+            </a>
+          </div>
+          <div class="title">Form Inputs</div>
+        </div>
+      </div>
+      <div class="page-content">
+
+        <div class="list medium-inset no-hairlines-md" id="form1">
+          <ul>
+            <li class="item-content item-input">
+              <div class="item-inner item-inner-required">
+                <div class="item-title item-label">First Name</div>
+                <div class="item-input-wrap">
+                  <input type="text" placeholder="" id="firstname" required validate>
+                </div>
+              </div>
+            </li>
+            <li class="item-content item-input">
+              <div class="item-inner item-inner-required">
+                <div class="item-title item-label">Last Name</div>
+                <div class="item-input-wrap">
+                  <input type="text" placeholder="" id="lastname" required validate>
+                </div>
+              </div>
+            </li>
+            <li class="item-content item-input">
+                <div class="item-inner">
+                  <div class="item-title item-label">Address</div>
+                  <div class="item-input-wrap">
+                    <input type="text" placeholder="Address Line 1">
+                  </div>
+         
+                  <div class="item-input-wrap">
+                    <input type="text" placeholder="Address Line 2">
+                  </div>
+            
+                  <div class="item-input-wrap">
+                    <input type="text" placeholder="City">
+                  </div>
+           
+                  <div class="item-input-wrap">
+                    <input type="text" placeholder="State">
+                  </div>
+            
+                  <div class="item-input-wrap">
+                    <input type="text" placeholder="Zip Code">
+                  </div>
+                </div>
+            </li>
+            <li class="item-content item-input">
+              <div class="item-inner">
+                <div class="item-title item-label">Notes</div>
+                <div class="item-input-wrap">
+                  <textarea placeholder=""></textarea>
+                </div>
+              </div>
+            </li>
+            <li class="item-content item-input">
+                <div class="item-inner">
+                  <div class="item-input-wrap">
+                      <div class="block">
+                        <p class="row">
+                            <button class="col button button-raised button-fill button-large color-blue" @click="create">Create account</button>
+                        </p>
+                      </div>
+                  </div>
+                </div>
+            </li>
+          </ul>
+        </div>
+    
+      </div>
+    </div>
+    </template>
+    <script>
+    return {
+      methods: {
+        create() {
+            var $ = this.$;
+            var app = this.$app;
+            app.input.validateInputs("#form1");
+
+            var firstname = $('input#firstname').val();
+            var lastname = $('input#lastname').val();
+            if (firstname && lastname) {
+                app.dialog.alert('Created account for: ' + firstname + ' ' + lastname, 'Account Created');
+            }
+        }
+      }
+    }
+    </script>
+    

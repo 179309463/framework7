@@ -1,0 +1,89 @@
+<template>
+    <div class="page no-toolbar">
+      <div class="navbar">
+        <div class="navbar-bg"></div>
+        <div class="navbar-inner sliding">
+          <div class="left">
+            <a href="#" class="link back">
+              <i class="icon icon-back"></i>
+              <span class="if-not-md">返回</span>
+            </a>
+          </div>
+          <div class="title">Infinite Scroll</div>
+        </div>
+      </div>
+      <div data-infinite-distance="50" class="page-content infinite-scroll-content" @infinite="loadMore">
+        <div class="block-title">Scroll bottom</div>
+        <div class="list medium-inset media-list">
+          <ul>
+            {{#each items}}
+            <li key="{{@index}}">
+                <div class="item-content">
+                  <div class="item-media">
+                      <img src="https://cdn.framework7.io/placeholder/fashion-88x88-1.jpg" width="40" class="image_round">
+                  </div>
+                  <div class="item-inner">
+                    <div class="item-title-row">
+                      <div class="item-title">Drew Crownover</div>
+                    </div>
+                    <div class="item-text">Created August 30, 2017</div>
+                  </div>
+                </div>
+              </li>
+            {{/each}}
+          </ul>
+        </div>
+        {{#if hasMoreItems}}
+        <div class="preloader infinite-scroll-preloader"></div>
+        {{/if}}
+      </div>
+    </div>
+  </template>
+  <style>
+    .image_round {
+        overflow: hidden;
+        border-radius: 50%;
+    }
+  </style>
+  <script>
+    return {
+      data: function () {
+        return {
+          allowInfinite: true,
+          hasMoreItems: true,
+          lastItem: 20,
+          items: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20],
+        }
+      },
+      methods: {
+        loadMore: function () {
+          var self = this;
+  
+          var $ = self.$$;
+          if (!self.allowInfinite) return;
+          self.allowInfinite = false;
+  
+          setTimeout(function () {
+            if (self.lastItem >= 60) {
+              self.$setState({
+                hasMoreItems: false,
+              });
+              return;
+            }
+  
+            for (var i = 1; i <= 20; i++) {
+              self.items.push(self.lastItem + i);
+            }
+  
+            self.allowInfinite = true;
+  
+            self.$setState({
+              lastItem: self.lastItem + 20,
+              items: self.items,
+            })
+          }, 1000);
+        }
+      }
+    }
+  </script>
+  
