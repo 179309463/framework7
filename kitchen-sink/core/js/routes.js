@@ -700,8 +700,8 @@ var routes = [
         componentUrl: './pages/ionic/spinner.html',
       },
       {
-        path: '/swiper/',
-        url: './pages/ionic/swiper.html',
+        path: '/swiper-horizontal/',
+        url: './pages/ionic/swiper-horizontal.html',
       },
       {
         path: '/tabs/',
@@ -709,11 +709,11 @@ var routes = [
       },
       {
         path: '/text/',
-        componentUrl: './pages/ionic/text.html',
+        url: './pages/ionic/text.html',
       },
       {
         path: '/thumbnail/',
-        componentUrl: './pages/ionic/thumbnail.html',
+        url: './pages/ionic/thumbnail.html',
       },
       {
         path: '/toast/',
@@ -724,8 +724,8 @@ var routes = [
         componentUrl: './pages/ionic/toggle.html',
       },
       {
-        path: '/toolbar-tabbar/',
-        componentUrl: './pages/ionic/toolbar-tabbar.html',
+        path: '/toolbar/',
+        url: './pages/ionic/toolbar.html',
       },
       
     ],    
